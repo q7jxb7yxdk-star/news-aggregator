@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的新聞聚合</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .update-time {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .news-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .news-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .news-title {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+        }
+        
+        .news-title:hover {
+            color: #667eea;
+        }
+        
+        .news-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85em;
+            color: #666;
+        }
+        
+        .badge {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+        }
+        
+        .badge.travel {
+            background: #f093fb;
+        }
+        
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            padding: 50px;
+        }
+        
+        .error {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📰 我的新聞聚合</h1>
+            <p class="update-time">更新時間: <span id="updateTime">載入中...</span></p>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="科技">科技</button>
+                <button class="filter-btn" data-filter="旅遊">旅遊</button>
+            </div>
+        </header>
+        
+        <div id="newsContainer" class="loading">
+            正在載入新聞...
+        </div>
+    </div>
+
+    <script>
+        let allNews = [];
+        let currentFilter = 'all';
+
+        // 載入新聞數據
+        async function loadNews() {
+            try {
+                const response = await fetch('news.json');
+                const data = await response.json();
+                
+                allNews = data.news;
+                document.getElementById('updateTime').textContent = data.update_time;
+                
+                displayNews(allNews);
+            } catch (error) {
+                document.getElementById('newsContainer').innerHTML = 
+                    '<div class="error">⚠️ 載入新聞失敗，請稍後再試</div>';
+                console.error('Error:', error);
+            }
+        }
+
+        // 顯示新聞
+        function displayNews(newsArray) {
+            const container = document.getElementById('newsContainer');
+            
+            if (newsArray.length === 0) {
+                container.innerHTML = '<div class="error">暫無新聞</div>';
+                return;
+            }
+            
+            container.className = 'news-grid';
+            container.innerHTML = newsArray.map(item => `
+                <div class="news-card" data-category="${item.category}">
+                    <a href="${item.link}" target="_blank" class="news-title">
+                        ${item.title}
+                    </a>
+                    <div class="news-meta">
+                        <span class="badge ${item.category === '旅遊' ? 'travel' : ''}">${item.category}</span>
+                        <span>來源: ${item.source}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 篩選功能
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                // 更新按鈕狀態
+                document.querySelectorAll('.filter-btn').forEach(btn => 
+                    btn.classList.remove('active')
+                );
+                e.target.classList.add('active');
+                
+                // 篩選新聞
+                const filter = e.target.dataset.filter;
+                const filtered = filter === 'all' 
+                    ? allNews 
+                    : allNews.filter(item => item.category === filter);
+                
+                displayNews(filtered);
+            }
+        });
+
+        // 頁面載入時執行
+        loadNews();
+    </script>
+</body>
+</html>
