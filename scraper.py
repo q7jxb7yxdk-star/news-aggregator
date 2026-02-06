@@ -19,6 +19,7 @@ def scrape_unwire():
                 href = link.get('href', '')
                 title = link.text.strip()
                 
+                # 如果有標題，而且標題長度多過 10 個字，同時連結係 unwire.hk，而且 URL 入面包含 /20
                 if title and len(title) > 10 and 'unwire.hk' in href and '/20' in href:
                     if not any(item['link'] == href for item in news):
                         news.append({
@@ -27,13 +28,56 @@ def scrape_unwire():
                             'source': 'Unwire.hk',
                             'category': '科技'
                         })
-                        if len(news) >= 15:
+                        if len(news) >= 15: # 當新聞數量已經收集到 15 篇，就停止再搵落去。
                             break
             
             print(f"✓ 成功抓取 {len(news)} 篇文章")
             return news
     except Exception as e:
         print(f"✗ Unwire.hk 抓取失敗: {e}")
+        return []
+
+def scrape_newmobilelife():
+    """抓取 New MobileLife 科技新聞"""
+    print("正在抓取 New MobileLife...")
+    url = 'https://www.newmobilelife.com/'
+    
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        }
+        response = requests.get(url, headers=headers, timeout=10)
+        
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.content, 'html.parser')
+            all_links = soup.find_all('a', href=True)
+            
+            news = []
+            for link in all_links:
+                href = link.get('href', '')
+                title = link.text.strip()
+                
+                # 篩選文章鏈接（包含日期格式 /2026/ 等）
+                if (title and len(title) > 15 and 
+                    'newmobilelife.com/20' in href and
+                    title not in ['Read More', '更多']):
+                    
+                    if not any(item['link'] == href for item in news):
+                        news.append({
+                            'title': title,
+                            'link': href,
+                            'source': 'New MobileLife',
+                            'category': '科技'
+                        })
+                        
+                        if len(news) >= 10:
+                            break
+            
+            print(f"✓ 成功抓取 {len(news)} 篇文章")
+            return news
+            
+    except Exception as e:
+        print(f"✗ New MobileLife 抓取失敗: {e}")
         return []
 
 def scrape_holidaysmart():
@@ -54,15 +98,22 @@ def scrape_holidaysmart():
             all_links = soup.find_all('a', href=True)
             
             news = []
+            # 需要排除的文字
+            exclude_texts = [
+                'HolidaySmart 假期日常', 'HolidaySmart', '更多', '詳情', 
+                '了解更多', '查看更多', 'Read More', 'an hour ago', 
+                'hours ago', 'a day ago', 'days ago'
+            ]
+            
             for link in all_links:
                 href = link.get('href', '')
                 title = link.text.strip()
                 
-                # 篩選看起來像文章的鏈接
-                if (title and len(title) > 15 and 
-                    ('holidaysmart.io' in href or href.startswith('/')) and
-                    title not in ['更多', '詳情', '了解更多', '查看更多']):
-                    
+                # 必須包含 /hk/article/ 才是真正的文章
+                if (title and len(title) > 20 and 
+                    '/hk/article/' in href and
+                    not any(exclude in title for exclude in exclude_texts)):
+
                     # 處理相對路徑
                     if href.startswith('/'):
                         href = 'https://holidaysmart.io' + href
@@ -76,7 +127,7 @@ def scrape_holidaysmart():
                             'category': '旅遊'
                         })
                         
-                        if len(news) >= 15:
+                        if len(news) >= 10:
                             break
             
             print(f"✓ 成功抓取 {len(news)} 篇文章")
@@ -95,6 +146,7 @@ def main():
     
     # 抓取各個網站
     all_news.extend(scrape_unwire())
+    all_news.extend(scrape_newmobilelife())
     all_news.extend(scrape_holidaysmart())
     
     # 添加抓取時間
