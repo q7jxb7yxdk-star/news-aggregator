@@ -38,30 +38,32 @@ def scrape_unwire():
         return []
 
 def scrape_newmobilelife():
-    """抓取 New MobileLife 科技新聞"""
     print("正在抓取 New MobileLife...")
     url = 'https://www.newmobilelife.com/'
     
     try:
         headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            'User-Agent': 'Mozilla/5.0'
         }
         response = requests.get(url, headers=headers, timeout=10)
-        
+
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
             all_links = soup.find_all('a', href=True)
-            
+
             news = []
             for link in all_links:
-                href = link.get('href', '')
-                title = link.text.strip()
-                
-                # 篩選文章鏈接（包含日期格式 /2026/ 等）
-                if (title and len(title) > 15 and 
-                    'newmobilelife.com/20' in href and
-                    title not in ['Read More', '更多']):
+                href = link.get('href', '').strip()
+                title = link.get_text(strip=True)
+
+                # 只要係文章 URL（日期格式）
+                if title and '/20' in href:
                     
+                    # 處理相對路徑
+                    if href.startswith('/'):
+                        href = 'https://www.newmobilelife.com' + href
+
+                    # 避免重複
                     if not any(item['link'] == href for item in news):
                         news.append({
                             'title': title,
@@ -69,13 +71,13 @@ def scrape_newmobilelife():
                             'source': 'New MobileLife',
                             'category': '科技'
                         })
-                        
+
                         if len(news) >= 10:
                             break
-            
+
             print(f"✓ 成功抓取 {len(news)} 篇文章")
             return news
-            
+
     except Exception as e:
         print(f"✗ New MobileLife 抓取失敗: {e}")
         return []
