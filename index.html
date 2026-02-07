@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的新聞聚合</title>
+    <title>📰 我的新聞聚合</title>
     <style>
         * {
             margin: 0;
@@ -19,17 +19,22 @@
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
+        /* Header 樣式 */
         header {
             background: white;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             margin-bottom: 30px;
+        }
+        
+        .header-top {
             text-align: center;
+            margin-bottom: 25px;
         }
         
         h1 {
@@ -38,17 +43,69 @@
             margin-bottom: 10px;
         }
         
-        .update-time {
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .stat-item {
             color: #666;
             font-size: 0.9em;
+        }
+        
+        .stat-number {
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        /* 搜尋框 */
+        .search-box {
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        /* 篩選器 */
+        .filters {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .filter-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .filter-label {
+            font-weight: 600;
+            color: #333;
+            min-width: 80px;
         }
         
         .filter-buttons {
             display: flex;
             gap: 10px;
-            justify-content: center;
             flex-wrap: wrap;
-            margin-top: 20px;
+            flex: 1;
         }
         
         .filter-btn {
@@ -58,17 +115,62 @@
             color: #667eea;
             border-radius: 25px;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 0.9em;
             transition: all 0.3s;
+            white-space: nowrap;
         }
         
-        .filter-btn:hover, .filter-btn.active {
+        .filter-btn:hover {
+            background: #f0f0f0;
+        }
+        
+        .filter-btn.active {
             background: #667eea;
             color: white;
         }
         
+        /* 結果資訊 */
+        .results-info {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .results-count {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .clear-filters {
+            padding: 8px 16px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.3s;
+        }
+        
+        .clear-filters:hover {
+            background: #ff5252;
+        }
+        
+        .clear-filters.hidden {
+            display: none;
+        }
+        
+        /* 新聞網格 */
         .news-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 20px;
         }
         
@@ -77,7 +179,10 @@
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
         
         .news-card:hover {
@@ -86,12 +191,13 @@
         }
         
         .news-title {
-            font-size: 1.2em;
+            font-size: 1.15em;
             color: #333;
-            margin-bottom: 10px;
             text-decoration: none;
             display: block;
             font-weight: 600;
+            line-height: 1.5;
+            flex: 1;
         }
         
         .news-title:hover {
@@ -100,23 +206,31 @@
         
         .news-meta {
             display: flex;
-            gap: 15px;
+            gap: 10px;
             font-size: 0.85em;
             color: #666;
+            flex-wrap: wrap;
         }
         
         .badge {
             background: #667eea;
             color: white;
-            padding: 4px 12px;
+            padding: 5px 12px;
             border-radius: 12px;
             font-size: 0.85em;
+            white-space: nowrap;
         }
         
         .badge.travel {
             background: #f093fb;
         }
         
+        .source-tag {
+            color: #888;
+            font-size: 0.85em;
+        }
+        
+        /* 載入動畫 */
         .loading {
             text-align: center;
             color: white;
@@ -124,6 +238,22 @@
             padding: 50px;
         }
         
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* 錯誤訊息 */
         .error {
             background: #ff6b6b;
             color: white;
@@ -131,90 +261,411 @@
             border-radius: 10px;
             text-align: center;
         }
+        
+        /* 空狀態 */
+        .empty-state {
+            background: white;
+            padding: 60px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .empty-state-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+        
+        .empty-state-text {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        /* 返回頂部按鈕 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #5568d3;
+            transform: translateY(-3px);
+        }
+        
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            header {
+                padding: 20px;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .filter-label {
+                width: 100%;
+            }
+            
+            .results-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        /* 深色模式支援 */
+        @media (prefers-color-scheme: dark) {
+            /* 可選：添加深色模式樣式 */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📰 我的新聞聚合</h1>
-            <p class="update-time">更新時間: <span id="updateTime">載入中...</span></p>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="科技">科技</button>
-                <button class="filter-btn" data-filter="旅遊">旅遊</button>
+            <div class="header-top">
+                <h1>📰 我的新聞聚合</h1>
+                <div class="stats">
+                    <div class="stat-item">
+                        更新時間: <span id="updateTime" class="stat-number">載入中...</span>
+                    </div>
+                    <div class="stat-item">
+                        總文章數: <span id="totalCount" class="stat-number">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 搜尋框 -->
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="🔍 搜尋新聞標題..."
+                >
+            </div>
+            
+            <!-- 篩選器 -->
+            <div class="filters">
+                <div class="filter-section">
+                    <span class="filter-label">分類:</span>
+                    <div class="filter-buttons" id="categoryFilters">
+                        <button class="filter-btn active" data-type="category" data-value="all">全部</button>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <span class="filter-label">來源:</span>
+                    <div class="filter-buttons" id="sourceFilters">
+                        <button class="filter-btn active" data-type="source" data-value="all">全部</button>
+                    </div>
+                </div>
             </div>
         </header>
         
+        <!-- 結果資訊 -->
+        <div class="results-info" id="resultsInfo" style="display: none;">
+            <span class="results-count" id="resultsCount">顯示 0 篇新聞</span>
+            <button class="clear-filters hidden" id="clearFilters">清除篩選</button>
+        </div>
+        
+        <!-- 新聞容器 -->
         <div id="newsContainer" class="loading">
-            正在載入新聞...
+            <div class="spinner"></div>
+            <p>正在載入新聞...</p>
         </div>
     </div>
+    
+    <!-- 返回頂部按鈕 -->
+    <button class="back-to-top" id="backToTop">↑</button>
 
     <script>
+        // 全域變數
         let allNews = [];
-        let currentFilter = 'all';
+        let currentFilters = {
+            category: 'all',
+            source: 'all',
+            search: ''
+        };
 
         // 載入新聞數據
         async function loadNews() {
             try {
                 const response = await fetch('news.json');
+                if (!response.ok) {
+                    throw new Error('無法載入新聞數據');
+                }
+                
                 const data = await response.json();
+                allNews = data.news || [];
                 
-                allNews = data.news;
-                document.getElementById('updateTime').textContent = data.update_time;
+                // 更新頁面資訊
+                document.getElementById('updateTime').textContent = data.update_time || '未知';
+                document.getElementById('totalCount').textContent = data.total_count || allNews.length;
                 
+                // 初始化篩選器
+                initializeFilters();
+                
+                // 顯示新聞
                 displayNews(allNews);
+                
+                // 顯示結果資訊
+                document.getElementById('resultsInfo').style.display = 'flex';
+                
             } catch (error) {
-                document.getElementById('newsContainer').innerHTML = 
-                    '<div class="error">⚠️ 載入新聞失敗，請稍後再試</div>';
+                showError('載入新聞失敗，請稍後再試');
                 console.error('Error:', error);
             }
+        }
+
+        // 初始化篩選器
+        function initializeFilters() {
+            // 自訂分類順序，未來如果有新分類（例如「財經」），只要加入陣列即可
+            const categoryOrder = ['科技', '旅遊'];
+            
+            // 獲取所有分類並按自訂順序排序
+            const allCategories = allNews.map(item => item.category);
+            console.log('所有分類:', allCategories); // 除錯用
+            
+            const categories = [...new Set(allCategories)]
+                .sort((a, b) => {
+                    const indexA = categoryOrder.indexOf(a);
+                    const indexB = categoryOrder.indexOf(b);
+                    // 如果分類不在自訂列表中，放到最後
+                    if (indexA === -1) return 1;
+                    if (indexB === -1) return -1;
+                    return indexA - indexB;
+                });
+            
+            console.log('處理後的分類:', categories); // 除錯用
+            
+            const categoryContainer = document.getElementById('categoryFilters');
+            
+            categories.forEach(category => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.dataset.type = 'category';
+                btn.dataset.value = category;
+                btn.textContent = category;
+                categoryContainer.appendChild(btn);
+            });
+            
+            // 獲取所有來源
+            const allSources = allNews.map(item => item.source);
+            console.log('所有來源:', allSources); // 除錯用
+            
+            const sources = [...new Set(allSources)].sort();
+            console.log('處理後的來源:', sources); // 除錯用
+            
+            const sourceContainer = document.getElementById('sourceFilters');
+            
+            sources.forEach(source => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.dataset.type = 'source';
+                btn.dataset.value = source;
+                btn.textContent = source;
+                sourceContainer.appendChild(btn);
+            });
+            
+            console.log('篩選器初始化完成'); // 除錯用
         }
 
         // 顯示新聞
         function displayNews(newsArray) {
             const container = document.getElementById('newsContainer');
             
+            // 更新結果計數
+            document.getElementById('resultsCount').textContent = 
+                `顯示 ${newsArray.length} 篇新聞`;
+            
             if (newsArray.length === 0) {
-                container.innerHTML = '<div class="error">暫無新聞</div>';
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📭</div>
+                        <div class="empty-state-text">沒有找到符合條件的新聞</div>
+                    </div>
+                `;
                 return;
             }
             
             container.className = 'news-grid';
             container.innerHTML = newsArray.map(item => `
-                <div class="news-card" data-category="${item.category}">
-                    <a href="${item.link}" target="_blank" class="news-title">
-                        ${item.title}
+                <div class="news-card" data-category="${item.category}" data-source="${item.source}">
+                    <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="news-title">
+                        ${highlightSearchTerm(item.title, currentFilters.search)}
                     </a>
                     <div class="news-meta">
                         <span class="badge ${item.category === '旅遊' ? 'travel' : ''}">${item.category}</span>
-                        <span>來源: ${item.source}</span>
+                        <span class="source-tag">${item.source}</span>
                     </div>
                 </div>
             `).join('');
         }
 
-        // 篩選功能
+        // 高亮搜尋關鍵字
+        function highlightSearchTerm(text, searchTerm) {
+            if (!searchTerm) return text;
+            
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            return text.replace(regex, '<mark style="background: #ffeb3b; padding: 2px 4px; border-radius: 3px;">$1</mark>');
+        }
+
+        // 篩選新聞
+        function filterNews() {
+            let filtered = allNews;
+            
+            // 分類篩選
+            if (currentFilters.category !== 'all') {
+                filtered = filtered.filter(item => item.category === currentFilters.category);
+            }
+            
+            // 來源篩選
+            if (currentFilters.source !== 'all') {
+                filtered = filtered.filter(item => item.source === currentFilters.source);
+            }
+            
+            // 搜尋篩選
+            if (currentFilters.search) {
+                filtered = filtered.filter(item => 
+                    item.title.toLowerCase().includes(currentFilters.search.toLowerCase())
+                );
+            }
+            
+            displayNews(filtered);
+            updateClearButton();
+        }
+
+        // 更新清除按鈕狀態
+        function updateClearButton() {
+            const clearBtn = document.getElementById('clearFilters');
+            const hasActiveFilters = 
+                currentFilters.category !== 'all' || 
+                currentFilters.source !== 'all' || 
+                currentFilters.search !== '';
+            
+            if (hasActiveFilters) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+        }
+
+        // 清除所有篩選
+        function clearAllFilters() {
+            currentFilters = {
+                category: 'all',
+                source: 'all',
+                search: ''
+            };
+            
+            // 重置按鈕狀態
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.value === 'all') {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // 清除搜尋框
+            document.getElementById('searchInput').value = '';
+            
+            // 重新顯示
+            filterNews();
+        }
+
+        // 顯示錯誤訊息
+        function showError(message) {
+            document.getElementById('newsContainer').innerHTML = 
+                `<div class="error">⚠️ ${message}</div>`;
+        }
+
+        // 篩選按鈕點擊事件
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('filter-btn')) {
+                const type = e.target.dataset.type;
+                const value = e.target.dataset.value;
+                
                 // 更新按鈕狀態
-                document.querySelectorAll('.filter-btn').forEach(btn => 
-                    btn.classList.remove('active')
-                );
+                const siblings = e.target.parentElement.querySelectorAll('.filter-btn');
+                siblings.forEach(btn => btn.classList.remove('active'));
                 e.target.classList.add('active');
                 
-                // 篩選新聞
-                const filter = e.target.dataset.filter;
-                const filtered = filter === 'all' 
-                    ? allNews 
-                    : allNews.filter(item => item.category === filter);
+                // 更新篩選條件
+                currentFilters[type] = value;
                 
-                displayNews(filtered);
+                // 執行篩選
+                filterNews();
             }
         });
 
+        // 搜尋功能
+        let searchTimeout;
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                currentFilters.search = e.target.value.trim();
+                filterNews();
+            }, 300); // 延遲 300ms 避免頻繁篩選
+        });
+
+        // 清除篩選按鈕
+        document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
+
+        // 返回頂部功能
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
         // 頁面載入時執行
-        loadNews();
+        document.addEventListener('DOMContentLoaded', loadNews);
     </script>
 </body>
 </html>
