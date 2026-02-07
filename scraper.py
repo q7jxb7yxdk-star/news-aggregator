@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 def scrape_unwire():
     """抓取 Unwire.hk 科技新聞"""
@@ -151,7 +151,8 @@ def main():
     
     # 添加抓取時間
     data = {
-        'update_time': (datetime.utcnow() + timedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S'),
+        # 香港時區
+        'update_time': datetime.now(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M:%S'),
         'total_count': len(all_news),
         'news': all_news
     }
