@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 from datetime import datetime, timedelta, timezone
 
-# 常量定義
+# 常量定義 test
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 MAX_NEWS_PER_SOURCE = 15
 REQUEST_TIMEOUT = 10
