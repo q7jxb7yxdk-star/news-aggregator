@@ -2,11 +2,22 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from datetime import datetime, timedelta, timezone
+from typing import Dict, List, Optional
+import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# 常量定義 test
+# 配置日誌
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# 常量定義
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 MAX_NEWS_PER_SOURCE = 15
 REQUEST_TIMEOUT = 10
+MAX_WORKERS = 3  # 並行抓取的線程數
 
 # 網站配置
 SCRAPERS_CONFIG = {
@@ -48,53 +59,104 @@ SCRAPERS_CONFIG = {
 }
 
 
-def scrape_website(config_key):
-    """通用的網站爬蟲函數，提高代碼效率"""
+def validate_article(title: str, href: str, config: Dict) -> bool:
+    """
+    驗證文章是否符合抓取條件
+    
+    Args:
+        title: 文章標題
+        href: 文章連結
+        config: 網站配置
+    
+    Returns:
+        是否符合條件
+    """
+    filters = config['filters']
+    
+    # 檢查標題長度
+    if not title or len(title) < config['min_title_length']:
+        return False
+    
+    # 檢查要排除的文字
+    exclude_titles = filters.get('exclude_titles', [])
+    if any(exclude in title for exclude in exclude_titles):
+        return False
+    
+    # 檢查 URL 必須滿足的條件
+    domain_check = filters.get('domain_check')
+    if domain_check and domain_check not in href:
+        return False
+    
+    url_pattern = filters.get('url_pattern')
+    if url_pattern and url_pattern not in href:
+        return False
+    
+    return True
+
+
+def normalize_url(href: str, base_url: Optional[str]) -> str:
+    """
+    標準化 URL（處理相對路徑）
+    
+    Args:
+        href: 原始連結
+        base_url: 基礎 URL
+    
+    Returns:
+        完整 URL
+    """
+    if base_url and href.startswith('/'):
+        return base_url + href
+    return href
+
+
+def scrape_website(config_key: str) -> List[Dict]:
+    """
+    通用的網站爬蟲函數
+    
+    Args:
+        config_key: 配置鍵名
+    
+    Returns:
+        新聞列表
+    """
     config = SCRAPERS_CONFIG[config_key]
     source_name = config['source']
-    print(f"正在抓取 {source_name}...")
+    logger.info(f"正在抓取 {source_name}...")
     
     try:
+        # 發送請求
         response = requests.get(
             config['url'],
             headers={'User-Agent': USER_AGENT},
             timeout=REQUEST_TIMEOUT
         )
+        response.raise_for_status()  # 自動處理 HTTP 錯誤
         
-        if response.status_code != 200:
-            print(f"✗ {source_name} HTTP 錯誤: {response.status_code}")
-            return []
-        
+        # 解析 HTML
         soup = BeautifulSoup(response.content, 'html.parser')
         all_links = soup.find_all('a', href=True)
         
         news = []
-        seen_links = set()  # 使用 set 提升查找效率到 O(1)
-        filters = config['filters']
+        seen_links = set()
+        base_url = config['filters'].get('base_url')
         
         for link in all_links:
-            href = link.get('href', '')
+            # 達到上限則停止
+            if len(news) >= MAX_NEWS_PER_SOURCE:
+                break
+            
+            href = link.get('href', '').strip()
             title = link.text.strip()
             
-            # 檢查標題長度
-            if not title or len(title) < config['min_title_length']:
+            # 驗證文章
+            if not validate_article(title, href, config):
                 continue
             
-            # 檢查要排除的文字
-            if any(exclude in title for exclude in filters.get('exclude_titles', [])):
-                continue
+            # 標準化 URL
+            href = normalize_url(href, base_url)
             
-            # 檢查 URL 必須滿足的條件
-            if filters.get('domain_check') and filters['domain_check'] not in href:
-                continue
-            if filters.get('url_pattern') and filters['url_pattern'] not in href:
-                continue
-            
-            # 處理相對路徑
-            if filters.get('base_url') and href.startswith('/'):
-                href = filters['base_url'] + href
-            
-            # 避免重複（使用 set 提升效率）
+            # 避免重複
             if href in seen_links:
                 continue
             
@@ -105,49 +167,93 @@ def scrape_website(config_key):
                 'source': source_name,
                 'category': config['category']
             })
-            
-            if len(news) >= MAX_NEWS_PER_SOURCE:
-                break
         
-        print(f"✓ 成功抓取 {len(news)} 篇文章")
+        logger.info(f"✓ {source_name} 成功抓取 {len(news)} 篇文章")
         return news
         
+    except requests.HTTPError as e:
+        logger.error(f"✗ {source_name} HTTP 錯誤: {e}")
+        return []
     except requests.RequestException as e:
-        print(f"✗ {source_name} 抓取失敗: {e}")
+        logger.error(f"✗ {source_name} 請求失敗: {e}")
         return []
     except Exception as e:
-        print(f"✗ {source_name} 發生錯誤: {e}")
+        logger.exception(f"✗ {source_name} 發生未預期錯誤: {e}")
         return []
 
-def main():
-    print("=" * 60)
-    print("開始抓取新聞...")
-    print("=" * 60)
+
+def scrape_all_websites_parallel() -> List[Dict]:
+    """
+    並行抓取所有網站
     
+    Returns:
+        所有新聞列表
+    """
     all_news = []
     
-    # 抓取各個網站
-    for config_key in SCRAPERS_CONFIG.keys():
-        all_news.extend(scrape_website(config_key))
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        # 提交所有任務
+        future_to_config = {
+            executor.submit(scrape_website, config_key): config_key 
+            for config_key in SCRAPERS_CONFIG.keys()
+        }
+        
+        # 收集結果
+        for future in as_completed(future_to_config):
+            config_key = future_to_config[future]
+            try:
+                news = future.result()
+                all_news.extend(news)
+            except Exception as e:
+                logger.exception(f"✗ {config_key} 任務執行失敗: {e}")
     
-    # 添加抓取時間（香港時區 UTC+8）
+    return all_news
+
+
+def save_to_json(data: Dict, filename: str = 'news.json') -> bool:
+    """
+    保存數據為 JSON 文件
+    
+    Args:
+        data: 要保存的數據
+        filename: 文件名
+    
+    Returns:
+        是否保存成功
+    """
+    try:
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        logger.info(f"✓ 已保存到 {filename}")
+        return True
+    except IOError as e:
+        logger.error(f"✗ 保存 JSON 文件失敗: {e}")
+        return False
+
+
+def main():
+    """主函數"""
+    logger.info("=" * 60)
+    logger.info("開始抓取新聞...")
+    logger.info("=" * 60)
+    
+    # 並行抓取所有網站
+    all_news = scrape_all_websites_parallel()
+    
+    # 準備數據
     data = {
-        'update_time': datetime.now(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M:%S'),
+        'update_time': datetime.now(
+            timezone(timedelta(hours=8))
+        ).strftime('%Y-%m-%d %H:%M:%S'),
         'total_count': len(all_news),
         'news': all_news
     }
     
-    # 保存為 JSON 文件
-    try:
-        with open('news.json', 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        
-        print("\n" + "=" * 60)
-        print(f"✓ 完成！共抓取 {len(all_news)} 篇新聞")
-        print(f"✓ 已保存到 news.json")
-        print("=" * 60)
-    except IOError as e:
-        print(f"✗ 保存 JSON 文件失敗: {e}")
+    # 保存結果
+    logger.info("=" * 60)
+    logger.info(f"✓ 完成！共抓取 {len(all_news)} 篇新聞")
+    save_to_json(data)
+    logger.info("=" * 60)
 
 
 if __name__ == '__main__':
