@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import json
 from datetime import datetime, timedelta, timezone
 
-# temp
 def scrape_unwire():
     """抓取 Unwire.hk 科技新聞"""
     print("正在抓取 Unwire.hk...")
