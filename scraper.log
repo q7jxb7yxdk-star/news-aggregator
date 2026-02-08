@@ -106,3 +106,93 @@
 2026-02-07 18:29:19,206 - INFO - ✓ 已保存到 news.json
 2026-02-07 18:29:19,207 - INFO - ✓ 已保存摘要到 news_summary.txt
 2026-02-07 18:29:19,207 - INFO - ============================================================
+2026-02-08 11:48:15,830 - INFO - ============================================================
+2026-02-08 11:48:15,831 - INFO - 開始抓取新聞...
+2026-02-08 11:48:15,831 - INFO - ============================================================
+2026-02-08 11:48:15,832 - INFO - 正在抓取 Unwire.hk...
+2026-02-08 11:48:15,833 - INFO - 正在抓取 NewMobileLife...
+2026-02-08 11:48:15,833 - INFO - 正在抓取 FlyDay.hk...
+2026-02-08 11:48:15,999 - INFO - ✓ Unwire.hk 成功抓取 15 篇文章
+2026-02-08 11:48:15,999 - INFO - 正在抓取 HolidaySmart...
+2026-02-08 11:48:16,021 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 1/3): 403 Client Error: Forbidden for url: https://flyday.hk/category/%E6%A9%9F%E7%A5%A8%E5%84%AA%E6%83%A0-tickets-promotions/
+2026-02-08 11:48:16,060 - INFO - ✓ NewMobileLife 成功抓取 15 篇文章
+2026-02-08 11:48:16,140 - INFO - ✓ HolidaySmart 成功抓取 15 篇文章
+2026-02-08 11:48:17,160 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 2/3): 403 Client Error: Forbidden for url: https://flyday.hk/category/%E6%A9%9F%E7%A5%A8%E5%84%AA%E6%83%A0-tickets-promotions/
+2026-02-08 11:48:19,303 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 3/3): 403 Client Error: Forbidden for url: https://flyday.hk/category/%E6%A9%9F%E7%A5%A8%E5%84%AA%E6%83%A0-tickets-promotions/
+2026-02-08 11:48:19,304 - WARNING - FlyDay.hk 主頁面無法獲取，嘗試備用頁面: https://flyday.hk/
+2026-02-08 11:48:19,410 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 1/3): 403 Client Error: Forbidden for url: https://flyday.hk/
+2026-02-08 11:48:20,543 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 2/3): 403 Client Error: Forbidden for url: https://flyday.hk/
+2026-02-08 11:48:22,679 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 3/3): 403 Client Error: Forbidden for url: https://flyday.hk/
+2026-02-08 11:48:22,682 - ERROR - ✗ FlyDay.hk 無法獲取頁面內容
+2026-02-08 11:48:22,686 - INFO - ============================================================
+2026-02-08 11:48:22,687 - INFO - ✓ 完成！共抓取 45 篇新聞
+2026-02-08 11:48:22,687 - INFO - ✓ 執行時間: 6.86 秒
+2026-02-08 11:48:22,688 - INFO - ✓ 已保存到 news.json
+2026-02-08 11:48:22,689 - INFO - ✓ 已保存摘要到 news_summary.txt
+2026-02-08 11:48:22,689 - INFO - ============================================================
+2026-02-08 12:52:25,789 - INFO - ============================================================
+2026-02-08 12:52:25,789 - INFO - 開始抓取新聞...
+2026-02-08 12:52:25,789 - INFO - ============================================================
+2026-02-08 12:52:25,789 - INFO - 正在抓取 Unwire.hk...
+2026-02-08 12:52:25,789 - INFO - 正在抓取 FlyDay.hk...
+2026-02-08 12:52:25,789 - INFO - 正在抓取 NewMobileLife...
+2026-02-08 12:52:25,926 - INFO - ✓ Unwire.hk 成功抓取 15 篇文章
+2026-02-08 12:52:25,927 - INFO - 正在抓取 HolidaySmart...
+2026-02-08 12:52:25,943 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 1/3): 403 Client Error: Forbidden for url: https://flyday.hk/category/%E6%A9%9F%E7%A5%A8%E5%84%AA%E6%83%A0-tickets-promotions/
+2026-02-08 12:52:25,960 - INFO - ✓ NewMobileLife 成功抓取 15 篇文章
+2026-02-08 12:52:26,052 - INFO - ✓ HolidaySmart 成功抓取 15 篇文章
+2026-02-08 12:52:27,080 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 2/3): 403 Client Error: Forbidden for url: https://flyday.hk/category/%E6%A9%9F%E7%A5%A8%E5%84%AA%E6%83%A0-tickets-promotions/
+2026-02-08 12:52:29,224 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 3/3): 403 Client Error: Forbidden for url: https://flyday.hk/category/%E6%A9%9F%E7%A5%A8%E5%84%AA%E6%83%A0-tickets-promotions/
+2026-02-08 12:52:29,224 - WARNING - FlyDay.hk 主頁面無法獲取，嘗試備用頁面: https://flyday.hk/
+2026-02-08 12:52:29,335 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 1/3): 403 Client Error: Forbidden for url: https://flyday.hk/
+2026-02-08 12:52:30,481 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 2/3): 403 Client Error: Forbidden for url: https://flyday.hk/
+2026-02-08 12:52:32,617 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 3/3): 403 Client Error: Forbidden for url: https://flyday.hk/
+2026-02-08 12:52:32,618 - ERROR - ✗ FlyDay.hk 無法獲取頁面內容
+2026-02-08 12:52:32,619 - INFO - ============================================================
+2026-02-08 12:52:32,619 - INFO - ✓ 完成！共抓取 45 篇新聞
+2026-02-08 12:52:32,619 - INFO - ✓ 執行時間: 6.83 秒
+2026-02-08 12:52:32,621 - INFO - ✓ 已保存到 news.json
+2026-02-08 12:52:32,621 - INFO - ✓ 已保存摘要到 news_summary.txt
+2026-02-08 12:52:32,621 - INFO - ============================================================
+2026-02-08 12:53:50,270 - INFO - ============================================================
+2026-02-08 12:53:50,270 - INFO - 開始抓取新聞...
+2026-02-08 12:53:50,270 - INFO - ============================================================
+2026-02-08 12:53:50,271 - INFO - 正在抓取 Unwire.hk...
+2026-02-08 12:53:50,271 - INFO - Unwire.hk 嘗試獲取: https://unwire.hk/ (嘗試 1/3)
+2026-02-08 12:53:50,271 - INFO - 正在抓取 NewMobileLife...
+2026-02-08 12:53:50,271 - INFO - 正在抓取 HolidaySmart...
+2026-02-08 12:53:50,271 - INFO - NewMobileLife 嘗試獲取: https://www.newmobilelife.com/ (嘗試 1/3)
+2026-02-08 12:53:50,271 - INFO - HolidaySmart 嘗試獲取: https://holidaysmart.io/hk (嘗試 1/3)
+2026-02-08 12:53:50,379 - INFO - Unwire.hk 成功獲取頁面，狀態碼: 200
+2026-02-08 12:53:50,399 - INFO - ✓ Unwire.hk 成功抓取 15 篇文章
+2026-02-08 12:53:50,399 - INFO - 正在抓取 FlyDay.hk...
+2026-02-08 12:53:50,399 - INFO - FlyDay.hk 嘗試獲取: https://flyday.hk/ (嘗試 1/3)
+2026-02-08 12:53:50,446 - INFO - HolidaySmart 成功獲取頁面，狀態碼: 200
+2026-02-08 12:53:50,457 - INFO - ✓ HolidaySmart 成功抓取 15 篇文章
+2026-02-08 12:53:50,457 - INFO - NewMobileLife 成功獲取頁面，狀態碼: 200
+2026-02-08 12:53:50,469 - INFO - ✓ NewMobileLife 成功抓取 15 篇文章
+2026-02-08 12:53:50,478 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 1/3): 狀態碼 403 - 403 Client Error: Forbidden for url: https://flyday.hk/
+2026-02-08 12:53:50,478 - INFO - FlyDay.hk 等待 1 秒後重試...
+2026-02-08 12:53:51,484 - INFO - FlyDay.hk 嘗試獲取: https://flyday.hk/ (嘗試 2/3)
+2026-02-08 12:53:51,617 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 2/3): 狀態碼 403 - 403 Client Error: Forbidden for url: https://flyday.hk/
+2026-02-08 12:53:51,617 - INFO - FlyDay.hk 等待 2 秒後重試...
+2026-02-08 12:53:53,622 - INFO - FlyDay.hk 嘗試獲取: https://flyday.hk/ (嘗試 3/3)
+2026-02-08 12:53:53,744 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 3/3): 狀態碼 403 - 403 Client Error: Forbidden for url: https://flyday.hk/
+2026-02-08 12:53:53,744 - ERROR - FlyDay.hk 所有嘗試均失敗，URL: https://flyday.hk/
+2026-02-08 12:53:53,744 - WARNING - FlyDay.hk 主頁面無法獲取，嘗試備用頁面: https://flyday.hk/category/travel-news/
+2026-02-08 12:53:53,744 - INFO - FlyDay.hk 嘗試獲取: https://flyday.hk/category/travel-news/ (嘗試 1/3)
+2026-02-08 12:53:53,859 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 1/3): 狀態碼 403 - 403 Client Error: Forbidden for url: https://flyday.hk/category/travel-news/
+2026-02-08 12:53:53,859 - INFO - FlyDay.hk 等待 1 秒後重試...
+2026-02-08 12:53:54,864 - INFO - FlyDay.hk 嘗試獲取: https://flyday.hk/category/travel-news/ (嘗試 2/3)
+2026-02-08 12:53:54,989 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 2/3): 狀態碼 403 - 403 Client Error: Forbidden for url: https://flyday.hk/category/travel-news/
+2026-02-08 12:53:54,989 - INFO - FlyDay.hk 等待 2 秒後重試...
+2026-02-08 12:53:56,994 - INFO - FlyDay.hk 嘗試獲取: https://flyday.hk/category/travel-news/ (嘗試 3/3)
+2026-02-08 12:53:57,124 - WARNING - FlyDay.hk HTTP 錯誤 (嘗試 3/3): 狀態碼 403 - 403 Client Error: Forbidden for url: https://flyday.hk/category/travel-news/
+2026-02-08 12:53:57,125 - ERROR - FlyDay.hk 所有嘗試均失敗，URL: https://flyday.hk/category/travel-news/
+2026-02-08 12:53:57,125 - ERROR - ✗ FlyDay.hk 無法獲取頁面內容
+2026-02-08 12:53:57,126 - INFO - ============================================================
+2026-02-08 12:53:57,126 - INFO - ✓ 完成！共抓取 45 篇新聞
+2026-02-08 12:53:57,126 - INFO - ✓ 執行時間: 6.86 秒
+2026-02-08 12:53:57,127 - INFO - ✓ 已保存到 news.json
+2026-02-08 12:53:57,127 - INFO - ✓ 已保存摘要到 news_summary.txt
+2026-02-08 12:53:57,127 - INFO - ============================================================

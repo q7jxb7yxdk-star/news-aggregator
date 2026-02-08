@@ -1,9 +1,5 @@
-"""
-新聞爬蟲系統 - 優化版本
-支援多網站並行爬取，具備完善的錯誤處理和配置管理
-"""
-
 import requests
+import feedparser
 from bs4 import BeautifulSoup
 import json
 from datetime import datetime, timedelta, timezone
@@ -16,77 +12,65 @@ from urllib.parse import urljoin, urlparse
 import time
 
 # ============================================================================
-# 配置日誌
+# Logging
 # ============================================================================
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler('scraper.log', encoding='utf-8')
-    ]
+    format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
 # ============================================================================
-# 常量定義
+# Constants
 # ============================================================================
-USER_AGENT = (
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
-    'AppleWebKit/537.36 (KHTML, like Gecko) '
-    'Chrome/120.0.0.0 Safari/537.36'
-)
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 MAX_NEWS_PER_SOURCE = 15
 REQUEST_TIMEOUT = 10
 MAX_WORKERS = 3
 MAX_RETRIES = 3
-RETRY_DELAY = 1  # 秒
-TIMEZONE_OFFSET = 8  # UTC+8
-
+RETRY_DELAY = 1
+TIMEZONE_OFFSET = 8
 
 # ============================================================================
-# 數據類別
+# Data Classes
 # ============================================================================
 @dataclass
 class Article:
-    """文章數據類"""
     title: str
     link: str
     source: str
     category: str
     scraped_at: str = None
-    
+
     def __post_init__(self):
-        if self.scraped_at is None:
+        if not self.scraped_at:
             self.scraped_at = datetime.now(
                 timezone(timedelta(hours=TIMEZONE_OFFSET))
             ).strftime('%Y-%m-%d %H:%M:%S')
-    
-    def to_dict(self) -> Dict:
-        """轉換為字典"""
+
+    def to_dict(self):
         return asdict(self)
 
 
 @dataclass
 class ScraperConfig:
-    """爬蟲配置類"""
     url: str
     source: str
     category: str
     min_title_length: int
+    selector: str = 'a'  # 預設抓取所有 a，但 MeetHK 會覆蓋此設定
     domain_check: Optional[str] = None
     url_pattern: Optional[str] = None
     exclude_titles: Optional[List[str]] = None
     base_url: Optional[str] = None
-    fallback_url: Optional[str] = None  # 備用 URL
-    
+    fallback_url: Optional[str] = None
+
     def __post_init__(self):
         if self.exclude_titles is None:
             self.exclude_titles = []
 
-
 # ============================================================================
-# 網站配置，來源順序定義在這裏
+# HTML Scraper Configs
 # ============================================================================
 SCRAPERS_CONFIG = {
     'unwire': ScraperConfig(
@@ -102,9 +86,7 @@ SCRAPERS_CONFIG = {
         source='NewMobileLife',
         category='科技',
         min_title_length=12,
-        domain_check='newmobilelife.com/20',
-        exclude_titles=['Read More', '更多'],
-        fallback_url='https://www.newmobilelife.com/最新文章/'  # 備用最新文章頁面
+        domain_check='newmobilelife.com/20'
     ),
     'holidaysmart': ScraperConfig(
         url='https://holidaysmart.io/hk',
@@ -112,425 +94,257 @@ SCRAPERS_CONFIG = {
         category='旅遊',
         min_title_length=12,
         url_pattern='/hk/article/',
-        exclude_titles=[
-            'HolidaySmart 假期日常', 'HolidaySmart', '更多', '詳情',
-            '了解更多', '查看更多', 'Read More'
-        ],
         base_url='https://holidaysmart.io'
+    ),
+    'meethk': ScraperConfig(
+        url='https://www.meethk.com/category/flight/',
+        source='MeetHK.com',
+        category='旅遊',
+        min_title_length=12,  # 提高長度，因為機票標題通常很長
+        selector='h2.post-title a, h3.post-title a, .post-title a', # 精確定位標題連結
+        domain_check='meethk.com',
+        url_pattern='/1', 
+        exclude_titles=[
+            '酒店', 'Staycation', 'Hotel', '信用卡',
+            '優惠碼', 'discount code', 'Club Med',
+            'KKday', 'Klook', '套票', 'HopeGoo',
+            '每日更新', 'Hotels.com', 'Trip.com',
+            'Expedia', 'Agoda', 'Booking.com',
+            '閱讀全文', 'Read More'
+        ]
     )
 }
 
-
 # ============================================================================
-# 工具函數
+# Utils
 # ============================================================================
 class URLValidator:
-    """URL 驗證工具類"""
-    
     @staticmethod
-    def is_valid_url(url: str) -> bool:
-        """檢查 URL 是否有效"""
+    def is_valid(url: str) -> bool:
         try:
-            result = urlparse(url)
-            return all([result.scheme, result.netloc])
+            r = urlparse(url)
+            return r.scheme and r.netloc
         except Exception:
             return False
-    
+
     @staticmethod
-    def normalize_url(href: str, base_url: Optional[str] = None) -> str:
-        """
-        標準化 URL（處理相對路徑）
-        
-        Args:
-            href: 原始連結
-            base_url: 基礎 URL
-        
-        Returns:
-            完整 URL
-        """
-        if not href:
-            return ''
-        
-        # 如果已經是完整 URL，直接返回
-        if href.startswith(('http://', 'https://')):
+    def normalize(href: str, base_url: Optional[str]):
+        if not href: return ""
+        if href.startswith('http'):
             return href
-        
-        # 處理相對路徑
         if base_url:
             return urljoin(base_url, href)
-        
         return href
 
 
 class ArticleValidator:
-    """文章驗證工具類"""
-    
     @staticmethod
     def validate(title: str, href: str, config: ScraperConfig) -> bool:
-        """
-        驗證文章是否符合抓取條件
-        
-        Args:
-            title: 文章標題
-            href: 文章連結
-            config: 網站配置
-        
-        Returns:
-            是否符合條件
-        """
-        # 檢查標題長度
         if not title or len(title) < config.min_title_length:
             return False
-        
-        # 檢查要排除的文字
-        if any(exclude in title for exclude in config.exclude_titles):
+        if any(x.lower() in title.lower() for x in config.exclude_titles):
             return False
-        
-        # 檢查 URL 必須滿足的條件
         if config.domain_check and config.domain_check not in href:
             return False
-        
         if config.url_pattern and config.url_pattern not in href:
             return False
-        
-        # 檢查 URL 有效性
-        if not URLValidator.is_valid_url(href):
-            return False
-        
-        return True
-
+        return URLValidator.is_valid(href)
 
 # ============================================================================
-# 爬蟲類
+# HTML Web Scraper
 # ============================================================================
 class WebScraper:
-    """網站爬蟲類"""
-    
     def __init__(self, config: ScraperConfig):
-        """
-        初始化爬蟲
-        
-        Args:
-            config: 爬蟲配置
-        """
         self.config = config
-        self.session = self._create_session()
-    
-    def _create_session(self) -> requests.Session:
-        """創建 requests session"""
-        session = requests.Session()
-        session.headers.update({'User-Agent': USER_AGENT})
-        return session
-    
-    def _fetch_page(self, url: Optional[str] = None) -> Optional[str]:
-        """
-        獲取頁面內容（帶重試機制）
-        
-        Args:
-            url: 要獲取的 URL，如果為 None 則使用 config.url
-        
-        Returns:
-            頁面 HTML 內容
-        """
-        target_url = url or self.config.url
-        
-        for attempt in range(MAX_RETRIES): # 嘗試獲取頁面內容3次
+        self.session = requests.Session()
+        self.session.headers.update({'User-Agent': USER_AGENT})
+
+    def scrape(self) -> List[Article]:
+        try:
+            html = self._fetch(self.config.url)
+            if not html and self.config.fallback_url:
+                html = self._fetch(self.config.fallback_url)
+            if not html:
+                return []
+            return self._parse(html)
+        finally:
+            self.session.close()
+
+    def _fetch(self, url: str) -> Optional[str]:
+        for i in range(MAX_RETRIES):
             try:
-                response = self.session.get(
-                    target_url,
-                    timeout=REQUEST_TIMEOUT
-                )
-                response.raise_for_status()
-                return response.content
-                
-            except requests.HTTPError as e:
-                logger.warning(
-                    f"{self.config.source} HTTP 錯誤 (嘗試 {attempt + 1}/{MAX_RETRIES}): {e}"
-                )
-            except requests.RequestException as e:
-                logger.warning(
-                    f"{self.config.source} 請求失敗 (嘗試 {attempt + 1}/{MAX_RETRIES}): {e}"
-                )
-            
-            # 重試前等待並遞增等待時間
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(RETRY_DELAY * (attempt + 1))
-        
+                r = self.session.get(url, timeout=REQUEST_TIMEOUT)
+                r.raise_for_status()
+                # 解決中文編碼問題
+                r.encoding = r.apparent_encoding
+                return r.text
+            except Exception as e:
+                logger.warning(f"重試 {i+1}/{MAX_RETRIES}: {url} - {e}")
+                time.sleep(RETRY_DELAY)
         return None
-    
-    def _extract_articles(self, html_content: str) -> List[Article]:
-        """
-        從 HTML 提取文章
-        
-        Args:
-            html_content: HTML 內容
-        
-        Returns:
-            文章列表
-        """
-        soup = BeautifulSoup(html_content, 'html.parser')
-        all_links = soup.find_all('a', href=True)
-        
+
+    def _parse(self, html: str) -> List[Article]:
+        soup = BeautifulSoup(html, 'html.parser')
+        seen = set()
         articles = []
-        seen_links: Set[str] = set()
-        
-        for link in all_links:
-            # 達到上限則停止
+
+        # 使用 CSS Selector 定位，避免抓到雜亂的 <a> 標籤
+        targets = soup.select(self.config.selector)
+
+        for a in targets:
             if len(articles) >= MAX_NEWS_PER_SOURCE:
                 break
-            
-            href = link.get('href', '').strip()
-            title = link.text.strip()
-            
-            # 標準化 URL
-            href = URLValidator.normalize_url(href, self.config.base_url)
-            
-            # 驗證文章
+
+            # get_text(strip=True) 能確保抓到 <a> 內部的完整文字，不論是否有 <span> 或其他標籤
+            title = a.get_text(strip=True)
+            href = URLValidator.normalize(a.get('href'), self.config.base_url)
+
             if not ArticleValidator.validate(title, href, self.config):
                 continue
-            
-            # 避免重複
-            if href in seen_links:
+            if href in seen:
                 continue
-            
-            seen_links.add(href)
+
+            seen.add(href)
             articles.append(Article(
                 title=title,
                 link=href,
                 source=self.config.source,
                 category=self.config.category
             ))
-        
-        return articles
-    
-    def scrape(self) -> List[Article]:
-        """
-        執行爬取
-        
-        Returns:
-            文章列表
-        """
-        logger.info(f"正在抓取 {self.config.source}...")
-        
-        try:
-            # 嘗試獲取主頁面
-            html_content = self._fetch_page()
-            
-            # 如果主頁面失敗且有備用 URL，嘗試備用 URL
-            if not html_content and self.config.fallback_url:
-                logger.warning(
-                    f"{self.config.source} 主頁面無法獲取，嘗試備用頁面: {self.config.fallback_url}"
-                )
-                html_content = self._fetch_page(self.config.fallback_url)
-            
-            # 如果還是沒有內容，返回空列表
-            if not html_content:
-                logger.error(f"✗ {self.config.source} 無法獲取頁面內容")
-                return []
-            
-            # 提取文章
-            articles = self._extract_articles(html_content)
-            logger.info(f"✓ {self.config.source} 成功抓取 {len(articles)} 篇文章")
-            return articles
-            
-        except Exception as e:
-            logger.exception(f"✗ {self.config.source} 發生未預期錯誤: {e}")
-            return []
-        finally:
-            self.session.close()
 
+        logger.info(f"✓ {self.config.source} HTML 抓取 {len(articles)} 篇")
+        return articles
 
 # ============================================================================
-# 爬蟲管理器
+# RSS Base Fetcher
+# ============================================================================
+class BaseRSSFetcher:
+    feed_url = ''
+    source = ''
+    category = ''
+
+    def fetch(self) -> List[Article]:
+        try:
+            r = requests.get(self.feed_url, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            feed = feedparser.parse(r.content)
+
+            if feed.bozo:
+                logger.warning(f"RSS 解析警告: {self.source}")
+                return []
+
+            articles = []
+            for e in feed.entries[:MAX_NEWS_PER_SOURCE]:
+                if not e.get('title') or not e.get('link'):
+                    continue
+                articles.append(Article(
+                    title=e.title.strip(),
+                    link=e.link.strip(),
+                    source=self.source,
+                    category=self.category
+                ))
+
+            logger.info(f"✓ {self.source} RSS 抓取 {len(articles)} 篇")
+            return articles
+        except Exception as e:
+            logger.error(f"✗ {self.source} RSS 失敗: {e}")
+            return []
+
+# ============================================================================
+# FlyDay RSS
+# ============================================================================
+class FlyDayRSSFetcher(BaseRSSFetcher):
+    feed_url = 'https://flyday.hk/feed/'
+    source = 'FlyDay.hk'
+    category = '旅遊'
+
+    AIRLINE_KEYWORDS = ['航空', 'hkexpress', 'air', '飛', '航線']
+    DEAL_HINTS = ['優惠', '折', '快閃', '減', '連稅', '起', '出發']
+    EXCLUDE_KEYWORDS = ['酒店', '住宿', '攻略', '教學', '信用卡', '里數']
+
+    def fetch(self) -> List[Article]:
+        articles = super().fetch()
+        filtered = []
+        for a in articles:
+            title = a.title.lower()
+            if any(k in title for k in self.EXCLUDE_KEYWORDS):
+                continue
+            airline_hit = any(k in title for k in self.AIRLINE_KEYWORDS)
+            deal_hit = any(k in title for k in self.DEAL_HINTS)
+            if airline_hit or deal_hit:
+                filtered.append(a)
+        logger.info(f"✓ FlyDay.hk 機票過濾後 {len(filtered)} 篇")
+        return filtered
+
+RSS_FETCHERS = [FlyDayRSSFetcher()]
+
+# ============================================================================
+# Manager
 # ============================================================================
 class ScraperManager:
-    """爬蟲管理器 - 負責協調多個爬蟲的執行"""
-    
-    def __init__(self, configs: Dict[str, ScraperConfig]):
-        """
-        初始化管理器
-        
-        Args:
-            configs: 爬蟲配置字典
-        """
+    def __init__(self, configs):
         self.configs = configs
-    
-    def scrape_all_parallel(self) -> List[Article]:
-        """
-        並行抓取所有網站（保持配置順序）
-        
-        Returns:
-            所有文章列表
-        """
-        results = {}  # 使用字典暫存結果
-        
-        # 並行爬取
-        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-            # 提交所有任務
-            future_to_config = {
-                executor.submit(self._scrape_single, config_key): config_key
-                for config_key in self.configs.keys()
-            }
-            
-            # 收集結果（保存到字典）
-            for future in as_completed(future_to_config):
-                config_key = future_to_config[future]
-                try:
-                    articles = future.result()
-                    results[config_key] = articles
-                except Exception as e:
-                    logger.exception(f"✗ {config_key} 任務執行失敗: {e}")
-                    results[config_key] = []
-        
-        # 按 SCRAPERS_CONFIG 的配置順序合併結果
-        all_articles = []
-        for config_key in self.configs.keys():
-            if config_key in results:
-                all_articles.extend(results[config_key])
-        
-        return all_articles
-    
-    def _scrape_single(self, config_key: str) -> List[Article]:
-        """
-        抓取單個網站
-        
-        Args:
-            config_key: 配置鍵名
-        
-        Returns:
-            文章列表
-        """
-        config = self.configs[config_key]
-        scraper = WebScraper(config)
-        return scraper.scrape()
 
+    def scrape_all(self) -> List[Article]:
+        articles = []
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
+            futures = {
+                ex.submit(WebScraper(cfg).scrape): k
+                for k, cfg in self.configs.items()
+            }
+            for f in as_completed(futures):
+                try:
+                    articles.extend(f.result())
+                except Exception as e:
+                    logger.error(f"抓取失敗: {e}")
+
+        for rss in RSS_FETCHERS:
+            try:
+                articles.extend(rss.fetch())
+            except Exception as e:
+                logger.error(f"RSS 抓取失敗: {e}")
+
+        return self._deduplicate(articles)
+
+    @staticmethod
+    def _deduplicate(articles: List[Article]) -> List[Article]:
+        seen = set()
+        unique = []
+        for a in articles:
+            if a.link in seen:
+                continue
+            seen.add(a.link)
+            unique.append(a)
+        return unique
 
 # ============================================================================
-# 數據存儲
+# Storage
 # ============================================================================
 class DataStorage:
-    """數據存儲類"""
-    
     @staticmethod
-    def save_to_json(
-        articles: List[Article],
-        filename: str = 'news.json'
-    ) -> bool:
-        """
-        保存數據為 JSON 文件
-        
-        Args:
-            articles: 文章列表
-            filename: 文件名
-        
-        Returns:
-            是否保存成功
-        """
-        try:
-            # 準備數據
-            data = {
-                'update_time': datetime.now(
-                    timezone(timedelta(hours=TIMEZONE_OFFSET))
-                ).strftime('%Y-%m-%d %H:%M:%S'),
-                'total_count': len(articles),
-                'sources': list(set(article.source for article in articles)),
-                'categories': list(set(article.category for article in articles)),
-                'news': [article.to_dict() for article in articles]
-            }
-            
-            # 確保目錄存在
-            output_path = Path(filename)
-            output_path.parent.mkdir(parents=True, exist_ok=True)
-            
-            # 保存文件
-            with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            
-            logger.info(f"✓ 已保存到 {filename}")
-            return True
-            
-        except IOError as e:
-            logger.error(f"✗ 保存 JSON 文件失敗: {e}")
-            return False
-    
-    @staticmethod
-    def save_summary(
-        articles: List[Article],
-        filename: str = 'news_summary.txt'
-    ) -> bool:
-        """
-        保存摘要文本
-        
-        Args:
-            articles: 文章列表
-            filename: 文件名
-        
-        Returns:
-            是否保存成功
-        """
-        try:
-            output_path = Path(filename)
-            output_path.parent.mkdir(parents=True, exist_ok=True)
-            
-            with open(output_path, 'w', encoding='utf-8') as f:
-                f.write(f"新聞爬取摘要\n")
-                f.write(f"{'=' * 60}\n")
-                f.write(f"更新時間: {datetime.now(timezone(timedelta(hours=TIMEZONE_OFFSET))).strftime('%Y-%m-%d %H:%M:%S')}\n")
-                f.write(f"總文章數: {len(articles)}\n\n")
-                
-                # 按來源分組
-                by_source = {}
-                for article in articles:
-                    if article.source not in by_source:
-                        by_source[article.source] = []
-                    by_source[article.source].append(article)
-                
-                for source, items in by_source.items():
-                    f.write(f"\n{source} ({len(items)} 篇)\n")
-                    f.write(f"{'-' * 60}\n")
-                    for i, article in enumerate(items, 1):
-                        f.write(f"{i}. {article.title}\n")
-                        f.write(f"   {article.link}\n\n")
-            
-            logger.info(f"✓ 已保存摘要到 {filename}")
-            return True
-            
-        except IOError as e:
-            logger.error(f"✗ 保存摘要失敗: {e}")
-            return False
-
+    def save(articles: List[Article], filename='news.json'):
+        data = {
+            'update_time': datetime.now(
+                timezone(timedelta(hours=TIMEZONE_OFFSET))
+            ).strftime('%Y-%m-%d %H:%M:%S'),
+            'total': len(articles),
+            'news': [a.to_dict() for a in articles]
+        }
+        Path(filename).write_text(
+            json.dumps(data, ensure_ascii=False, indent=2),
+            encoding='utf-8'
+        )
+        logger.info(f"✓ 已輸出 {filename}")
 
 # ============================================================================
-# 主程序
+# Main
 # ============================================================================
 def main():
-    """主函數"""
-    logger.info("=" * 60)
-    logger.info("開始抓取新聞...")
-    logger.info("=" * 60)
-    
-    start_time = time.time()
-    
-    # 創建管理器並執行爬取
-    manager = ScraperManager(SCRAPERS_CONFIG)
-    all_articles = manager.scrape_all_parallel()
-    
-    # 計算執行時間
-    elapsed_time = time.time() - start_time
-    
-    # 保存結果
-    logger.info("=" * 60)
-    logger.info(f"✓ 完成！共抓取 {len(all_articles)} 篇新聞")
-    logger.info(f"✓ 執行時間: {elapsed_time:.2f} 秒")
-    
-    # 保存為 JSON
-    DataStorage.save_to_json(all_articles)
-    
-    # 保存摘要
-    DataStorage.save_summary(all_articles)
-    
-    logger.info("=" * 60)
-
+    logger.info("開始抓取新聞")
+    mgr = ScraperManager(SCRAPERS_CONFIG)
+    articles = mgr.scrape_all()
+    logger.info(f"完成，共 {len(articles)} 篇")
+    DataStorage.save(articles)
 
 if __name__ == '__main__':
     main()
