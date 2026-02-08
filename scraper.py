@@ -98,7 +98,7 @@ SCRAPERS_CONFIG = {
     ),
     'meethk': ScraperConfig(
         url='https://www.meethk.com/category/flight/',
-        source='MeetHK.com',
+        source='MeetHK', # 名稱要和 index.html 中一致，才能對應到圖示
         category='旅遊',
         min_title_length=12,  # 提高長度，因為機票標題通常很長
         selector='h2.post-title a, h3.post-title a, .post-title a', # 精確定位標題連結
@@ -255,7 +255,7 @@ class BaseRSSFetcher:
 # ============================================================================
 class FlyDayRSSFetcher(BaseRSSFetcher):
     feed_url = 'https://flyday.hk/feed/'
-    source = 'FlyDay.hk'
+    source = 'FlyDayhk' # 名稱要和 index.html 中一致，才能對應到圖示
     category = '旅遊'
 
     AIRLINE_KEYWORDS = ['航空', 'hkexpress', 'air', '飛', '航線']
