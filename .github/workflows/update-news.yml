@@ -1,33 +1,97 @@
-name: Auto Update News
-on:
-  schedule:
-    # 每小時整點執行一次
-    - cron: '0 * * * *'
-  workflow_dispatch:  # 允許手動觸發
+# ============================================
+# GitHub Actions 工作流配置文件
+# 功能：自动更新新闻数据
+# ============================================
 
+# 工作流名称（会显示在 GitHub Actions 页面）
+name: Auto Update News
+
+# ============================================
+# 触发条件设定
+# ============================================
+on:
+  # 定时触发器
+  schedule:
+    # cron 表达式说明：
+    # ┌───────────── 分钟 (0 - 59)
+    # │ ┌───────────── 小时 (0 - 23)
+    # │ │ ┌───────────── 日期 (1 - 31)
+    # │ │ │ ┌───────────── 月份 (1 - 12)
+    # │ │ │ │ ┌───────────── 星期 (0 - 6，0 代表星期日)
+    # │ │ │ │ │
+    # * * * * *
+    # 
+    # '0 * * * *' = 每小时的第 0 分钟执行（每小时整点执行一次）
+    - cron: '0 * * * *'
+  
+  # 手动触发选项（可在 GitHub Actions 页面手动运行）
+  workflow_dispatch:
+
+# ============================================
+# 工作任务定义
+# ============================================
 jobs:
+  # 任务 ID：update-news
   update-news:
+    # 指定运行环境：使用最新版本的 Ubuntu Linux
     runs-on: ubuntu-latest
+    
+    # ============================================
+    # 执行步骤（按顺序执行）
+    # ============================================
     steps:
+      # --------------------------------------------
+      # 步骤 1：检出代码仓库
+      # --------------------------------------------
       - name: Checkout repository
+        # 使用 GitHub 官方提供的 checkout action（版本 3）
         uses: actions/checkout@v3
       
+      # --------------------------------------------
+      # 步骤 2：设置 Python 环境
+      # --------------------------------------------
       - name: Set up Python
+        # 使用 GitHub 官方提供的 Python 设置 action（版本 4）
         uses: actions/setup-python@v4
         with:
+          # 指定 Python 版本为 3.10
           python-version: '3.10'
       
+      # --------------------------------------------
+      # 步骤 3：安装 Python 依赖包
+      # --------------------------------------------
       - name: Install dependencies
+        # 运行 shell 命令
         run: |
+          # 使用 pip 安装所需的 Python 套件：
+          # - requests：用于发送 HTTP 请求
+          # - beautifulsoup4：用于解析 HTML 内容
+          # - feedparser：用于解析 RSS/Atom 订阅源
           pip install requests beautifulsoup4 feedparser
       
+      # --------------------------------------------
+      # 步骤 4：执行爬虫脚本
+      # --------------------------------------------
       - name: Run scraper
         run: |
+          # 运行 scraper.py 脚本来抓取新闻数据
           python scraper.py
       
+      # --------------------------------------------
+      # 步骤 5：提交并推送更改到仓库
+      # --------------------------------------------
       - name: Commit and push if changed
         run: |
+          # 配置 Git 用户信息（使用 GitHub Actions 机器人身份）
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # 将 news.json 文件添加到 Git 暂存区
           git add news.json
+          
+          # 检查是否有变更，如果有则提交并推送
+          # git diff --quiet：检查工作区是否有变更
+          # git diff --staged --quiet：检查暂存区是否有变更
+          # || 表示：如果前面的命令失败（有变更），则执行后面的命令
+          # $(date '+%Y-%m-%d %H:%M')：添加当前时间到提交信息
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update news $(date '+%Y-%m-%d %H:%M')" && git push)
