@@ -1,97 +1,97 @@
 # ============================================
-# GitHub Actions 工作流配置文件 (YAML 格式的文件)
-# 功能：自动更新新闻数据
+# GitHub Actions 工作流程設定檔
+# 功能：自動更新新聞資料
 # ============================================
 
-# 工作流名称（会显示在 GitHub Actions 页面）
+# 工作流程名稱（會顯示在 GitHub Actions 頁面）
 name: Auto Update News
 
 # ============================================
-# 触发条件设定
+# 觸發條件設定
 # ============================================
 on:
-  # 定时触发器
+  # 定時觸發器
   schedule:
-    # cron 表达式说明：
-    # ┌───────────── 分钟 (0 - 59)
-    # │ ┌───────────── 小时 (0 - 23)
+    # cron 表達式說明：
+    # ┌───────────── 分鐘 (0 - 59)
+    # │ ┌───────────── 小時 (0 - 23)
     # │ │ ┌───────────── 日期 (1 - 31)
     # │ │ │ ┌───────────── 月份 (1 - 12)
     # │ │ │ │ ┌───────────── 星期 (0 - 6，0 代表星期日)
     # │ │ │ │ │
     # * * * * *
     # 
-    # '0 * * * *' = 每小时的第 0 分钟执行（每小时整点执行一次）
+    # '0 * * * *' = 每小時的第 0 分鐘執行（每小時整點執行一次）
     - cron: '0 * * * *'
   
-  # 手动触发选项（可在 GitHub Actions 页面手动运行）
+  # 手動觸發選項（可在 GitHub Actions 頁面手動執行）
   workflow_dispatch:
 
 # ============================================
-# 工作任务定义
+# 工作任務定義
 # ============================================
 jobs:
-  # 任务 ID：update-news
+  # 任務 ID：update-news
   update-news:
-    # 指定运行环境：使用最新版本的 Ubuntu Linux
+    # 指定執行環境：使用最新版本的 Ubuntu Linux
     runs-on: ubuntu-latest
     
     # ============================================
-    # 执行步骤（按顺序执行）
+    # 執行步驟（按順序執行）
     # ============================================
     steps:
       # --------------------------------------------
-      # 步骤 1：检出代码仓库
+      # 步驟 1：檢出程式碼儲存庫
       # --------------------------------------------
       - name: Checkout repository
         # 使用 GitHub 官方提供的 checkout action（版本 3）
         uses: actions/checkout@v3
       
       # --------------------------------------------
-      # 步骤 2：设置 Python 环境
+      # 步驟 2：設定 Python 環境
       # --------------------------------------------
       - name: Set up Python
-        # 使用 GitHub 官方提供的 Python 设置 action（版本 4）
+        # 使用 GitHub 官方提供的 Python 設定 action（版本 4）
         uses: actions/setup-python@v4
         with:
-          # 指定 Python 版本为 3.10
+          # 指定 Python 版本為 3.10
           python-version: '3.10'
       
       # --------------------------------------------
-      # 步骤 3：安装 Python 依赖包
+      # 步驟 3：安裝 Python 相依套件
       # --------------------------------------------
       - name: Install dependencies
-        # 运行 shell 命令
+        # 執行 shell 指令
         run: |
-          # 使用 pip 安装所需的 Python 套件：
-          # - requests：用于发送 HTTP 请求
-          # - beautifulsoup4：用于解析 HTML 内容
-          # - feedparser：用于解析 RSS/Atom 订阅源
+          # 使用 pip 安裝所需的 Python 套件：
+          # - requests：用於發送 HTTP 請求
+          # - beautifulsoup4：用於解析 HTML 內容
+          # - feedparser：用於解析 RSS/Atom 訂閱來源
           pip install requests beautifulsoup4 feedparser
       
       # --------------------------------------------
-      # 步骤 4：执行爬虫脚本
+      # 步驟 4：執行爬蟲腳本
       # --------------------------------------------
       - name: Run scraper
         run: |
-          # 运行 scraper.py 脚本来抓取新闻数据
+          # 執行 scraper.py 腳本來抓取新聞資料
           python scraper.py
       
       # --------------------------------------------
-      # 步骤 5：提交并推送更改到仓库
+      # 步驟 5：提交並推送變更到儲存庫
       # --------------------------------------------
       - name: Commit and push if changed
         run: |
-          # 配置 Git 用户信息（使用 GitHub Actions 机器人身份）
+          # 設定 Git 使用者資訊（使用 GitHub Actions 機器人身份）
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
-          # 将 news.json 文件添加到 Git 暂存区
+          # 將 news.json 檔案加入到 Git 暫存區
           git add news.json
           
-          # 检查是否有变更，如果有则提交并推送
-          # git diff --quiet：检查工作区是否有变更
-          # git diff --staged --quiet：检查暂存区是否有变更
-          # || 表示：如果前面的命令失败（有变更），则执行后面的命令
-          # $(date '+%Y-%m-%d %H:%M')：添加当前时间到提交信息
+          # 檢查是否有變更，如果有則提交並推送
+          # git diff --quiet：檢查工作區是否有變更
+          # git diff --staged --quiet：檢查暫存區是否有變更
+          # || 表示：如果前面的指令失敗（有變更），則執行後面的指令
+          # $(date '+%Y-%m-%d %H:%M')：在提交訊息中加入當前時間
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update news $(date '+%Y-%m-%d %H:%M')" && git push)

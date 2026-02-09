@@ -8,25 +8,25 @@
 # ============================================================================
 # 匯入需要的工具包（像是借用別人寫好的工具）
 # ============================================================================
-import requests          # 用來訪問網頁，就像打開瀏覽器
-import feedparser        # 用來讀取 RSS 新聞源（一種新聞格式）
-from bs4 import BeautifulSoup  # 用來解析網頁內容，找出我們要的資訊
-import json              # 用來儲存資料成 JSON 格式（一種常見的資料格式）
+import requests                                     # 用來訪問網頁，就像打開瀏覽器
+import feedparser                                   # 用來讀取 RSS 新聞源（一種新聞格式）
+from bs4 import BeautifulSoup                       # 用來解析網頁內容，找出我們要的資訊
+import json                                         # 用來儲存資料成 JSON 格式（一種常見的資料格式）
 from datetime import datetime, timedelta, timezone  # 處理時間日期
 from typing import Dict, List, Optional, Set        # 用來標註變數類型，讓程式更清楚
 from dataclasses import dataclass, asdict           # 用來建立資料結構
 from pathlib import Path                            # 處理檔案路徑
 import logging                                      # 記錄程式執行過程
-from concurrent.futures import ThreadPoolExecutor, as_completed  # 同時做多件事（多線程）
+from concurrent.futures import ThreadPoolExecutor, as_completed # 同時做多件事（多線程）
 from urllib.parse import urljoin, urlparse          # 處理網址
-import time              # 處理時間延遲
+import time                                         # 處理時間延遲
 
 # ============================================================================
 # 設定日誌系統（像是程式的日記本，記錄發生什麼事）
 # ============================================================================
 logging.basicConfig(
     level=logging.INFO,  # 記錄的詳細程度（INFO 是一般訊息）
-    format='%(asctime)s - %(levelname)s - %(message)s'  # 日誌格式：時間 - 等級 - 訊息
+    format='%(asctime)s - %(levelname)s - %(message)s' # 日誌格式：時間 - 等級 - 訊息
 )
 logger = logging.getLogger(__name__)  # 建立一個日誌記錄器
 
@@ -52,10 +52,10 @@ class Article:
     儲存單篇新聞文章的資料結構
     就像一張表格，每一列是一篇新聞的資訊
     """
-    title: str       # 新聞標題
-    link: str        # 新聞連結
-    source: str      # 新聞來源（例如：Unwire.hk）
-    category: str    # 新聞分類（例如：科技、旅遊）
+    title: str              # 新聞標題
+    link: str               # 新聞連結
+    source: str             # 新聞來源（例如：Unwire.hk）
+    category: str           # 新聞分類（例如：科技、旅遊）
     scraped_at: str = None  # 抓取時間（預設是空的）
 
     def __post_init__(self):
@@ -82,16 +82,16 @@ class ScraperConfig:
     爬蟲設定的資料結構
     定義每個網站要怎麼抓取
     """
-    url: str                # 要抓取的網站網址
-    source: str             # 網站名稱
-    category: str           # 新聞分類
-    min_title_length: int   # 標題最短長度（太短的可能不是新聞）
-    selector: str = 'a'     # CSS 選擇器（用來找網頁中的連結，預設抓所有 <a> 標籤）
-    domain_check: Optional[str] = None      # 檢查網址是否包含特定文字
-    url_pattern: Optional[str] = None       # 網址必須包含的特定模式
+    url: str                                    # 要抓取的網站網址
+    source: str                                 # 網站名稱
+    category: str                               # 新聞分類
+    min_title_length: int                       # 標題最短長度（太短的可能不是新聞）
+    selector: str = 'a'                         # CSS 選擇器（用來找網頁中的連結，預設抓所有 <a> 標籤）
+    domain_check: Optional[str] = None          # 檢查網址是否包含特定文字
+    url_pattern: Optional[str] = None           # 網址必須包含的特定模式
     exclude_titles: Optional[List[str]] = None  # 要排除的標題關鍵字
-    base_url: Optional[str] = None          # 基礎網址（用來拼接相對路徑）
-    fallback_url: Optional[str] = None      # 備用網址（主網址失敗時使用）
+    base_url: Optional[str] = None              # 基礎網址（用來拼接相對路徑）
+    fallback_url: Optional[str] = None          # 備用網址（主網址失敗時使用）
 
     def __post_init__(self):
         """
@@ -129,7 +129,7 @@ SCRAPERS_CONFIG = {
         source='HolidaySmart',
         category='旅遊',
         min_title_length=12,
-        url_pattern='/hk/article/',   # 只抓文章頁面
+        url_pattern='/hk/article/',         # 只抓文章頁面
         base_url='https://holidaysmart.io'  # 用來拼接完整網址
     ),
     
@@ -182,11 +182,11 @@ class URLValidator:
         例如：/news/123 + https://example.com = https://example.com/news/123
         """
         if not href: 
-            return ""  # 如果沒有連結，回傳空字串
+            return "" # 如果沒有連結，回傳空字串
         if href.startswith('http'):
-            return href  # 已經是完整網址，直接回傳
+            return href # 已經是完整網址，直接回傳
         if base_url:
-            return urljoin(base_url, href)  # 拼接成完整網址
+            return urljoin(base_url, href) # 拼接成完整網址
         return href
 
 
@@ -508,9 +508,9 @@ class DataStorage:
         data = {
             'update_time': datetime.now(
                 timezone(timedelta(hours=TIMEZONE_OFFSET))
-            ).strftime('%Y-%m-%d %H:%M:%S'),  # 更新時間
-            'total': len(articles),            # 總新聞數
-            'news': [a.to_dict() for a in articles]  # 所有新聞（轉成字典）
+            ).strftime('%Y-%m-%d %H:%M:%S'),            # 更新時間
+            'total': len(articles),                     # 總新聞數
+            'news': [a.to_dict() for a in articles]     # 所有新聞（轉成字典）
         }
         
         # 寫入檔案
