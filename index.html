@@ -1,477 +1,648 @@
-<!DOCTYPE html>
+
+
+<!-- 正確 HTML 註解，HyperText Markup Language 超文字標記語言 -->
+<!DOCTYPE html> 
+<!--
+這個網頁包含以下功能：
+搜尋功能 - 可以搜尋新聞標題
+分類篩選 - 按科技、旅遊等分類過濾
+來源篩選 - 按不同新聞來源過濾
+響應式設計 - 手機和電腦都能正常顯示
+返回頂部 - 捲動時可快速回到頁首
+-->
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📰 我的新聞聚合</title>
-<style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    <!-- ==================== 網頁基本設定 ==================== -->
+    <meta charset="UTF-8">
+    <!-- 設定字符編碼為 UTF-8，支援中文顯示 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 讓網頁在手機上正確顯示，可以自動縮放 -->
+    
+    <title>📰 我的新聞聚合</title>
+    <!-- 網頁標題，會顯示在瀏覽器分頁上 -->
+
+    <!-- ==================== CSS 樣式表開始 ==================== -->
+    <style>
+        /* ========== 全域重置樣式 ========== */
+        /* 移除所有元素的預設邊距和內距，讓樣式更容易控制 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-body {
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", sans-serif;
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-min-height: 100vh;
-padding: 20px;
+
+        /* ========== 網頁主體樣式 ========== */
+        body {
+            /* 設定字體：優先使用系統字體，確保在不同裝置上都美觀 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", sans-serif;
+            
+            /* 背景漸層：從紫藍色漸變到紫色 */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            
+            /* 最小高度設為整個視窗高度 */
+            min-height: 100vh;
+            
+            /* 四周留白 20px */
+            padding: 20px;
         }
-.container {
-max-width: 1200px;
-margin: 0 auto;
+
+        /* ========== 主容器 ========== */
+        .container {
+            /* 最大寬度 1200px，內容不會太寬 */
+            max-width: 1200px;
+            
+            /* 左右自動邊距，讓容器置中 */
+            margin: 0 auto;
         }
-/* Header 樣式 */
-header {
-background: white;
-padding: 30px;
-border-radius: 15px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-margin-bottom: 30px;
+
+        /* ========== 頁首區域 ========== */
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px; /* 圓角 */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* 陰影效果 */
+            margin-bottom: 30px;
         }
-.header-top {
-text-align: center;
-margin-bottom: 25px;
+
+        /* 頁首頂部區域 */
+        .header-top {
+            text-align: center;
+            margin-bottom: 25px;
         }
-h1 {
-color: #667eea;
-font-size: 2.5em;
-margin-bottom: 10px;
+
+        /* 主標題 */
+        h1 {
+            color: #667eea; /* 紫藍色 */
+            font-size: 2.5em; /* 字體大小 */
+            margin-bottom: 10px;
         }
-.stats {
-display: flex;
-justify-content: center;
-gap: 20px;
-flex-wrap: wrap;
-margin-top: 15px;
+
+        /* ========== 統計資訊區 ========== */
+        .stats {
+            display: flex; /* 使用彈性盒子布局 */
+            justify-content: center; /* 水平置中 */
+            gap: 20px; /* 項目間距 */
+            flex-wrap: wrap; /* 允許換行 */
+            margin-top: 15px;
         }
-.stat-item {
-color: #666;
-font-size: 0.9em;
+
+        /* 單個統計項目 */
+        .stat-item {
+            color: #666;
+            font-size: 0.9em;
         }
-.stat-number {
-font-weight: bold;
-color: #667eea;
+
+        /* 統計數字 */
+        .stat-number {
+            font-weight: bold;
+            color: #667eea;
         }
-/* 搜尋框 */
-.search-box {
-margin-bottom: 20px;
+
+        /* ========== 搜尋框區域 ========== */
+        .search-box {
+            margin-bottom: 20px;
         }
-.search-input {
-width: 100%;
-padding: 15px 20px;
-border: 2px solid #e0e0e0;
-border-radius: 25px;
-font-size: 1em;
-transition: all 0.3s;
+
+        /* 搜尋輸入框 */
+        .search-input {
+            width: 100%; /* 寬度 100% */
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px; /* 圓角 */
+            font-size: 1em;
+            transition: all 0.3s; /* 所有變化都有 0.3 秒的過渡效果 */
         }
-.search-input:focus {
-outline: none;
-border-color: #667eea;
-box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+
+        /* 搜尋框被點擊時的樣式 */
+        .search-input:focus {
+            outline: none; /* 移除預設的外框 */
+            border-color: #667eea; /* 邊框變成紫藍色 */
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); /* 添加光暈效果 */
         }
-/* 篩選器 */
-.filters {
-display: flex;
-flex-direction: column;
-gap: 15px;
+
+        /* ========== 篩選器區域 ========== */
+        .filters {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            gap: 15px;
         }
-.filter-section {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
-align-items: center;
+
+        /* 單個篩選區塊 */
+        .filter-section {
+            display: flex;
+            flex-wrap: wrap; /* 允許換行 */
+            gap: 10px;
+            align-items: center; /* 垂直置中對齊 */
         }
-.filter-label {
-font-weight: 600;
-color: #333;
-min-width: 80px;
+
+        /* 篩選器標籤（例如：「分類:」「來源:」） */
+        .filter-label {
+            font-weight: 600;
+            color: #333;
+            min-width: 80px;
         }
-.filter-buttons {
-display: flex;
-gap: 10px;
-flex-wrap: wrap;
-flex: 1;
+
+        /* 篩選按鈕容器 */
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            flex: 1; /* 佔據剩餘空間 */
         }
-.filter-btn {
-padding: 10px 20px;
-border: 2px solid #667eea;
-background: white;
-color: #667eea;
-border-radius: 25px;
-cursor: pointer;
-font-size: 0.9em;
-transition: all 0.3s;
-white-space: nowrap;
+
+        /* 篩選按鈕樣式 */
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #667eea; /* 紫藍色邊框 */
+            background: white;
+            color: #667eea;
+            border-radius: 25px; /* 圓角 */
+            cursor: pointer; /* 滑鼠移上去變成手指 */
+            font-size: 0.9em;
+            transition: all 0.3s; /* 過渡效果 */
+            white-space: nowrap; /* 文字不換行 */
         }
-.filter-btn:hover {
-background: #f0f0f0;
+
+        /* 滑鼠移到按鈕上時 */
+        .filter-btn:hover {
+            background: #f0f0f0; /* 背景變淺灰色 */
         }
-.filter-btn.active {
-background: #667eea;
-color: white;
+
+        /* 按鈕被選中時（啟用狀態） */
+        .filter-btn.active {
+            background: #667eea; /* 背景變紫藍色 */
+            color: white; /* 文字變白色 */
         }
-/* 結果資訊 */
-.results-info {
-background: white;
-padding: 15px 25px;
-border-radius: 10px;
-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-margin-bottom: 20px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-gap: 10px;
+
+        /* ========== 結果資訊區 ========== */
+        .results-info {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between; /* 兩端對齊 */
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-.results-count {
-color: #666;
-font-size: 0.95em;
+
+        /* 結果計數文字 */
+        .results-count {
+            color: #666;
+            font-size: 0.95em;
         }
-.clear-filters {
-padding: 8px 16px;
-background: #ff6b6b;
-color: white;
-border: none;
-border-radius: 20px;
-cursor: pointer;
-font-size: 0.85em;
-transition: all 0.3s;
+
+        /* 清除篩選按鈕 */
+        .clear-filters {
+            padding: 8px 16px;
+            background: #ff6b6b; /* 紅色背景 */
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.3s;
         }
-.clear-filters:hover {
-background: #ff5252;
+
+        /* 滑鼠移到清除按鈕上時 */
+        .clear-filters:hover {
+            background: #ff5252; /* 更深的紅色 */
         }
-.clear-filters.hidden {
-display: none;
+
+        /* 隱藏清除按鈕 */
+        .clear-filters.hidden {
+            display: none;
         }
-/* 新聞網格 */
-.news-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-gap: 20px;
+
+        /* ========== 新聞網格布局 ========== */
+        .news-grid {
+            /* 使用網格布局，自動填充，每個格子最小 320px */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px; /* 格子間距 */
         }
-.news-card {
-background: white;
-padding: 25px;
-border-radius: 15px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-transition: all 0.3s;
-display: flex;
-flex-direction: column;
-gap: 15px;
+
+        /* ========== 新聞卡片 ========== */
+        .news-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* 陰影效果 */
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            gap: 15px;
         }
-.news-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+        /* 滑鼠移到卡片上時 */
+        .news-card:hover {
+            transform: translateY(-5px); /* 向上移動 5px */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* 陰影變深 */
         }
-.news-title {
-font-size: 1.15em;
-color: #333;
-text-decoration: none;
-display: block;
-font-weight: 600;
-line-height: 1.5;
-flex: 1;
+
+        /* 新聞標題 */
+        .news-title {
+            font-size: 1.15em;
+            color: #333;
+            text-decoration: none; /* 移除底線 */
+            display: block;
+            font-weight: 600;
+            line-height: 1.5; /* 行高 */
+            flex: 1; /* 佔據剩餘空間 */
         }
-.news-title:hover {
-color: #667eea;
+
+        /* 滑鼠移到標題上時 */
+        .news-title:hover {
+            color: #667eea; /* 變成紫藍色 */
         }
-.news-meta {
-display: flex;
-gap: 10px;
-font-size: 0.85em;
-color: #666;
-flex-wrap: wrap;
+
+        /* 新聞元資訊（分類、來源） */
+        .news-meta {
+            display: flex;
+            gap: 10px;
+            font-size: 0.85em;
+            color: #666;
+            flex-wrap: wrap;
         }
-.badge {
-background: #667eea;
-color: white;
-padding: 5px 12px;
-border-radius: 12px;
-font-size: 0.85em;
-white-space: nowrap;
+
+        /* 標籤樣式（用於分類） */
+        .badge {
+            background: #667eea; /* 預設紫藍色 */
+            color: white;
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            white-space: nowrap; /* 不換行 */
         }
-.badge.travel {
-background: #f093fb;
+
+        /* 旅遊分類的特殊顏色 */
+        .badge.travel {
+            background: #f093fb; /* 粉紫色 */
         }
-.source-tag {
-color: #888;
-font-size: 0.85em;
-display: flex;
-align-items: center;
-gap: 5px;
+
+        /* 來源標籤 */
+        .source-tag {
+            color: #888;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
-/* 來源圖標 */
-.source-icon {
-display: inline-block;
-width: 16px;
-height: 16px;
+
+        /* 來源圖標 */
+        .source-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
         }
-/* 載入動畫 */
-.loading {
-text-align: center;
-color: white;
-font-size: 1.2em;
-padding: 50px;
+
+        /* ========== 載入動畫 ========== */
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            padding: 50px;
         }
-.spinner {
-border: 4px solid rgba(255,255,255,0.3);
-border-top: 4px solid white;
-border-radius: 50%;
-width: 50px;
-height: 50px;
-animation: spin 1s linear infinite;
-margin: 20px auto;
+
+        /* 旋轉的載入指示器 */
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.3); /* 半透明白色邊框 */
+            border-top: 4px solid white; /* 頂部白色邊框 */
+            border-radius: 50%; /* 圓形 */
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite; /* 無限旋轉動畫 */
+            margin: 20px auto;
         }
-@keyframes spin {
+
+        /* 旋轉動畫定義 */
+        @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-/* 錯誤訊息 */
-.error {
-background: #ff6b6b;
-color: white;
-padding: 20px;
-border-radius: 10px;
-text-align: center;
+
+        /* ========== 錯誤訊息 ========== */
+        .error {
+            background: #ff6b6b; /* 紅色背景 */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
         }
-/* 空狀態 */
-.empty-state {
-background: white;
-padding: 60px 20px;
-border-radius: 15px;
-text-align: center;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+        /* ========== 空狀態（沒有資料時） ========== */
+        .empty-state {
+            background: white;
+            padding: 60px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-.empty-state-icon {
-font-size: 4em;
-margin-bottom: 15px;
+
+        /* 空狀態圖標 */
+        .empty-state-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
         }
-.empty-state-text {
-color: #666;
-font-size: 1.1em;
+
+        /* 空狀態文字 */
+        .empty-state-text {
+            color: #666;
+            font-size: 1.1em;
         }
-/* 返回頂部按鈕 */
-.back-to-top {
-position: fixed;
-bottom: 30px;
-right: 30px;
-background: #667eea;
-color: white;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-border: none;
-cursor: pointer;
-font-size: 1.5em;
-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-transition: all 0.3s;
-opacity: 0;
-visibility: hidden;
+
+        /* ========== 返回頂部按鈕 ========== */
+        .back-to-top {
+            position: fixed; /* 固定定位 */
+            bottom: 30px; /* 距離底部 30px */
+            right: 30px; /* 距離右邊 30px */
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* 圓形按鈕 */
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            opacity: 0; /* 初始透明 */
+            visibility: hidden; /* 初始隱藏 */
         }
-.back-to-top.visible {
-opacity: 1;
-visibility: visible;
+
+        /* 按鈕顯示時 */
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
         }
-.back-to-top:hover {
-background: #5568d3;
-transform: translateY(-3px);
+
+        /* 滑鼠移到按鈕上時 */
+        .back-to-top:hover {
+            background: #5568d3;
+            transform: translateY(-3px); /* 向上移動 */
         }
-/* 響應式設計 */
-@media (max-width: 768px) {
-body {
-padding: 10px;
+
+        /* ========== 手機版響應式設計 ========== */
+        /* 當螢幕寬度小於 768px 時（手機） */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px; /* 減少留白 */
             }
-h1 {
-font-size: 2em;
+            
+            h1 {
+                font-size: 2em; /* 標題變小 */
             }
-header {
-padding: 20px;
+            
+            header {
+                padding: 20px; /* 減少內距 */
             }
-.news-grid {
-grid-template-columns: 1fr;
+            
+            .news-grid {
+                grid-template-columns: 1fr; /* 單列顯示 */
             }
-.filter-section {
-flex-direction: column;
-align-items: flex-start;
+            
+            .filter-section {
+                flex-direction: column; /* 垂直排列 */
+                align-items: flex-start; /* 左對齊 */
             }
-.filter-label {
-width: 100%;
+            
+            .filter-label {
+                width: 100%; /* 標籤佔滿寬度 */
             }
-.results-info {
-flex-direction: column;
-align-items: flex-start;
+            
+            .results-info {
+                flex-direction: column;
+                align-items: flex-start;
             }
-.back-to-top {
-bottom: 20px;
-right: 20px;
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
             }
         }
-</style>
+    </style>
+    <!-- ==================== CSS 樣式表結束 ==================== -->
 </head>
+
 <body>
-<div class="container">
-<header>
-<div class="header-top">
-<h1>📰 我的新聞聚合</h1>
-<div class="stats">
-<div class="stat-item">
+    <div class="container">
+        <!-- ==================== 頁首區域開始 ==================== -->
+        <header>
+            <div class="header-top">
+                <h1>📰 我的新聞聚合</h1>
+                
+                <!-- 統計資訊 -->
+                <div class="stats">
+                    <div class="stat-item">
                         更新時間: <span id="updateTime" class="stat-number">載入中...</span>
-</div>
-<div class="stat-item">
+                    </div>
+                    <div class="stat-item">
                         總文章數: <span id="totalCount" class="stat-number">0</span>
-</div>
-</div>
-</div>
-<!-- 搜尋框 -->
-<div class="search-box">
-<input 
-type="text" 
-id="searchInput" 
-class="search-input" 
-placeholder="🔍 搜尋新聞標題..."
->
-</div>
-<!-- 篩選器 -->
-<div class="filters">
-<div class="filter-section">
-<span class="filter-label">分類:</span>
-<div class="filter-buttons" id="categoryFilters">
-<button class="filter-btn active" data-type="category" data-value="all">全部</button>
-</div>
-</div>
-<div class="filter-section">
-<span class="filter-label">來源:</span>
-<div class="filter-buttons" id="sourceFilters">
-<button class="filter-btn active" data-type="source" data-value="all">全部</button>
-</div>
-</div>
-</div>
-</header>
-<!-- 結果資訊 -->
-<div class="results-info" id="resultsInfo" style="display: none;">
-<span class="results-count" id="resultsCount">顯示 0 篇新聞</span>
-<button class="clear-filters hidden" id="clearFilters">清除篩選</button>
-</div>
-<!-- 新聞容器 -->
-<div id="newsContainer" class="loading">
-<div class="spinner"></div>
-<p>正在載入新聞...</p>
-</div>
-</div>
-<!-- 返回頂部按鈕 -->
-<button class="back-to-top" id="backToTop">↑</button>
-<script>
-// 全域變數
-let allNews = [];
-let currentFilters = {
-category: 'all',
-source: 'all',
-search: ''
+                    </div>
+                </div>
+            </div>
+
+            <!-- 搜尋框 -->
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="🔍 搜尋新聞標題..."
+                >
+            </div>
+
+            <!-- 篩選器區域 -->
+            <div class="filters">
+                <!-- 分類篩選 -->
+                <div class="filter-section">
+                    <span class="filter-label">分類:</span>
+                    <div class="filter-buttons" id="categoryFilters">
+                        <button class="filter-btn active" data-type="category" data-value="all">全部</button>
+                        <!-- 其他分類按鈕會由 JavaScript 動態產生 -->
+                    </div>
+                </div>
+
+                <!-- 來源篩選 -->
+                <div class="filter-section">
+                    <span class="filter-label">來源:</span>
+                    <div class="filter-buttons" id="sourceFilters">
+                        <button class="filter-btn active" data-type="source" data-value="all">全部</button>
+                        <!-- 其他來源按鈕會由 JavaScript 動態產生 -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ==================== 頁首區域結束 ==================== -->
+
+        <!-- ==================== 結果資訊區 ==================== -->
+        <div class="results-info" id="resultsInfo" style="display: none;">
+            <span class="results-count" id="resultsCount">顯示 0 篇新聞</span>
+            <button class="clear-filters hidden" id="clearFilters">清除篩選</button>
+        </div>
+
+        <!-- ==================== 新聞容器 ==================== -->
+        <!-- 這裡會顯示所有新聞卡片，初始顯示載入動畫 -->
+        <div id="newsContainer" class="loading">
+            <div class="spinner"></div>
+            <p>正在載入新聞...</p>
+        </div>
+    </div>
+
+    <!-- ==================== 返回頂部按鈕 ==================== -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <!-- ==================== JavaScript 程式碼開始 ==================== -->
+    <script>
+        // ==================== 全域變數定義 ====================
+        
+        // 儲存所有新聞資料的陣列
+        let allNews = [];
+        
+        // 目前的篩選條件
+        let currentFilters = {
+            category: 'all',  // 分類篩選（預設：全部）
+            source: 'all',    // 來源篩選（預設：全部）
+            search: ''        // 搜尋關鍵字（預設：空白）
         };
 
-// 來源圖標映射（可選）
-const sourceIcons = {
-'Unwire.hk': '💻',
-'NewMobileLife': '📱',
-'FlyDayhk': '🎫',
-'HolidaySmart': '🌴',
-'MeetHK': '✈️'
+        // 來源圖標映射表（可以自訂每個來源的圖標）
+        const sourceIcons = {
+            'Unwire.hk': '💻',
+            'NewMobileLife': '📱',
+            'FlyDayhk': '🎫',
+            'HolidaySmart': '🌴',
+            'MeetHK': '✈️'
         };
 
-// 載入新聞數據
-async function loadNews() {
-try {
-const response = await fetch('news.json');
-if (!response.ok) {
-throw new Error('無法載入新聞數據');
+        // ==================== 主要功能函數 ====================
+
+        /**
+         * 載入新聞資料
+         * 從 news.json 檔案讀取新聞資料並顯示
+         */
+        async function loadNews() {
+            try {
+                // 從伺服器讀取 news.json 檔案
+                const response = await fetch('news.json');
+                
+                // 如果讀取失敗，拋出錯誤
+                if (!response.ok) {
+                    throw new Error('無法載入新聞數據');
                 }
-const data = await response.json();
-allNews = data.news || [];
                 
-// 更新頁面資訊
-document.getElementById('updateTime').textContent = data.update_time || '未知';
-document.getElementById('totalCount').textContent = data.total_count || allNews.length;
+                // 將回應轉換為 JSON 格式
+                const data = await response.json();
                 
-// 初始化篩選器
-initializeFilters();
+                // 將新聞資料存入全域變數
+                allNews = data.news || [];
                 
-// 顯示新聞
-displayNews(allNews);
+                // 更新頁面上的統計資訊
+                document.getElementById('updateTime').textContent = data.update_time || '未知';
+                document.getElementById('totalCount').textContent = data.total_count || allNews.length;
                 
-// 顯示結果資訊
-document.getElementById('resultsInfo').style.display = 'flex';
+                // 初始化篩選器按鈕（根據資料產生分類和來源按鈕）
+                initializeFilters();
+                
+                // 顯示所有新聞
+                displayNews(allNews);
+                
+                // 顯示結果資訊區
+                document.getElementById('resultsInfo').style.display = 'flex';
+                
             } catch (error) {
-showError('載入新聞失敗，請稍後再試');
-console.error('Error:', error);
+                // 如果發生錯誤，顯示錯誤訊息
+                showError('載入新聞失敗，請稍後再試');
+                console.error('Error:', error);
             }
         }
 
-// 初始化篩選器
-function initializeFilters() {
-// 自訂分類順序
-const categoryOrder = ['科技', '旅遊'];
+        /**
+         * 初始化篩選器按鈕
+         * 根據新聞資料動態產生分類和來源的篩選按鈕
+         */
+        function initializeFilters() {
+            // 定義分類的顯示順序
+            const categoryOrder = ['科技', '旅遊'];
             
-// 獲取所有分類並按自訂順序排序
-const allCategories = allNews.map(item => item.category);
-const categories = [...new Set(allCategories)]
+            // 從所有新聞中提取分類，並去除重複項
+            const allCategories = allNews.map(item => item.category);
+            const categories = [...new Set(allCategories)]
                 .sort((a, b) => {
-const indexA = categoryOrder.indexOf(a);
-const indexB = categoryOrder.indexOf(b);
-if (indexA === -1) return 1;
-if (indexB === -1) return -1;
-return indexA - indexB;
+                    // 根據自訂順序排序分類
+                    const indexA = categoryOrder.indexOf(a);
+                    const indexB = categoryOrder.indexOf(b);
+                    if (indexA === -1) return 1;
+                    if (indexB === -1) return -1;
+                    return indexA - indexB;
                 });
-                
-const categoryContainer = document.getElementById('categoryFilters');
-categories.forEach(category => {
-const btn = document.createElement('button');
-btn.className = 'filter-btn';
-btn.dataset.type = 'category';
-btn.dataset.value = category;
-btn.textContent = category;
-categoryContainer.appendChild(btn);
+            
+            // 產生分類按鈕
+            const categoryContainer = document.getElementById('categoryFilters');
+            categories.forEach(category => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.dataset.type = 'category';
+                btn.dataset.value = category;
+                btn.textContent = category;
+                categoryContainer.appendChild(btn);
             });
             
-// 獲取所有來源
-const sources = [...new Set(allNews.map(item => item.source))].sort();
-const sourceContainer = document.getElementById('sourceFilters');
-sources.forEach(source => {
-const btn = document.createElement('button');
-btn.className = 'filter-btn';
-btn.dataset.type = 'source';
-btn.dataset.value = source;
-// 添加圖標（如果有定義）
-const icon = sourceIcons[source] || '';
-btn.textContent = icon ? `${icon} ${source}` : source;
-sourceContainer.appendChild(btn);
+            // 從所有新聞中提取來源，並去除重複項，然後排序
+            const sources = [...new Set(allNews.map(item => item.source))].sort();
+            
+            // 產生來源按鈕
+            const sourceContainer = document.getElementById('sourceFilters');
+            sources.forEach(source => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.dataset.type = 'source';
+                btn.dataset.value = source;
+                
+                // 如果有定義圖標，就加上圖標
+                const icon = sourceIcons[source] || '';
+                btn.textContent = icon ? `${icon} ${source}` : source;
+                sourceContainer.appendChild(btn);
             });
         }
 
-// 顯示新聞
-function displayNews(newsArray) {
-const container = document.getElementById('newsContainer');
+        /**
+         * 顯示新聞
+         * @param {Array} newsArray - 要顯示的新聞陣列
+         */
+        function displayNews(newsArray) {
+            const container = document.getElementById('newsContainer');
             
-// 更新結果計數
-document.getElementById('resultsCount').textContent = 
-`顯示 ${newsArray.length} 篇新聞`;
+            // 更新結果計數
+            document.getElementById('resultsCount').textContent = 
+                `顯示 ${newsArray.length} 篇新聞`;
             
-if (newsArray.length === 0) {
-container.innerHTML = `
+            // 如果沒有新聞，顯示空狀態
+            if (newsArray.length === 0) {
+                container.innerHTML = `
                     <div class="empty-state">
                         <div class="empty-state-icon">📭</div>
                         <div class="empty-state-text">沒有找到符合條件的新聞</div>
                     </div>
                 `;
-return;
+                return;
             }
             
-container.className = 'news-grid';
-container.innerHTML = newsArray.map(item => {
-const icon = sourceIcons[item.source] || '📰';
-return `
+            // 改變容器樣式為網格布局
+            container.className = 'news-grid';
+            
+            // 產生新聞卡片的 HTML
+            container.innerHTML = newsArray.map(item => {
+                // 取得來源圖標，如果沒有定義就用預設的 📰
+                const icon = sourceIcons[item.source] || '📰';
+                
+                return `
                     <div class="news-card" data-category="${item.category}" data-source="${item.source}">
                         <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="news-title">
-${highlightSearchTerm(item.title, currentFilters.search)}
+                            ${highlightSearchTerm(item.title, currentFilters.search)}
                         </a>
                         <div class="news-meta">
                             <span class="badge ${item.category === '旅遊' ? 'travel' : ''}">${item.category}</span>
@@ -485,133 +656,193 @@ ${highlightSearchTerm(item.title, currentFilters.search)}
             }).join('');
         }
 
-// 高亮搜尋關鍵字
-function highlightSearchTerm(text, searchTerm) {
-if (!searchTerm) return text;
-const regex = new RegExp(`(${searchTerm})`, 'gi');
-return text.replace(regex, '<mark style="background: #ffeb3b; padding: 2px 4px; border-radius: 3px;">$1</mark>');
+        /**
+         * 高亮搜尋關鍵字
+         * @param {string} text - 原始文字
+         * @param {string} searchTerm - 搜尋關鍵字
+         * @return {string} - 高亮後的文字
+         */
+        function highlightSearchTerm(text, searchTerm) {
+            // 如果沒有搜尋關鍵字，直接回傳原文
+            if (!searchTerm) return text;
+            
+            // 建立正則表達式，不區分大小寫
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            
+            // 將符合的文字用 mark 標籤包起來（黃色背景）
+            return text.replace(regex, '<mark style="background: #ffeb3b; padding: 2px 4px; border-radius: 3px;">$1</mark>');
         }
 
-// 篩選新聞
-function filterNews() {
-let filtered = allNews;
+        /**
+         * 篩選新聞
+         * 根據目前的篩選條件過濾新聞並顯示
+         */
+        function filterNews() {
+            // 從所有新聞開始
+            let filtered = allNews;
             
-// 分類篩選
-if (currentFilters.category !== 'all') {
-filtered = filtered.filter(item => item.category === currentFilters.category);
+            // 如果有選擇特定分類，進行分類篩選
+            if (currentFilters.category !== 'all') {
+                filtered = filtered.filter(item => item.category === currentFilters.category);
             }
             
-// 來源篩選
-if (currentFilters.source !== 'all') {
-filtered = filtered.filter(item => item.source === currentFilters.source);
+            // 如果有選擇特定來源，進行來源篩選
+            if (currentFilters.source !== 'all') {
+                filtered = filtered.filter(item => item.source === currentFilters.source);
             }
             
-// 搜尋篩選
-if (currentFilters.search) {
-filtered = filtered.filter(item => 
-item.title.toLowerCase().includes(currentFilters.search.toLowerCase())
+            // 如果有輸入搜尋關鍵字，進行搜尋篩選
+            if (currentFilters.search) {
+                filtered = filtered.filter(item => 
+                    item.title.toLowerCase().includes(currentFilters.search.toLowerCase())
                 );
             }
             
-displayNews(filtered);
-updateClearButton();
+            // 顯示篩選後的新聞
+            displayNews(filtered);
+            
+            // 更新清除按鈕的顯示狀態
+            updateClearButton();
         }
 
-// 更新清除按鈕狀態
-function updateClearButton() {
-const clearBtn = document.getElementById('clearFilters');
-const hasActiveFilters = 
-currentFilters.category !== 'all' || 
-currentFilters.source !== 'all' || 
-currentFilters.search !== '';
-                
-if (hasActiveFilters) {
-clearBtn.classList.remove('hidden');
+        /**
+         * 更新清除按鈕的顯示狀態
+         * 如果有任何篩選條件，顯示清除按鈕；否則隱藏
+         */
+        function updateClearButton() {
+            const clearBtn = document.getElementById('clearFilters');
+            
+            // 檢查是否有啟用任何篩選條件
+            const hasActiveFilters = 
+                currentFilters.category !== 'all' || 
+                currentFilters.source !== 'all' || 
+                currentFilters.search !== '';
+            
+            // 根據是否有篩選條件來顯示或隱藏按鈕
+            if (hasActiveFilters) {
+                clearBtn.classList.remove('hidden');
             } else {
-clearBtn.classList.add('hidden');
+                clearBtn.classList.add('hidden');
             }
         }
 
-// 清除所有篩選
-function clearAllFilters() {
-currentFilters = {
-category: 'all',
-source: 'all',
-search: ''
+        /**
+         * 清除所有篩選條件
+         * 重置所有篩選器到初始狀態
+         */
+        function clearAllFilters() {
+            // 重置篩選條件
+            currentFilters = {
+                category: 'all',
+                source: 'all',
+                search: ''
             };
             
-// 重置按鈕狀態
-document.querySelectorAll('.filter-btn').forEach(btn => {
-btn.classList.remove('active');
-if (btn.dataset.value === 'all') {
-btn.classList.add('active');
+            // 重置所有按鈕的啟用狀態
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                // 只有「全部」按鈕設為啟用
+                if (btn.dataset.value === 'all') {
+                    btn.classList.add('active');
                 }
             });
             
-// 清除搜尋框
-document.getElementById('searchInput').value = '';
+            // 清空搜尋框
+            document.getElementById('searchInput').value = '';
             
-// 重新顯示
-filterNews();
+            // 重新顯示所有新聞
+            filterNews();
         }
 
-// 顯示錯誤訊息
-function showError(message) {
-document.getElementById('newsContainer').innerHTML = 
-`<div class="error">⚠️ ${message}</div>`;
+        /**
+         * 顯示錯誤訊息
+         * @param {string} message - 錯誤訊息文字
+         */
+        function showError(message) {
+            document.getElementById('newsContainer').innerHTML = 
+                `<div class="error">⚠️ ${message}</div>`;
         }
 
-// 篩選按鈕點擊事件
-document.addEventListener('click', (e) => {
-if (e.target.classList.contains('filter-btn')) {
-const type = e.target.dataset.type;
-const value = e.target.dataset.value;
+        // ==================== 事件監聽器 ====================
+
+        /**
+         * 篩選按鈕點擊事件
+         * 當使用者點擊分類或來源按鈕時觸發
+         */
+        document.addEventListener('click', (e) => {
+            // 檢查是否點擊了篩選按鈕
+            if (e.target.classList.contains('filter-btn')) {
+                const type = e.target.dataset.type;   // 取得類型（category 或 source）
+                const value = e.target.dataset.value; // 取得值
                 
-// 更新按鈕狀態
-const siblings = e.target.parentElement.querySelectorAll('.filter-btn');
-siblings.forEach(btn => btn.classList.remove('active'));
-e.target.classList.add('active');
+                // 將同一組的所有按鈕設為未啟用
+                const siblings = e.target.parentElement.querySelectorAll('.filter-btn');
+                siblings.forEach(btn => btn.classList.remove('active'));
                 
-// 更新篩選條件
-currentFilters[type] = value;
+                // 將被點擊的按鈕設為啟用
+                e.target.classList.add('active');
                 
-// 執行篩選
-filterNews();
+                // 更新篩選條件
+                currentFilters[type] = value;
+                
+                // 執行篩選
+                filterNews();
             }
         });
 
-// 搜尋功能
-let searchTimeout;
-document.getElementById('searchInput').addEventListener('input', (e) => {
-clearTimeout(searchTimeout);
-searchTimeout = setTimeout(() => {
-currentFilters.search = e.target.value.trim();
-filterNews();
+        /**
+         * 搜尋框輸入事件
+         * 當使用者在搜尋框輸入文字時觸發
+         * 使用防抖動（debounce）技術，避免每次按鍵都執行搜尋
+         */
+        let searchTimeout; // 用於儲存計時器
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            // 清除之前的計時器
+            clearTimeout(searchTimeout);
+            
+            // 設定新的計時器，300 毫秒後執行搜尋
+            // 這樣使用者快速輸入時不會一直觸發搜尋
+            searchTimeout = setTimeout(() => {
+                currentFilters.search = e.target.value.trim();
+                filterNews();
             }, 300);
         });
 
-// 清除篩選按鈕
-document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
+        /**
+         * 清除篩選按鈕點擊事件
+         */
+        document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
 
-// 返回頂部功能
-const backToTopBtn = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-if (window.pageYOffset > 300) {
-backToTopBtn.classList.add('visible');
+        /**
+         * 返回頂部按鈕的顯示控制
+         * 當頁面捲動超過 300px 時顯示按鈕
+         */
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
             } else {
-backToTopBtn.classList.remove('visible');
+                backToTopBtn.classList.remove('visible');
             }
         });
 
-backToTopBtn.addEventListener('click', () => {
-window.scrollTo({
-top: 0,
-behavior: 'smooth'
+        /**
+         * 返回頂部按鈕點擊事件
+         * 平滑捲動回到頁面頂部
+         */
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 平滑捲動效果
             });
         });
 
-// 頁面載入時執行
-document.addEventListener('DOMContentLoaded', loadNews);
-</script>
+        // ==================== 初始化 ====================
+        /**
+         * 當網頁載入完成時，執行 loadNews 函數
+         */
+        document.addEventListener('DOMContentLoaded', loadNews);
+    </script>
+    <!-- ==================== JavaScript 程式碼結束 ==================== -->
 </body>
 </html>
