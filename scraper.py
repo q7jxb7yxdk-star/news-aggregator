@@ -111,7 +111,7 @@ SCRAPERS_CONFIG = {
     # eZone - 科技新聞網站（香港經濟日報）
     'ezone': ScraperConfig(
         url='https://ezone.hk/srae001/loadmore/1',  # 直接呼叫文章載入 API
-        source='e-zone',
+        source='E-zone',
         category='科技',
         min_title_length=8,
         selector='h3.title',          # 只抓標題元素，避免混入作者/日期文字
