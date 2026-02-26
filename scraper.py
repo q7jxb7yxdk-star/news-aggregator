@@ -108,6 +108,22 @@ class ScraperConfig:
 #       因此這裡不再包含 unwire 的設定
 # ============================================================================
 SCRAPERS_CONFIG = {
+    # eZone - 科技新聞網站（香港經濟日報）
+    'ezone': ScraperConfig(
+        url='https://ezone.hk/srae001/loadmore/1',  # 直接呼叫文章載入 API
+        source='e-zone',
+        category='科技',
+        min_title_length=8,
+        selector='h3.title',          # 只抓標題元素，避免混入作者/日期文字
+        domain_check='ezone.hk',
+        url_pattern='/article/',       # ezone 文章網址固定格式
+        base_url='https://ezone.hk',
+        exclude_titles=[
+            '訂閱', '登入', '廣告', '更多', '查看全部',
+            'Privacy', 'Terms', 'Cookie'
+        ]
+    ),
+
     # NewMobileLife - 科技新聞網站
     'newmobilelife': ScraperConfig(
         url='https://www.newmobilelife.com/',
@@ -277,24 +293,40 @@ class WebScraper:
         解析網頁 HTML，找出所有新聞連結
         """
         soup = BeautifulSoup(html, 'html.parser')  # 用 BeautifulSoup 解析 HTML
-        seen = set()  # 用來記錄已經看過的連結（避免重複）
+        seen = set()   # 用來記錄已經看過的連結（避免重複）
         articles = []  # 儲存找到的新聞
 
         # 使用 CSS 選擇器找出所有符合條件的標籤
         targets = soup.select(self.config.selector)
 
-        for a in targets:
+        for tag in targets:
             # 如果已經抓夠數量，就停止
             if len(articles) >= MAX_NEWS_PER_SOURCE:
                 break
 
             # 取得標籤內的文字（標題）
-            title = a.get_text(strip=True)
+            title = tag.get_text(strip=True)
 
-            # 取得連結網址，並轉換成完整網址
-            href = URLValidator.normalize(a.get('href'), self.config.base_url)
+            # 判斷找到的標籤是否為 <a>（連結標籤）
+            # 一般情況：selector 直接選到 <a>，可以直接取 href
+            # eZone 特殊情況：selector 選到 <h3>，本身沒有 href
+            #   → 需要往上尋找包住它的父層 <a> 標籤來取得連結
+            # 例如 ezone 的 HTML 結構：
+            #   <a href="/article/123/...">   ← 連結在外層 <a>
+            #     <h3 class="title">文章標題</h3>  ← selector 選到這裡
+            #   </a>
+            if tag.name != 'a':
+                # 不是 <a> 標籤，往上找最近的父層 <a>
+                parent_a = tag.find_parent('a')
+                href = URLValidator.normalize(
+                    parent_a.get('href') if parent_a else '',
+                    self.config.base_url
+                )
+            else:
+                # 本身就是 <a> 標籤，直接取 href
+                href = URLValidator.normalize(tag.get('href'), self.config.base_url)
 
-            # 檢查這篇文章是否符合條件
+            # 檢查這篇文章是否符合條件（標題長度、排除關鍵字、網址格式等）
             if not ArticleValidator.validate(title, href, self.config):
                 continue  # 不符合就跳過
 
