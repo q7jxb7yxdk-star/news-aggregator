@@ -590,7 +590,7 @@
                 categoryContainer.appendChild(btn);
             });
             
-            // 從所有新聞中提取來源，並去除重複項，然後排序
+            // 從所有新聞中提取來源，並去除重複項，然後排序。 .sort() 是按英文字母自動排序。
             const sources = [...new Set(allNews.map(item => item.source))].sort();
             
             // 產生來源按鈕
