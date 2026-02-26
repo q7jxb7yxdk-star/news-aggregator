@@ -1,9 +1,11 @@
+# ============================================================================
 # 這個Python 腳本的主要功能：
 # 自動抓取新聞 - 從 5 個網站抓取科技和旅遊新聞
 # 智慧過濾 - 排除廣告、優惠碼等不相關內容
 # 去除重複 - 自動刪除重複的新聞
 # 存成檔案 - 最後輸出成 news.json 檔案
 # 執行後會產生一個包含所有新聞的 JSON 檔案，可以用在網站或 App 上顯示最新資訊！
+# ============================================================================
 
 # ============================================================================
 # 匯入需要的工具包（像是借用別人寫好的工具）
@@ -102,18 +104,10 @@ class ScraperConfig:
 
 # ============================================================================
 # HTML 爬蟲設定（定義要抓取哪些網站）
+# 注意：Unwire.hk 已改由 RSS 負責（見下方 UnwireRSSFetcher），
+#       因此這裡不再包含 unwire 的設定
 # ============================================================================
 SCRAPERS_CONFIG = {
-    # Unwire.hk - 科技新聞網站
-    'unwire': ScraperConfig(
-        url='https://unwire.hk/',
-        source='Unwire.hk',
-        category='科技',
-        min_title_length=12,          # 標題至少 12 個字
-        domain_check='unwire.hk',     # 網址必須包含 unwire.hk
-        url_pattern='/20'             # 網址必須包含 /20（通常是年份，確保是文章）
-    ),
-    
     # NewMobileLife - 科技新聞網站
     'newmobilelife': ScraperConfig(
         url='https://www.newmobilelife.com/',
@@ -122,7 +116,7 @@ SCRAPERS_CONFIG = {
         min_title_length=12,
         domain_check='newmobilelife.com/20'  # 確保是 2020 年後的文章
     ),
-    
+
     # HolidaySmart - 旅遊網站
     'holidaysmart': ScraperConfig(
         url='https://holidaysmart.io/hk',
@@ -132,7 +126,7 @@ SCRAPERS_CONFIG = {
         url_pattern='/hk/article/',         # 只抓文章頁面
         base_url='https://holidaysmart.io'  # 用來拼接完整網址
     ),
-    
+
     # MeetHK - 旅遊網站（專注機票資訊）
     'meethk': ScraperConfig(
         url='https://www.meethk.com/category/flight/',
@@ -181,12 +175,12 @@ class URLValidator:
         把相對路徑轉換成完整網址
         例如：/news/123 + https://example.com = https://example.com/news/123
         """
-        if not href: 
-            return "" # 如果沒有連結，回傳空字串
+        if not href:
+            return ""  # 如果沒有連結，回傳空字串
         if href.startswith('http'):
-            return href # 已經是完整網址，直接回傳
+            return href  # 已經是完整網址，直接回傳
         if base_url:
-            return urljoin(base_url, href) # 拼接成完整網址
+            return urljoin(base_url, href)  # 拼接成完整網址
         return href
 
 
@@ -202,19 +196,19 @@ class ArticleValidator:
         # 標題不存在或太短 → 不要
         if not title or len(title) < config.min_title_length:
             return False
-        
+
         # 標題包含排除關鍵字 → 不要
         if any(x.lower() in title.lower() for x in config.exclude_titles):
             return False
-        
+
         # 網址不包含指定的網域 → 不要
         if config.domain_check and config.domain_check not in href:
             return False
-        
+
         # 網址不包含指定的模式 → 不要
         if config.url_pattern and config.url_pattern not in href:
             return False
-        
+
         # 檢查網址格式是否正確
         return URLValidator.is_valid(href)
 
@@ -241,15 +235,15 @@ class WebScraper:
         try:
             # 1. 先嘗試從主網址抓取
             html = self._fetch(self.config.url)
-            
+
             # 2. 如果失敗且有備用網址，就用備用網址
             if not html and self.config.fallback_url:
                 html = self._fetch(self.config.fallback_url)
-            
+
             # 3. 如果還是失敗，回傳空清單
             if not html:
                 return []
-            
+
             # 4. 解析網頁內容，找出新聞
             return self._parse(html)
         finally:
@@ -266,16 +260,16 @@ class WebScraper:
                 # 發送請求，取得網頁
                 r = self.session.get(url, timeout=REQUEST_TIMEOUT)
                 r.raise_for_status()  # 檢查是否成功（如 404, 500 會拋出錯誤）
-                
+
                 # 解決中文編碼問題（自動偵測正確的編碼）
                 r.encoding = r.apparent_encoding
                 return r.text  # 回傳網頁 HTML 原始碼
-                
+
             except Exception as e:
                 # 記錄錯誤訊息
                 logger.warning(f"重試 {i+1}/{MAX_RETRIES}: {url} - {e}")
                 time.sleep(RETRY_DELAY)  # 等待 1 秒後再重試
-        
+
         return None  # 重試 3 次都失敗，回傳 None
 
     def _parse(self, html: str) -> List[Article]:
@@ -287,7 +281,6 @@ class WebScraper:
         articles = []  # 儲存找到的新聞
 
         # 使用 CSS 選擇器找出所有符合條件的標籤
-        # 例如：找出所有 <a> 標籤，或 <h2 class="post-title"> 內的 <a>
         targets = soup.select(self.config.selector)
 
         for a in targets:
@@ -296,23 +289,22 @@ class WebScraper:
                 break
 
             # 取得標籤內的文字（標題）
-            # get_text(strip=True) 會去除前後空白，並合併所有內部文字
             title = a.get_text(strip=True)
-            
+
             # 取得連結網址，並轉換成完整網址
             href = URLValidator.normalize(a.get('href'), self.config.base_url)
 
             # 檢查這篇文章是否符合條件
             if not ArticleValidator.validate(title, href, self.config):
                 continue  # 不符合就跳過
-            
+
             # 檢查是否已經看過這個連結
             if href in seen:
                 continue  # 重複就跳過
 
             # 記錄這個連結，避免重複
             seen.add(href)
-            
+
             # 建立新聞物件並加入清單
             articles.append(Article(
                 title=title,
@@ -345,7 +337,7 @@ class BaseRSSFetcher:
             # 1. 訪問 RSS 網址
             r = requests.get(self.feed_url, timeout=REQUEST_TIMEOUT)
             r.raise_for_status()  # 檢查是否成功
-            
+
             # 2. 解析 RSS 內容
             feed = feedparser.parse(r.content)
 
@@ -360,7 +352,7 @@ class BaseRSSFetcher:
                 # 檢查標題和連結是否存在
                 if not e.get('title') or not e.get('link'):
                     continue
-                
+
                 # 建立新聞物件
                 articles.append(Article(
                     title=e.title.strip(),   # 去除前後空白
@@ -372,10 +364,26 @@ class BaseRSSFetcher:
             # 記錄抓取結果
             logger.info(f"✓ {self.source} RSS 抓取 {len(articles)} 篇")
             return articles
-            
+
         except Exception as e:
             logger.error(f"✗ {self.source} RSS 失敗: {e}")
             return []
+
+# ============================================================================
+# Unwire RSS 抓取器（取代原本的 HTML 爬蟲，確保只取最新文章）
+# ============================================================================
+class UnwireRSSFetcher(BaseRSSFetcher):
+    """
+    Unwire.hk 的 RSS 抓取器。
+
+    改用 RSS 的原因：
+    - HTML 爬蟲會抓到側邊欄、推薦文章、熱門文章等舊內容
+    - RSS Feed 只包含編輯主動推送的最新文章，天生按發布時間降序排列
+    - 直接取前 15 筆即保證是最新 15 篇，無需額外過濾
+    """
+    feed_url = 'https://unwire.hk/feed/'
+    source = 'Unwire.hk'
+    category = '科技'
 
 # ============================================================================
 # FlyDay RSS 抓取器（專門抓取機票優惠新聞）
@@ -391,10 +399,10 @@ class FlyDayRSSFetcher(BaseRSSFetcher):
 
     # 航空公司關鍵字
     AIRLINE_KEYWORDS = ['航空', 'hkexpress', 'air', '飛', '航線']
-    
+
     # 優惠訊息關鍵字
     DEAL_HINTS = ['優惠', '折', '快閃', '減', '連稅', '起', '出發']
-    
+
     # 要排除的關鍵字
     EXCLUDE_KEYWORDS = ['酒店', '住宿', '攻略', '教學', '信用卡', '里數']
 
@@ -404,30 +412,31 @@ class FlyDayRSSFetcher(BaseRSSFetcher):
         """
         # 1. 先用父類別的方法抓取所有新聞
         articles = super().fetch()
-        
+
         filtered = []
         # 2. 逐一檢查每篇新聞
         for a in articles:
             title = a.title.lower()  # 轉成小寫方便比對
-            
+
             # 如果包含排除關鍵字，跳過
             if any(k in title for k in self.EXCLUDE_KEYWORDS):
                 continue
-            
+
             # 檢查是否包含航空公司或優惠關鍵字
             airline_hit = any(k in title for k in self.AIRLINE_KEYWORDS)
             deal_hit = any(k in title for k in self.DEAL_HINTS)
-            
+
             # 如果有符合任一條件，就保留
             if airline_hit or deal_hit:
                 filtered.append(a)
-        
+
         # 記錄過濾結果
         logger.info(f"✓ FlyDay.hk 機票過濾後 {len(filtered)} 篇")
         return filtered
 
-# 所有 RSS 抓取器的清單
-RSS_FETCHERS = [FlyDayRSSFetcher()]
+
+# 所有 RSS 抓取器的清單（新增 UnwireRSSFetcher）
+RSS_FETCHERS = [FlyDayRSSFetcher(), UnwireRSSFetcher()]
 
 # ============================================================================
 # 爬蟲管理器（統一管理所有爬蟲）
@@ -447,7 +456,7 @@ class ScraperManager:
         同時執行所有爬蟲，抓取所有新聞
         """
         articles = []
-        
+
         # 使用多線程同時執行多個爬蟲（加快速度）
         with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
             # 為每個設定建立一個爬蟲任務
@@ -455,7 +464,7 @@ class ScraperManager:
                 ex.submit(WebScraper(cfg).scrape): k
                 for k, cfg in self.configs.items()
             }
-            
+
             # 等待所有任務完成，收集結果
             for f in as_completed(futures):
                 try:
@@ -480,16 +489,16 @@ class ScraperManager:
         """
         seen = set()  # 記錄已看過的連結
         unique = []   # 儲存不重複的新聞
-        
+
         for a in articles:
             # 如果這個連結已經看過，跳過
             if a.link in seen:
                 continue
-            
+
             # 記錄這個連結
             seen.add(a.link)
             unique.append(a)
-        
+
         return unique
 
 # ============================================================================
@@ -512,13 +521,13 @@ class DataStorage:
             'total': len(articles),                     # 總新聞數
             'news': [a.to_dict() for a in articles]     # 所有新聞（轉成字典）
         }
-        
+
         # 寫入檔案
         Path(filename).write_text(
             json.dumps(data, ensure_ascii=False, indent=2),  # 轉成 JSON，保留中文，縮排 2 格
             encoding='utf-8'  # 使用 UTF-8 編碼
         )
-        
+
         logger.info(f"✓ 已輸出 {filename}")
 
 # ============================================================================
@@ -529,16 +538,16 @@ def main():
     主函數 - 程式從這裡開始執行
     """
     logger.info("開始抓取新聞")
-    
+
     # 1. 建立爬蟲管理器
     mgr = ScraperManager(SCRAPERS_CONFIG)
-    
+
     # 2. 執行所有爬蟲，抓取新聞
     articles = mgr.scrape_all()
-    
+
     # 3. 顯示結果
     logger.info(f"完成，共 {len(articles)} 篇")
-    
+
     # 4. 儲存成 JSON 檔案
     DataStorage.save(articles)
 
