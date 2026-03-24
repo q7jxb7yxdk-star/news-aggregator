@@ -1,496 +1,391 @@
 {
-  "update_time": "2026-03-25 03:45:09",
-  "total": 70,
+  "update_time": "2026-03-25 04:29:21",
+  "total": 55,
   "news": [
-    {
-      "title": "蘋果宣佈 WWDC 2026 舉行時間　iOS 27、iPadOS 27、macOS 27、watchOS 27 即將降臨",
-      "link": "https://www.newmobilelife.com/2026/03/24/apple-wwdc-2026-announced-new-os/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "NotebookLM 快速批次轉成可編輯 PPT 之法",
-      "link": "https://www.newmobilelife.com/2026/03/18/notebooklm-editable-ppt/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "macOS Tahoe 26.4 正式發佈　支援 Safari 精簡分頁列與充電限制",
-      "link": "https://www.newmobilelife.com/2026/03/25/macos-tahoe-26-4-safari-charging-limit/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "Apple 正式發佈 iOS 26.4 及 iPadOS 26.4　新功能全面看",
-      "link": "https://www.newmobilelife.com/2026/03/25/apple-ios-26-4-whats-new/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "Perplexity 推出 iOS 版 Comet AI 瀏覽器　內建助理功能",
-      "link": "https://www.newmobilelife.com/2026/03/19/perplexity-comet-ai-browser-iphone/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "Apple 發佈 visionOS 26.4　空間音訊功能顯著改進",
-      "link": "https://www.newmobilelife.com/2026/03/25/apple-visionos-26-4-update/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "視覺化筆記與任務整合　原價 US $4.99《GemNote》限時免費",
-      "link": "https://www.newmobilelife.com/2026/03/24/gemnote-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "Apple 強化 OLED 供應鏈　大幅降低對中國廠商依賴",
-      "link": "https://www.newmobilelife.com/2026/03/24/apple-oled-supply-chain-reduce-china-reliance/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "Apple 發佈 iOS 26.4 及 iPadOS 26.4 RC　新功能全面看",
-      "link": "https://www.newmobilelife.com/2026/03/19/apple-ios-26-4-rc/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "萬用桌遊計分助手　原價 US $4.99《ScoreMaster》限時免費",
-      "link": "https://www.newmobilelife.com/2026/03/14/scoremaster-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "Google Maps 推出沉浸式導航　十年來最大駕駛體驗更新",
-      "link": "https://www.newmobilelife.com/2026/03/14/google-maps-immersive-navigation-update/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "OpenAI 發佈 GPT-5.4 模型　整合編碼與電腦操作能力",
-      "link": "https://www.newmobilelife.com/2026/03/06/openai-gpt-5-4-releases/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "MacBook Neo VS MacBook Air 規格詳解",
-      "link": "https://www.newmobilelife.com/2026/03/05/macbook-neo-vs-macbook-air/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "簡單易用計算助手　原價 US $0.99《EasyCalc》終生版限時免費",
-      "link": "https://www.newmobilelife.com/2026/03/23/easycalc-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "打造個人智慧第二大腦　原價 US $79.99《Wiz Note AI》終生版限時免費",
-      "link": "https://www.newmobilelife.com/2026/03/23/wiz-note-ai-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "美食推介．主題特集．【JetsoWong著數王】【荔枝角放題】$28任食炸雞皮餃子+薯條！限時兩小時 無限次追加真係超抵！ 荔枝角 一間餐廳近日推出「炸雞皮餃子&薯條」 放題 優惠，只需$28就可以兩小時無限任食香口炸雞皮餃子以及香...4 days ago",
-      "link": "https://holidaysmart.io/hk/article/468992/%E8%8D%94%E6%9E%9D%E8%A7%92%E6%94%BE%E9%A1%8C-%E4%BB%BB%E9%A3%9F%E7%82%B8%E9%9B%9E%E7%9A%AE%E9%A4%83%E5%AD%90%E8%96%AF%E6%A2%9D",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "美食推介．日本旅遊．日韓旅遊【日本杯麵2026】日本10大必食杯麵推介！芝士咖喱、辣番茄口味、日式炒麵手信必買杯麵 無論作為正餐或零嘴都相當受歡迎， 日本 作為杯麵大國亦有生產不少口味新奇、惹味的杯麵！今次小編就為大家推介2026...7 days ago",
-      "link": "https://holidaysmart.io/hk/article/468909/%E6%97%A5%E6%9C%AC%E6%9D%AF%E9%BA%B52026-%E6%97%A5%E6%9C%AC10%E5%A4%A7%E5%BF%85%E9%A3%9F%E6%9D%AF%E9%BA%B5%E6%8E%A8%E4%BB%8B",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "購物著數．生活百貨．主題特集．【JetsoWong著數王】【名牌平替】Ralph Lauren經典款外套$400有找？ MUJI平替慳足$2000 網友：版型很好！作為小資女孩、小資男孩，最鍾意捐窿捐罅搵平嘢？最近就有網友行 MUJI 發現一件Ralph Lauren「神級 平替 」...7 days ago",
-      "link": "https://holidaysmart.io/hk/article/468920/%E5%90%8D%E7%89%8C%E5%B9%B3%E6%9B%BF-ralph-lauren%E7%B6%93%E5%85%B8%E6%AC%BE%E5%A4%96%E5%A5%97400%E6%9C%89%E6%89%BE",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "購物著數．主題特集．【JetsoWong著數王】【超市優惠】全港6大超市隱藏「減價時間表」！AEON＋DONKI壽司半價／一田+百佳清貨時段攻略！「慳錢」絕對是一門易學難精的學問～小編今次就醒大家其中一個 慳錢 攻略！原來全港6大超市（包括 DONKI、AEON、一...8 days ago",
-      "link": "https://holidaysmart.io/hk/article/468896/%E8%B6%85%E5%B8%82%E5%84%AA%E6%83%A0-%E5%85%A8%E6%B8%AF6%E5%A4%A7%E8%B6%85%E5%B8%82%E9%9A%B1%E8%97%8F%E6%B8%9B%E5%83%B9%E6%99%82%E9%96%93%E8%A1%A8",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "主題特集．【JetsoWong著數王】【大家樂外賣】新增「外賣自取智能櫃」迎新送$100優惠券 2大地區率先試行！打工仔福音！ 大家樂 近日被發現於兩大上班區引入外賣智能櫃服務，顧客只需於每天早上10:30前完成下單，中午12:00即...12 days ago",
-      "link": "https://holidaysmart.io/hk/article/468883/%E5%A4%A7%E5%AE%B6%E6%A8%82%E5%A4%96%E8%B3%A3%E5%84%AA%E6%83%A0-%E6%96%B0%E5%A2%9E%E5%A4%96%E8%B3%A3%E8%87%AA%E5%8F%96%E6%99%BA%E8%83%BD%E6%AB%83",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "主題特集．【JetsoWong著數王】【豐澤開倉優惠】3月特賣場低至19折！必搶Apple iPad Air／Samsung手機／Dyson（附登記詳情）豐澤 超筍開倉優惠！豐澤2026年荃灣特賣場將會由3月27日起開始，將劈價出售各款人氣品牌的電子產品及家電，優惠低至19...12 days ago",
-      "link": "https://holidaysmart.io/hk/article/468875/%E8%B1%90%E6%BE%A4%E9%96%8B%E5%80%89%E5%84%AA%E6%83%A0-3%E6%9C%88%E7%89%B9%E8%B3%A3%E5%A0%B4%E4%BD%8E%E8%87%B319%E6%8A%98",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "購物著數．主題特集．【JetsoWong著數王】【Hisso結業】本地時裝店宣布全線結業 清貨優惠低至1折 當季上衣／牛仔褲／外套$99起入手！本地商舖 結業 潮持續，近日開業15年港產潮牌時裝店HISSO及其姊妹店Story Behind就在社交平台宣布，品牌將...15 days ago",
-      "link": "https://holidaysmart.io/hk/article/468806/hisso%E7%B5%90%E6%A5%AD-%E6%B8%85%E8%B2%A8%E5%84%AA%E6%83%A0%E4%BD%8E%E8%87%B31%E6%8A%98",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "購物著數【恆香老餅家優惠】恆香老婆餅節推三重賞禮！免費送心形老婆餅 禮盒88折想試心形老婆餅？快啲望過啦！香港老字號「 恆香 老餅家」今年首度推出「恆香老婆餅節」，除了會限定在3月推出三重賞禮遇，更...18 days ago",
-      "link": "https://holidaysmart.io/hk/article/468792/%E6%81%86%E9%A6%99%E8%80%81%E9%A4%85%E5%AE%B6%E5%84%AA%E6%83%A0-%E6%81%86%E9%A6%99%E8%80%81%E5%A9%86%E9%A4%85%E7%AF%80",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "美食推介．韓國旅遊．旅遊攻略．日韓旅遊【韓國手信2026】首爾必買10大零食推介！爆紅杜拜朱古力麻糬／原顆水果大福／新派藥果（附詳細地址）去 韓國 買咩手信好？仲買緊紫菜、朱古力批就太冇新意喇！小編今次就為大家帶來首爾2026年必買10大零食...19 days ago",
-      "link": "https://holidaysmart.io/hk/article/468757/%E9%9F%93%E5%9C%8B%E6%89%8B%E4%BF%A12026-%E9%A6%96%E7%88%BE%E5%BF%85%E8%B2%B710%E5%A4%A7%E9%9B%B6%E9%A3%9F%E6%8E%A8%E4%BB%8B",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "購物著數．生活百貨．網購超市信用卡優惠2026｜10大信用卡消費回贈！百佳／惠康／AEON／SOGO 最高賺8%正所謂「小數怕長計」，想做精明消費者慳錢絕對要從生活入手！小編已經為大家整理10大超市 優惠...20 days ago",
-      "link": "https://holidaysmart.io/hk/article/468701/%E8%B6%85%E5%B8%82%E4%BF%A1%E7%94%A8%E5%8D%A1%E5%84%AA%E6%83%A02026-10%E5%A4%A7%E4%BF%A1%E7%94%A8%E5%8D%A1%E6%B6%88%E8%B2%BB%E5%9B%9E%E8%B4%88",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "美食推介．餐廳推薦燒味推介2026｜香港10大必食燒味店！Brian力推肥燶叉燒／古法燒鵝／脆皮燒肉（附地址／營業時間詳情）燒味 是香港地道 美食 之一，坊間不乏港人及遊客熱捧的叉燒、燒鵝等餐廳。但芸芸中究竟邊幾間最「Dope」？小編已經幫大家...21 days ago",
-      "link": "https://holidaysmart.io/hk/article/468664/%E7%87%92%E5%91%B3%E6%8E%A8%E4%BB%8B2026-%E9%A6%99%E6%B8%AF10%E5%A4%A7%E5%BF%85%E9%A3%9F%E7%87%92%E5%91%B3%E5%BA%97",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "美食推介．主題特集．【JetsoWong著數王】【油麻地點心放題優惠】城景國際午市任食40+款點心！低至$238/位 暢食蝦餃皇+鵪鶉蛋燒賣油麻地 城景國際酒店樂雅軒再有優惠推出！今次有期間限定「任點 任食 點心套餐」，低至$2...22 days ago",
-      "link": "https://holidaysmart.io/hk/article/468655/%E6%B2%B9%E9%BA%BB%E5%9C%B0%E9%BB%9E%E5%BF%83%E6%94%BE%E9%A1%8C%E5%84%AA%E6%83%A0-%E5%8D%88%E5%B8%82%E4%BB%BB%E9%A3%9F40%E6%AC%BE%E9%BB%9E%E5%BF%83",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "226 Feb【日本藥妝店必買2026】16款大熱產品推薦！護膚品＋洗髮水＋人氣面膜 ？呢2款香港都有得買！",
-      "link": "https://holidaysmart.io/hk/article/466855/%E6%97%A5%E6%9C%AC%E8%97%A5%E5%A6%9D%E5%BA%97%E5%BF%85%E8%B2%B72026",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "402 Mar【麥當勞限時優惠】會員100分加購魚柳飽睡衣套裝！免費換即磨咖啡+漢堡包（附換購攻略）",
-      "link": "https://holidaysmart.io/hk/article/468640/%E9%BA%A5%E7%95%B6%E5%8B%9E%E9%99%90%E6%99%82%E5%84%AA%E6%83%A0-%E5%84%AA%E6%83%A0%E8%91%97%E6%95%B8-%E6%96%B0%E5%93%81",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
-    {
-      "title": "526 Feb【Häagen-Dazs全新雪糕登場】芒椰西柚＋士多啤梨柚子口味！ 限時優惠平均$20一盒！",
-      "link": "https://holidaysmart.io/hk/article/468589/haagen-dazs-%E6%96%B0%E5%93%81-%E9%9B%AA%E7%B3%95%E6%89%B9-%E9%99%90%E6%99%82%E5%84%AA%E6%83%A0-%E8%91%97%E6%95%B8",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
-    },
     {
       "title": "國泰飛札幌！連稅3千9起！7月10日前出發！香港飛札幌來回連稅只需$3,917起 – 國泰航空 (優惠至3月31日)",
       "link": "https://www.meethk.com/158990/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "嘩！日航JAL飛東京連稅2千7起！6月30日前出發！包2件各23kg寄艙行李！香港飛東京成田來回連稅只需$2,785起 – 日本航空 (優惠至3月31日)",
       "link": "https://www.meethk.com/159061/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "泰國限時優惠！6月30日前出發！香港飛曼谷/布吉/清邁單程只需$128起 – HK Express (優惠至3月25日)",
       "link": "https://www.meethk.com/159039/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "連稅千三起飛濟州！包15kg寄艙行李！4月份出發！香港飛濟州來回連稅只需$1,315起 – 真航空 Jin Air",
       "link": "https://www.meethk.com/158994/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "星宇飛台北！連稅千二！7月15日前出發！趕喺加燃油附加費前入手！包23kg寄艙行李！香港飛台北來回連稅只需$1,203起 – 星宇航空 (優惠至3月22日)",
       "link": "https://www.meethk.com/158907/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "嘩！真心抵！星宇飛美國連稅4千3起！趕係加燃油附加費前入手！包2件各23kg寄艙行李！香港飛洛杉磯、三藩市來回連稅只需$4,320起 – 星宇航空 (優惠至3月22日)",
       "link": "https://www.meethk.com/158999/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "嘩！大專生機票優惠返嚟啦～可以帶埋屋企人/朋友一齊出發！日/韓/台/東南亞等20多個航點單程只需$98起！47間指定大專院校都有份 (優惠至3月22日)",
       "link": "https://www.meethk.com/158954/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "高質ANA飛東京！連稅3千起！暑假旺季都有！9月30日前出發！可”免費”加多兩程國內航段！香港飛東京來回連稅只需$3,070起、札幌$3,076起 – ANA全日空 (優惠至3月31日)",
       "link": "https://www.meethk.com/158923/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "【永安旅遊 x 澳洲航空】澳洲/新西蘭機票優惠！無門檻勁減$250！來回連稅：直飛悉尼$5,045起、直飛墨爾本$5,156起、基督城/奧克蘭/威靈頓$6,818起！",
       "link": "https://www.meethk.com/158802/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "加燃油附加費前最後入手機會！連稅九百飛台北！10月21日前出發！香港飛台北來回連稅只需$901起 – 大灣區航空",
       "link": "https://www.meethk.com/158849/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:04"
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "美食推介．主題特集．【JetsoWong著數王】【荔枝角放題】$28任食炸雞皮餃子+薯條！限時兩小時 無限次追加真係超抵！ 荔枝角 一間餐廳近日推出「炸雞皮餃子&薯條」 放題 優惠，只需$28就可以兩小時無限任食香口炸雞皮餃子以及香...4 days ago",
+      "link": "https://holidaysmart.io/hk/article/468992/%E8%8D%94%E6%9E%9D%E8%A7%92%E6%94%BE%E9%A1%8C-%E4%BB%BB%E9%A3%9F%E7%82%B8%E9%9B%9E%E7%9A%AE%E9%A4%83%E5%AD%90%E8%96%AF%E6%A2%9D",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "美食推介．日本旅遊．日韓旅遊【日本杯麵2026】日本10大必食杯麵推介！芝士咖喱、辣番茄口味、日式炒麵手信必買杯麵 無論作為正餐或零嘴都相當受歡迎， 日本 作為杯麵大國亦有生產不少口味新奇、惹味的杯麵！今次小編就為大家推介2026...7 days ago",
+      "link": "https://holidaysmart.io/hk/article/468909/%E6%97%A5%E6%9C%AC%E6%9D%AF%E9%BA%B52026-%E6%97%A5%E6%9C%AC10%E5%A4%A7%E5%BF%85%E9%A3%9F%E6%9D%AF%E9%BA%B5%E6%8E%A8%E4%BB%8B",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "購物著數．生活百貨．主題特集．【JetsoWong著數王】【名牌平替】Ralph Lauren經典款外套$400有找？ MUJI平替慳足$2000 網友：版型很好！作為小資女孩、小資男孩，最鍾意捐窿捐罅搵平嘢？最近就有網友行 MUJI 發現一件Ralph Lauren「神級 平替 」...7 days ago",
+      "link": "https://holidaysmart.io/hk/article/468920/%E5%90%8D%E7%89%8C%E5%B9%B3%E6%9B%BF-ralph-lauren%E7%B6%93%E5%85%B8%E6%AC%BE%E5%A4%96%E5%A5%97400%E6%9C%89%E6%89%BE",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "購物著數．主題特集．【JetsoWong著數王】【超市優惠】全港6大超市隱藏「減價時間表」！AEON＋DONKI壽司半價／一田+百佳清貨時段攻略！「慳錢」絕對是一門易學難精的學問～小編今次就醒大家其中一個 慳錢 攻略！原來全港6大超市（包括 DONKI、AEON、一...8 days ago",
+      "link": "https://holidaysmart.io/hk/article/468896/%E8%B6%85%E5%B8%82%E5%84%AA%E6%83%A0-%E5%85%A8%E6%B8%AF6%E5%A4%A7%E8%B6%85%E5%B8%82%E9%9A%B1%E8%97%8F%E6%B8%9B%E5%83%B9%E6%99%82%E9%96%93%E8%A1%A8",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "主題特集．【JetsoWong著數王】【大家樂外賣】新增「外賣自取智能櫃」迎新送$100優惠券 2大地區率先試行！打工仔福音！ 大家樂 近日被發現於兩大上班區引入外賣智能櫃服務，顧客只需於每天早上10:30前完成下單，中午12:00即...12 days ago",
+      "link": "https://holidaysmart.io/hk/article/468883/%E5%A4%A7%E5%AE%B6%E6%A8%82%E5%A4%96%E8%B3%A3%E5%84%AA%E6%83%A0-%E6%96%B0%E5%A2%9E%E5%A4%96%E8%B3%A3%E8%87%AA%E5%8F%96%E6%99%BA%E8%83%BD%E6%AB%83",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "主題特集．【JetsoWong著數王】【豐澤開倉優惠】3月特賣場低至19折！必搶Apple iPad Air／Samsung手機／Dyson（附登記詳情）豐澤 超筍開倉優惠！豐澤2026年荃灣特賣場將會由3月27日起開始，將劈價出售各款人氣品牌的電子產品及家電，優惠低至19...12 days ago",
+      "link": "https://holidaysmart.io/hk/article/468875/%E8%B1%90%E6%BE%A4%E9%96%8B%E5%80%89%E5%84%AA%E6%83%A0-3%E6%9C%88%E7%89%B9%E8%B3%A3%E5%A0%B4%E4%BD%8E%E8%87%B319%E6%8A%98",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "購物著數．主題特集．【JetsoWong著數王】【Hisso結業】本地時裝店宣布全線結業 清貨優惠低至1折 當季上衣／牛仔褲／外套$99起入手！本地商舖 結業 潮持續，近日開業15年港產潮牌時裝店HISSO及其姊妹店Story Behind就在社交平台宣布，品牌將...15 days ago",
+      "link": "https://holidaysmart.io/hk/article/468806/hisso%E7%B5%90%E6%A5%AD-%E6%B8%85%E8%B2%A8%E5%84%AA%E6%83%A0%E4%BD%8E%E8%87%B31%E6%8A%98",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "購物著數【恆香老餅家優惠】恆香老婆餅節推三重賞禮！免費送心形老婆餅 禮盒88折想試心形老婆餅？快啲望過啦！香港老字號「 恆香 老餅家」今年首度推出「恆香老婆餅節」，除了會限定在3月推出三重賞禮遇，更...18 days ago",
+      "link": "https://holidaysmart.io/hk/article/468792/%E6%81%86%E9%A6%99%E8%80%81%E9%A4%85%E5%AE%B6%E5%84%AA%E6%83%A0-%E6%81%86%E9%A6%99%E8%80%81%E5%A9%86%E9%A4%85%E7%AF%80",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "美食推介．韓國旅遊．旅遊攻略．日韓旅遊【韓國手信2026】首爾必買10大零食推介！爆紅杜拜朱古力麻糬／原顆水果大福／新派藥果（附詳細地址）去 韓國 買咩手信好？仲買緊紫菜、朱古力批就太冇新意喇！小編今次就為大家帶來首爾2026年必買10大零食...19 days ago",
+      "link": "https://holidaysmart.io/hk/article/468757/%E9%9F%93%E5%9C%8B%E6%89%8B%E4%BF%A12026-%E9%A6%96%E7%88%BE%E5%BF%85%E8%B2%B710%E5%A4%A7%E9%9B%B6%E9%A3%9F%E6%8E%A8%E4%BB%8B",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "購物著數．生活百貨．網購超市信用卡優惠2026｜10大信用卡消費回贈！百佳／惠康／AEON／SOGO 最高賺8%正所謂「小數怕長計」，想做精明消費者慳錢絕對要從生活入手！小編已經為大家整理10大超市 優惠...20 days ago",
+      "link": "https://holidaysmart.io/hk/article/468701/%E8%B6%85%E5%B8%82%E4%BF%A1%E7%94%A8%E5%8D%A1%E5%84%AA%E6%83%A02026-10%E5%A4%A7%E4%BF%A1%E7%94%A8%E5%8D%A1%E6%B6%88%E8%B2%BB%E5%9B%9E%E8%B4%88",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "美食推介．餐廳推薦燒味推介2026｜香港10大必食燒味店！Brian力推肥燶叉燒／古法燒鵝／脆皮燒肉（附地址／營業時間詳情）燒味 是香港地道 美食 之一，坊間不乏港人及遊客熱捧的叉燒、燒鵝等餐廳。但芸芸中究竟邊幾間最「Dope」？小編已經幫大家...21 days ago",
+      "link": "https://holidaysmart.io/hk/article/468664/%E7%87%92%E5%91%B3%E6%8E%A8%E4%BB%8B2026-%E9%A6%99%E6%B8%AF10%E5%A4%A7%E5%BF%85%E9%A3%9F%E7%87%92%E5%91%B3%E5%BA%97",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "美食推介．主題特集．【JetsoWong著數王】【油麻地點心放題優惠】城景國際午市任食40+款點心！低至$238/位 暢食蝦餃皇+鵪鶉蛋燒賣油麻地 城景國際酒店樂雅軒再有優惠推出！今次有期間限定「任點 任食 點心套餐」，低至$2...22 days ago",
+      "link": "https://holidaysmart.io/hk/article/468655/%E6%B2%B9%E9%BA%BB%E5%9C%B0%E9%BB%9E%E5%BF%83%E6%94%BE%E9%A1%8C%E5%84%AA%E6%83%A0-%E5%8D%88%E5%B8%82%E4%BB%BB%E9%A3%9F40%E6%AC%BE%E9%BB%9E%E5%BF%83",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "226 Feb【日本藥妝店必買2026】16款大熱產品推薦！護膚品＋洗髮水＋人氣面膜 ？呢2款香港都有得買！",
+      "link": "https://holidaysmart.io/hk/article/466855/%E6%97%A5%E6%9C%AC%E8%97%A5%E5%A6%9D%E5%BA%97%E5%BF%85%E8%B2%B72026",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "402 Mar【麥當勞限時優惠】會員100分加購魚柳飽睡衣套裝！免費換即磨咖啡+漢堡包（附換購攻略）",
+      "link": "https://holidaysmart.io/hk/article/468640/%E9%BA%A5%E7%95%B6%E5%8B%9E%E9%99%90%E6%99%82%E5%84%AA%E6%83%A0-%E5%84%AA%E6%83%A0%E8%91%97%E6%95%B8-%E6%96%B0%E5%93%81",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
+    },
+    {
+      "title": "526 Feb【Häagen-Dazs全新雪糕登場】芒椰西柚＋士多啤梨柚子口味！ 限時優惠平均$20一盒！",
+      "link": "https://holidaysmart.io/hk/article/468589/haagen-dazs-%E6%96%B0%E5%93%81-%E9%9B%AA%E7%B3%95%E6%89%B9-%E9%99%90%E6%99%82%E5%84%AA%E6%83%A0-%E8%91%97%E6%95%B8",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-03-25 04:29:20"
     },
     {
       "title": "舊版iOS用家高危！DarkSword間諜軟件代碼遭公開下載 駭客更易偷個資【Apple促即做1動作】",
       "link": "https://ezone.hk/article/20092582/%E8%88%8A%E7%89%88iOS%E7%94%A8%E5%AE%B6%E9%AB%98%E5%8D%B1-DarkSword%E9%96%93%E8%AB%9C%E8%BB%9F%E4%BB%B6%E4%BB%A3%E7%A2%BC%E9%81%AD%E5%85%AC%E9%96%8B%E4%B8%8B%E8%BC%89-%E9%A7%AD%E5%AE%A2%E6%9B%B4%E6%98%93%E5%81%B7%E5%80%8B%E8%B3%87-Apple%E4%BF%83%E5%8D%B3%E5%81%9A1%E5%8B%95%E4%BD%9C",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "史上最貴 iPhone 最快 9 月殺到？ 傳 Apple 首部「大摺」定價直逼兩萬！擁 3 大黑科技：真係值呢個價？",
       "link": "https://ezone.hk/article/20092547/%E5%8F%B2%E4%B8%8A%E6%9C%80%E8%B2%B4-iPhone-%E6%9C%80%E5%BF%AB-9-%E6%9C%88%E6%AE%BA%E5%88%B0-%E5%82%B3-Apple-%E9%A6%96%E9%83%A8-%E5%A4%A7%E6%91%BA-%E5%AE%9A%E5%83%B9%E7%9B%B4%E9%80%BC%E5%85%A9%E8%90%AC-%E6%93%81-3-%E5%A4%A7%E9%BB%91%E7%A7%91%E6%8A%80-%E7%9C%9F%E4%BF%82%E5%80%BC%E5%91%A2%E5%80%8B%E5%83%B9",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "Android 終於用到 AirDrop！ Samsung S26 破天荒支援 iPhone 原圖互傳：一鍵跨平台過相 不再讓 WhatsApp 壓畫質【附啟用教學】",
       "link": "https://ezone.hk/article/20092546/Android-%E7%B5%82%E6%96%BC%E7%94%A8%E5%88%B0-AirDrop-Samsung-S26-%E7%A0%B4%E5%A4%A9%E8%8D%92%E6%94%AF%E6%8F%B4-iPhone-%E5%8E%9F%E5%9C%96%E4%BA%92%E5%82%B3-%E4%B8%80%E9%8D%B5%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%81%8E%E7%9B%B8-%E4%B8%8D%E5%86%8D%E8%AE%93-WhatsApp-%E5%A3%93%E7%95%AB%E8%B3%AA-%E9%99%84%E5%95%9F%E7%94%A8%E6%95%99%E5%AD%B8",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "【永孝街考試路線】葵盛考車常犯錯位提示！考牌重點注意事項輕鬆Pass",
       "link": "https://ezone.hk/article/20069720/%E6%B0%B8%E5%AD%9D%E8%A1%97%E8%80%83%E8%A9%A6%E8%B7%AF%E7%B7%9A-%E8%91%B5%E7%9B%9B%E8%80%83%E8%BB%8A%E5%B8%B8%E7%8A%AF%E9%8C%AF%E4%BD%8D%E6%8F%90%E7%A4%BA-%E8%80%83%E7%89%8C%E9%87%8D%E9%BB%9E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%E8%BC%95%E9%AC%86Pass",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "防水手機點解會入水？IP67同IP68有何分別？睇清電子產品IP防水防塵等級【教5招延續防水壽命】",
       "link": "https://ezone.hk/article/20092516/%E9%98%B2%E6%B0%B4%E6%89%8B%E6%A9%9F%E9%BB%9E%E8%A7%A3%E6%9C%83%E5%85%A5%E6%B0%B4-IP67%E5%90%8CIP68%E6%9C%89%E4%BD%95%E5%88%86%E5%88%A5-%E7%9D%87%E6%B8%85%E9%9B%BB%E5%AD%90%E7%94%A2%E5%93%81IP%E9%98%B2%E6%B0%B4%E9%98%B2%E5%A1%B5%E7%AD%89%E7%B4%9A-%E6%95%995%E6%8B%9B%E5%BB%B6%E7%BA%8C%E9%98%B2%E6%B0%B4%E5%A3%BD%E5%91%BD",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "香港車主醒目換偈油攻略 平貴點揀？幾時要換？收費大公開！",
       "link": "https://ezone.hk/article/20068553/%E9%A6%99%E6%B8%AF%E8%BB%8A%E4%B8%BB%E9%86%92%E7%9B%AE%E6%8F%9B%E5%81%88%E6%B2%B9%E6%94%BB%E7%95%A5-%E5%B9%B3%E8%B2%B4%E9%BB%9E%E6%8F%80-%E5%B9%BE%E6%99%82%E8%A6%81%E6%8F%9B-%E6%94%B6%E8%B2%BB%E5%A4%A7%E5%85%AC%E9%96%8B",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "揸車新手「P」牌點算好？P牌限制、扣分機制與罰則懶人包",
       "link": "https://ezone.hk/article/20072886/%E6%8F%B8%E8%BB%8A%E6%96%B0%E6%89%8B-P-%E7%89%8C%E9%BB%9E%E7%AE%97%E5%A5%BD-P%E7%89%8C%E9%99%90%E5%88%B6-%E6%89%A3%E5%88%86%E6%A9%9F%E5%88%B6%E8%88%87%E7%BD%B0%E5%89%87%E6%87%B6%E4%BA%BA%E5%8C%85",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "假冷氣真風扇！日本實測網購中國製空調10款名單曝 「偽冷氣」拆開只有風扇",
       "link": "https://ezone.hk/article/20092488/%E5%81%87%E5%86%B7%E6%B0%A3%E7%9C%9F%E9%A2%A8%E6%89%87-%E6%97%A5%E6%9C%AC%E5%AF%A6%E6%B8%AC%E7%B6%B2%E8%B3%BC%E4%B8%AD%E5%9C%8B%E8%A3%BD%E7%A9%BA%E8%AA%BF10%E6%AC%BE%E5%90%8D%E5%96%AE%E6%9B%9D-%E5%81%BD%E5%86%B7%E6%B0%A3-%E6%8B%86%E9%96%8B%E5%8F%AA%E6%9C%89%E9%A2%A8%E6%89%87",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "導航apps比較｜6大開車導航App功能比較 香港/海外自駕導航app推薦",
       "link": "https://ezone.hk/article/20039625/%E5%B0%8E%E8%88%AAapps%E6%AF%94%E8%BC%83-6%E5%A4%A7%E9%96%8B%E8%BB%8A%E5%B0%8E%E8%88%AAApp%E5%8A%9F%E8%83%BD%E6%AF%94%E8%BC%83-%E9%A6%99%E6%B8%AF-%E6%B5%B7%E5%A4%96%E8%87%AA%E9%A7%95%E5%B0%8E%E8%88%AAapp%E6%8E%A8%E8%96%A6",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "Tesla充一次電幾錢？電動車每度電幾錢？如何計算電動車充電時間及費用？",
       "link": "https://ezone.hk/article/20065716/Tesla%E5%85%85%E4%B8%80%E6%AC%A1%E9%9B%BB%E5%B9%BE%E9%8C%A2-%E9%9B%BB%E5%8B%95%E8%BB%8A%E6%AF%8F%E5%BA%A6%E9%9B%BB%E5%B9%BE%E9%8C%A2-%E5%A6%82%E4%BD%95%E8%A8%88%E7%AE%97%E9%9B%BB%E5%8B%95%E8%BB%8A%E5%85%85%E9%9B%BB%E6%99%82%E9%96%93%E5%8F%8A%E8%B2%BB%E7%94%A8",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "WeChat玩到「龍蝦」啦！騰訊推微信「ClawBot」插件 教你1 行指令即安裝【附安裝教學】",
       "link": "https://ezone.hk/article/20092470/WeChat%E7%8E%A9%E5%88%B0-%E9%BE%8D%E8%9D%A6-%E5%95%A6-%E9%A8%B0%E8%A8%8A%E6%8E%A8%E5%BE%AE%E4%BF%A1-ClawBot-%E6%8F%92%E4%BB%B6-%E6%95%99%E4%BD%A01-%E8%A1%8C%E6%8C%87%E4%BB%A4%E5%8D%B3%E5%AE%89%E8%A3%9D-%E9%99%84%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "iPad 12 確定今年登場：最平價 AI 裝置 $2XXX 維持「經典設計」？",
       "link": "https://ezone.hk/article/20092445/iPad-12-%E7%A2%BA%E5%AE%9A%E4%BB%8A%E5%B9%B4%E7%99%BB%E5%A0%B4-%E6%9C%80%E5%B9%B3%E5%83%B9-AI-%E8%A3%9D%E7%BD%AE-2XXX-%E7%B6%AD%E6%8C%81-%E7%B6%93%E5%85%B8%E8%A8%AD%E8%A8%88",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "你部機跑唔跑得郁 AI？網頁免下載一撳即知　仲會推薦你用邊個模型【附網站連結】",
       "link": "https://ezone.hk/article/20092352/%E4%BD%A0%E9%83%A8%E6%A9%9F%E8%B7%91%E5%94%94%E8%B7%91%E5%BE%97%E9%83%81-AI-%E7%B6%B2%E9%A0%81%E5%85%8D%E4%B8%8B%E8%BC%89%E4%B8%80%E6%92%B3%E5%8D%B3%E7%9F%A5-%E4%BB%B2%E6%9C%83%E6%8E%A8%E8%96%A6%E4%BD%A0%E7%94%A8%E9%82%8A%E5%80%8B%E6%A8%A1%E5%9E%8B-%E9%99%84%E7%B6%B2%E7%AB%99%E9%80%A3%E7%B5%90",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "國內智能馬桶突冒煙起火事主險火燒 XX 應急管理部發 6 個安全使用智能家電提示",
       "link": "https://ezone.hk/article/20092316/%E5%9C%8B%E5%85%A7%E6%99%BA%E8%83%BD%E9%A6%AC%E6%A1%B6%E7%AA%81%E5%86%92%E7%85%99%E8%B5%B7%E7%81%AB%E4%BA%8B%E4%B8%BB%E9%9A%AA%E7%81%AB%E7%87%92-XX-%E6%87%89%E6%80%A5%E7%AE%A1%E7%90%86%E9%83%A8%E7%99%BC-6-%E5%80%8B%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E6%99%BA%E8%83%BD%E5%AE%B6%E9%9B%BB%E6%8F%90%E7%A4%BA",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "日本自駕遊攻略｜港人常用日本租車公司推薦 流程/文件/收費/車型/保險",
       "link": "https://ezone.hk/article/20030039/%E6%97%A5%E6%9C%AC%E8%87%AA%E9%A7%95%E9%81%8A%E6%94%BB%E7%95%A5-%E6%B8%AF%E4%BA%BA%E5%B8%B8%E7%94%A8%E6%97%A5%E6%9C%AC%E7%A7%9F%E8%BB%8A%E5%85%AC%E5%8F%B8%E6%8E%A8%E8%96%A6-%E6%B5%81%E7%A8%8B-%E6%96%87%E4%BB%B6-%E6%94%B6%E8%B2%BB-%E8%BB%8A%E5%9E%8B-%E4%BF%9D%E9%9A%AA",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "【烏茲別克航空】冷門中亞優惠！深圳出發直航飛首都塔什干連稅都係3千2！",
       "link": "https://flyday.hk/uzbekistan-airways",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "【台灣虎航】台灣虎航3月尾後停飛澳門！曾為唯一廉航往返澳門至台灣！",
       "link": "https://flyday.hk/tigerair-taiwan",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "【真航空韓國優惠】濟州線再劈！連稅1千2起包行李！凌晨機去晚機返！",
       "link": "https://flyday.hk/jinair-korea-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "【日本航空優惠】未加燃油費前必搶！來回東京成田連稅2千7起！包2件23kg行李！",
       "link": "https://flyday.hk/japan-airlines-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "【HK Express 泰國優惠】泰爽飛全線優惠！單程飛曼谷、清邁、布吉$128 起！6月30日前出發！",
       "link": "https://flyday.hk/hk-express-thailand-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-03-25 03:45:08"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "國安法細則修訂生效 鄧炳強：警員搜查電子設備須先申請手令",
       "link": "https://unwire.hk/2026/03/24/nsl-article-43-tang-bingqiang-search-warrant-required/tech-secure/?utm_source=rss&utm_medium=rss&utm_campaign=nsl-article-43-tang-bingqiang-search-warrant-required",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "Claude Computer Use 讓 AI 操作電腦畫面  同時推出手機遙距操控 Claude",
       "link": "https://unwire.hk/2026/03/24/claude-computer-use/ai/?utm_source=rss&utm_medium=rss&utm_campaign=claude-computer-use",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "巴西教師用《刺客教條》教歷史  展示工業革命  Ubisoft 轉發影片大讚",
       "link": "https://unwire.hk/2026/03/24/brazil-teacher-assassins-creed-history-lesson/game-channel/?utm_source=rss&utm_medium=rss&utm_campaign=brazil-teacher-assassins-creed-history-lesson",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "Grab 衝出東南亞  斥資 6 億美元收購台灣 Foodpanda  會否都考慮來香港？",
       "link": "https://unwire.hk/2026/03/24/grab-foodpanda-taiwan-acquisition/life-tech/?utm_source=rss&utm_medium=rss&utm_campaign=grab-foodpanda-taiwan-acquisition",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "黃仁勳首度回應 DLSS 5 負評    AI 只強化畫面非取代藝術「我自己都不喜歡 AI slop」",
       "link": "https://unwire.hk/2026/03/24/nvidia-dlss5-jensen-huang-response/ai/?utm_source=rss&utm_medium=rss&utm_campaign=nvidia-dlss5-jensen-huang-response",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "TIDAL 母企裁員裁過頭   AI 表現未如理想  需要再次聘請已炒同事",
       "link": "https://unwire.hk/2026/03/24/block-dorsey-layoff-rehire-ai-goose/ai/?utm_source=rss&utm_medium=rss&utm_campaign=block-dorsey-layoff-rehire-ai-goose",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "網民分享 OpenRice 寫負評經驗  只彈 Bagel 外皮太硬  即收「法律警告」指太誇張",
       "link": "https://unwire.hk/2026/03/24/openrice/life-tech/?utm_source=rss&utm_medium=rss&utm_campaign=openrice",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "食少啲 RAM 為大家慳錢    微軟計劃降低 Windows 11  20% 記憶體,磁碟空間佔用",
       "link": "https://unwire.hk/2026/03/24/windows11-update-ram/fun-tech/?utm_source=rss&utm_medium=rss&utm_campaign=windows11-update-ram",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "繼密碼後再強化網絡平台移除權力  警務處可要求移除危害訊息   國安法第43條細則修訂刊憲",
       "link": "https://unwire.hk/2026/03/24/hk-nsl-article43-amendment-2026/tech-secure/?utm_source=rss&utm_medium=rss&utm_campaign=hk-nsl-article43-amendment-2026",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     },
     {
       "title": "DJI 大疆起訴影石   創新 6 項專利權屬糾紛",
       "link": "https://unwire.hk/2026/03/24/dji-insta360-patent-lawsuit-drone/dc/?utm_source=rss&utm_medium=rss&utm_campaign=dji-insta360-patent-lawsuit-drone",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-03-25 03:45:09"
+      "scraped_at": "2026-03-25 04:29:21"
     }
   ]
 }
