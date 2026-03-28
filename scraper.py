@@ -493,8 +493,12 @@ class DotDotNewsFetcher:
                 if column == '港聞':
                     source = '點新聞-港聞'
 
-                elif column in ['兩岸', '內地', '中國']:
+                elif column == '兩岸':
+                # elif column in ['兩岸', '內地', '中國']:
                     source = '點新聞-兩岸'
+                
+                elif column == '國際':
+                    source = '點新聞-國際'
 
                 else:
                     continue
