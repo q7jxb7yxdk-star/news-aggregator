@@ -466,9 +466,43 @@ class FlyDayRSSFetcher(BaseRSSFetcher):
         logger.info(f"✓ FlyDay.hk 機票過濾後 {len(filtered)} 篇")
         return filtered
 
+# DotDotNews 抓取器（專門抓取點新聞的港聞新聞）
+class DotDotNewsFetcher:
+    def fetch(self) -> List[Article]:
+        url = "https://www.dotdotnews.com/channels/somenewsapp/hotlist/hours/24/stories.json"
+        articles = []
+
+        try:
+            r = requests.get(url, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            data = r.json()
+
+            for item in data.get('data', [])[:MAX_NEWS_PER_SOURCE]:
+                title = item.get('title')
+                link = item.get('url')
+
+                if not title or not link:
+                    continue
+
+                if link.startswith('/'):
+                    link = "https://www.dotdotnews.com" + link
+
+                articles.append(Article(
+                    title=title.strip(),
+                    link=link.strip(),
+                    source='點新聞-港聞',
+                    category='港聞'
+                ))
+
+            logger.info(f"✓ 點新聞-港聞 API 抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ 點新聞 API 失敗: {e}")
+            return []
 
 # 所有 RSS 抓取器的清單（新增 UnwireRSSFetcher）
-RSS_FETCHERS = [FlyDayRSSFetcher(), UnwireRSSFetcher()]
+RSS_FETCHERS = [FlyDayRSSFetcher(), UnwireRSSFetcher(), DotDotNewsFetcher()]
 
 # ============================================================================
 # 爬蟲管理器（統一管理所有爬蟲）
