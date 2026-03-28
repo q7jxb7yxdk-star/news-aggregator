@@ -467,10 +467,10 @@ class FlyDayRSSFetcher(BaseRSSFetcher):
         return filtered
 
 # DotDotNews 抓取器（專門抓取點新聞的港聞新聞）
+# 用 Chrome 打開點新聞網站，使用瀏覽器的開發者工具（F12），切換到 Network 分頁，按 Reload 重新載入頁面，找到 stories.json 的請求，右鍵 Copy URL。
 class DotDotNewsFetcher:
     def fetch(self) -> List[Article]:
-        url = "https://www.dotdotnews.com/channels/somenewsapp/hotlist/hours/24/stories.json"        # 真實網址找出方法：
-        # 用 Chrome 打開點新聞網站，使用瀏覽器的開發者工具（F12），切換到 Network 分頁，按 Reload 重新載入頁面，找到 stories.json 的請求，右鍵 Copy URL。
+        url = "https://www.dotdotnews.com/channels/somenewsapp/hotlist/hours/24/stories.json"
         articles = []
 
         try:
@@ -478,9 +478,10 @@ class DotDotNewsFetcher:
             r.raise_for_status()
             data = r.json()
 
-            for item in data.get('data', [])[:MAX_NEWS_PER_SOURCE]:
+            for item in data.get('data', [])[:30]:
                 title = item.get('title')
                 link = item.get('url')
+                column = item.get('columnName', '').strip()
 
                 if not title or not link:
                     continue
@@ -488,14 +489,24 @@ class DotDotNewsFetcher:
                 if link.startswith('/'):
                     link = "https://www.dotdotnews.com" + link
 
+                # 👇 用官方欄目分類（最準）
+                if column == '港聞':
+                    source = '點新聞-港聞'
+
+                elif column in ['兩岸', '內地', '中國']:
+                    source = '點新聞-兩岸'
+
+                else:
+                    continue
+
                 articles.append(Article(
                     title=title.strip(),
                     link=link.strip(),
-                    source='點新聞-港聞',
-                    category='港聞'
+                    source=source,
+                    category='新聞'
                 ))
 
-            logger.info(f"✓ 點新聞-港聞 API 抓取 {len(articles)} 篇")
+            logger.info(f"✓ 點新聞 分類後 {len(articles)} 篇")
             return articles
 
         except Exception as e:
