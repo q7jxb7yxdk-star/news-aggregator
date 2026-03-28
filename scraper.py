@@ -469,7 +469,8 @@ class FlyDayRSSFetcher(BaseRSSFetcher):
 # DotDotNews 抓取器（專門抓取點新聞的港聞新聞）
 class DotDotNewsFetcher:
     def fetch(self) -> List[Article]:
-        url = "https://www.dotdotnews.com/channels/somenewsapp/hotlist/hours/24/stories.json"
+        url = "https://www.dotdotnews.com/channels/somenewsapp/hotlist/hours/24/stories.json"        # 真實網址找出方法：
+        # 用 Chrome 打開點新聞網站，使用瀏覽器的開發者工具（F12），切換到 Network 分頁，按 Reload 重新載入頁面，找到 stories.json 的請求，右鍵 Copy URL。
         articles = []
 
         try:
