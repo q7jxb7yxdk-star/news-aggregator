@@ -1,636 +1,524 @@
 {
-  "update_time": "2026-04-21 19:51:57",
-  "total": 90,
+  "update_time": "2026-04-21 20:54:43",
+  "total": 74,
   "news": [
-    {
-      "title": "Tim Cook 將於 9 月 1 日卸任 CEO　蘋果硬體總監 John Ternus 全面接班",
-      "link": "https://www.newmobilelife.com/2026/04/21/tim-cook-step-down-john-ternus-becomes-new-apple-ceo/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "iPhone 18 Pro 四款傳聞顏色曝光　「深櫻桃紅」成主打新色",
-      "link": "https://www.newmobilelife.com/2026/04/17/iphone-18-pro-colors-cherry-red/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "YouTube 新增時間管理功能　允許用戶徹底關閉 YouTube Shorts",
-      "link": "https://www.newmobilelife.com/2026/04/16/youtube-shorts-disable/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "Apple 發佈 iOS 26.5 Beta 2　強化地圖搜尋及訊息安全",
-      "link": "https://www.newmobilelife.com/2026/04/14/apple-ios-26-5-beta-2-test/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "馬斯克全新 XChat 本周發佈　心急網民「盲搶」推爆俄羅斯同名 App 登 App Store 第 2 位",
-      "link": "https://www.newmobilelife.com/2026/04/13/fake-xchat-appstore-no2/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "Claude Code 更易觸發用量限制　Codex 仍值得看高一線",
-      "link": "https://www.newmobilelife.com/2026/04/21/claude-code-vs-codex/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "Google Photos 推出全新臉部微調工具　實現美白、去痘、眼袋淡化",
-      "link": "https://www.newmobilelife.com/2026/04/21/google-photos-face-refine-tool/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "專業發票估價單製作工具　原價 US $29.99《SmartIQ》限時免費",
-      "link": "https://www.newmobilelife.com/2026/04/21/smartiq-invoice-maker-pdf-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "iOS 26.4.1 與 iPadOS 26.4.1 正式登場　修復系統錯誤提升穩定性",
-      "link": "https://www.newmobilelife.com/2026/04/09/apple-ios-ipados-update-bug-fix/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "【突發】Google Gemini App 正式登陸香港　免 VPN 直接用",
-      "link": "https://www.newmobilelife.com/2026/03/26/google-gemini-app-download-hk/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "Apple 正式發佈 iOS 26.4 及 iPadOS 26.4　新功能全面看",
-      "link": "https://www.newmobilelife.com/2026/03/25/apple-ios-26-4-whats-new/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "Apple 發佈 iOS 26.4 及 iPadOS 26.4 RC　新功能全面看",
-      "link": "https://www.newmobilelife.com/2026/03/19/apple-ios-26-4-rc/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "Google Maps 推出沉浸式導航　十年來最大駕駛體驗更新",
-      "link": "https://www.newmobilelife.com/2026/03/14/google-maps-immersive-navigation-update/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "OpenAI 發佈 GPT-5.4 模型　整合編碼與電腦操作能力",
-      "link": "https://www.newmobilelife.com/2026/03/06/openai-gpt-5-4-releases/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
-    {
-      "title": "推動你每天到健身室　原價 US $29.99《OnTrack》限時免費",
-      "link": "https://www.newmobilelife.com/2026/04/21/ontrack-gym-accountability-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-04-21 19:51:49"
-    },
     {
       "title": "國泰飛札幌！連稅四千！7月10日前出發！香港飛札幌二人同行來回連稅每人只需$4,081起 – 國泰航空 (優惠至4月30日)",
       "link": "https://www.meethk.com/159763/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "【永安旅遊 x 加拿大航空】搭加航輕鬆暢遊加拿大、美國、墨西哥！加拿大航空來回機票每單勁減$300！預訂指定豪華經濟艙再送「楓葉貴賓室」通行證！",
       "link": "https://www.meethk.com/159652/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "暑假旺季直飛麗江！連稅2千3起！包23kg寄艙行李！香港飛麗江來回連稅只需$2,353起 – 香港航空",
       "link": "https://www.meethk.com/159582/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "嘩！$22飛台北/高雄、$60飛首爾、$102飛名古屋/廣島！暑假旺季都有折！老友記出發啦！12個精選航點機票兩折！HK Express 60+老友記專享優惠！10月24日前出發 – HK Express (優惠至4月20日)",
       "link": "https://www.meethk.com/159697/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "暑假旺季出發！國泰飛台北！連稅千七起！8月31日前出發！香港飛台北來回連稅只需$1,774起 – 國泰航空 (優惠至5月31日)",
       "link": "https://www.meethk.com/159612/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "EastarJet平飛首爾！連稅千七！包15kg寄艙行李！凌晨機去晚機返！香港飛首爾來回連稅只需$1,740起 – EastarJet 易斯達航空 (優惠至4月21日)",
       "link": "https://www.meethk.com/159623/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "嘩！抵呀！連稅千二飛大阪！樂桃Special Sale！10月24日前出發！香港飛大阪單程只需$400起 (堅持唔收燃油附加費) – 樂桃航空 (優惠至4月19日)",
       "link": "https://www.meethk.com/159629/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "正！連稅千三飛吉隆坡、連稅千五飛沙巴(亞庇)！慶祝AirAsia音樂航班再次啟航！明年3月27日前出發！$156飛吉隆坡、$280飛沙巴(亞庇)！同時加購20kg寄艙行李仲有高達7折優惠 (優惠至4月26日)",
       "link": "https://www.meethk.com/159531/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "美食推介．主題特集．【JetsoWong著數王】【DSE 2026】應屆考生6大福利！樂園門票優惠＋免費可頌＋茶飲折扣2026年香港中學文憑試（ DSE ）正式展開，不少餐飲品牌同步推出考生專屬優惠，為應屆考生打氣。今次小編就幫各位整合多...8 hours ago",
       "link": "https://holidaysmart.io/hk/article/469694/dse-2026-%E6%87%89%E5%B1%86%E8%80%83%E7%94%9F6%E5%A4%A7%E7%A6%8F%E5%88%A9",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "旅遊攻略．主題特集．大灣區旅遊【北上好去處】深圳春夏5大必去快閃店！打卡Zootopia+ Popmart烘培店深圳 近期快閃店大爆發！全部都係期間限定，錯過就冇～今次幫你整理5大必去清單，包括：Zootopia、Popmart烘培...4 days ago",
       "link": "https://holidaysmart.io/hk/article/469652/%E6%B7%B1%E5%9C%B3%E6%98%A5%E5%A4%8F5%E5%A4%A7%E5%BF%85%E5%8E%BB%E5%BF%AB%E9%96%83%E5%BA%97",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "美食推介．主題特集．【JetsoWong著數王】【放題優惠】旺角人氣火鍋結業優惠 海鮮粥底蒸氣鍋買四送一 龍蝦＋時令海鮮＋雞煲任食！旺角 兆萬中心一間主打火鍋放題的人氣 火鍋 店「紅火鮮料火鍋專門店」日前預告將於5月結束營業，並推出買四送一等告別優惠。...5 days ago",
       "link": "https://holidaysmart.io/hk/article/469646/%E6%94%BE%E9%A1%8C%E5%84%AA%E6%83%A0-%E6%97%BA%E8%A7%92%E4%BA%BA%E6%B0%A3%E7%81%AB%E9%8D%8B%E8%B2%B7%E5%9B%9B%E9%80%81%E4%B8%80",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "美食推介【香港美食】8間杜拜朱古力甜品推介！爆紅棉花糖麻糬＋雞蛋仔＋戚風蛋糕 （附地址／營業時間）近期甜品界最 Hit 的關鍵詞，絕對非「 杜拜朱古力 」莫屬！這股風潮從最初的排裝朱古力，不斷進化成各式各樣的網絡爆紅甜...6 days ago",
       "link": "https://holidaysmart.io/hk/article/469607/%E9%A6%99%E6%B8%AF%E7%BE%8E%E9%A3%9F-8%E9%96%93%E6%9D%9C%E6%8B%9C%E6%9C%B1%E5%8F%A4%E5%8A%9B%E7%94%9C%E5%93%81%E6%8E%A8%E4%BB%8B",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "美食推介【Google Gemini AI教學】免費整專屬鬆弛熊公仔！3步超簡單指令 隨意換裝萌爆！Google Gemini 手機應用程式（App）正式在香港全面開放下載～小編今次就教大家好好運用Gemini nano...7 days ago",
       "link": "https://holidaysmart.io/hk/article/469596/google-gemini-ai%E6%95%99%E5%AD%B8-%E5%B0%88%E5%B1%AC%E9%AC%86%E5%BC%9B%E7%86%8A",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "美食推介．主題特集．【JetsoWong著數王】【酒樓優惠】連鎖酒家晚市大劈價！$4起嘆乳鴿+燒雞 4款海鮮小菜$28想平平地食餐晚飯？小編有好推介！明星海鮮酒家最近推出全新晚市超值 優惠 ，震撼價$4起就可以食到紅燒乳鴿及燒雞，另外多款...8 days ago",
       "link": "https://holidaysmart.io/hk/article/469575/%E9%85%92%E6%A8%93%E5%84%AA%E6%83%A0-%E9%85%92%E5%AE%B6-%E6%99%9A%E5%B8%82",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "香港好去處【週末好去處】萬寧BoostUP好狀態嘉年華@西九｜限時早鳥HK$100  玩哂40+場身心充電活動！（附票價詳情/超chill懶人包）香港人平時返工超忙，生活節奏快，日日壓力爆表，好多人都想短暫逃離現實，找回屬於自己的放鬆時間。今個4月，一個更貼地、更治...11 days ago",
       "link": "https://holidaysmart.io/hk/article/469134/%E8%90%AC%E5%AF%A7boostup%E5%BF%AB%E9%96%83%E6%B4%BB%E5%8B%95",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "美食推介．購物著數．生活百貨【深圳盒馬】10款抹茶甜品推介！必試麻糬撻＋瀑布蛋糕＋生朱古力近年 抹茶 甜品持續熱潮，盒馬烘焙系列最近推出多款抹茶新品，從蛋糕、撻類到生朱古力一應俱全。本文整合10款最新抹茶甜品的...12 days ago",
       "link": "https://holidaysmart.io/hk/article/469341/%E6%B7%B1%E5%9C%B3%E7%9B%92%E9%A6%AC-10%E6%AC%BE%E6%8A%B9%E8%8C%B6%E7%94%9C%E5%93%81%E6%8E%A8%E4%BB%8B",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "美食推介．主題特集．【JetsoWong著數王】【自助餐優惠2026】灣仔海景自助餐快閃優惠 三人同行一人免費 嘆冰鎮長腳蟹＋即開生蠔！約家人、朋友聚會當然要食大餐！ 香港會議展覽中心環球美食 自助餐 廳薈景推出快閃優惠，即日起三位成人同行惠顧海景自助早午...12 days ago",
       "link": "https://holidaysmart.io/hk/article/469517/%E8%87%AA%E5%8A%A9%E9%A4%90%E5%84%AA%E6%83%A02026-%E7%81%A3%E4%BB%94%E6%B5%B7%E6%99%AF%E8%87%AA%E5%8A%A9%E9%A4%90%E5%BF%AB%E9%96%83%E5%84%AA%E6%83%A0",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "美食推介．泰國旅遊．生活百貨泰國手信2026｜Big C 12大必掃清單推介！泰式脆炸雞皮／椰奶芒果乾／泰式奶茶粉泰國 Big C超市一直是遊客掃貨的熱門地點，無論是經典零食、限定口味，還是實用伴手禮，都能一次買齊。以下整理12款必買...13 days ago",
       "link": "https://holidaysmart.io/hk/article/469410/%E6%B3%B0%E5%9C%8B%E6%89%8B%E4%BF%A12026-bigc%E5%BF%85%E6%8E%83%E6%B8%85%E5%96%AE%E6%8E%A8%E4%BB%8B",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "香港好去處．商場【復活節好去處】信和集團5大商場型格「GoCircular｜好物共享」企劃！升級改造潮物＋再生玩具＋咖啡市集環保唔單止係慳水慳電，放假玩樂都一樣可以實踐綠色生活！今次小編有好推介！信和集團首辦跨區跨界別嘅「GoCircular ...18 days ago",
       "link": "https://holidaysmart.io/hk/article/469326/%E5%BE%A9%E6%B4%BB%E7%AF%80%E5%A5%BD%E5%8E%BB%E8%99%95-%E4%BF%A1%E5%92%8C%E9%9B%86%E5%9C%98%E5%95%86%E5%A0%B4-%E5%B8%82%E9%9B%86",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "美食推介．主題特集．【JetsoWong著數王】【PizzaExpress 放題】$58任食烤雞薄餅+焗麵包球！滿足1條件享堂食6折連鎖薄餅店PizzaExpress近期喺香港推出全新英倫風味菜式，將英國經典元素融入Menu，為港人帶來創新又地道的美食...20 days ago",
       "link": "https://holidaysmart.io/hk/article/469255/pizzaexpress%E6%94%BE%E9%A1%8C%E5%9B%9E%E6%AD%B8",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "331 Mar【日本優惠券2026】 Bic Camera、大國藥妝免稅再疊加優惠！最高18%OFF掃貨攻略",
       "link": "https://holidaysmart.io/hk/article/469225/2026%E6%97%A5%E6%9C%AC%E5%84%AA%E6%83%A0%E5%88%B8%E5%90%88%E9%9B%86",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "530 Mar【牛品火鍋優惠】$98任食台式打邊爐！75分鐘午市放題 80+款配料＋珍奶任飲",
       "link": "https://holidaysmart.io/hk/article/469151/%E7%89%9B%E5%93%81%E7%81%AB%E9%8D%8B%E5%84%AA%E6%83%A0-%E4%BB%BB%E9%A3%9F%E5%8F%B0%E5%BC%8F%E7%81%AB%E9%8D%8B",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "725 Mar【放題優惠】連鎖餐廳$48沙爹牛麵放題！任食60分鐘 飲品一律半價（附地址／營業時間）",
       "link": "https://holidaysmart.io/hk/article/469012/%E6%94%BE%E9%A1%8C%E5%84%AA%E6%83%A0-%E9%80%A3%E9%8E%96%E9%A4%90%E5%BB%B348%E8%9A%8A%E6%B2%99%E7%88%B9%E7%89%9B%E9%BA%B5%E6%94%BE%E9%A1%8C",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:50"
+      "scraped_at": "2026-04-21 20:54:40"
     },
     {
       "title": "輪胎老化、胎紋不足？香港換胎懶人包 教你如何安全省錢換新胎",
       "link": "https://ezone.hk/article/20073275/%E8%BC%AA%E8%83%8E%E8%80%81%E5%8C%96-%E8%83%8E%E7%B4%8B%E4%B8%8D%E8%B6%B3-%E9%A6%99%E6%B8%AF%E6%8F%9B%E8%83%8E%E6%87%B6%E4%BA%BA%E5%8C%85-%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E5%AE%89%E5%85%A8%E7%9C%81%E9%8C%A2%E6%8F%9B%E6%96%B0%E8%83%8E",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "一年慳返幾百蚊！微軟認證 Windows 唔使再買防毒：內建 Defender 已夠強 專家：呢 2 類人先要課金",
       "link": "https://ezone.hk/article/20094872/%E4%B8%80%E5%B9%B4%E6%85%B3%E8%BF%94%E5%B9%BE%E7%99%BE%E8%9A%8A-%E5%BE%AE%E8%BB%9F%E8%AA%8D%E8%AD%89-Windows-%E5%94%94%E4%BD%BF%E5%86%8D%E8%B2%B7%E9%98%B2%E6%AF%92-%E5%85%A7%E5%BB%BA-Defender-%E5%B7%B2%E5%A4%A0%E5%BC%B7-%E5%B0%88%E5%AE%B6-%E5%91%A2-2-%E9%A1%9E%E4%BA%BA%E5%85%88%E8%A6%81%E8%AA%B2%E9%87%91",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "【驗車年檢忠告】車房代辦幾錢？自己揸去驗車OK？驗車肥佬點算？附38間驗車中心地址及續牌收費",
       "link": "https://ezone.hk/article/20027351/%E9%A9%97%E8%BB%8A%E5%B9%B4%E6%AA%A2%E5%BF%A0%E5%91%8A-%E8%BB%8A%E6%88%BF%E4%BB%A3%E8%BE%A6%E5%B9%BE%E9%8C%A2-%E8%87%AA%E5%B7%B1%E6%8F%B8%E5%8E%BB%E9%A9%97%E8%BB%8AOK-%E9%A9%97%E8%BB%8A%E8%82%A5%E4%BD%AC%E9%BB%9E%E7%AE%97-%E9%99%8438%E9%96%93%E9%A9%97%E8%BB%8A%E4%B8%AD%E5%BF%83%E5%9C%B0%E5%9D%80%E5%8F%8A%E7%BA%8C%E7%89%8C%E6%94%B6%E8%B2%BB",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "唔止相簿咁簡單！Google 相簿推「美顏」功能 7大必學功能1秒出大片【每個月慳返幾十蚊】",
       "link": "https://ezone.hk/article/20094858/%E5%94%94%E6%AD%A2%E7%9B%B8%E7%B0%BF%E5%92%81%E7%B0%A1%E5%96%AE-Google-%E7%9B%B8%E7%B0%BF%E6%8E%A8-%E7%BE%8E%E9%A1%8F-%E5%8A%9F%E8%83%BD-7%E5%A4%A7%E5%BF%85%E5%AD%B8%E5%8A%9F%E8%83%BD1%E7%A7%92%E5%87%BA%E5%A4%A7%E7%89%87-%E6%AF%8F%E5%80%8B%E6%9C%88%E6%85%B3%E8%BF%94%E5%B9%BE%E5%8D%81%E8%9A%8A",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "街頭聚賭無所遁形！警方首用無人機高空巡查屋邨馬鞍山揭賭檔 預告加碼 845 萬增購加大機隊數",
       "link": "https://ezone.hk/article/20094844/%E8%A1%97%E9%A0%AD%E8%81%9A%E8%B3%AD%E7%84%A1%E6%89%80%E9%81%81%E5%BD%A2-%E8%AD%A6%E6%96%B9%E9%A6%96%E7%94%A8%E7%84%A1%E4%BA%BA%E6%A9%9F%E9%AB%98%E7%A9%BA%E5%B7%A1%E6%9F%A5%E5%B1%8B%E9%82%A8%E9%A6%AC%E9%9E%8D%E5%B1%B1%E6%8F%AD%E8%B3%AD%E6%AA%94-%E9%A0%90%E5%91%8A%E5%8A%A0%E7%A2%BC-845-%E8%90%AC%E5%A2%9E%E8%B3%BC%E5%8A%A0%E5%A4%A7%E6%A9%9F%E9%9A%8A%E6%95%B8",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "HONOR X6d 5G 登場！$1,199「超長氣」5G 神機 5,260mAh 電池撐足全日",
       "link": "https://ezone.hk/article/20092425/HONOR-X6d-5G-%E7%99%BB%E5%A0%B4-1-199-%E8%B6%85%E9%95%B7%E6%B0%A3-5G-%E7%A5%9E%E6%A9%9F-5-260mAh-%E9%9B%BB%E6%B1%A0%E6%92%90%E8%B6%B3%E5%85%A8%E6%97%A5",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "突發！Apple 易帥！Tim Cook 宣佈 9 月卸任 CEO 新任 CEO 將是 Steve Jobs 遺志的真正繼承者？",
       "link": "https://ezone.hk/article/20094811/%E7%AA%81%E7%99%BC-Apple-%E6%98%93%E5%B8%A5-Tim-Cook-%E5%AE%A3%E4%BD%88-9-%E6%9C%88%E5%8D%B8%E4%BB%BB-CEO-%E6%96%B0%E4%BB%BB-CEO-%E5%B0%87%E6%98%AF-Steve-Jobs-%E9%81%BA%E5%BF%97%E7%9A%84%E7%9C%9F%E6%AD%A3%E7%B9%BC%E6%89%BF%E8%80%85",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "同 AI 傾得愈深愈危險？專家揭主流模型預設「偷料」訓練！ 教你 1 招封鎖 ChatGPT、Gemini 等 5 大平台收集私隱",
       "link": "https://ezone.hk/article/20094767/%E5%90%8C-AI-%E5%82%BE%E5%BE%97%E6%84%88%E6%B7%B1%E6%84%88%E5%8D%B1%E9%9A%AA-%E5%B0%88%E5%AE%B6%E6%8F%AD%E4%B8%BB%E6%B5%81%E6%A8%A1%E5%9E%8B%E9%A0%90%E8%A8%AD-%E5%81%B7%E6%96%99-%E8%A8%93%E7%B7%B4-%E6%95%99%E4%BD%A0-1-%E6%8B%9B%E5%B0%81%E9%8E%96-ChatGPT-Gemini-%E7%AD%89-5-%E5%A4%A7%E5%B9%B3%E5%8F%B0%E6%94%B6%E9%9B%86%E7%A7%81%E9%9A%B1",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "Gemini突發登陸Chrome：Gemini側邊欄殺到一鍵執相兼跨Tab格價 必學5大最強神技",
       "link": "https://ezone.hk/article/20094810/Gemini%E7%AA%81%E7%99%BC%E7%99%BB%E9%99%B8Chrome-Gemini%E5%81%B4%E9%82%8A%E6%AC%84%E6%AE%BA%E5%88%B0%E4%B8%80%E9%8D%B5%E5%9F%B7%E7%9B%B8%E5%85%BC%E8%B7%A8Tab%E6%A0%BC%E5%83%B9-%E5%BF%85%E5%AD%B85%E5%A4%A7%E6%9C%80%E5%BC%B7%E7%A5%9E%E6%8A%80",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "浴室寶開抽氣其實無用？沖涼後做漏一步牆身照發霉【回南天速乾廁開1個模式】",
       "link": "https://ezone.hk/article/20084298/%E6%B5%B4%E5%AE%A4%E5%AF%B6%E9%96%8B%E6%8A%BD%E6%B0%A3%E5%85%B6%E5%AF%A6%E7%84%A1%E7%94%A8-%E6%B2%96%E6%B6%BC%E5%BE%8C%E5%81%9A%E6%BC%8F%E4%B8%80%E6%AD%A5%E7%89%86%E8%BA%AB%E7%85%A7%E7%99%BC%E9%9C%89-%E5%9B%9E%E5%8D%97%E5%A4%A9%E9%80%9F%E4%B9%BE%E5%BB%81%E9%96%8B1%E5%80%8B%E6%A8%A1%E5%BC%8F",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "$3,699 玩到潛望長焦？ Nothing Phone (4a) 實測：70 倍 AI 變焦實測、4500nits 屏幕 規格「越級」挑戰旗艦",
       "link": "https://ezone.hk/article/20094669/3-699-%E7%8E%A9%E5%88%B0%E6%BD%9B%E6%9C%9B%E9%95%B7%E7%84%A6-Nothing-Phone-4a-%E5%AF%A6%E6%B8%AC-70-%E5%80%8D-AI-%E8%AE%8A%E7%84%A6%E5%AF%A6%E6%B8%AC-4500nits-%E5%B1%8F%E5%B9%95-%E8%A6%8F%E6%A0%BC-%E8%B6%8A%E7%B4%9A-%E6%8C%91%E6%88%B0%E6%97%97%E8%89%A6",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "【Gemini 64型人格測試指令】教用AI免費自製測驗 唔使畀錢解鎖MBTI結果神準",
       "link": "https://ezone.hk/article/20094762/Gemini-64%E5%9E%8B%E4%BA%BA%E6%A0%BC%E6%B8%AC%E8%A9%A6%E6%8C%87%E4%BB%A4-%E6%95%99%E7%94%A8AI%E5%85%8D%E8%B2%BB%E8%87%AA%E8%A3%BD%E6%B8%AC%E9%A9%97-%E5%94%94%E4%BD%BF%E7%95%80%E9%8C%A2%E8%A7%A3%E9%8E%96MBTI%E7%B5%90%E6%9E%9C%E7%A5%9E%E6%BA%96",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "通話太嘈對方聽唔到？一鍵開啟iPhone隱藏功能「語音隔離」 幫你自動過濾車聲風聲！",
       "link": "https://ezone.hk/article/20094797/%E9%80%9A%E8%A9%B1%E5%A4%AA%E5%98%88%E5%B0%8D%E6%96%B9%E8%81%BD%E5%94%94%E5%88%B0-%E4%B8%80%E9%8D%B5%E9%96%8B%E5%95%9FiPhone%E9%9A%B1%E8%97%8F%E5%8A%9F%E8%83%BD-%E8%AA%9E%E9%9F%B3%E9%9A%94%E9%9B%A2-%E5%B9%AB%E4%BD%A0%E8%87%AA%E5%8B%95%E9%81%8E%E6%BF%BE%E8%BB%8A%E8%81%B2%E9%A2%A8%E8%81%B2",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "想日日收 Offer？Gemini一秒優化LinkedIn檔案 4個指令個人曝光率翻倍【Copy & Paste就用得】",
       "link": "https://ezone.hk/article/20094783/%E6%83%B3%E6%97%A5%E6%97%A5%E6%94%B6-Offer-Gemini%E4%B8%80%E7%A7%92%E5%84%AA%E5%8C%96LinkedIn%E6%AA%94%E6%A1%88-4%E5%80%8B%E6%8C%87%E4%BB%A4%E5%80%8B%E4%BA%BA%E6%9B%9D%E5%85%89%E7%8E%87%E7%BF%BB%E5%80%8D-Copy-Paste%E5%B0%B1%E7%94%A8%E5%BE%97",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "ChatGPT、Gemini 點揀好？大學入學試「呢款 AI」幾乎全對！一文睇清兩大 AI 應用場合及邏輯差異",
       "link": "https://ezone.hk/article/20094775/ChatGPT-Gemini-%E9%BB%9E%E6%8F%80%E5%A5%BD-%E5%A4%A7%E5%AD%B8%E5%85%A5%E5%AD%B8%E8%A9%A6-%E5%91%A2%E6%AC%BE-AI-%E5%B9%BE%E4%B9%8E%E5%85%A8%E5%B0%8D-%E4%B8%80%E6%96%87%E7%9D%87%E6%B8%85%E5%85%A9%E5%A4%A7-AI-%E6%87%89%E7%94%A8%E5%A0%B4%E5%90%88%E5%8F%8A%E9%82%8F%E8%BC%AF%E5%B7%AE%E7%95%B0",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "【燃油附加費】持續更新！4.1起國泰、HK Express等上調加燃油附加費！多間航空公司宣布削班！",
       "link": "https://flyday.hk/fuel-surcharge",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "國泰航空貴賓室｜全新旗艦國泰寰宇堂 The Wing 頭等貴賓室重開｜附位置、使用要求、開放時間",
       "link": "https://flyday.hk/cathay-the-wing-first",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "【深圳好去處2026】深圳景點好去處推介｜週末快閃精選！摩天輪、CityWalk商場打卡位、野生動物園",
       "link": "https://flyday.hk/%E6%B7%B1%E5%9C%B3%E5%A5%BD%E5%8E%BB%E8%99%95",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "國泰航空貴賓室｜香港機場 The Deck 玲瓏堂 1-20 號閘口必入「家居風」貴賓室｜附位置、使用要求、開放時間",
       "link": "https://flyday.hk/cathay-pacific-the-deck",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "【國泰航空貴賓室】The Wing First 寰宇堂頭等貴賓室重開！附The Bridge 逸連堂、The Wing 寰宇堂、The Pier 玉衡堂、The Deck 玲瓏堂貴賓室介紹",
       "link": "https://flyday.hk/cathay-pacific-lounges",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "持電動行李喼被拒入港鐵    辯稱行李喼是輪椅  驚動警察調停",
       "link": "https://unwire.hk/2026/04/21/mtr-electric-suitcase-ban-wheelchair-dispute/life-tech/?utm_source=rss&utm_medium=rss&utm_campaign=mtr-electric-suitcase-ban-wheelchair-dispute",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "九巴 App 廣告被指”播毒”   畫面顯示”Google翻譯要更新”   訊息疑誤導長者",
       "link": "https://unwire.hk/2026/04/21/kmb-app-ad-warning/tech-secure/?utm_source=rss&utm_medium=rss&utm_campaign=kmb-app-ad-warning",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "Dyson Supersonic Travel 登場  機身輕30%支援全球電壓  外遊告別酒店毛躁風筒",
       "link": "https://unwire.hk/2026/04/21/dyson-supersonic-travel-hairdryer-hk-launch-specs/life-tech/?utm_source=rss&utm_medium=rss&utm_campaign=dyson-supersonic-travel-hairdryer-hk-launch-specs",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "Tim Cook 蘋果時代的功與過    歷史回顧：引領四兆美元帝國   從當喬布斯影子到退下來",
       "link": "https://unwire.hk/2026/04/21/leadership-tim-cook/mobile-phone/?utm_source=rss&utm_medium=rss&utm_campaign=leadership-tim-cook",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "宏福苑住戶行路上 17 層樓   外骨骼步行輔助器幫手　盼日後政府可借俾街坊",
       "link": "https://unwire.hk/2026/04/21/wang-fuk-court-exoskeleton-17f-resident-belongings/life-tech/%e6%a9%9f%e6%a2%b0%e4%ba%ba/?utm_source=rss&utm_medium=rss&utm_campaign=wang-fuk-court-exoskeleton-17f-resident-belongings",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "HUAWEI AI 眼鏡亮相   運行鴻蒙與雲端雙AI  加映: 內藏無線耳機手錶",
       "link": "https://unwire.hk/2026/04/21/huawei-watch-buds-2-ai-glasses-fit5-launch/shop_guide/?utm_source=rss&utm_medium=rss&utm_campaign=huawei-watch-buds-2-ai-glasses-fit5-launch",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "【評測】Huawei Pura X Max 國行速測\t細大屏均好用切換無感 + 外型美觀手感佳",
       "link": "https://unwire.hk/2026/04/21/huawei-puraxmax-chinaversion-first-review/review-2/?utm_source=rss&utm_medium=rss&utm_campaign=huawei-puraxmax-chinaversion-first-review",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "執公司垃圾 72 條 DDR4 ECC 記憶體  今時今日變黃金   市值逾 15 萬港元",
       "link": "https://unwire.hk/2026/04/21/ddr4-ecc-rdimm-dumpster-rescue-ai-ram-surge/notebook/?utm_source=rss&utm_medium=rss&utm_campaign=ddr4-ecc-rdimm-dumpster-rescue-ai-ram-surge",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "【評測】Huawei Pura90 Pro Max 國行速測\t顏色搶眼吸引 + 遠攝有料到",
       "link": "https://unwire.hk/2026/04/21/huawei-pura90promax-china-first-review/review-2/?utm_source=rss&utm_medium=rss&utm_campaign=huawei-pura90promax-china-first-review",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "19 歲少女挪用公款 1,700 萬打賞網紅  父親含淚帶女自首冀追回款項",
       "link": "https://unwire.hk/2026/04/21/china-girl-19-embezzle-1700wan-livestream-tipping/life-tech/social-network/?utm_source=rss&utm_medium=rss&utm_campaign=china-girl-19-embezzle-1700wan-livestream-tipping",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-04-21 19:51:55"
+      "scraped_at": "2026-04-21 20:54:41"
     },
     {
       "title": "停火失效在即伊朗仍未點頭赴會　特朗普：他們會參加談判",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e6cbaee4b09ea233131b7c.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "（有片）日本將地震級別升至7.7級　向逾15萬人發布避難指示",
-      "link": "https://www.dotdotnews.com/a/202604/20/AP69e61cdae4b09ea233131397.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "日本地震｜約10旅行團在北海道及東北　人員安全行程未受影響",
-      "link": "https://www.dotdotnews.com/a/202604/20/AP69e61e54e4b09ea2331313d7.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "（有片）宏福苑善後｜李家超：首日上樓執拾安排暢順　業權收購料8月底前有總結",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e6e152e4b09ea233131d3a.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "美伊臨時停火失效在即　特朗普：若未達成協議「大量炸彈將爆炸」",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e64528e4b09ea2331317a7.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "（有片）宏福苑善後｜有住戶購內地外骨骼爬樓　居民盼見救命恩人當面道謝",
-      "link": "https://www.dotdotnews.com/a/202604/21/AP69e6dd42e4b09ea233131cbb.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "油塘女子過路捱撞彈飛10米送院亡　貨車側鏡纏長髮",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e6f21de4b09ea233131f20.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "（有片）宏福苑善後｜有住戶購內地外骨骼爬樓　居民盼見救命恩人當面道謝",
+      "link": "https://www.dotdotnews.com/a/202604/21/AP69e6dd42e4b09ea233131cbb.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "（有片）南海海槽大地震概率升至90%？日本學者直言：超級地震或致國家崩塌",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e70420e4b09ea233132159.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "伊朗喊話美國：立即放人",
-      "link": "https://www.dotdotnews.com/a/202604/21/AP69e71323e4b09ea233132223.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "日本陸上自衛隊一訓練場彈藥爆炸　已致3人死亡",
-      "link": "https://www.dotdotnews.com/a/202604/21/AP69e6f0e7e4b09ea233131ef9.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "美民調：特朗普支持率創第二任期新低　近七成民眾不認同伊朗戰事",
-      "link": "https://www.dotdotnews.com/a/202604/21/AP69e71ddbe4b09ea233132407.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "（有片）日本各界批放寬武器出口限制違憲　民眾憂陷「死亡循環」",
-      "link": "https://www.dotdotnews.com/a/202604/21/AP69e6fe81e4b09ea2331320b9.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "不顧民眾抗議　日本正式允許出口殺傷性武器",
-      "link": "https://www.dotdotnews.com/a/202604/21/AP69e6d253e4b09ea233131bce.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "（有片）車Cam直擊！牛頭角的士捱撞180旋轉鏟安全島　網民：點做到㗎？",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e7382fe4b09ea233132767.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "伊朗喊話美國：立即放人",
+      "link": "https://www.dotdotnews.com/a/202604/21/AP69e71323e4b09ea233132223.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "日本陸上自衛隊一訓練場彈藥爆炸　已致3人死亡",
+      "link": "https://www.dotdotnews.com/a/202604/21/AP69e6f0e7e4b09ea233131ef9.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "美民調：特朗普支持率創第二任期新低　近七成民眾不認同伊朗戰事",
+      "link": "https://www.dotdotnews.com/a/202604/21/AP69e71ddbe4b09ea233132407.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "（有片）中方回應高市早苗向靖國神社獻祭品：已提出嚴正交涉　強烈抗議！",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e73056e4b09ea233132617.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "伊朗官員：最高領袖完全健康　不拍片出於安全考慮",
-      "link": "https://www.dotdotnews.com/a/202604/20/AP69e638bae4b09ea23313163b.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "美伊談判｜特朗普：若有突破進展　願同伊朗高級別領導人會面",
-      "link": "https://www.dotdotnews.com/a/202604/20/AP69e632d4e4b09ea233131590.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
-    },
-    {
-      "title": "（有片）抗議美對伊軍事行動　數十名美國退伍軍人被捕包括殘疾人",
-      "link": "https://www.dotdotnews.com/a/202604/21/AP69e70174e4b09ea2331320f4.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "美伊停火協議明到期　伊拉克民兵組織：或將恢復對美襲擊",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e73a4fe4b09ea233132773.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "（有片）日本各界批放寬武器出口限制違憲　民眾憂陷「死亡循環」",
+      "link": "https://www.dotdotnews.com/a/202604/21/AP69e6fe81e4b09ea2331320b9.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "不顧民眾抗議　日本正式允許出口殺傷性武器",
+      "link": "https://www.dotdotnews.com/a/202604/21/AP69e6d253e4b09ea233131bce.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "伊朗官員：最高領袖完全健康　不拍片出於安全考慮",
+      "link": "https://www.dotdotnews.com/a/202604/20/AP69e638bae4b09ea23313163b.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "美伊談判｜特朗普：若有突破進展　願同伊朗高級別領導人會面",
+      "link": "https://www.dotdotnews.com/a/202604/20/AP69e632d4e4b09ea233131590.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "（有片）抗議美對伊軍事行動　數十名美國退伍軍人被捕包括殘疾人",
+      "link": "https://www.dotdotnews.com/a/202604/21/AP69e70174e4b09ea2331320f4.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "美媒：萬斯今晚啟程赴巴基斯坦",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e6d5a0e4b09ea233131c06.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "高市早苗「拜鬼」　向靖國神社獻祭品",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e6c13ae4b09ea233131a90.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
     },
     {
       "title": "（有片）政府叫停籃球博彩　李家超：通盤考慮風險「值得做才會做」",
       "link": "https://www.dotdotnews.com/a/202604/21/AP69e6ee4ce4b09ea233131e96.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-04-21 19:51:57"
+      "scraped_at": "2026-04-21 20:54:43"
+    },
+    {
+      "title": "（有片）東京羽田機場系統「甩轆」　上萬旅客受影響　兩返港航班延誤",
+      "link": "https://www.dotdotnews.com/a/202604/21/AP69e7160ee4b09ea233132287.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-04-21 20:54:43"
     }
   ]
 }
