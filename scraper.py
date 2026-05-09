@@ -105,7 +105,7 @@ class ScraperConfig:
 
 # ============================================================================
 # HTML 爬蟲設定（定義要抓取哪些網站）
-# 注意：Unwire.hk 已改由 RSS 負責（見下方 UnwireRSSFetcher），
+# 注意：Unwire.hk 已改由首頁專用抓取器負責（見下方 UnwireFetcher），
 #       因此這裡不再包含 unwire 的設定
 # ============================================================================
 SCRAPERS_CONFIG = {
@@ -535,6 +535,14 @@ class UnwireFetcher:
         except ValueError:
             return None
 
+    @staticmethod
+    def _is_within_24_hours(text: str) -> bool:
+        if re.search(r'\d+\s*秒前|\d+\s*分鐘前', text):
+            return True
+
+        hour_match = re.search(r'(\d+)\s*小時前', text)
+        return bool(hour_match and int(hour_match.group(1)) < 24)
+
     def fetch(self) -> List[Article]:
         articles = []
         seen = set()
@@ -550,14 +558,16 @@ class UnwireFetcher:
                 href = URLValidator.normalize(tag.get('href'), 'https://unwire.hk')
                 title = tag.get_text(strip=True)
                 item_date = self._article_date_from_link(href)
+                parent = tag.find_parent(class_='post-content')
+                item_text = parent.get_text(' ', strip=True) if parent else ''
 
                 if not title or len(title) < 8 or not item_date:
                     continue
 
-                if item_date < today:
-                    break
+                if item_date != today and not self._is_within_24_hours(item_text):
+                    continue
 
-                if item_date != today or href in seen:
+                if href in seen:
                     continue
 
                 articles.append(Article(
@@ -724,7 +734,7 @@ class DotDotNewsFetcher:
             return []
 
 # 所有額外抓取器的清單（RSS 與專用網站抓取器）
-RSS_FETCHERS = [EzoneFetcher(), NewMobileLifeFetcher(), FlyDayRSSFetcher(), UnwireRSSFetcher(), DotDotNewsFetcher()]
+RSS_FETCHERS = [EzoneFetcher(), NewMobileLifeFetcher(), FlyDayRSSFetcher(), UnwireFetcher(), DotDotNewsFetcher()]
 
 # ============================================================================
 # 爬蟲管理器（統一管理所有爬蟲）
