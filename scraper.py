@@ -22,6 +22,7 @@ import logging                                      # 記錄程式執行過程
 from concurrent.futures import ThreadPoolExecutor, as_completed # 同時做多件事（多線程）
 from urllib.parse import urljoin, urlparse          # 處理網址
 import time                                         # 處理時間延遲
+import re                                           # 用來比對文字格式
 
 # ============================================================================
 # 設定日誌系統（像是程式的日記本，記錄發生什麼事）
@@ -108,31 +109,6 @@ class ScraperConfig:
 #       因此這裡不再包含 unwire 的設定
 # ============================================================================
 SCRAPERS_CONFIG = {
-    # eZone - 科技新聞網站（香港經濟日報）
-    'ezone': ScraperConfig(
-        url='https://ezone.hk/srae001/loadmore/1',  # 直接呼叫文章載入 API
-        source='E-zone',
-        category='科技',
-        min_title_length=8,
-        selector='h3.title',          # 只抓標題元素，避免混入作者/日期文字
-        domain_check='ezone.hk',
-        url_pattern='/article/',       # ezone 文章網址固定格式
-        base_url='https://ezone.hk',
-        exclude_titles=[
-            '訂閱', '登入', '廣告', '更多', '查看全部',
-            'Privacy', 'Terms', 'Cookie'
-        ]
-    ),
-
-    # NewMobileLife - 科技新聞網站
-    'newmobilelife': ScraperConfig(
-        url='https://www.newmobilelife.com/',
-        source='NewMobileLife',
-        category='科技',
-        min_title_length=12,
-        domain_check='newmobilelife.com/20'  # 確保是 2020 年後的文章
-    ),
-
     # HolidaySmart - 旅遊網站
     'holidaysmart': ScraperConfig(
         url='https://holidaysmart.io/hk',
@@ -350,6 +326,139 @@ class WebScraper:
         return articles
 
 # ============================================================================
+# eZone 抓取器（科技焦點，只抓取當天新聞）
+# ============================================================================
+class EzoneFetcher:
+    URL = 'https://ezone.hk/srae001/科技焦點/'
+    source = 'E-zone'
+    category = '科技'
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _article_date_from_text(text: str):
+        date_match = re.search(r'(\d{2})-(\d{2})-(\d{4})\s+\d{2}:\d{2}', text)
+        if not date_match:
+            return None
+
+        try:
+            return datetime.strptime('-'.join(date_match.groups()), '%d-%m-%Y').date()
+        except ValueError:
+            return None
+
+    def fetch(self) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+
+        try:
+            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding
+            soup = BeautifulSoup(r.text, 'html.parser')
+
+            for tag in soup.select('a[href*="/article/"]'):
+                href = URLValidator.normalize(tag.get('href'), 'https://ezone.hk')
+                title_tag = tag.select_one('h3.title')
+                title = title_tag.get_text(strip=True) if title_tag else ''
+                item_date = self._article_date_from_text(tag.get_text(' ', strip=True))
+
+                if not title or len(title) < 8 or not item_date:
+                    continue
+
+                if item_date < today:
+                    break
+
+                if item_date != today or href in seen:
+                    continue
+
+                articles.append(Article(
+                    title=title,
+                    link=href,
+                    source=self.source,
+                    category=self.category
+                ))
+                seen.add(href)
+
+            logger.info(f"✓ E-zone 科技焦點當天抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ E-zone 科技焦點抓取失敗: {e}")
+            return []
+
+# ============================================================================
+# NewMobileLife 抓取器（最新文章，只抓取當天新聞）
+# ============================================================================
+class NewMobileLifeFetcher:
+    URL = 'https://www.newmobilelife.com/最新文章/'
+    source = 'NewMobileLife'
+    category = '科技'
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _article_date_from_text(text: str):
+        try:
+            return datetime.strptime(text.strip(), '%Y-%m-%d').date()
+        except ValueError:
+            return None
+
+    def fetch(self) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+
+        try:
+            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding
+            soup = BeautifulSoup(r.text, 'html.parser')
+
+            for item in soup.select('article'):
+                title_tag = item.select_one('h2 a')
+                date_tag = item.select_one('.cs-meta-date')
+
+                if not title_tag or not date_tag:
+                    continue
+
+                title = title_tag.get_text(strip=True)
+                href = URLValidator.normalize(title_tag.get('href'), 'https://www.newmobilelife.com')
+                item_date = self._article_date_from_text(date_tag.get_text(strip=True))
+
+                if not title or len(title) < 12 or not item_date:
+                    continue
+
+                if item_date < today:
+                    break
+
+                if item_date != today or href in seen:
+                    continue
+
+                articles.append(Article(
+                    title=title,
+                    link=href,
+                    source=self.source,
+                    category=self.category
+                ))
+                seen.add(href)
+
+            logger.info(f"✓ NewMobileLife 最新文章當天抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ NewMobileLife 最新文章抓取失敗: {e}")
+            return []
+
+# ============================================================================
 # RSS 基礎類別（用來抓取 RSS 格式的新聞源）
 # ============================================================================
 class BaseRSSFetcher:
@@ -402,20 +511,69 @@ class BaseRSSFetcher:
             return []
 
 # ============================================================================
-# Unwire RSS 抓取器（取代原本的 HTML 爬蟲，確保只取最新文章）
+# Unwire 抓取器（首頁最新文章，只抓取當天新聞）
 # ============================================================================
-class UnwireRSSFetcher(BaseRSSFetcher):
-    """
-    Unwire.hk 的 RSS 抓取器。
-
-    改用 RSS 的原因：
-    - HTML 爬蟲會抓到側邊欄、推薦文章、熱門文章等舊內容
-    - RSS Feed 只包含編輯主動推送的最新文章，天生按發布時間降序排列
-    - 直接取前 15 筆即保證是最新 15 篇，無需額外過濾
-    """
-    feed_url = 'https://unwire.hk/feed/'
+class UnwireFetcher:
+    URL = 'https://unwire.hk'
     source = 'Unwire.hk'
     category = '科技'
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _article_date_from_link(link: str):
+        date_match = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', link)
+        if not date_match:
+            return None
+
+        try:
+            return datetime.strptime('-'.join(date_match.groups()), '%Y-%m-%d').date()
+        except ValueError:
+            return None
+
+    def fetch(self) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+
+        try:
+            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding
+            soup = BeautifulSoup(r.text, 'html.parser')
+
+            for tag in soup.select('.post-content .title a'):
+                href = URLValidator.normalize(tag.get('href'), 'https://unwire.hk')
+                title = tag.get_text(strip=True)
+                item_date = self._article_date_from_link(href)
+
+                if not title or len(title) < 8 or not item_date:
+                    continue
+
+                if item_date < today:
+                    break
+
+                if item_date != today or href in seen:
+                    continue
+
+                articles.append(Article(
+                    title=title,
+                    link=href,
+                    source=self.source,
+                    category=self.category
+                ))
+                seen.add(href)
+
+            logger.info(f"✓ Unwire.hk 首頁當天抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ Unwire.hk 首頁抓取失敗: {e}")
+            return []
 
 # ============================================================================
 # FlyDay RSS 抓取器（專門抓取機票優惠新聞）
@@ -469,46 +627,94 @@ class FlyDayRSSFetcher(BaseRSSFetcher):
 # DotDotNews 抓取器（專門抓取點新聞的港聞新聞）
 # 用 Chrome 打開點新聞網站，使用瀏覽器的開發者工具（F12），切換到 Network 分頁，按 Reload 重新載入頁面，找到 stories.json 的請求，右鍵 Copy URL。
 class DotDotNewsFetcher:
-    def fetch(self) -> List[Article]:
-        url = "https://www.dotdotnews.com/channels/somenewsapp/hotlist/hours/24/stories.json"
-        articles = []
+    HK_NEWS_URL = "https://www.dotdotnews.com/immed/hknews"
+    BOTH_SIDES_URL = "https://www.dotdotnews.com/immed/bothsides"
+    INTERNATIONAL_URL = "https://www.dotdotnews.com/immed/inter"
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _article_date_from_link(link: str):
+        date_match = re.search(r'/a/(\d{6})/(\d{2})/', link)
+        if not date_match:
+            return None
 
         try:
+            return datetime.strptime(''.join(date_match.groups()), '%Y%m%d').date()
+        except ValueError:
+            return None
+
+    def _fetch_column_news(self, base_url: str, source: str, days: int) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+        earliest_date = today - timedelta(days=days - 1)
+        page = 1
+
+        while True:
+            url = base_url if page == 1 else f"{base_url}/more_{page}.html"
             r = requests.get(url, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
             r.raise_for_status()
-            data = r.json()
+            soup = BeautifulSoup(r.text, 'html.parser')
 
-            for item in data.get('data', [])[:30]:
-                title = item.get('title')
-                link = item.get('url')
-                column = item.get('columnName', '').strip()
+            page_items = soup.select('.Share_Article[data-title][data-href]')
+            if not page_items:
+                break
 
-                if not title or not link:
+            found_today = False
+            found_older = False
+
+            for item in page_items:
+                link = URLValidator.normalize(item.get('data-href'), 'https://www.dotdotnews.com')
+                title = item.get('data-title', '').strip()
+                item_date = self._article_date_from_link(link)
+
+                if not title or not item_date or link in seen:
                     continue
 
-                if link.startswith('/'):
-                    link = "https://www.dotdotnews.com" + link
+                if item_date < earliest_date:
+                    found_older = True
+                    continue
 
-                # 👇 用官方欄目分類（最準）
-                if column == '港聞':
-                    source = '點新聞-港聞'
-
-                elif column == '兩岸':
-                # elif column in ['兩岸', '內地', '中國']:
-                    source = '點新聞-兩岸'
-                
-                elif column == '國際':
-                    source = '點新聞-國際'
-
-                else:
+                if item_date > today:
                     continue
 
                 articles.append(Article(
-                    title=title.strip(),
+                    title=title,
                     link=link.strip(),
                     source=source,
                     category='新聞'
                 ))
+                seen.add(link)
+                found_today = True
+
+            if found_older or not found_today:
+                break
+
+            page += 1
+
+        return articles
+
+    def _fetch_hk_news(self) -> List[Article]:
+        return self._fetch_column_news(self.HK_NEWS_URL, '點新聞-港聞', days=1)
+
+    def _fetch_both_sides_news(self) -> List[Article]:
+        return self._fetch_column_news(self.BOTH_SIDES_URL, '點新聞-兩岸', days=2)
+
+    def _fetch_international_news(self) -> List[Article]:
+        return self._fetch_column_news(self.INTERNATIONAL_URL, '點新聞-國際', days=1)
+
+    def fetch(self) -> List[Article]:
+        articles = []
+
+        try:
+            articles.extend(self._fetch_hk_news())
+            articles.extend(self._fetch_both_sides_news())
+            articles.extend(self._fetch_international_news())
 
             logger.info(f"✓ 點新聞 分類後 {len(articles)} 篇")
             return articles
@@ -517,8 +723,8 @@ class DotDotNewsFetcher:
             logger.error(f"✗ 點新聞 API 失敗: {e}")
             return []
 
-# 所有 RSS 抓取器的清單（新增 UnwireRSSFetcher）
-RSS_FETCHERS = [FlyDayRSSFetcher(), UnwireRSSFetcher(), DotDotNewsFetcher()]
+# 所有額外抓取器的清單（RSS 與專用網站抓取器）
+RSS_FETCHERS = [EzoneFetcher(), NewMobileLifeFetcher(), FlyDayRSSFetcher(), UnwireRSSFetcher(), DotDotNewsFetcher()]
 
 # ============================================================================
 # 爬蟲管理器（統一管理所有爬蟲）
