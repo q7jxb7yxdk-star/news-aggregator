@@ -361,9 +361,10 @@ class HolidaySmartFetcher:
             r.raise_for_status()
             r.encoding = r.apparent_encoding
             soup = BeautifulSoup(r.text, 'html.parser')
+            candidates = []
 
             for tag in soup.select('a[href*="/hk/article/"]'):
-                if len(articles) >= MAX_NEWS_PER_SOURCE:
+                if len(candidates) >= MAX_NEWS_PER_SOURCE:
                     break
 
                 href = URLValidator.normalize(tag.get('href'), 'https://holidaysmart.io')
@@ -371,6 +372,12 @@ class HolidaySmartFetcher:
 
                 if not title or len(title) < 12 or href in seen:
                     continue
+
+                candidates.append((title, href))
+                seen.add(href)
+
+            def fetch_article(candidate):
+                title, href = candidate
 
                 try:
                     article_response = requests.get(
@@ -380,28 +387,29 @@ class HolidaySmartFetcher:
                     )
                     article_response.raise_for_status()
                     article_response.encoding = article_response.apparent_encoding
+                    article_date = self._article_date_from_html(article_response.text)
                 except Exception as e:
                     logger.warning(f"HolidaySmart 文章日期讀取失敗: {href} - {e}")
-                    continue
+                    return None
 
-                article_date = self._article_date_from_html(article_response.text)
+                if not article_date or article_date < earliest_date or article_date > today:
+                    return None
 
-                if not article_date:
-                    continue
-
-                if article_date < earliest_date:
-                    continue
-
-                if article_date > today:
-                    continue
-
-                articles.append(Article(
+                return Article(
                     title=title,
                     link=href,
                     source=self.source,
                     category=self.category
-                ))
-                seen.add(href)
+                )
+
+            with ThreadPoolExecutor(max_workers=5) as ex:
+                futures = [ex.submit(fetch_article, candidate) for candidate in candidates]
+
+                for f in as_completed(futures):
+                    article = f.result()
+
+                    if article:
+                        articles.append(article)
 
             logger.info(f"✓ HolidaySmart 7 天內抓取 {len(articles)} 篇")
             return articles
@@ -725,6 +733,7 @@ class DotDotNewsFetcher:
     HK_NEWS_URL = "https://www.dotdotnews.com/immed/hknews"
     BOTH_SIDES_URL = "https://www.dotdotnews.com/immed/bothsides"
     INTERNATIONAL_URL = "https://www.dotdotnews.com/immed/inter"
+    FINANCE_URL = "https://www.dotdotnews.com/finance"
 
     @staticmethod
     def _today_hk_date():
@@ -794,6 +803,59 @@ class DotDotNewsFetcher:
 
         return articles
 
+    def _fetch_static_pages_news(self, urls: List[str], source: str, days: int) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+        earliest_date = today - timedelta(days=days - 1)
+
+        for base_url in urls:
+            page = 1
+
+            while True:
+                url = base_url if page == 1 else f"{base_url}/more_{page}.html"
+                r = requests.get(url, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+                r.raise_for_status()
+                soup = BeautifulSoup(r.text, 'html.parser')
+
+                page_items = soup.select('.Share_Article[data-title][data-href]')
+                if not page_items:
+                    break
+
+                found_in_range = False
+                found_older = False
+
+                for item in page_items:
+                    link = URLValidator.normalize(item.get('data-href'), 'https://www.dotdotnews.com')
+                    title = item.get('data-title', '').strip()
+                    item_date = self._article_date_from_link(link)
+
+                    if not title or not item_date or link in seen:
+                        continue
+
+                    if item_date < earliest_date:
+                        found_older = True
+                        continue
+
+                    if item_date > today:
+                        continue
+
+                    articles.append(Article(
+                        title=title,
+                        link=link.strip(),
+                        source=source,
+                        category='新聞'
+                    ))
+                    seen.add(link)
+                    found_in_range = True
+
+                if found_older or not found_in_range:
+                    break
+
+                page += 1
+
+        return articles
+
     def _fetch_hk_news(self) -> List[Article]:
         return self._fetch_column_news(self.HK_NEWS_URL, '點新聞-港聞', days=1)
 
@@ -803,6 +865,13 @@ class DotDotNewsFetcher:
     def _fetch_international_news(self) -> List[Article]:
         return self._fetch_column_news(self.INTERNATIONAL_URL, '點新聞-國際', days=1)
 
+    def _fetch_market_news(self) -> List[Article]:
+        return self._fetch_static_pages_news(
+            [self.FINANCE_URL],
+            '點新聞-財經',
+            days=2
+        )
+
     def fetch(self) -> List[Article]:
         articles = []
 
@@ -810,6 +879,7 @@ class DotDotNewsFetcher:
             articles.extend(self._fetch_hk_news())
             articles.extend(self._fetch_both_sides_news())
             articles.extend(self._fetch_international_news())
+            articles.extend(self._fetch_market_news())
 
             logger.info(f"✓ 點新聞 分類後 {len(articles)} 篇")
             return articles
@@ -868,18 +938,20 @@ class ScraperManager:
     @staticmethod
     def _deduplicate(articles: List[Article]) -> List[Article]:
         """
-        去除重複的新聞（根據連結判斷）
+        去除重複的新聞（同一來源內根據連結判斷）
         """
-        seen = set()  # 記錄已看過的連結
+        seen = set()  # 記錄已看過的來源和連結
         unique = []   # 儲存不重複的新聞
 
         for a in articles:
-            # 如果這個連結已經看過，跳過
-            if a.link in seen:
+            key = (a.source, a.link)
+
+            # 如果同一來源的這個連結已經看過，跳過
+            if key in seen:
                 continue
 
-            # 記錄這個連結
-            seen.add(a.link)
+            # 記錄這個來源和連結
+            seen.add(key)
             unique.append(a)
 
         return unique
