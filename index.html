@@ -593,14 +593,32 @@
                 categoryContainer.appendChild(btn);
             });
             
-            // 從所有新聞中提取來源，並去除重複項，然後排序。 .sort() 是按英文字母自動排序，大寫排先。
-            const sources = [...new Set(allNews.map(item => item.source))].sort();
-            
-            // 產生來源按鈕
+            // 產生來源按鈕（會根據目前分類動態更新）
+            renderSourceFilters();
+        }
+
+        /**
+         * 根據目前分類動態產生來源篩選按鈕
+         */
+        function renderSourceFilters() {
             const sourceContainer = document.getElementById('sourceFilters');
+            const sourceNews = currentFilters.category === 'all'
+                ? allNews
+                : allNews.filter(item => item.category === currentFilters.category);
+            const sources = [...new Set(sourceNews.map(item => item.source))].sort();
+
+            sourceContainer.innerHTML = '';
+
+            const allBtn = document.createElement('button');
+            allBtn.className = `filter-btn ${currentFilters.source === 'all' ? 'active' : ''}`;
+            allBtn.dataset.type = 'source';
+            allBtn.dataset.value = 'all';
+            allBtn.textContent = '全部';
+            sourceContainer.appendChild(allBtn);
+
             sources.forEach(source => {
                 const btn = document.createElement('button');
-                btn.className = 'filter-btn';
+                btn.className = `filter-btn ${currentFilters.source === source ? 'active' : ''}`;
                 btn.dataset.type = 'source';
                 btn.dataset.value = source;
                 
@@ -680,6 +698,17 @@
          * 根據目前的篩選條件過濾新聞並顯示
          */
         function filterNews() {
+            const availableSources = currentFilters.category === 'all'
+                ? allNews.map(item => item.source)
+                : allNews
+                    .filter(item => item.category === currentFilters.category)
+                    .map(item => item.source);
+
+            if (currentFilters.source !== 'all' && !availableSources.includes(currentFilters.source)) {
+                currentFilters.source = 'all';
+                renderSourceFilters();
+            }
+
             // 從所有新聞開始
             let filtered = allNews;
             
@@ -751,6 +780,9 @@
             
             // 清空搜尋框
             document.getElementById('searchInput').value = '';
+
+            // 重新產生來源按鈕，回到所有來源
+            renderSourceFilters();
             
             // 重新顯示所有新聞
             filterNews();
@@ -786,6 +818,10 @@
                 
                 // 更新篩選條件
                 currentFilters[type] = value;
+
+                if (type === 'category') {
+                    renderSourceFilters();
+                }
                 
                 // 執行篩選
                 filterNews();
