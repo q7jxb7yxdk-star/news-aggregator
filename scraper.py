@@ -109,16 +109,6 @@ class ScraperConfig:
 #       因此這裡不再包含 unwire 的設定
 # ============================================================================
 SCRAPERS_CONFIG = {
-    # HolidaySmart - 旅遊網站
-    'holidaysmart': ScraperConfig(
-        url='https://holidaysmart.io/hk',
-        source='HolidaySmart',
-        category='旅遊',
-        min_title_length=12,
-        url_pattern='/hk/article/',         # 只抓文章頁面
-        base_url='https://holidaysmart.io'  # 用來拼接完整網址
-    ),
-
     # MeetHK - 旅遊網站（專注機票資訊）
     'meethk': ScraperConfig(
         url='https://www.meethk.com/category/flight/',
@@ -324,6 +314,101 @@ class WebScraper:
         # 記錄抓取結果
         logger.info(f"✓ {self.config.source} HTML 抓取 {len(articles)} 篇")
         return articles
+
+# ============================================================================
+# HolidaySmart 抓取器（只抓取 7 天內文章）
+# ============================================================================
+class HolidaySmartFetcher:
+    URL = 'https://holidaysmart.io/hk'
+    source = 'HolidaySmart'
+    category = '旅遊'
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _article_date_from_html(html: str):
+        date_match = re.search(
+            r'(?:datePublished|published_at|publishedAt)["\']?\s*[:=]\s*["\']([^"\']+)',
+            html
+        )
+        if not date_match:
+            date_match = re.search(r'(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2}))', html)
+
+        if not date_match:
+            return None
+
+        date_text = date_match.group(1).replace('Z', '+00:00')
+
+        try:
+            return datetime.fromisoformat(date_text).astimezone(
+                timezone(timedelta(hours=TIMEZONE_OFFSET))
+            ).date()
+        except ValueError:
+            return None
+
+    def fetch(self) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+        earliest_date = today - timedelta(days=6)
+
+        try:
+            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding
+            soup = BeautifulSoup(r.text, 'html.parser')
+
+            for tag in soup.select('a[href*="/hk/article/"]'):
+                if len(articles) >= MAX_NEWS_PER_SOURCE:
+                    break
+
+                href = URLValidator.normalize(tag.get('href'), 'https://holidaysmart.io')
+                title = tag.get_text(strip=True)
+
+                if not title or len(title) < 12 or href in seen:
+                    continue
+
+                try:
+                    article_response = requests.get(
+                        href,
+                        headers={'User-Agent': USER_AGENT},
+                        timeout=REQUEST_TIMEOUT
+                    )
+                    article_response.raise_for_status()
+                    article_response.encoding = article_response.apparent_encoding
+                except Exception as e:
+                    logger.warning(f"HolidaySmart 文章日期讀取失敗: {href} - {e}")
+                    continue
+
+                article_date = self._article_date_from_html(article_response.text)
+
+                if not article_date:
+                    continue
+
+                if article_date < earliest_date:
+                    continue
+
+                if article_date > today:
+                    continue
+
+                articles.append(Article(
+                    title=title,
+                    link=href,
+                    source=self.source,
+                    category=self.category
+                ))
+                seen.add(href)
+
+            logger.info(f"✓ HolidaySmart 7 天內抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ HolidaySmart 抓取失敗: {e}")
+            return []
 
 # ============================================================================
 # eZone 抓取器（科技焦點，只抓取當天新聞）
@@ -734,7 +819,7 @@ class DotDotNewsFetcher:
             return []
 
 # 所有額外抓取器的清單（RSS 與專用網站抓取器）
-RSS_FETCHERS = [EzoneFetcher(), NewMobileLifeFetcher(), FlyDayRSSFetcher(), UnwireFetcher(), DotDotNewsFetcher()]
+RSS_FETCHERS = [HolidaySmartFetcher(), EzoneFetcher(), NewMobileLifeFetcher(), FlyDayRSSFetcher(), UnwireFetcher(), DotDotNewsFetcher()]
 
 # ============================================================================
 # 爬蟲管理器（統一管理所有爬蟲）
