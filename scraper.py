@@ -131,6 +131,17 @@ SCRAPERS_CONFIG = {
     )
 }
 
+# 自訂抓取順序：調整這個清單即可改變 VS Code Terminal 顯示和實際抓取順序
+FETCH_ORDER = [
+    '點新聞',
+    'E-zone',
+    'NewMobileLife',
+    'Unwire.hk',
+    'FlyDayhk',
+    'HolidaySmart',
+    'MeetHK'
+]
+
 # ============================================================================
 # 工具類別（用來驗證和處理網址、文章）
 # ============================================================================
@@ -730,6 +741,7 @@ class FlyDayRSSFetcher(BaseRSSFetcher):
 # DotDotNews 抓取器（專門抓取點新聞的港聞新聞）
 # 用 Chrome 打開點新聞網站，使用瀏覽器的開發者工具（F12），切換到 Network 分頁，按 Reload 重新載入頁面，找到 stories.json 的請求，右鍵 Copy URL。
 class DotDotNewsFetcher:
+    source = '點新聞'
     HK_NEWS_URL = "https://www.dotdotnews.com/immed/hknews"
     BOTH_SIDES_URL = "https://www.dotdotnews.com/immed/bothsides"
     INTERNATIONAL_URL = "https://www.dotdotnews.com/immed/inter"
@@ -876,12 +888,20 @@ class DotDotNewsFetcher:
         articles = []
 
         try:
-            articles.extend(self._fetch_hk_news())
-            articles.extend(self._fetch_both_sides_news())
-            articles.extend(self._fetch_international_news())
-            articles.extend(self._fetch_market_news())
+            hk_news = self._fetch_hk_news()
+            both_sides_news = self._fetch_both_sides_news()
+            international_news = self._fetch_international_news()
+            market_news = self._fetch_market_news()
 
-            logger.info(f"✓ 點新聞 分類後 {len(articles)} 篇")
+            logger.info(f"✓ 點新聞-港聞 抓取 {len(hk_news)} 篇")
+            logger.info(f"✓ 點新聞-兩岸 抓取 {len(both_sides_news)} 篇")
+            logger.info(f"✓ 點新聞-國際 抓取 {len(international_news)} 篇")
+            logger.info(f"✓ 點新聞-財經 抓取 {len(market_news)} 篇")
+
+            articles.extend(hk_news)
+            articles.extend(both_sides_news)
+            articles.extend(international_news)
+            articles.extend(market_news)
             return articles
 
         except Exception as e:
@@ -889,7 +909,14 @@ class DotDotNewsFetcher:
             return []
 
 # 所有額外抓取器的清單（RSS 與專用網站抓取器）
-RSS_FETCHERS = [HolidaySmartFetcher(), EzoneFetcher(), NewMobileLifeFetcher(), FlyDayRSSFetcher(), UnwireFetcher(), DotDotNewsFetcher()]
+RSS_FETCHERS = {
+    'HolidaySmart': HolidaySmartFetcher(),
+    'E-zone': EzoneFetcher(),
+    'NewMobileLife': NewMobileLifeFetcher(),
+    'FlyDayhk': FlyDayRSSFetcher(),
+    'Unwire.hk': UnwireFetcher(),
+    '點新聞': DotDotNewsFetcher()
+}
 
 # ============================================================================
 # 爬蟲管理器（統一管理所有爬蟲）
@@ -910,27 +937,27 @@ class ScraperManager:
         """
         articles = []
 
-        # 使用多線程同時執行多個爬蟲（加快速度）
-        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
-            # 為每個設定建立一個爬蟲任務
-            futures = {
-                ex.submit(WebScraper(cfg).scrape): k
-                for k, cfg in self.configs.items()
-            }
+        for source in FETCH_ORDER:
+            config = next(
+                (cfg for cfg in self.configs.values() if cfg.source == source),
+                None
+            )
 
-            # 等待所有任務完成，收集結果
-            for f in as_completed(futures):
+            if config:
                 try:
-                    articles.extend(f.result())  # 將結果加入清單
+                    articles.extend(WebScraper(config).scrape())
                 except Exception as e:
-                    logger.error(f"抓取失敗: {e}")
+                    logger.error(f"{source} 抓取失敗: {e}")
 
-        # 執行所有 RSS 抓取器
-        for rss in RSS_FETCHERS:
-            try:
-                articles.extend(rss.fetch())
-            except Exception as e:
-                logger.error(f"RSS 抓取失敗: {e}")
+                continue
+
+            fetcher = RSS_FETCHERS.get(source)
+
+            if fetcher:
+                try:
+                    articles.extend(fetcher.fetch())
+                except Exception as e:
+                    logger.error(f"{source} 抓取失敗: {e}")
 
         # 去除重複的新聞
         return self._deduplicate(articles)
