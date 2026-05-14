@@ -41,21 +41,21 @@
 
 ## 抓取順序
 
-抓取順序由 `scraper.py` 內的 `FETCH_ORDER` 控制。
+抓取順序由 `scraper.py` 內的 `FETCHERS` 控制。
 
 ```python
-FETCH_ORDER = [
-    '點新聞',
-    'E-zone',
-    'NewMobileLife',
-    'Unwire.hk',
-    'FlyDayhk',
-    'HolidaySmart',
-    'MeetHK'
-]
+FETCHERS = {
+    '點新聞': DotDotNewsFetcher(),
+    'E-zone': EzoneFetcher(),
+    'NewMobileLife': NewMobileLifeFetcher(),
+    'Unwire.hk': UnwireFetcher(),
+    'FlyDayhk': FlyDayRSSFetcher(),
+    'HolidaySmart': HolidaySmartFetcher(),
+    'MeetHK': ConfigFetcher(ScraperConfig(...))
+}
 ```
 
-程式會由上至下執行。要改順序，只需要調整這個清單，不需要移動 class 或 function 的代碼位置。
+程式會由上至下執行。要改順序，只需要調整 `FETCHERS` 內來源的排列，不需要移動 class 或 function 的代碼位置。
 
 其中 `點新聞` 會在內部再依序抓取：
 
@@ -68,28 +68,11 @@ FETCH_ORDER = [
 
 ## 抓取器分類
 
-`MeetHK` 使用通用 HTML 設定，放在 `SCRAPERS_CONFIG`。
+所有來源現在都統一放在 `FETCHERS`。
 
-```python
-SCRAPERS_CONFIG = {
-    'meethk': ScraperConfig(...)
-}
-```
+專用來源直接使用自己的 Fetcher class，例如 `DotDotNewsFetcher()`、`EzoneFetcher()`。
 
-其他來源使用專用抓取器，放在 `RSS_FETCHERS`。
-
-```python
-RSS_FETCHERS = {
-    '點新聞': DotDotNewsFetcher(),
-    'NewMobileLife': NewMobileLifeFetcher(),
-    'E-zone': EzoneFetcher(),
-    'Unwire.hk': UnwireFetcher(),
-    'FlyDayhk': FlyDayRSSFetcher(),
-    'HolidaySmart': HolidaySmartFetcher()
-}
-```
-
-`RSS_FETCHERS` 名字沿用舊代碼，但現在不只包含 RSS，也包含專用 HTML 抓取器。
+`MeetHK` 使用通用 HTML 規則，所以用 `ConfigFetcher(ScraperConfig(...))` 包裝成同一種 `fetch()` 介面。
 
 ## 安裝
 
@@ -190,7 +173,7 @@ Unwire.hk
 
 | 設定 | 說明 |
 |---|---|
-| `FETCH_ORDER` | 自訂抓取順序 |
+| `FETCHERS` | 自訂來源和抓取順序 |
 | `MAX_NEWS_PER_SOURCE` | 每個來源最多抓取數量 |
 | `REQUEST_TIMEOUT` | 網路請求逾時秒數 |
 | `MAX_RETRIES` | 通用 HTML 抓取器重試次數 |
@@ -199,6 +182,6 @@ Unwire.hk
 
 ## 新增來源
 
-如果新來源適合通用 HTML 抓取，可以加入 `SCRAPERS_CONFIG`。
+如果新來源適合通用 HTML 抓取，可以用 `ConfigFetcher(ScraperConfig(...))` 加入 `FETCHERS`。
 
-如果新來源需要特殊日期、分頁或過濾邏輯，建議新增一個專用 Fetcher class，然後加入 `RSS_FETCHERS` 和 `FETCH_ORDER`。
+如果新來源需要特殊日期、分頁或過濾邏輯，建議新增一個專用 Fetcher class，然後加入 `FETCHERS`。

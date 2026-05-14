@@ -1,6 +1,6 @@
 # ============================================================================
 # 這個Python 腳本的主要功能：
-# 自動抓取新聞 - 從 5 個網站抓取科技和旅遊新聞
+# 自動抓取新聞 - 從多個來源抓取新聞、科技和旅遊資訊
 # 智慧過濾 - 排除廣告、優惠碼等不相關內容
 # 去除重複 - 自動刪除重複的新聞
 # 存成檔案 - 最後輸出成 news.json 檔案
@@ -15,7 +15,7 @@ import feedparser                                   # 用來讀取 RSS 新聞源
 from bs4 import BeautifulSoup                       # 用來解析網頁內容，找出我們要的資訊
 import json                                         # 用來儲存資料成 JSON 格式（一種常見的資料格式）
 from datetime import datetime, timedelta, timezone  # 處理時間日期
-from typing import Dict, List, Optional, Set        # 用來標註變數類型，讓程式更清楚
+from typing import List, Optional                   # 用來標註變數類型，讓程式更清楚
 from dataclasses import dataclass, asdict           # 用來建立資料結構
 from pathlib import Path                            # 處理檔案路徑
 import logging                                      # 記錄程式執行過程
@@ -41,7 +41,6 @@ USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 
 MAX_NEWS_PER_SOURCE = 15  # 每個網站最多抓 15 篇新聞
 REQUEST_TIMEOUT = 10      # 等待網站回應的時間上限（10 秒）
-MAX_WORKERS = 3           # 同時處理 3 個網站（加快速度）
 MAX_RETRIES = 3           # 如果失敗，最多重試 3 次
 RETRY_DELAY = 1           # 重試之間等待 1 秒
 TIMEZONE_OFFSET = 8       # 時區偏移（香港是 UTC+8）
@@ -286,6 +285,18 @@ class WebScraper:
         # 記錄抓取結果
         logger.info(f"✓ {self.config.source} HTML 抓取 {len(articles)} 篇")
         return articles
+
+
+class ConfigFetcher:
+    """
+    把通用 HTML 爬蟲設定包裝成和其他專用抓取器一致的 fetch() 介面
+    """
+    def __init__(self, config: ScraperConfig):
+        self.config = config
+        self.source = config.source
+
+    def fetch(self) -> List[Article]:
+        return WebScraper(self.config).scrape()
 
 # ============================================================================
 # RSS 基礎類別（用來抓取 RSS 格式的新聞源）
@@ -872,20 +883,23 @@ class HolidaySmartFetcher:
             return []
 
 # ============================================================================
-# MeetHK 抓取器
+# 抓取器清單（順序即 VS Code Terminal 顯示和實際抓取順序）
 # ============================================================================
-SCRAPERS_CONFIG = {
-    # MeetHK - 旅遊網站（專注機票資訊）
-    'meethk': ScraperConfig(
+FETCHERS = {
+    '點新聞': DotDotNewsFetcher(),
+    'E-zone': EzoneFetcher(),
+    'NewMobileLife': NewMobileLifeFetcher(),
+    'Unwire.hk': UnwireFetcher(),
+    'FlyDayhk': FlyDayRSSFetcher(),
+    'HolidaySmart': HolidaySmartFetcher(),
+    'MeetHK': ConfigFetcher(ScraperConfig(
         url='https://www.meethk.com/category/flight/',
         source='MeetHK',
         category='旅遊',
         min_title_length=12,
-        # 使用更精確的選擇器，只抓標題中的連結
         selector='h2.post-title a, h3.post-title a, .post-title a',
         domain_check='meethk.com',
-        url_pattern='/1',  # 網址包含 /1（可能是文章編號）
-        # 排除不想要的標題（酒店、優惠碼等）
+        url_pattern='/1',
         exclude_titles=[
             '酒店', 'Staycation', 'Hotel', '信用卡',
             '優惠碼', 'discount code', 'Club Med',
@@ -894,28 +908,7 @@ SCRAPERS_CONFIG = {
             'Expedia', 'Agoda', 'Booking.com',
             '閱讀全文', 'Read More'
         ]
-    )
-}
-
-# 自訂抓取順序：調整這個清單即可改變 VS Code Terminal 顯示和實際抓取順序
-FETCH_ORDER = [
-    '點新聞',
-    'E-zone',
-    'NewMobileLife',
-    'Unwire.hk',
-    'FlyDayhk',
-    'HolidaySmart',
-    'MeetHK'
-]
-
-# 所有額外抓取器的清單（RSS 與專用網站抓取器）
-RSS_FETCHERS = {
-    '點新聞': DotDotNewsFetcher(),
-    'E-zone': EzoneFetcher(),
-    'NewMobileLife': NewMobileLifeFetcher(),
-    'Unwire.hk': UnwireFetcher(),
-    'FlyDayhk': FlyDayRSSFetcher(),
-    'HolidaySmart': HolidaySmartFetcher()
+    ))
 }
 
 # ============================================================================
@@ -925,39 +918,23 @@ class ScraperManager:
     """
     爬蟲管理器 - 負責協調所有爬蟲一起工作
     """
-    def __init__(self, configs):
+    def __init__(self, fetchers):
         """
-        初始化，接收所有爬蟲設定
+        初始化，接收所有抓取器
         """
-        self.configs = configs
+        self.fetchers = fetchers
 
     def scrape_all(self) -> List[Article]:
         """
-        同時執行所有爬蟲，抓取所有新聞
+        依照 FETCHERS 的排列順序執行所有爬蟲，抓取所有新聞
         """
         articles = []
 
-        for source in FETCH_ORDER:
-            config = next(
-                (cfg for cfg in self.configs.values() if cfg.source == source),
-                None
-            )
-
-            if config:
-                try:
-                    articles.extend(WebScraper(config).scrape())
-                except Exception as e:
-                    logger.error(f"{source} 抓取失敗: {e}")
-
-                continue
-
-            fetcher = RSS_FETCHERS.get(source)
-
-            if fetcher:
-                try:
-                    articles.extend(fetcher.fetch())
-                except Exception as e:
-                    logger.error(f"{source} 抓取失敗: {e}")
+        for source, fetcher in self.fetchers.items():
+            try:
+                articles.extend(fetcher.fetch())
+            except Exception as e:
+                logger.error(f"{source} 抓取失敗: {e}")
 
         # 去除重複的新聞
         return self._deduplicate(articles)
@@ -1022,7 +999,7 @@ def main():
     logger.info("開始抓取新聞")
 
     # 1. 建立爬蟲管理器
-    mgr = ScraperManager(SCRAPERS_CONFIG)
+    mgr = ScraperManager(FETCHERS)
 
     # 2. 執行所有爬蟲，抓取新聞
     articles = mgr.scrape_all()
