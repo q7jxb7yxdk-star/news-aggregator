@@ -911,8 +911,8 @@ FETCH_ORDER = [
 # 所有額外抓取器的清單（RSS 與專用網站抓取器）
 RSS_FETCHERS = {
     '點新聞': DotDotNewsFetcher(),
-    'NewMobileLife': NewMobileLifeFetcher(),
     'E-zone': EzoneFetcher(),
+    'NewMobileLife': NewMobileLifeFetcher(),
     'Unwire.hk': UnwireFetcher(),
     'FlyDayhk': FlyDayRSSFetcher(),
     'HolidaySmart': HolidaySmartFetcher()
