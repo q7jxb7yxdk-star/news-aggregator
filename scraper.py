@@ -897,16 +897,6 @@ SCRAPERS_CONFIG = {
     )
 }
 
-# 所有額外抓取器的清單（RSS 與專用網站抓取器）
-RSS_FETCHERS = {
-    '點新聞': DotDotNewsFetcher(),
-    'NewMobileLife': NewMobileLifeFetcher(),
-    'E-zone': EzoneFetcher(),
-    'Unwire.hk': UnwireFetcher(),
-    'FlyDayhk': FlyDayRSSFetcher(),
-    'HolidaySmart': HolidaySmartFetcher()
-}
-
 # 自訂抓取順序：調整這個清單即可改變 VS Code Terminal 顯示和實際抓取順序
 FETCH_ORDER = [
     '點新聞',
@@ -917,6 +907,16 @@ FETCH_ORDER = [
     'HolidaySmart',
     'MeetHK'
 ]
+
+# 所有額外抓取器的清單（RSS 與專用網站抓取器）
+RSS_FETCHERS = {
+    '點新聞': DotDotNewsFetcher(),
+    'NewMobileLife': NewMobileLifeFetcher(),
+    'E-zone': EzoneFetcher(),
+    'Unwire.hk': UnwireFetcher(),
+    'FlyDayhk': FlyDayRSSFetcher(),
+    'HolidaySmart': HolidaySmartFetcher()
+}
 
 # ============================================================================
 # 爬蟲管理器（統一管理所有爬蟲）
