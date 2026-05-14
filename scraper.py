@@ -104,45 +104,6 @@ class ScraperConfig:
             self.exclude_titles = []
 
 # ============================================================================
-# HTML 爬蟲設定（定義要抓取哪些網站）
-# 注意：Unwire.hk 已改由首頁專用抓取器負責（見下方 UnwireFetcher），
-#       因此這裡不再包含 unwire 的設定
-# ============================================================================
-SCRAPERS_CONFIG = {
-    # MeetHK - 旅遊網站（專注機票資訊）
-    'meethk': ScraperConfig(
-        url='https://www.meethk.com/category/flight/',
-        source='MeetHK',
-        category='旅遊',
-        min_title_length=12,
-        # 使用更精確的選擇器，只抓標題中的連結
-        selector='h2.post-title a, h3.post-title a, .post-title a',
-        domain_check='meethk.com',
-        url_pattern='/1',  # 網址包含 /1（可能是文章編號）
-        # 排除不想要的標題（酒店、優惠碼等）
-        exclude_titles=[
-            '酒店', 'Staycation', 'Hotel', '信用卡',
-            '優惠碼', 'discount code', 'Club Med',
-            'KKday', 'Klook', '套票', 'HopeGoo',
-            '每日更新', 'Hotels.com', 'Trip.com',
-            'Expedia', 'Agoda', 'Booking.com',
-            '閱讀全文', 'Read More'
-        ]
-    )
-}
-
-# 自訂抓取順序：調整這個清單即可改變 VS Code Terminal 顯示和實際抓取順序
-FETCH_ORDER = [
-    '點新聞',
-    'E-zone',
-    'NewMobileLife',
-    'Unwire.hk',
-    'FlyDayhk',
-    'HolidaySmart',
-    'MeetHK'
-]
-
-# ============================================================================
 # 工具類別（用來驗證和處理網址、文章）
 # ============================================================================
 class URLValidator:
@@ -327,242 +288,6 @@ class WebScraper:
         return articles
 
 # ============================================================================
-# HolidaySmart 抓取器（只抓取 7 天內文章）
-# ============================================================================
-class HolidaySmartFetcher:
-    URL = 'https://holidaysmart.io/hk'
-    source = 'HolidaySmart'
-    category = '旅遊'
-
-    @staticmethod
-    def _today_hk_date():
-        return datetime.now(
-            timezone(timedelta(hours=TIMEZONE_OFFSET))
-        ).date()
-
-    @staticmethod
-    def _article_date_from_html(html: str):
-        date_match = re.search(
-            r'(?:datePublished|published_at|publishedAt)["\']?\s*[:=]\s*["\']([^"\']+)',
-            html
-        )
-        if not date_match:
-            date_match = re.search(r'(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2}))', html)
-
-        if not date_match:
-            return None
-
-        date_text = date_match.group(1).replace('Z', '+00:00')
-
-        try:
-            return datetime.fromisoformat(date_text).astimezone(
-                timezone(timedelta(hours=TIMEZONE_OFFSET))
-            ).date()
-        except ValueError:
-            return None
-
-    def fetch(self) -> List[Article]:
-        articles = []
-        seen = set()
-        today = self._today_hk_date()
-        earliest_date = today - timedelta(days=6)
-
-        try:
-            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
-            r.raise_for_status()
-            r.encoding = r.apparent_encoding
-            soup = BeautifulSoup(r.text, 'html.parser')
-            candidates = []
-
-            for tag in soup.select('a[href*="/hk/article/"]'):
-                if len(candidates) >= MAX_NEWS_PER_SOURCE:
-                    break
-
-                href = URLValidator.normalize(tag.get('href'), 'https://holidaysmart.io')
-                title = tag.get_text(strip=True)
-
-                if not title or len(title) < 12 or href in seen:
-                    continue
-
-                candidates.append((title, href))
-                seen.add(href)
-
-            def fetch_article(candidate):
-                title, href = candidate
-
-                try:
-                    article_response = requests.get(
-                        href,
-                        headers={'User-Agent': USER_AGENT},
-                        timeout=REQUEST_TIMEOUT
-                    )
-                    article_response.raise_for_status()
-                    article_response.encoding = article_response.apparent_encoding
-                    article_date = self._article_date_from_html(article_response.text)
-                except Exception as e:
-                    logger.warning(f"HolidaySmart 文章日期讀取失敗: {href} - {e}")
-                    return None
-
-                if not article_date or article_date < earliest_date or article_date > today:
-                    return None
-
-                return Article(
-                    title=title,
-                    link=href,
-                    source=self.source,
-                    category=self.category
-                )
-
-            with ThreadPoolExecutor(max_workers=5) as ex:
-                futures = [ex.submit(fetch_article, candidate) for candidate in candidates]
-
-                for f in as_completed(futures):
-                    article = f.result()
-
-                    if article:
-                        articles.append(article)
-
-            logger.info(f"✓ HolidaySmart 7 天內抓取 {len(articles)} 篇")
-            return articles
-
-        except Exception as e:
-            logger.error(f"✗ HolidaySmart 抓取失敗: {e}")
-            return []
-
-# ============================================================================
-# eZone 抓取器（科技焦點，只抓取當天新聞）
-# ============================================================================
-class EzoneFetcher:
-    URL = 'https://ezone.hk/srae001/科技焦點/'
-    source = 'E-zone'
-    category = '科技'
-
-    @staticmethod
-    def _today_hk_date():
-        return datetime.now(
-            timezone(timedelta(hours=TIMEZONE_OFFSET))
-        ).date()
-
-    @staticmethod
-    def _article_date_from_text(text: str):
-        date_match = re.search(r'(\d{2})-(\d{2})-(\d{4})\s+\d{2}:\d{2}', text)
-        if not date_match:
-            return None
-
-        try:
-            return datetime.strptime('-'.join(date_match.groups()), '%d-%m-%Y').date()
-        except ValueError:
-            return None
-
-    def fetch(self) -> List[Article]:
-        articles = []
-        seen = set()
-        today = self._today_hk_date()
-
-        try:
-            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
-            r.raise_for_status()
-            r.encoding = r.apparent_encoding
-            soup = BeautifulSoup(r.text, 'html.parser')
-
-            for tag in soup.select('a[href*="/article/"]'):
-                href = URLValidator.normalize(tag.get('href'), 'https://ezone.hk')
-                title_tag = tag.select_one('h3.title')
-                title = title_tag.get_text(strip=True) if title_tag else ''
-                item_date = self._article_date_from_text(tag.get_text(' ', strip=True))
-
-                if not title or len(title) < 8 or not item_date:
-                    continue
-
-                if item_date < today:
-                    break
-
-                if item_date != today or href in seen:
-                    continue
-
-                articles.append(Article(
-                    title=title,
-                    link=href,
-                    source=self.source,
-                    category=self.category
-                ))
-                seen.add(href)
-
-            logger.info(f"✓ E-zone 科技焦點當天抓取 {len(articles)} 篇")
-            return articles
-
-        except Exception as e:
-            logger.error(f"✗ E-zone 科技焦點抓取失敗: {e}")
-            return []
-
-# ============================================================================
-# NewMobileLife 抓取器（最新文章，只抓取當天新聞）
-# ============================================================================
-class NewMobileLifeFetcher:
-    URL = 'https://www.newmobilelife.com/最新文章/'
-    source = 'NewMobileLife'
-    category = '科技'
-
-    @staticmethod
-    def _today_hk_date():
-        return datetime.now(
-            timezone(timedelta(hours=TIMEZONE_OFFSET))
-        ).date()
-
-    @staticmethod
-    def _article_date_from_text(text: str):
-        try:
-            return datetime.strptime(text.strip(), '%Y-%m-%d').date()
-        except ValueError:
-            return None
-
-    def fetch(self) -> List[Article]:
-        articles = []
-        seen = set()
-        today = self._today_hk_date()
-
-        try:
-            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
-            r.raise_for_status()
-            r.encoding = r.apparent_encoding
-            soup = BeautifulSoup(r.text, 'html.parser')
-
-            for item in soup.select('article'):
-                title_tag = item.select_one('h2 a')
-                date_tag = item.select_one('.cs-meta-date')
-
-                if not title_tag or not date_tag:
-                    continue
-
-                title = title_tag.get_text(strip=True)
-                href = URLValidator.normalize(title_tag.get('href'), 'https://www.newmobilelife.com')
-                item_date = self._article_date_from_text(date_tag.get_text(strip=True))
-
-                if not title or len(title) < 12 or not item_date:
-                    continue
-
-                if item_date < today:
-                    break
-
-                if item_date != today or href in seen:
-                    continue
-
-                articles.append(Article(
-                    title=title,
-                    link=href,
-                    source=self.source,
-                    category=self.category
-                ))
-                seen.add(href)
-
-            logger.info(f"✓ NewMobileLife 最新文章當天抓取 {len(articles)} 篇")
-            return articles
-
-        except Exception as e:
-            logger.error(f"✗ NewMobileLife 最新文章抓取失敗: {e}")
-            return []
-
-# ============================================================================
 # RSS 基礎類別（用來抓取 RSS 格式的新聞源）
 # ============================================================================
 class BaseRSSFetcher:
@@ -615,131 +340,9 @@ class BaseRSSFetcher:
             return []
 
 # ============================================================================
-# Unwire 抓取器（首頁最新文章，只抓取當天新聞）
-# ============================================================================
-class UnwireFetcher:
-    URL = 'https://unwire.hk'
-    source = 'Unwire.hk'
-    category = '科技'
-
-    @staticmethod
-    def _today_hk_date():
-        return datetime.now(
-            timezone(timedelta(hours=TIMEZONE_OFFSET))
-        ).date()
-
-    @staticmethod
-    def _article_date_from_link(link: str):
-        date_match = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', link)
-        if not date_match:
-            return None
-
-        try:
-            return datetime.strptime('-'.join(date_match.groups()), '%Y-%m-%d').date()
-        except ValueError:
-            return None
-
-    @staticmethod
-    def _is_within_24_hours(text: str) -> bool:
-        if re.search(r'\d+\s*秒前|\d+\s*分鐘前', text):
-            return True
-
-        hour_match = re.search(r'(\d+)\s*小時前', text)
-        return bool(hour_match and int(hour_match.group(1)) < 24)
-
-    def fetch(self) -> List[Article]:
-        articles = []
-        seen = set()
-        today = self._today_hk_date()
-
-        try:
-            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
-            r.raise_for_status()
-            r.encoding = r.apparent_encoding
-            soup = BeautifulSoup(r.text, 'html.parser')
-
-            for tag in soup.select('.post-content .title a'):
-                href = URLValidator.normalize(tag.get('href'), 'https://unwire.hk')
-                title = tag.get_text(strip=True)
-                item_date = self._article_date_from_link(href)
-                parent = tag.find_parent(class_='post-content')
-                item_text = parent.get_text(' ', strip=True) if parent else ''
-
-                if not title or len(title) < 8 or not item_date:
-                    continue
-
-                if item_date != today and not self._is_within_24_hours(item_text):
-                    continue
-
-                if href in seen:
-                    continue
-
-                articles.append(Article(
-                    title=title,
-                    link=href,
-                    source=self.source,
-                    category=self.category
-                ))
-                seen.add(href)
-
-            logger.info(f"✓ Unwire.hk 首頁當天抓取 {len(articles)} 篇")
-            return articles
-
-        except Exception as e:
-            logger.error(f"✗ Unwire.hk 首頁抓取失敗: {e}")
-            return []
-
-# ============================================================================
-# FlyDay RSS 抓取器（專門抓取機票優惠新聞）
-# ============================================================================
-class FlyDayRSSFetcher(BaseRSSFetcher):
-    """
-    FlyDay.hk 的 RSS 抓取器
-    只抓取機票相關的新聞，過濾掉酒店、攻略等
-    """
-    feed_url = 'https://flyday.hk/feed/'
-    source = 'FlyDayhk'
-    category = '旅遊'
-
-    # 航空公司關鍵字
-    AIRLINE_KEYWORDS = ['航空', 'hkexpress', 'air', '飛', '航線']
-
-    # 優惠訊息關鍵字
-    DEAL_HINTS = ['優惠', '折', '快閃', '減', '連稅', '起', '出發']
-
-    # 要排除的關鍵字
-    EXCLUDE_KEYWORDS = ['酒店', '住宿', '攻略', '教學', '信用卡', '里數']
-
-    def fetch(self) -> List[Article]:
-        """
-        抓取並過濾新聞
-        """
-        # 1. 先用父類別的方法抓取所有新聞
-        articles = super().fetch()
-
-        filtered = []
-        # 2. 逐一檢查每篇新聞
-        for a in articles:
-            title = a.title.lower()  # 轉成小寫方便比對
-
-            # 如果包含排除關鍵字，跳過
-            if any(k in title for k in self.EXCLUDE_KEYWORDS):
-                continue
-
-            # 檢查是否包含航空公司或優惠關鍵字
-            airline_hit = any(k in title for k in self.AIRLINE_KEYWORDS)
-            deal_hit = any(k in title for k in self.DEAL_HINTS)
-
-            # 如果有符合任一條件，就保留
-            if airline_hit or deal_hit:
-                filtered.append(a)
-
-        # 記錄過濾結果
-        logger.info(f"✓ FlyDay.hk 機票過濾後 {len(filtered)} 篇")
-        return filtered
-
 # DotDotNews 抓取器（專門抓取點新聞的港聞新聞）
 # 用 Chrome 打開點新聞網站，使用瀏覽器的開發者工具（F12），切換到 Network 分頁，按 Reload 重新載入頁面，找到 stories.json 的請求，右鍵 Copy URL。
+# ============================================================================
 class DotDotNewsFetcher:
     source = '點新聞'
     HK_NEWS_URL = "https://www.dotdotnews.com/immed/hknews"
@@ -908,15 +511,412 @@ class DotDotNewsFetcher:
             logger.error(f"✗ 點新聞 API 失敗: {e}")
             return []
 
+# ============================================================================
+# eZone 抓取器（科技焦點，只抓取當天新聞）
+# ============================================================================
+class EzoneFetcher:
+    URL = 'https://ezone.hk/srae001/科技焦點/'
+    source = 'E-zone'
+    category = '科技'
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _article_date_from_text(text: str):
+        date_match = re.search(r'(\d{2})-(\d{2})-(\d{4})\s+\d{2}:\d{2}', text)
+        if not date_match:
+            return None
+
+        try:
+            return datetime.strptime('-'.join(date_match.groups()), '%d-%m-%Y').date()
+        except ValueError:
+            return None
+
+    def fetch(self) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+
+        try:
+            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding
+            soup = BeautifulSoup(r.text, 'html.parser')
+
+            for tag in soup.select('a[href*="/article/"]'):
+                href = URLValidator.normalize(tag.get('href'), 'https://ezone.hk')
+                title_tag = tag.select_one('h3.title')
+                title = title_tag.get_text(strip=True) if title_tag else ''
+                item_date = self._article_date_from_text(tag.get_text(' ', strip=True))
+
+                if not title or len(title) < 8 or not item_date:
+                    continue
+
+                if item_date < today:
+                    break
+
+                if item_date != today or href in seen:
+                    continue
+
+                articles.append(Article(
+                    title=title,
+                    link=href,
+                    source=self.source,
+                    category=self.category
+                ))
+                seen.add(href)
+
+            logger.info(f"✓ E-zone 科技焦點當天抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ E-zone 科技焦點抓取失敗: {e}")
+            return []
+
+# ============================================================================
+# NewMobileLife 抓取器（最新文章，只抓取當天新聞）
+# ============================================================================
+class NewMobileLifeFetcher:
+    URL = 'https://www.newmobilelife.com/最新文章/'
+    source = 'NewMobileLife'
+    category = '科技'
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _article_date_from_text(text: str):
+        try:
+            return datetime.strptime(text.strip(), '%Y-%m-%d').date()
+        except ValueError:
+            return None
+
+    def fetch(self) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+
+        try:
+            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding
+            soup = BeautifulSoup(r.text, 'html.parser')
+
+            for item in soup.select('article'):
+                title_tag = item.select_one('h2 a')
+                date_tag = item.select_one('.cs-meta-date')
+
+                if not title_tag or not date_tag:
+                    continue
+
+                title = title_tag.get_text(strip=True)
+                href = URLValidator.normalize(title_tag.get('href'), 'https://www.newmobilelife.com')
+                item_date = self._article_date_from_text(date_tag.get_text(strip=True))
+
+                if not title or len(title) < 12 or not item_date:
+                    continue
+
+                if item_date < today:
+                    break
+
+                if item_date != today or href in seen:
+                    continue
+
+                articles.append(Article(
+                    title=title,
+                    link=href,
+                    source=self.source,
+                    category=self.category
+                ))
+                seen.add(href)
+
+            logger.info(f"✓ NewMobileLife 最新文章當天抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ NewMobileLife 最新文章抓取失敗: {e}")
+            return []
+
+# ============================================================================
+# Unwire 抓取器（首頁最新文章，只抓取當天新聞）
+# ============================================================================
+class UnwireFetcher:
+    URL = 'https://unwire.hk'
+    source = 'Unwire.hk'
+    category = '科技'
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _article_date_from_link(link: str):
+        date_match = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', link)
+        if not date_match:
+            return None
+
+        try:
+            return datetime.strptime('-'.join(date_match.groups()), '%Y-%m-%d').date()
+        except ValueError:
+            return None
+
+    @staticmethod
+    def _is_within_24_hours(text: str) -> bool:
+        if re.search(r'\d+\s*秒前|\d+\s*分鐘前', text):
+            return True
+
+        hour_match = re.search(r'(\d+)\s*小時前', text)
+        return bool(hour_match and int(hour_match.group(1)) < 24)
+
+    def fetch(self) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+
+        try:
+            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding
+            soup = BeautifulSoup(r.text, 'html.parser')
+
+            for tag in soup.select('.post-content .title a'):
+                href = URLValidator.normalize(tag.get('href'), 'https://unwire.hk')
+                title = tag.get_text(strip=True)
+                item_date = self._article_date_from_link(href)
+                parent = tag.find_parent(class_='post-content')
+                item_text = parent.get_text(' ', strip=True) if parent else ''
+
+                if not title or len(title) < 8 or not item_date:
+                    continue
+
+                if item_date != today and not self._is_within_24_hours(item_text):
+                    continue
+
+                if href in seen:
+                    continue
+
+                articles.append(Article(
+                    title=title,
+                    link=href,
+                    source=self.source,
+                    category=self.category
+                ))
+                seen.add(href)
+
+            logger.info(f"✓ Unwire.hk 首頁當天抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ Unwire.hk 首頁抓取失敗: {e}")
+            return []
+
+# ============================================================================
+# FlyDay RSS 抓取器（專門抓取機票優惠新聞）
+# ============================================================================
+class FlyDayRSSFetcher(BaseRSSFetcher):
+    """
+    FlyDay.hk 的 RSS 抓取器
+    只抓取機票相關的新聞，過濾掉酒店、攻略等
+    """
+    feed_url = 'https://flyday.hk/feed/'
+    source = 'FlyDayhk'
+    category = '旅遊'
+
+    # 航空公司關鍵字
+    AIRLINE_KEYWORDS = ['航空', 'hkexpress', 'air', '飛', '航線']
+
+    # 優惠訊息關鍵字
+    DEAL_HINTS = ['優惠', '折', '快閃', '減', '連稅', '起', '出發']
+
+    # 要排除的關鍵字
+    EXCLUDE_KEYWORDS = ['酒店', '住宿', '攻略', '教學', '信用卡', '里數']
+
+    def fetch(self) -> List[Article]:
+        """
+        抓取並過濾新聞
+        """
+        # 1. 先用父類別的方法抓取所有新聞
+        articles = super().fetch()
+
+        filtered = []
+        # 2. 逐一檢查每篇新聞
+        for a in articles:
+            title = a.title.lower()  # 轉成小寫方便比對
+
+            # 如果包含排除關鍵字，跳過
+            if any(k in title for k in self.EXCLUDE_KEYWORDS):
+                continue
+
+            # 檢查是否包含航空公司或優惠關鍵字
+            airline_hit = any(k in title for k in self.AIRLINE_KEYWORDS)
+            deal_hit = any(k in title for k in self.DEAL_HINTS)
+
+            # 如果有符合任一條件，就保留
+            if airline_hit or deal_hit:
+                filtered.append(a)
+
+        # 記錄過濾結果
+        logger.info(f"✓ FlyDay.hk 機票過濾後 {len(filtered)} 篇")
+        return filtered
+
+# ============================================================================
+# HolidaySmart 抓取器（只抓取 7 天內文章）
+# ============================================================================
+class HolidaySmartFetcher:
+    URL = 'https://holidaysmart.io/hk'
+    source = 'HolidaySmart'
+    category = '旅遊'
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _article_date_from_html(html: str):
+        date_match = re.search(
+            r'(?:datePublished|published_at|publishedAt)["\']?\s*[:=]\s*["\']([^"\']+)',
+            html
+        )
+        if not date_match:
+            date_match = re.search(r'(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2}))', html)
+
+        if not date_match:
+            return None
+
+        date_text = date_match.group(1).replace('Z', '+00:00')
+
+        try:
+            return datetime.fromisoformat(date_text).astimezone(
+                timezone(timedelta(hours=TIMEZONE_OFFSET))
+            ).date()
+        except ValueError:
+            return None
+
+    def fetch(self) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+        earliest_date = today - timedelta(days=6)
+
+        try:
+            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding
+            soup = BeautifulSoup(r.text, 'html.parser')
+            candidates = []
+
+            for tag in soup.select('a[href*="/hk/article/"]'):
+                if len(candidates) >= MAX_NEWS_PER_SOURCE:
+                    break
+
+                href = URLValidator.normalize(tag.get('href'), 'https://holidaysmart.io')
+                title = tag.get_text(strip=True)
+
+                if not title or len(title) < 12 or href in seen:
+                    continue
+
+                candidates.append((title, href))
+                seen.add(href)
+
+            def fetch_article(candidate):
+                title, href = candidate
+
+                try:
+                    article_response = requests.get(
+                        href,
+                        headers={'User-Agent': USER_AGENT},
+                        timeout=REQUEST_TIMEOUT
+                    )
+                    article_response.raise_for_status()
+                    article_response.encoding = article_response.apparent_encoding
+                    article_date = self._article_date_from_html(article_response.text)
+                except Exception as e:
+                    logger.warning(f"HolidaySmart 文章日期讀取失敗: {href} - {e}")
+                    return None
+
+                if not article_date or article_date < earliest_date or article_date > today:
+                    return None
+
+                return Article(
+                    title=title,
+                    link=href,
+                    source=self.source,
+                    category=self.category
+                )
+
+            with ThreadPoolExecutor(max_workers=5) as ex:
+                futures = [ex.submit(fetch_article, candidate) for candidate in candidates]
+
+                for f in as_completed(futures):
+                    article = f.result()
+
+                    if article:
+                        articles.append(article)
+
+            logger.info(f"✓ HolidaySmart 7 天內抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ HolidaySmart 抓取失敗: {e}")
+            return []
+
+# ============================================================================
+# MeetHK 抓取器
+# ============================================================================
+SCRAPERS_CONFIG = {
+    # MeetHK - 旅遊網站（專注機票資訊）
+    'meethk': ScraperConfig(
+        url='https://www.meethk.com/category/flight/',
+        source='MeetHK',
+        category='旅遊',
+        min_title_length=12,
+        # 使用更精確的選擇器，只抓標題中的連結
+        selector='h2.post-title a, h3.post-title a, .post-title a',
+        domain_check='meethk.com',
+        url_pattern='/1',  # 網址包含 /1（可能是文章編號）
+        # 排除不想要的標題（酒店、優惠碼等）
+        exclude_titles=[
+            '酒店', 'Staycation', 'Hotel', '信用卡',
+            '優惠碼', 'discount code', 'Club Med',
+            'KKday', 'Klook', '套票', 'HopeGoo',
+            '每日更新', 'Hotels.com', 'Trip.com',
+            'Expedia', 'Agoda', 'Booking.com',
+            '閱讀全文', 'Read More'
+        ]
+    )
+}
+
 # 所有額外抓取器的清單（RSS 與專用網站抓取器）
 RSS_FETCHERS = {
-    'HolidaySmart': HolidaySmartFetcher(),
-    'E-zone': EzoneFetcher(),
+    '點新聞': DotDotNewsFetcher(),
     'NewMobileLife': NewMobileLifeFetcher(),
-    'FlyDayhk': FlyDayRSSFetcher(),
+    'E-zone': EzoneFetcher(),
     'Unwire.hk': UnwireFetcher(),
-    '點新聞': DotDotNewsFetcher()
+    'FlyDayhk': FlyDayRSSFetcher(),
+    'HolidaySmart': HolidaySmartFetcher()
 }
+
+# 自訂抓取順序：調整這個清單即可改變 VS Code Terminal 顯示和實際抓取順序
+FETCH_ORDER = [
+    '點新聞',
+    'E-zone',
+    'NewMobileLife',
+    'Unwire.hk',
+    'FlyDayhk',
+    'HolidaySmart',
+    'MeetHK'
+]
 
 # ============================================================================
 # 爬蟲管理器（統一管理所有爬蟲）
