@@ -200,4 +200,4 @@ def fetch(self) -> List[Article]:
 
 ## 更多技術說明
 
-請看 `TECHNICAL_DOCUMENTATION.md`。
+請看 [[news-aggregator_TECHNICAL_DOCUMENTATION | Technical Documentation]]。
