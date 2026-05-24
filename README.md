@@ -87,8 +87,8 @@ http://localhost:8000
 | E-zone | 科技 | `https://ezone.hk/srae001/科技焦點/` | 當天 |
 | NewMobileLife | 科技 | `https://www.newmobilelife.com/最新文章/` | 當天 |
 | Unwire.hk | 科技 | `https://unwire.hk` | 當天最新文章 |
-| FlyDayhk | 旅遊 | `https://flyday.hk/feed/` | RSS，機票相關內容 |
-| HolidaySmart | 旅遊 | `https://holidaysmart.io/hk` | 7 天內 |
+| FlyDayhk | 旅遊 | `https://flyday.hk/feed/` | RSS，機票相關內容；主來源 403 時改用 Google RSS 備用來源 |
+| HolidaySmart | 旅遊 | `https://holidaysmart.io/hk` | 7 天內，按文章日期由新至舊排序 |
 | MeetHK | 旅遊 | `https://www.meethk.com/category/flight/` | 機票相關內容 |
 
 ## 抓取順序

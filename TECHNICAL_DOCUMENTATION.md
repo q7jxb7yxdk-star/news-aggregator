@@ -150,12 +150,12 @@ RSS 抓取器基礎類別。
 
 主要流程：
 
-- 下載 RSS feed
+- 依序下載主 RSS feed 和備用 RSS feed
 - 用 `feedparser.parse()` 解析
 - 讀取 `title` 和 `link`
 - 回傳最多 `MAX_NEWS_PER_SOURCE` 篇
 
-`FlyDayRSSFetcher` 繼承它後再做機票內容過濾。
+如果主 RSS feed 失敗，`BaseRSSFetcher` 會自動改試 `fallback_feed_urls`。`FlyDayRSSFetcher` 繼承它後再做機票內容過濾。
 
 ### 專用 Fetcher
 
@@ -167,8 +167,8 @@ RSS 抓取器基礎類別。
 | `EzoneFetcher` | E-zone | 只保留當天科技焦點 |
 | `NewMobileLifeFetcher` | NewMobileLife | 只保留當天最新文章 |
 | `UnwireFetcher` | Unwire.hk | 首頁文章，只保留當天或 24 小時內 |
-| `FlyDayRSSFetcher` | FlyDayhk | RSS 後再過濾機票優惠 |
-| `HolidaySmartFetcher` | HolidaySmart | 首頁找候選文章，再平行讀文章日期，只保留 7 天內 |
+| `FlyDayRSSFetcher` | FlyDayhk | 先抓官方 RSS，失敗時改用 Google RSS 備用來源，再過濾機票優惠 |
+| `HolidaySmartFetcher` | HolidaySmart | 首頁找候選文章，再平行讀文章日期，只保留 7 天內，並按日期由新至舊排序 |
 
 ## 來源規則
 
@@ -181,8 +181,8 @@ RSS 抓取器基礎類別。
 | E-zone | 科技 | 當天 |
 | NewMobileLife | 科技 | 當天 |
 | Unwire.hk | 科技 | 當天或 24 小時內 |
-| FlyDayhk | 旅遊 | RSS 最新內容，並過濾機票相關 |
-| HolidaySmart | 旅遊 | 7 天內 |
+| FlyDayhk | 旅遊 | RSS 最新內容，並過濾機票相關；主來源不可用時使用 Google RSS 備用來源 |
+| HolidaySmart | 旅遊 | 7 天內，按文章日期由新至舊排序 |
 | MeetHK | 旅遊 | 通用 HTML 規則，並排除酒店、優惠碼等內容 |
 
 ## 去重邏輯
@@ -316,8 +316,8 @@ FETCHERS = {
 ## 注意事項
 
 - Unwire.hk 使用首頁，不使用 fallback。
-- FlyDayhk 使用 `https://flyday.hk/feed/`，不使用首頁，因為首頁有 Cloudflare 保護。
-- HolidaySmart 需要進入文章頁讀日期，因此比一般首頁解析慢；目前用 `ThreadPoolExecutor(max_workers=5)` 平行加速。
+- FlyDayhk 優先使用 `https://flyday.hk/feed/`，不使用首頁，因為首頁有 Cloudflare 保護；如果官方 RSS 回 403，會改用 Google RSS 備用來源。
+- HolidaySmart 需要進入文章頁讀日期，因此比一般首頁解析慢；目前用 `ThreadPoolExecutor(max_workers=5)` 平行加速，最後會按文章日期由新至舊排序。
 - 點新聞財經目前使用 `https://www.dotdotnews.com/finance`。
 - 所有時間判斷以香港時間 UTC+8 為準。
 
