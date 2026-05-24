@@ -38,6 +38,16 @@ logger = logging.getLogger(__name__)  # 建立一個日誌記錄器
 # ============================================================================
 # 假裝我們是 Chrome 瀏覽器（有些網站會檢查）
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+REQUEST_HEADERS = {
+    'User-Agent': USER_AGENT,
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'zh-HK,zh;q=0.9,en;q=0.8',
+}
+RSS_HEADERS = {
+    **REQUEST_HEADERS,
+    'Accept': 'application/rss+xml,application/xml,text/xml;q=0.9,*/*;q=0.8',
+    'Referer': 'https://flyday.hk/',
+}
 
 MAX_NEWS_PER_SOURCE = 15  # 每個網站最多抓 15 篇新聞
 REQUEST_TIMEOUT = 10      # 等待網站回應的時間上限（10 秒）
@@ -307,6 +317,7 @@ class BaseRSSFetcher:
     RSS 是一種標準化的新聞格式，很多網站都有提供
     """
     feed_url = ''   # RSS 網址（子類別會覆蓋）
+    fallback_feed_urls = []  # 備用 RSS 網址
     source = ''     # 來源名稱
     category = ''   # 分類
 
@@ -314,9 +325,21 @@ class BaseRSSFetcher:
         """
         從 RSS 源抓取新聞
         """
+        feed_urls = [self.feed_url, *self.fallback_feed_urls]
+
+        for index, feed_url in enumerate(feed_urls):
+            articles = self._fetch_feed(feed_url)
+
+            if articles is not None:
+                return articles
+
+        logger.error(f"✗ {self.source} RSS 全部來源失敗")
+        return []
+
+    def _fetch_feed(self, feed_url: str) -> Optional[List[Article]]:
         try:
             # 1. 訪問 RSS 網址
-            r = requests.get(self.feed_url, timeout=REQUEST_TIMEOUT)
+            r = requests.get(feed_url, headers=RSS_HEADERS, timeout=REQUEST_TIMEOUT)
             r.raise_for_status()  # 檢查是否成功
 
             # 2. 解析 RSS 內容
@@ -324,8 +347,8 @@ class BaseRSSFetcher:
 
             # 3. 檢查是否有解析錯誤
             if feed.bozo:  # bozo 表示格式有問題
-                logger.warning(f"RSS 解析警告: {self.source}")
-                return []
+                logger.warning(f"RSS 解析警告: {self.source} - {feed_url}")
+                return None
 
             articles = []
             # 4. 遍歷每一則新聞（最多 15 則）
@@ -343,12 +366,18 @@ class BaseRSSFetcher:
                 ))
 
             # 記錄抓取結果
-            logger.info(f"✓ {self.source} RSS 抓取 {len(articles)} 篇")
+            if feed_url == self.feed_url:
+                logger.info(f"✓ {self.source} RSS 抓取 {len(articles)} 篇")
+            else:
+                logger.info(f"✓ {self.source} Google RSS 備用來源抓取 {len(articles)} 篇")
             return articles
 
         except Exception as e:
-            logger.error(f"✗ {self.source} RSS 失敗: {e}")
-            return []
+            if feed_url == self.feed_url:
+                logger.warning(f"{self.source} RSS 主來源不可用，改用備用來源")
+            else:
+                logger.warning(f"{self.source} RSS 備用來源不可用: {e}")
+            return None
 
 # ============================================================================
 # DotDotNews 抓取器（專門抓取點新聞的港聞新聞）
@@ -739,6 +768,9 @@ class FlyDayRSSFetcher(BaseRSSFetcher):
     只抓取機票相關的新聞，過濾掉酒店、攻略等
     """
     feed_url = 'https://flyday.hk/feed/'
+    fallback_feed_urls = [
+        'https://news.google.com/rss/search?q=site%3Aflyday.hk%20%E6%A9%9F%E7%A5%A8&hl=zh-HK&gl=HK&ceid=HK:zh-Hant'
+    ]
     source = 'FlyDayhk'
     category = '旅遊'
 
@@ -859,22 +891,27 @@ class HolidaySmartFetcher:
                 if not article_date or article_date < earliest_date or article_date > today:
                     return None
 
-                return Article(
-                    title=title,
-                    link=href,
-                    source=self.source,
-                    category=self.category
+                return (
+                    article_date,
+                    Article(
+                        title=title,
+                        link=href,
+                        source=self.source,
+                        category=self.category
+                    )
                 )
 
             with ThreadPoolExecutor(max_workers=5) as ex:
                 futures = [ex.submit(fetch_article, candidate) for candidate in candidates]
 
                 for f in as_completed(futures):
-                    article = f.result()
+                    result = f.result()
 
-                    if article:
-                        articles.append(article)
+                    if result:
+                        articles.append(result)
 
+            articles.sort(key=lambda item: item[0], reverse=True)
+            articles = [article for _, article in articles]
             logger.info(f"✓ HolidaySmart 7 天內抓取 {len(articles)} 篇")
             return articles
 
