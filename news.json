@@ -1,377 +1,454 @@
 {
-  "update_time": "2026-05-31 07:49:38",
-  "total": 53,
+  "update_time": "2026-05-31 10:05:16",
+  "total": 64,
   "news": [
+    {
+      "title": "林文健拜訪深圳海關　就埃博拉病防控等交流",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b9495e4b09ea23316f041.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:01"
+    },
+    {
+      "title": "據報中環私家車發現懷疑毒品　警封鎖現場調查",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b9018e4b09ea23316f02d.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:01"
+    },
+    {
+      "title": "颱風「薔薇」闖沖繩600公里範圍　香港快運取消未來兩日6航班",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b8287e4b09ea23316ef03.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:01"
+    },
+    {
+      "title": "李家超今早赴中亞　冀建立聯繫開拓商機",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b7e54e4b09ea23316eeff.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:01"
+    },
+    {
+      "title": "「港車北上」政策延長5年　至2031年中",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b7906e4b09ea23316ee6b.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:01"
+    },
     {
       "title": "（有片）19間臨時避暑中心開放　增降溫通風設備/飲水機等",
       "link": "https://www.dotdotnews.com/a/202605/31/AP6a1a5ecce4b09ea23316dc9b.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:27"
+      "scraped_at": "2026-05-31 10:05:01"
     },
     {
       "title": "發現灣區｜首屆Comic Con今閉幕　古天樂與《回到未來》巨星將壓軸登場",
       "link": "https://www.dotdotnews.com/a/202605/31/AP6a1a97fde4b09ea23316e1be.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:27"
+      "scraped_at": "2026-05-31 10:05:01"
+    },
+    {
+      "title": "林文健拜訪深圳海關　就埃博拉病防控等交流",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b9495e4b09ea23316f041.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:02"
+    },
+    {
+      "title": "「港車北上」政策延長5年　至2031年中",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b7906e4b09ea23316ee6b.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:02"
     },
     {
       "title": "打虎！王益華被查",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1ad5d2e4b09ea23316e7de.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:28"
+      "scraped_at": "2026-05-31 10:05:02"
     },
     {
       "title": "點直播｜天津「智能機器人嘉年華」2026｜5月30日",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1ad1f6e4b09ea23316e78c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:28"
+      "scraped_at": "2026-05-31 10:05:02"
     },
     {
       "title": "阿拉貢站首回合第8　張雪機車：明二番戰見分曉",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1acddfe4b09ea23316e763.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:28"
+      "scraped_at": "2026-05-31 10:05:02"
     },
     {
       "title": "國務院同意港澳遊艇大灣區自由行　特區政府：適時公布「北艇南下」便利措施",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1ac6dae4b09ea23316e681.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:28"
+      "scraped_at": "2026-05-31 10:05:02"
     },
     {
       "title": "（有片）第四屆全國創新爭先獎今揭榜！香港這3名學者專家獲獎（附簡介）",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1ab01ae4b09ea23316e3d8.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:28"
+      "scraped_at": "2026-05-31 10:05:02"
     },
     {
       "title": "（有片）商務部：如歐方推出新貿易工具採取歧視性限制　中方將堅決反制",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1aab1be4b09ea23316e36d.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:28"
+      "scraped_at": "2026-05-31 10:05:02"
     },
     {
       "title": "「港車北上」政策延長5年至2031年",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1aa252e4b09ea23316e2ae.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:28"
+      "scraped_at": "2026-05-31 10:05:03"
     },
     {
       "title": "（有片）湖南邵東一水庫隧洞施工人員被困　已致3死",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1aa182e4b09ea23316e285.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:28"
+      "scraped_at": "2026-05-31 10:05:03"
     },
     {
       "title": "王毅晤加拿大總理卡尼　指中加關係轉圜是加方正確選擇",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1a96dae4b09ea23316e16f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:29"
+      "scraped_at": "2026-05-31 10:05:03"
     },
     {
       "title": "林文健率團訪深圳藥檢院　冀推動藥械監管合作",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1a8785e4b09ea23316dfc9.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:29"
+      "scraped_at": "2026-05-31 10:05:03"
     },
     {
       "title": "郝軍輝已任中央組織部副部長",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1a7bb4e4b09ea23316def7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:29"
+      "scraped_at": "2026-05-31 10:05:03"
     },
     {
       "title": "點直播｜智能巔峰對決　走進亞太機器人世界盃天津國際邀請賽｜5月30日",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1a5313e4b09ea23316db1c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:29"
+      "scraped_at": "2026-05-31 10:05:03"
     },
     {
       "title": "（有片）關志鷗任湖北省委書記　王忠林另有任用",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1a41b8e4b09ea23316da5b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:29"
+      "scraped_at": "2026-05-31 10:05:03"
     },
     {
       "title": "人工胚胎等空間站第十批科學實驗樣品順利返回並交付科學家",
       "link": "https://www.dotdotnews.com/a/202605/30/AP6a1a3f46e4b09ea23316d9fa.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:29"
+      "scraped_at": "2026-05-31 10:05:03"
+    },
+    {
+      "title": "美伊繼續就商船通行對峙　被困船隻提供錄音",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b8ad9e4b09ea23316ef64.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:06"
+    },
+    {
+      "title": "美軍證實擊中一艘試圖駛往伊朗港口的貨船",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b8899e4b09ea23316ef3d.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:06"
+    },
+    {
+      "title": "颱風「薔薇」闖沖繩600公里範圍　香港快運取消未來兩日6航班",
+      "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b8287e4b09ea23316ef03.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-05-31 10:05:06"
     },
     {
       "title": "美法院下令肯尼迪中心移除特朗普名字",
       "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b7700e4b09ea23316ee43.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:31"
+      "scraped_at": "2026-05-31 10:05:06"
     },
     {
       "title": "一船試圖突破封鎖前往伊朗港口　遭美軍打擊失去動力",
       "link": "https://www.dotdotnews.com/a/202605/31/AP6a1b089ee4b09ea23316ec36.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-05-31 07:49:31"
+      "scraped_at": "2026-05-31 10:05:06"
+    },
+    {
+      "title": "旅行回鄉必備！Belkin 20,000mAh尿袋劈至$89 有3C符合上機規定",
+      "link": "https://ezone.hk/article/20095318/%E6%97%85%E8%A1%8C%E5%9B%9E%E9%84%89%E5%BF%85%E5%82%99-Belkin-20-000mAh%E5%B0%BF%E8%A2%8B%E5%8A%88%E8%87%B3-89-%E6%9C%893C%E7%AC%A6%E5%90%88%E4%B8%8A%E6%A9%9F%E8%A6%8F%E5%AE%9A",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-05-31 10:05:09"
     },
     {
       "title": "81 款耳機全含致癌物？大部分知名牌子都中！「一情況」恐加速人體吸收毒素",
       "link": "https://ezone.hk/article/20089715/81-%E6%AC%BE%E8%80%B3%E6%A9%9F%E5%85%A8%E5%90%AB%E8%87%B4%E7%99%8C%E7%89%A9-%E5%A4%A7%E9%83%A8%E5%88%86%E7%9F%A5%E5%90%8D%E7%89%8C%E5%AD%90%E9%83%BD%E4%B8%AD-%E4%B8%80%E6%83%85%E6%B3%81-%E6%81%90%E5%8A%A0%E9%80%9F%E4%BA%BA%E9%AB%94%E5%90%B8%E6%94%B6%E6%AF%92%E7%B4%A0",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:34"
+      "scraped_at": "2026-05-31 10:05:09"
     },
     {
       "title": "浴室寶開抽氣其實無用？沖涼後做漏一步牆身照發霉【回南天速乾廁開1個模式】",
       "link": "https://ezone.hk/article/20084298/%E6%B5%B4%E5%AE%A4%E5%AF%B6%E9%96%8B%E6%8A%BD%E6%B0%A3%E5%85%B6%E5%AF%A6%E7%84%A1%E7%94%A8-%E6%B2%96%E6%B6%BC%E5%BE%8C%E5%81%9A%E6%BC%8F%E4%B8%80%E6%AD%A5%E7%89%86%E8%BA%AB%E7%85%A7%E7%99%BC%E9%9C%89-%E5%9B%9E%E5%8D%97%E5%A4%A9%E9%80%9F%E4%B9%BE%E5%BB%81%E9%96%8B1%E5%80%8B%E6%A8%A1%E5%BC%8F",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:34"
+      "scraped_at": "2026-05-31 10:05:09"
     },
     {
       "title": "4K 芒點解畫面咁差？ 解鎖 HDMI 接口4大隱藏潛力 畫質、流暢度、音效即刻升級",
       "link": "https://ezone.hk/article/20089911/4K-%E8%8A%92%E9%BB%9E%E8%A7%A3%E7%95%AB%E9%9D%A2%E5%92%81%E5%B7%AE-%E8%A7%A3%E9%8E%96-HDMI-%E6%8E%A5%E5%8F%A34%E5%A4%A7%E9%9A%B1%E8%97%8F%E6%BD%9B%E5%8A%9B-%E7%95%AB%E8%B3%AA-%E6%B5%81%E6%9A%A2%E5%BA%A6-%E9%9F%B3%E6%95%88%E5%8D%B3%E5%88%BB%E5%8D%87%E7%B4%9A",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:34"
+      "scraped_at": "2026-05-31 10:05:09"
     },
     {
       "title": "智能笑容捕捉相機　原價 US $2.99《Just Smile》限時免費",
       "link": "https://www.newmobilelife.com/2026/05/31/just-smile-smile-camera-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:10"
     },
     {
       "title": "【PC】荒謬跑酷樂趣無限　《IQ Under Construction》限時免費",
       "link": "https://www.newmobilelife.com/2026/05/31/iq-under-construction-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:10"
     },
     {
       "title": "【PC】神秘森林解謎探險　《Moonrise Fall》限時免費",
       "link": "https://www.newmobilelife.com/2026/05/31/moonrise-fall-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:10"
     },
     {
       "title": "Lamine Yamal 展示 Beats 未發佈耳機　傳已獲 FCC 批准即將發佈",
       "link": "https://www.newmobilelife.com/2026/05/31/lamine-yamal-beats-headphones-fcc-approval/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:10"
     },
     {
       "title": "英國買 iPhone Air 竟比香港便宜逾 HK$ 2,800？！",
       "link": "https://www.newmobilelife.com/2026/05/31/uk-iphone-air-price-cheaper-than-hk/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:10"
     },
     {
       "title": "微軟 7 月起強制 Mac 版 Office 2019 變成唯讀模式　用戶須重新購買方可使用",
       "link": "https://www.newmobilelife.com/2026/05/31/microsoft-office-2019-upgrade-mac-iphone/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:10"
     },
     {
       "title": "免費清潔換 AI 訓練數據　初創紐約推出「零收費」家居服務",
       "link": "https://unwire.hk/2026/05/30/shift-microagi-free-home-cleaning-ai-robot-training-nyc/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:11"
     },
     {
       "title": "維基媒體基金會解散社群團隊　逾 700 名 Wikipedia 義工聯署準備罷工",
       "link": "https://unwire.hk/2026/05/30/wikimedia-community-tech-layoffs-strike-threat/learning/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:11"
     },
     {
       "title": "Ferrari Luce 負評不斷　行政總裁反駁：「新科技應該值得尊重」",
       "link": "https://unwire.hk/2026/05/30/ferrari-luce-ev-vigna-defence-modena/life-tech/auto/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:11"
     },
     {
       "title": "日本電視台用生成 AI 製作動畫　效果備受批評網民直指「見到就想嘔」",
       "link": "https://unwire.hk/2026/05/30/japan-tv-ai-anime-backlash-uncanny-valley/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:11"
     },
     {
       "title": "Anthropic H 輪融資估值逼近一兆美元 超越 OpenAI 同日發布 Claude Opus 4.8",
       "link": "https://unwire.hk/2026/05/30/anthropic-series-h-965-billion-valuation-claude-opus-4-8/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:11"
     },
     {
       "title": "Computex TAIPEI 前夕 Acer 重點產品大檢閱  掌上型 AI 算力巨獸登場",
       "link": "https://unwire.hk/2026/05/30/computex-taipei-acer/notebook/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:11"
     },
     {
       "title": "iPhone 18 Pro 可變光圈鏡頭成本大增 50%   Apple 面對罕見多重成本壓力",
       "link": "https://unwire.hk/2026/05/30/iphone-18-pro-variable-aperture-camera-cost-increase/mobile-phone/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:11"
     },
     {
       "title": "Leica 推出 Metal Gray 金屬灰配色   M11-P、Q3、D-Lux 8 及鏡頭全線煥新",
       "link": "https://unwire.hk/2026/05/30/leica-metal-gray-m11p-q3-d-lux-8-2026/dc/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:11"
     },
     {
       "title": "BYD 璇璣 A3 4nm 智駕芯片發佈　三顆算力逾 2,100 TOPS + 城市領航 1 年無上限兜底",
       "link": "https://unwire.hk/2026/05/30/byd-xuanji-a3-4nm-chip-city-pilot/life-tech/auto/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:11"
     },
     {
       "title": "【橫濱自由行2026】Sanrio Fes 2026登陸橫濱港未來｜5米高巨型布甸狗及30周年快閃店",
       "link": "https://flyday.hk/sanrio-fes",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:13"
     },
     {
       "title": "【深圳好去處2026】深圳景點好去處推介｜週末快閃精選！摩天輪、CityWalk商場打卡位、野生動物園",
       "link": "https://flyday.hk/%E6%B7%B1%E5%9C%B3%E5%A5%BD%E5%8E%BB%E8%99%95",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:13"
     },
     {
       "title": "【中華航空台灣優惠】暑假遊台！來回高雄 台北連稅1千5起，包23kg行李",
       "link": "https://flyday.hk/china-airlines-taiwan-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:13"
     },
     {
       "title": "大熱韓劇《21世紀大君夫人》取景地｜跟住IU邊佑錫腳步遊全羅北道｜首爾出發交通",
       "link": "https://flyday.hk/182219/",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:36"
+      "scraped_at": "2026-05-31 10:05:13"
     },
     {
       "title": "美食推介．餐廳推薦【曼谷美食地圖2026】米芝蓮認證泰菜推薦！皇室宮廷菜/爆紅打拋豬飯/珍珠泰奶冰曼谷 餐飲界發展迅速，由街頭小店到高級Fine Dining餐廳百花齊放，米芝蓮指南更成為不少旅客規劃行程時的重要參考。...3 days ago",
       "link": "https://holidaysmart.io/hk/article/470448/%E6%9B%BC%E8%B0%B7%E7%BE%8E%E9%A3%9F%E5%9C%B0%E5%9C%962026-%E7%B1%B3%E8%8A%9D%E8%93%AE%E8%AA%8D%E8%AD%89%E6%B3%B0%E8%8F%9C",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:14"
     },
     {
       "title": "購物著數．主題特集．【JetsoWong著數王】【麥當勞 x 八達通優惠】App落單滿$45即賺$5回贈！最高可獲$25獎賞麥當勞 聯乘八達通推出限時消費回贈優惠，由即日起至2026年5月31日，顧客只需透過麥當勞App落單並使用八達通付款，即...4 days ago",
       "link": "https://holidaysmart.io/hk/article/470393/%E9%BA%A5%E7%95%B6%E5%8B%9E-%E5%85%AB%E9%81%94%E9%80%9A",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:37"
-    },
-    {
-      "title": "生活教學．【JetsoWong著數王】【蓄錢攻略】AlipayHK隱藏功能秒變最強「理財神器」 經內置 Ant Bank 小程式輕鬆體驗股票交易～限時解鎖高達 HK$6,815 獎賞！好多人以為支付寶（AlipayHK）只係用嚟掃 Code 畀錢或者搭車，其實入面隱藏咗個超強大嘅理財功能！螞蟻銀行(香港...3 days ago",
-      "link": "https://holidaysmart.io/hk/article/470218/%E8%93%84%E9%8C%A2%E6%94%BB%E7%95%A5-%E6%94%AF%E4%BB%98%E5%AF%B6%E9%9A%B1%E8%97%8F%E5%8A%9F%E8%83%BD-%E8%9E%9E%E8%9F%BB%E9%8A%80%E8%A1%8C",
-      "source": "HolidaySmart",
-      "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:37"
+      "scraped_at": "2026-05-31 10:05:14"
     },
     {
       "title": "香港好去處．戶外郊遊【香港好去處】6大玻璃海秘境攻略！橋咀洲／海下灣／東平洲（附地址/交通/收費）每逢夏天，不少香港人都會計劃出海玩水。其實毋須飛往泰國或沖繩，香港本地已有不少被稱為「 玻璃海 」的海岸秘境，擁有清澈見...4 days ago",
       "link": "https://holidaysmart.io/hk/article/470358/%E9%A6%99%E6%B8%AF%E5%A5%BD%E5%8E%BB%E8%99%95-%E7%8E%A9%E6%B0%B4-6%E5%A4%A7%E7%8E%BB%E7%92%83%E6%B5%B7%E7%A7%98%E5%A2%83%E6%94%BB%E7%95%A5",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:37"
+      "scraped_at": "2026-05-31 10:05:14"
+    },
+    {
+      "title": "生活教學．【JetsoWong著數王】【蓄錢攻略】AlipayHK隱藏功能秒變最強「理財神器」 經內置 Ant Bank 小程式輕鬆體驗股票交易～限時解鎖高達 HK$6,815 獎賞！好多人以為支付寶（AlipayHK）只係用嚟掃 Code 畀錢或者搭車，其實入面隱藏咗個超強大嘅理財功能！螞蟻銀行(香港...4 days ago",
+      "link": "https://holidaysmart.io/hk/article/470218/%E8%93%84%E9%8C%A2%E6%94%BB%E7%95%A5-%E6%94%AF%E4%BB%98%E5%AF%B6%E9%9A%B1%E8%97%8F%E5%8A%9F%E8%83%BD-%E8%9E%9E%E8%9F%BB%E9%8A%80%E8%A1%8C",
+      "source": "HolidaySmart",
+      "category": "旅遊",
+      "scraped_at": "2026-05-31 10:05:14"
     },
     {
       "title": "泰航飛曼谷！連稅二千二起！6月30日前出發！香港飛曼谷來回連稅只需$2,255起 – 泰國航空 (優惠至5月31日)",
       "link": "https://www.meethk.com/160616/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:16"
     },
     {
       "title": "國泰暑假旺季飛台北！連稅千六起！8月31日前出發！香港飛台北來回連稅只需$1,634起 – 國泰航空 (優惠至5月31日)",
       "link": "https://www.meethk.com/160755/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:16"
     },
     {
       "title": "【日本航空 JAL Japan Explorer Pass】玩轉全日本！旅客限定優惠！唔收燃油附加費！日本國內線航班單程只需7,700円起(約HK$379起)！包2件各23kg寄艙行李！超過30個日本城市任你揀！",
       "link": "https://www.meethk.com/159098/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:16"
     },
     {
       "title": "連稅千七飛首爾！暑假旺季都有平！包15kg寄艙行李！7月31日前出發！香港飛首爾來回連稅只需$1,717起 – EastarJet 易斯達航空 (優惠至5月31日)",
       "link": "https://www.meethk.com/160740/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:16"
     },
     {
       "title": "暑假旺季都有平！國泰飛札幌！連稅4千3起！9月28日前出發！香港飛札幌來回連稅只需$4,348起 – 國泰航空 (優惠至6月15日)",
       "link": "https://www.meethk.com/160733/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:16"
     },
     {
       "title": "港航飛沖繩！連稅千八！包23kg寄艙行李！明年3月10日前出發！香港飛沖繩來回連稅只需$1,824起 – 香港航空",
       "link": "https://www.meethk.com/160598/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:16"
     },
     {
       "title": "【新加坡航空 x 美國運通卡限時優惠】暑假出發來回連稅：新加坡HK$2,325起、墨爾本HK$5,785起、悉尼HK$5,865起！美國運通卡尊享HK$800簽賬回贈* ！KrisFlyer會員全程無限量免費享用機上Wi-Fi！",
       "link": "https://www.meethk.com/159984/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:16"
     },
     {
       "title": "國泰直飛澳洲！連稅5千1起！明年3月24日前出發！香港直飛悉尼、墨爾本來回連稅$5,170起 – 國泰航空 (優惠至6月16日)",
       "link": "https://www.meethk.com/160651/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:16"
     },
     {
       "title": "嘩！抵呀！直飛澳洲連稅4千2起！明年3月24日前出發！包30kg寄艙行李！香港直飛悉尼、墨爾本來回連稅$4,287起 – 澳洲航空 (優惠至6月16日)",
       "link": "https://www.meethk.com/160681/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-05-31 07:49:38"
+      "scraped_at": "2026-05-31 10:05:16"
     }
   ]
 }
