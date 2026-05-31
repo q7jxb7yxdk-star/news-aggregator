@@ -374,7 +374,10 @@ class BaseRSSFetcher:
 
         except Exception as e:
             if feed_url == self.feed_url:
-                logger.warning(f"{self.source} RSS 主來源不可用，改用備用來源")
+                if self.fallback_feed_urls:
+                    logger.warning(f"{self.source} RSS 主來源不可用，改用備用來源")
+                else:
+                    logger.warning(f"{self.source} RSS 主來源不可用: {e}")
             else:
                 logger.warning(f"{self.source} RSS 備用來源不可用: {e}")
             return None
@@ -550,6 +553,17 @@ class DotDotNewsFetcher:
         except Exception as e:
             logger.error(f"✗ 點新聞 API 失敗: {e}")
             return []
+
+# ============================================================================
+# 經濟一週 RSS 抓取器（即時財經）
+# ============================================================================
+class EdigestRSSFetcher(BaseRSSFetcher):
+    """
+    經濟一週即時財經 RSS 抓取器
+    """
+    feed_url = 'https://www.edigest.hk/category/%E6%8A%95%E8%B3%87/news/feed/'
+    source = '經濟一週'
+    category = '新聞'
 
 # ============================================================================
 # eZone 抓取器（科技焦點，只抓取當天新聞）
@@ -924,6 +938,7 @@ class HolidaySmartFetcher:
 # ============================================================================
 FETCHERS = {
     '點新聞': DotDotNewsFetcher(),
+    '經濟一週': EdigestRSSFetcher(),
     'E-zone': EzoneFetcher(),
     'NewMobileLife': NewMobileLifeFetcher(),
     'Unwire.hk': UnwireFetcher(),

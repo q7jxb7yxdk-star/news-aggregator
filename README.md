@@ -84,6 +84,7 @@ http://localhost:8000
 | 點新聞-兩岸 | 新聞 | `https://www.dotdotnews.com/immed/bothsides` | 今天和昨天 |
 | 點新聞-國際 | 新聞 | `https://www.dotdotnews.com/immed/inter` | 當天 |
 | 點新聞-財經 | 新聞 | `https://www.dotdotnews.com/finance` | 今天和昨天 |
+| 經濟一週 | 新聞 | `https://www.edigest.hk/category/投資/news/feed/` | RSS，即時財經 |
 | E-zone | 科技 | `https://ezone.hk/srae001/科技焦點/` | 當天 |
 | NewMobileLife | 科技 | `https://www.newmobilelife.com/最新文章/` | 當天 |
 | Unwire.hk | 科技 | `https://unwire.hk` | 當天最新文章 |
@@ -98,6 +99,7 @@ http://localhost:8000
 ```python
 FETCHERS = {
     '點新聞': DotDotNewsFetcher(),
+    '經濟一週': EdigestRSSFetcher(),
     'E-zone': EzoneFetcher(),
     'NewMobileLife': NewMobileLifeFetcher(),
     'Unwire.hk': UnwireFetcher(),

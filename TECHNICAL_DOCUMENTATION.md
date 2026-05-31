@@ -97,6 +97,7 @@ def fetch(self) -> List[Article]:
 ```python
 FETCHERS = {
     '點新聞': DotDotNewsFetcher(),
+    '經濟一週': EdigestRSSFetcher(),
     'E-zone': EzoneFetcher(),
     'NewMobileLife': NewMobileLifeFetcher(),
     'Unwire.hk': UnwireFetcher(),
@@ -164,6 +165,7 @@ RSS 抓取器基礎類別。
 | Fetcher | 來源 | 特點 |
 |---|---|---|
 | `DotDotNewsFetcher` | 點新聞 | 多分類、分頁、按日期範圍抓取 |
+| `EdigestRSSFetcher` | 經濟一週 | RSS 抓取即時財經 |
 | `EzoneFetcher` | E-zone | 只保留當天科技焦點 |
 | `NewMobileLifeFetcher` | NewMobileLife | 只保留當天最新文章 |
 | `UnwireFetcher` | Unwire.hk | 首頁文章，只保留當天或 24 小時內 |
@@ -178,6 +180,7 @@ RSS 抓取器基礎類別。
 | 點新聞-兩岸 | 新聞 | 今天和昨天 |
 | 點新聞-國際 | 新聞 | 當天 |
 | 點新聞-財經 | 新聞 | 今天和昨天 |
+| 經濟一週 | 新聞 | RSS 即時財經 |
 | E-zone | 科技 | 當天 |
 | NewMobileLife | 科技 | 當天 |
 | Unwire.hk | 科技 | 當天或 24 小時內 |
@@ -316,6 +319,7 @@ FETCHERS = {
 ## 注意事項
 
 - Unwire.hk 使用首頁，不使用 fallback。
+- 經濟一週使用即時財經分類 RSS：`https://www.edigest.hk/category/投資/news/feed/`。
 - FlyDayhk 優先使用 `https://flyday.hk/feed/`，不使用首頁，因為首頁有 Cloudflare 保護；如果官方 RSS 回 403，會改用 Google RSS 備用來源。
 - HolidaySmart 需要進入文章頁讀日期，因此比一般首頁解析慢；目前用 `ThreadPoolExecutor(max_workers=5)` 平行加速，最後會按文章日期由新至舊排序。
 - 點新聞財經目前使用 `https://www.dotdotnews.com/finance`。
