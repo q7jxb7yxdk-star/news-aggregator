@@ -23,6 +23,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed # 同時做多�
 from urllib.parse import urljoin, urlparse          # 處理網址
 import time                                         # 處理時間延遲
 import re                                           # 用來比對文字格式
+import calendar                                     # 處理 RSS UTC 時間
 
 # ============================================================================
 # 設定日誌系統（像是程式的日記本，記錄發生什麼事）
@@ -514,6 +515,65 @@ class DotDotNewsFetcher:
 
         return articles
 
+    def _fetch_latest_available_static_pages_news(self, urls: List[str], source: str) -> List[Article]:
+        articles = []
+        seen = set()
+        today = self._today_hk_date()
+        target_date = None
+
+        for base_url in urls:
+            page = 1
+
+            while True:
+                url = base_url if page == 1 else f"{base_url}/more_{page}.html"
+                r = requests.get(url, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
+                r.raise_for_status()
+                soup = BeautifulSoup(r.text, 'html.parser')
+
+                page_items = soup.select('.Share_Article[data-title][data-href]')
+                if not page_items:
+                    break
+
+                found_target_date = False
+                found_older = False
+
+                for item in page_items:
+                    link = URLValidator.normalize(item.get('data-href'), 'https://www.dotdotnews.com')
+                    title = item.get('data-title', '').strip()
+                    item_date = self._article_date_from_link(link)
+
+                    if not title or not item_date or link in seen:
+                        continue
+
+                    if item_date > today:
+                        continue
+
+                    if target_date is None:
+                        target_date = today if item_date == today else item_date
+
+                    if item_date < target_date:
+                        found_older = True
+                        continue
+
+                    if item_date != target_date:
+                        continue
+
+                    articles.append(Article(
+                        title=title,
+                        link=link.strip(),
+                        source=source,
+                        category='新聞'
+                    ))
+                    seen.add(link)
+                    found_target_date = True
+
+                if found_older or not found_target_date:
+                    break
+
+                page += 1
+
+        return articles
+
     def _fetch_hk_news(self) -> List[Article]:
         return self._fetch_column_news(self.HK_NEWS_URL, '點新聞-港聞', days=1)
 
@@ -524,10 +584,9 @@ class DotDotNewsFetcher:
         return self._fetch_column_news(self.INTERNATIONAL_URL, '點新聞-國際', days=1)
 
     def _fetch_market_news(self) -> List[Article]:
-        return self._fetch_static_pages_news(
+        return self._fetch_latest_available_static_pages_news(
             [self.FINANCE_URL],
-            '點新聞-財經',
-            days=2
+            '點新聞-財經'
         )
 
     def fetch(self) -> List[Article]:
@@ -564,6 +623,74 @@ class EdigestRSSFetcher(BaseRSSFetcher):
     feed_url = 'https://www.edigest.hk/category/%E6%8A%95%E8%B3%87/news/feed/'
     source = '經濟一週'
     category = '新聞'
+
+    @staticmethod
+    def _today_hk_date():
+        return datetime.now(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    @staticmethod
+    def _entry_date_hk(entry):
+        if not entry.get('published_parsed'):
+            return None
+
+        published_utc = datetime.fromtimestamp(
+            calendar.timegm(entry.published_parsed),
+            timezone.utc
+        )
+        return published_utc.astimezone(
+            timezone(timedelta(hours=TIMEZONE_OFFSET))
+        ).date()
+
+    def fetch(self) -> List[Article]:
+        try:
+            r = requests.get(self.feed_url, headers=RSS_HEADERS, timeout=REQUEST_TIMEOUT)
+            r.raise_for_status()
+            feed = feedparser.parse(r.content)
+
+            if feed.bozo:
+                logger.warning(f"RSS 解析警告: {self.source}")
+                return []
+
+            articles = []
+            today = self._today_hk_date()
+            dated_entries = []
+
+            for entry in feed.entries:
+                entry_date = self._entry_date_hk(entry)
+                if not entry_date:
+                    continue
+
+                if not entry.get('title') or not entry.get('link'):
+                    continue
+
+                dated_entries.append((entry_date, entry))
+
+            target_date = today
+            if not any(entry_date == today for entry_date, _ in dated_entries) and dated_entries:
+                target_date = max(entry_date for entry_date, _ in dated_entries)
+
+            for entry_date, entry in dated_entries:
+                if len(articles) >= MAX_NEWS_PER_SOURCE:
+                    break
+
+                if entry_date != target_date:
+                    continue
+
+                articles.append(Article(
+                    title=entry.title.strip(),
+                    link=entry.link.strip(),
+                    source=self.source,
+                    category=self.category
+                ))
+
+            logger.info(f"✓ 經濟一週即時財經抓取 {len(articles)} 篇")
+            return articles
+
+        except Exception as e:
+            logger.error(f"✗ 經濟一週即時財經抓取失敗: {e}")
+            return []
 
 # ============================================================================
 # eZone 抓取器（科技焦點，只抓取當天新聞）
