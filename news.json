@@ -1,650 +1,727 @@
 {
-  "update_time": "2026-07-26 07:48:03",
-  "total": 92,
+  "update_time": "2026-07-26 09:25:51",
+  "total": 103,
   "news": [
+    {
+      "title": "颱風紅霞｜9人風暴期間受傷　消防接95宗塌樹報告",
+      "link": "https://www.dotdotnews.com/a/202607/26/AP6a655c24e4b04b6c5d34b8e2.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-07-26 09:25:32"
+    },
+    {
+      "title": "颱風紅霞｜港島綫荃灣綫觀塘綫全綫恢復服務　太和站架空電纜受損　港鐵最新交通消息一覽",
+      "link": "https://www.dotdotnews.com/a/202607/26/AP6a6556b7e4b04b6c5d34b836.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-07-26 09:25:32"
+    },
+    {
+      "title": "颱風紅霞｜九巴B1、B9及B9A早9時起恢復有限度服務",
+      "link": "https://www.dotdotnews.com/a/202607/26/AP6a655420e4b04b6c5d34b736.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-07-26 09:25:32"
+    },
+    {
+      "title": "皇家美素力1號澳門檢出鉛超標　香港食安中心指示回收涉事批次（附聯絡方式）",
+      "link": "https://www.dotdotnews.com/a/202607/26/AP6a655338e4b04b6c5d34b733.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-07-26 09:25:32"
+    },
+    {
+      "title": "颱風紅霞｜「9轉8」香港動漫電玩節開唔開？即睇惡劣天氣入場安排",
+      "link": "https://www.dotdotnews.com/a/202607/26/AP6a654e86e4b04b6c5d34b5c0.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-07-26 09:25:32"
+    },
+    {
+      "title": "颱風紅霞｜港鐵九龍站捲閘被強風吹損　這些出入口暫時關閉",
+      "link": "https://www.dotdotnews.com/a/202607/26/AP6a654bf9e4b04b6c5d34b585.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-07-26 09:25:32"
+    },
+    {
+      "title": "颱風紅霞｜今年首掛九號風球　政府嚴陣以待",
+      "link": "https://www.dotdotnews.com/a/202607/26/AP6a654bbbe4b04b6c5d34b582.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-07-26 09:25:32"
+    },
     {
       "title": "「十年一遇」紅霞登陸惠州　今年首個9號風球持續6小時",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a6549bce4b04b6c5d34b55a.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:47"
+      "scraped_at": "2026-07-26 09:25:32"
     },
     {
       "title": "颱風紅霞·交通消息｜港鐵露天段列車服務需時重啟　城巴B7龍運S1及S64恢復有限度服務",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a654960e4b04b6c5d34b544.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:47"
+      "scraped_at": "2026-07-26 09:25:32"
     },
     {
       "title": "（不斷更新）颱風紅霞｜8號風球至少維持至中午12時　所有日校停課",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64e847e4b04b6c5d34ac3a.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:47"
+      "scraped_at": "2026-07-26 09:25:32"
     },
     {
       "title": "颱風紅霞｜渠務署：暫無確認水浸個案",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a654536e4b04b6c5d34b4d5.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:47"
+      "scraped_at": "2026-07-26 09:25:32"
     },
     {
       "title": "颱風紅霞｜天文台改發8號波　港鐵：露天段較長路綫需時重啟",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a654323e4b04b6c5d34b48a.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:47"
+      "scraped_at": "2026-07-26 09:25:32"
     },
     {
       "title": "颱風紅霞｜天文台改發8號風球　至少維持至中午12時",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64dbf8e4b04b6c5d34aa8f.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:47"
+      "scraped_at": "2026-07-26 09:25:32"
     },
     {
       "title": "颱風「紅霞」在廣東惠州登陸　近十年登陸珠江口以東最強颱風！",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a6541dae4b04b6c5d34b462.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:47"
+      "scraped_at": "2026-07-26 09:25:32"
     },
     {
       "title": "發現灣區｜颱風打到嚟！外賣營運情況與落波返工指南來了",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a6504b3e4b04b6c5d34aee5.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:47"
+      "scraped_at": "2026-07-26 09:25:32"
     },
     {
       "title": "颱風紅霞·交通消息｜港鐵露天段列車服務暫停　九巴城巴所有日間及通宵路線暫停服務",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a653f84e4b04b6c5d34b3f2.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:32"
     },
     {
       "title": "颱風紅霞｜教育局：所有日校今日停課",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a653a58e4b04b6c5d34b382.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:33"
     },
     {
       "title": "颱風紅霞｜9號風球生效　1男1女風暴期間受傷　暫接27宗塌樹報告",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a653814e4b04b6c5d34b2cb.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:33"
     },
     {
       "title": "颱風紅霞｜9號風球生效　暫接7宗塌樹報告　暫無市民受傷",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64f684e4b04b6c5d34adf8.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:33"
     },
     {
       "title": "颱風紅霞｜9號風球至少維持至今早7時　天文台評估需否改發10號波",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64f3c4e4b04b6c5d34adbe.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:33"
     },
     {
       "title": "颱風紅霞｜9號風球生效　各區開放29個臨時庇護中心（附詳情）",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64f213e4b04b6c5d34ad61.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:33"
     },
     {
       "title": "颱風紅霞｜天文台改發9號風球　港鐵露天段服務即時暫停",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64e57ce4b04b6c5d34abdc.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:33"
     },
     {
       "title": "赤鱲角致命交通意外　電單車司機死亡",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64e9dbe4b04b6c5d34ac50.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:33"
     },
     {
       "title": "颱風紅霞｜九巴龍運及城巴大部分路線零時30分起暫停服務　通宵路線暫停",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64e0a2e4b04b6c5d34ab7e.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:33"
     },
     {
       "title": "颱風紅霞｜政府緊急事故監察及支援中心已啟動　呼籲市民勿追風",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64df9de4b04b6c5d34ab69.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:34"
     },
     {
       "title": "颱風紅霞｜本港今有頻密狂風大驟雨及雷暴",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64dc92e4b04b6c5d34aabb.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:34"
     },
     {
       "title": "（有片）颱風紅霞 │ 杏花邨岸邊深夜見湧浪　康文署提醒市民勿追風逐浪",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64de55e4b04b6c5d34ab1e.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:34"
     },
     {
       "title": "颱風紅霞｜凌晨1時起深圳灣口岸暫停通關",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64dd79e4b04b6c5d34ab07.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:48"
+      "scraped_at": "2026-07-26 09:25:34"
+    },
+    {
+      "title": "颱風紅霞｜狂風暴雨侵襲粵閩沿海　廣東停運停航安排一文睇",
+      "link": "https://www.dotdotnews.com/a/202607/26/AP6a655a08e4b04b6c5d34b897.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-07-26 09:25:35"
     },
     {
       "title": "颱風「紅霞」在廣東惠州登陸　近十年登陸珠江口以東最強颱風！",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a6541dae4b04b6c5d34b462.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:35"
     },
     {
       "title": "颱風紅霞｜凌晨1時起深圳灣口岸暫停通關",
       "link": "https://www.dotdotnews.com/a/202607/26/AP6a64dd79e4b04b6c5d34ab07.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:35"
     },
     {
       "title": "港生邊境祭英烈：「謝謝素未謀面的你們守護祖國山河」",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a64d3e1e4b04b6c5d34a958.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:35"
     },
     {
       "title": "（有片）藍鴻春《給阿嬤的情書》續作《帶你去見我媽》接力8·6本港上映",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a64cc94e4b04b6c5d34a818.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:35"
     },
     {
       "title": "「紅霞」已增強為強颱風　中央氣象台發布今年首個颱風紅色預警",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a64c9e2e4b04b6c5d34a7b8.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:35"
     },
     {
       "title": "范長江行動山東行啟幕　港生感知齊魯澎湃動能",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a64c882e4b04b6c5d34a7a2.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:35"
     },
     {
       "title": "（有片）現場畫面！日巡視船逼近我科考船　於台東海域遭中國海警攔截",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a64b8b6e4b04b6c5d34a432.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:35"
     },
     {
       "title": "孫東：人工智能賦能彌補「數字鴻溝」",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a64ab13e4b04b6c5d34a1cc.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:36"
     },
     {
       "title": "專家解讀：「紅霞」兩天速成　雨量極端　次生災害風險高",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a64a636e4b04b6c5d34a0fd.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:36"
     },
     {
       "title": "颱風紅霞｜粵累計轉移超28萬人　全省水庫預洩2.49億立方米防洪",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a648f9ce4b04b6c5d349c9b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:36"
     },
     {
       "title": "（有片）一尾金魚竟藏千年東方美學？「金魚王子」陳啟基透過魚眼看世界｜港故事",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a6487a0e4b04b6c5d349af2.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:36"
     },
     {
       "title": "颱風紅霞｜會否引發極端降水？能否降溫？專家解析「紅霞」影響幾何",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a647834e4b04b6c5d34982b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:36"
     },
     {
       "title": "國家防總提升廣東應急響應至Ⅲ級　港珠澳大橋橋樑航道實施臨時交通管制",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a64768be4b04b6c5d3497df.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:36"
     },
     {
       "title": "（有片）被罰近52億　攜程公布19項整改措施",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a647057e4b04b6c5d3496dd.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:36"
     },
     {
       "title": "（有片）粵車南下｜「粵車」車主赴港遊玩　打卡地標景點",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a6469d6e4b04b6c5d349583.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:36"
     },
     {
       "title": "北上注意！颱風「紅霞」臨近　深圳地鐵或調整運營",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a6464b0e4b04b6c5d3494d5.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:50"
+      "scraped_at": "2026-07-26 09:25:37"
     },
     {
       "title": "「重走長征路」黔滇行收官　灣區媒體人踏訪紅色沃土感悟長征精神",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a6463a9e4b04b6c5d3494a9.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:51"
+      "scraped_at": "2026-07-26 09:25:37"
     },
     {
       "title": "乒超聯賽｜王楚欽1-2不敵張煜東　手感全無還自抽耳光",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a64539de4b04b6c5d3492c9.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:51"
+      "scraped_at": "2026-07-26 09:25:37"
     },
     {
       "title": "粵車南下｜邊檢備案司機突破1.3萬人　新增5城車輛今起通關",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a6450ade4b04b6c5d34929d.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:51"
+      "scraped_at": "2026-07-26 09:25:37"
     },
     {
       "title": "離岸信託個稅新政落地　專家：香港家族辦公室迎轉型",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a644bc4e4b04b6c5d349216.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:51"
+      "scraped_at": "2026-07-26 09:25:37"
     },
     {
       "title": "（有片）被罰近52億　攜程為何挨了最重的罰？",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a644204e4b04b6c5d3490b3.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:51"
+      "scraped_at": "2026-07-26 09:25:37"
     },
     {
       "title": "中紀委連打三「虎」",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a6429bde4b04b6c5d348d0a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:51"
+      "scraped_at": "2026-07-26 09:25:37"
     },
     {
       "title": "史上超級罰單　攜程因壟斷行為被罰近52億",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a641d77e4b04b6c5d348b73.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:51"
+      "scraped_at": "2026-07-26 09:25:37"
     },
     {
       "title": "山西洪洞發生黃土崩塌　致5人死亡",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a641a5de4b04b6c5d348a5d.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:51"
+      "scraped_at": "2026-07-26 09:25:38"
     },
     {
       "title": "「粵車南下」今起擴至灣區9市　每日名額200輛",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a640263e4b04b6c5d348741.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:52"
+      "scraped_at": "2026-07-26 09:25:38"
     },
     {
       "title": "直撲香港！一夜過去「紅霞」升呢颱風級　最新路徑公布",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a63fefce4b04b6c5d3486ed.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:52"
+      "scraped_at": "2026-07-26 09:25:38"
     },
     {
       "title": "范長江追尋紅軍足跡　報道長征第一人",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a63eba5e4b04b6c5d348532.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:52"
+      "scraped_at": "2026-07-26 09:25:38"
     },
     {
       "title": "大公報「追尋范長江 重走長征路」採訪活動在哈達鋪啟動",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a63e73be4b04b6c5d3484f8.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:52"
+      "scraped_at": "2026-07-26 09:25:38"
     },
     {
       "title": "粵車南下今起擴至灣區9市　運輸署製作在港自駕小貼士",
       "link": "https://www.dotdotnews.com/a/202607/25/AP6a637726e4b04b6c5d3481da.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:52"
+      "scraped_at": "2026-07-26 09:25:38"
+    },
+    {
+      "title": "第14晚煞科　特朗普下令暫停空襲伊朗",
+      "link": "https://www.dotdotnews.com/a/202607/26/AP6a654ffbe4b04b6c5d34b635.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-07-26 09:25:39"
     },
     {
       "title": "貿發局增設開羅顧問辦事處開拓新興市場　馬時亨：美301關稅料對本港貿易影響有限",
       "link": "https://www.dotdotnews.com/a/202607/24/AP6a633fd8e4b04b6c5d347937.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:40"
     },
     {
       "title": "油價破百 AI股泡沫憂慮　亞洲股市下跌",
       "link": "https://www.dotdotnews.com/a/202607/24/AP6a630c7be4b04b6c5d3473cc.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:40"
     },
     {
       "title": "Pokémon卡炒到日本自民黨出手！成立「卡牌議員聯盟」規管洗黑錢 直指「日本原創IP 點解定價權在歐美」",
       "link": "https://www.edigest.hk/news/ed09-pokemon-card-japan-ldp-regulation-trading-card-money-laundering-risk-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2026607/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:41"
     },
     {
       "title": "Lawson 限購 10 包贏盡民心 Pokémon 新卡 M6 月尾開賣 玩家鬧爆網上抽選放生黃牛 炒家恐慌拋售 憂隨時徵 20% 稅",
       "link": "https://www.edigest.hk/news/ed09-pokemon%e5%8d%a1-card-m6-lawson-limit-vs-familymart-lottery-scalper-risk-analysis-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2026585/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:41"
     },
     {
       "title": "堅持實景同 70mm 菲林 路蘭史詩巨著《奧德賽》狂收破個人紀錄！另一邊廂 Netflix、Amazon 狂推 AI 慳特效成本 網民狠批「畫面呃唔到人」",
       "link": "https://www.edigest.hk/news/ed09-christopher-nolan-the-odyssey-box-office-vs-ai-hollywood-risk-analysis-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2026578/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:41"
     },
     {
       "title": "《阿森一族》創辦人1億美金遺產寧救流浪狗？網民熱議「人命定狗命重要」離世前的選擇 十一年後仍惹爭議",
       "link": "https://www.edigest.hk/news/ed09-sam-simon-simpsons-100m-estate-animal-charity-royalties-risk-analysis-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2026570/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:41"
     },
     {
       "title": "內地AI伴侶新規生效！豆包千問等「虛擬戀人」被全面封殺 用戶崩潰：像我這樣的人 幾乎無法不愛上AI 的愛",
       "link": "https://www.edigest.hk/news/china-ai-companion-regulations-doubao-qianwen-shutdown-risk-analysis-ed09-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2026562/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:41"
     },
     {
       "title": "AI泡沫恐慌引爆亞洲小股災 亞洲股市全線插水 日經瀉 2000 點 中東局勢升溫 油價重上 100 美元",
       "link": "https://www.edigest.hk/news/ai-bubble-fears-asian-stock-market-crash-nikkei-oil-yen-risk-analysis-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2026552/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:41"
     },
     {
       "title": "AI 震撼基礎科學！Claude 成功推翻 87 年數學懸案 搵出雅可比猜想三維反例！天才陶哲軒親自核實歎「如同奇蹟」",
       "link": "https://www.edigest.hk/news/ai-claude-solves-jacobian-conjecture-math-terence-tao-yitang-zhang-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2026547/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:41"
     },
     {
       "title": "星洲樞紐地位動搖？基金猛人爆「離岸潮」回流香港！稅率與生活成本成致命傷",
       "link": "https://www.edigest.hk/news/aima-warns-mas-singapore-fund-managers-relocate-hong-kong-tax-cost-risk-analysis-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2026540/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-07-26 07:47:55"
+      "scraped_at": "2026-07-26 09:25:41"
+    },
+    {
+      "title": "專注今日目標　原價 US $0.99《DailyNodes》限時免費",
+      "link": "https://www.newmobilelife.com/2026/07/26/dailynodes-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-07-26 09:25:43"
+    },
+    {
+      "title": "【台灣】本周最多人購買的 10 套 iTunes 電影限時特價 NT$ 90 起",
+      "link": "https://www.newmobilelife.com/2026/07/26/tw-top10-movie-20260726/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-07-26 09:25:43"
     },
     {
       "title": "【香港】本周最多人購買的 10 套 iTunes 電影限時特價 HK$ 38 起",
       "link": "https://www.newmobilelife.com/2026/07/26/hk-top10-movie-20260726/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:57"
+      "scraped_at": "2026-07-26 09:25:43"
     },
     {
       "title": "Anthropic 公佈 Opus 5 近乎免疫提示注入　瀏覽器攻擊成功率降至零",
       "link": "https://www.newmobilelife.com/2026/07/26/anthropic-opus-5-prompt-injection-browser-attacks-zero/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:57"
+      "scraped_at": "2026-07-26 09:25:43"
     },
     {
       "title": "報告揭示 OpenAI 在 Hugging Face 遭自主入侵時的失控程度　內部員工表達擔憂",
       "link": "https://www.newmobilelife.com/2026/07/26/openai-hugging-face-breach-employee-concerns/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:57"
+      "scraped_at": "2026-07-26 09:25:43"
     },
     {
       "title": "AI 巴西柔術實戰決策訓練　原價 US $99.99《Tap Out》限時免費",
       "link": "https://www.newmobilelife.com/2026/07/26/tap-out-bjj-sparring-iq-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:57"
+      "scraped_at": "2026-07-26 09:25:43"
     },
     {
       "title": "iPhone 18 系列秋季僅推 Pro 與摺疊機　標準型號延至明年春季",
       "link": "https://www.newmobilelife.com/2026/07/26/iphone-18-pro-foldable-standard-spring/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:57"
+      "scraped_at": "2026-07-26 09:25:43"
     },
     {
       "title": "中國 6 歲女童基因編輯試驗身亡　上海新華醫院隱瞞事故照登論文",
       "link": "https://unwire.hk/2026/07/25/shanghai-gene-editing-trial-fatality-investigation/life-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "Patreon 突然宣佈裁員兩成　CEO 堅稱與 AI 無關",
       "link": "https://unwire.hk/2026/07/25/patreon-layoffs-ai-reorganization/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "英國公司強制遙距辦公員工開鏡頭　員工控告公司未作合理調整勝訴",
       "link": "https://unwire.hk/2026/07/25/uk-tribunal-camera-disability-verified/life-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "Meta 退出清潔能源聯盟　因天然氣投資終結 10 年會籍",
       "link": "https://unwire.hk/2026/07/25/meta-exit-re100-gas-verified/life-tech/green-2/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "Google 被歐盟罰 8.9 億歐元   搜尋及 Play Store 涉違反數碼市場法",
       "link": "https://unwire.hk/2026/07/25/google-dma-fine-890million/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "美企聯署反對封殺中國 AI   特朗普擬限制 Kimi K3 惹爭議",
       "link": "https://unwire.hk/2026/07/25/littletechai-trumpkimik3/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "DeepSeek 梁文峰：NVIDIA CUDA 優勢正崩解   4 小時投資者會議曝光",
       "link": "https://unwire.hk/2026/07/25/deepseek-liang-cuda-agi/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "丁薛祥斥拒用國產晶片是叛徒  中國全力谷自研 AI 晶片",
       "link": "https://unwire.hk/2026/07/25/china-ai-chip-traitor-ding/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "龍翔道 900 米重鋪工程啟動    新速乾瀝青物料 1 小時固化清晨即通車",
       "link": "https://unwire.hk/2026/07/25/lung-cheung-road-resurfacing/fun-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "3D 打印鋁晶格加橡膠　美大學研發出全球首個全方向熱隱形斗篷",
       "link": "https://unwire.hk/2026/07/25/3d-thermal-cloak/3d-%e6%89%93%e5%8d%b0/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:44"
     },
     {
       "title": "【2026 燃油附加費最新消息】國泰航空宣布2026年8月1日起上調燃油附加費｜航空公司燃油附加費一覽（持續更新）",
       "link": "https://flyday.hk/fuel-surcharge",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:45"
     },
     {
       "title": "【HK Express 優惠】10大精選航點限時單程低至$308起！東京、大阪、名古屋、福岡、沖繩等",
       "link": "https://flyday.hk/hkexpress-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:45"
     },
     {
       "title": "【萬豪旅享家 Marriott Bonvoy】會籍匹配整合介紹懶人包！加拿大航空Aeroplan、Hyatt、日航、新航、聯合航空！",
       "link": "https://flyday.hk/travel-partner-marriott",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:45"
     },
     {
       "title": "【泰國機場規定】泰國機場10月16日起推行安檢新規定｜旅客不在場亦可強制開箱檢查",
       "link": "https://flyday.hk/thailand-airport-baggage",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:45"
     },
     {
       "title": "【永安旅遊優惠】精選歐洲 Local Tour 當地參團每位減$500！折後每位低至$5,720 起！精選英倫經典、西歐、東歐、南歐、北歐團！",
       "link": "https://flyday.hk/wing-on-travel-tour-europe-local",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:47:58"
+      "scraped_at": "2026-07-26 09:25:45"
     },
     {
-      "title": "旅遊攻略．大灣區旅遊【北上好去處】海上世界復古郵輪免費參觀！甲板欣賞絕美日落／走入復古船艙+木系旋轉樓梯（附地址）深圳 南山區蛇口海上世界最知名的地標，絕對是停泊於廣場中央的巨型復古郵輪「明華輪」，最近這艘充滿歷史感的豪華客輪正式開放...2 days ago",
+      "title": "旅遊攻略．大灣區旅遊【北上好去處】海上世界復古郵輪免費參觀！甲板欣賞絕美日落／走入復古船艙+木系旋轉樓梯（附地址）深圳 南山區蛇口海上世界最知名的地標，絕對是停泊於廣場中央的巨型復古郵輪「明華輪」，最近這艘充滿歷史感的豪華客輪正式開放...3 days ago",
       "link": "https://holidaysmart.io/hk/article/471178/%E5%8C%97%E4%B8%8A-%E6%B7%B1%E5%9C%B3-%E6%B5%B7%E4%B8%8A%E4%B8%96%E7%95%8C-%E9%81%8A%E8%BC%AA-%E5%85%8D%E8%B2%BB-%E5%BE%A9%E5%8F%A4-%E6%89%93%E5%8D%A1",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:47:59"
+      "scraped_at": "2026-07-26 09:25:48"
     },
     {
       "title": "美食推介．購物著數【中秋月餅2026】奇華月餅激抵早鳥優惠！奶皇、陳皮豆沙月買2件即減 / 5大聯乘月餅各位精明眼是時候為中秋節做好準備！每年中秋送禮自用都不可缺少高質月餅，奇華餅家今年推出多重震撼禮遇，網店及門市同步推早鳥...5 days ago",
       "link": "https://holidaysmart.io/hk/article/471114/%E4%B8%AD%E7%A7%8B%E6%9C%88%E9%A4%852026-%E5%A5%87%E8%8F%AF%E6%9C%88%E9%A4%85-%E6%97%A9%E9%B3%A5%E5%84%AA%E6%83%A0",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:00"
+      "scraped_at": "2026-07-26 09:25:46"
     },
     {
       "title": "美食推介．【JetsoWong著數王】【抵食火鍋】油尖旺超抵食$68日式一人火鍋！包湯底+肉類+主食+蔬菜拼盤超豐盛（附地址、營業時間）最近平價一人 火鍋 店「千鳥Shabu Shabu」再網民引起熱議，皆因他們主打的超抵食日式一人火鍋，只需 $68就可以...6 days ago",
       "link": "https://holidaysmart.io/hk/article/471140/%E7%BE%8E%E9%A3%9F-%E4%B8%80%E4%BA%BA%E7%81%AB%E9%8D%8B-%E6%97%A5%E5%BC%8F-%E6%8A%B5%E9%A3%9F-%E5%A4%AA%E5%AD%90",
       "source": "HolidaySmart",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:47:59"
+      "scraped_at": "2026-07-26 09:25:46"
     },
     {
       "title": "抵呀！連稅二千起飛大阪！包20kg寄艙行李！11月17日前出發！香港飛大阪來回連稅只需$2,006起 – 大灣區航空 (優惠至7月26日)",
       "link": "https://www.meethk.com/162472/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:03"
+      "scraped_at": "2026-07-26 09:25:51"
     },
     {
       "title": "嘩！突發日本優惠！全線日本航點單程$308！11月30日前出發！東京/大阪/福岡/名古屋/沖繩/高松/仙台/廣島/小松單程$308起 – HK Express (優惠至7月26日)",
       "link": "https://www.meethk.com/162449/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:03"
+      "scraped_at": "2026-07-26 09:25:51"
     },
     {
       "title": "抵呀！連稅二千飛東京！包20kg寄艙行李！11月17日前出發！香港飛東京來回連稅只需$2,063起 – 大灣區航空 (優惠至7月26日)",
       "link": "https://www.meethk.com/162440/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:03"
+      "scraped_at": "2026-07-26 09:25:51"
     },
     {
       "title": "國泰直飛倫敦！連稅6千4！12月10日前出發！香港直飛倫敦來回連稅只需$6,486起 – 國泰航空 (優惠至7月31日)",
       "link": "https://www.meethk.com/161749/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:03"
+      "scraped_at": "2026-07-26 09:25:51"
     },
     {
       "title": "抵呀！$40飛台北！連稅九百飛台北！包20kg寄艙行李！10月24日前出發！香港飛台北來回連稅只需$989起 – 大灣區航空 (優惠至7月26日)",
       "link": "https://www.meethk.com/162417/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:03"
+      "scraped_at": "2026-07-26 09:25:51"
     },
     {
       "title": "嘩！飛西雅圖穿4千！連稅3千7起！12月15日前出發！香港飛西雅圖來回連稅只需$3,778起 – 加拿大航空",
       "link": "https://www.meethk.com/162349/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:03"
+      "scraped_at": "2026-07-26 09:25:51"
     },
     {
       "title": "抵呀！連稅2千1飛札幌！包20kg寄艙行李！香港飛札幌來回連稅只需$2,147起 – 大灣區航空 (優惠至7月26日)",
       "link": "https://www.meethk.com/162394/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:03"
+      "scraped_at": "2026-07-26 09:25:51"
     },
     {
       "title": "國泰飛首爾！連稅2千2起！12月10日前出發！香港飛首爾來回連稅$2,285起 – 國泰航空 (優惠至7月31日)",
       "link": "https://www.meethk.com/162301/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:03"
+      "scraped_at": "2026-07-26 09:25:51"
     },
     {
       "title": "連稅千七飛大阪！連稅千九飛東京！包20kg寄艙行李！香港飛大阪來回連稅只需$1,756起、東京成田$1,903起 – 大灣區航空 (優惠至7月26日)",
       "link": "https://www.meethk.com/162380/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-07-26 07:48:03"
+      "scraped_at": "2026-07-26 09:25:51"
     }
   ]
 }
