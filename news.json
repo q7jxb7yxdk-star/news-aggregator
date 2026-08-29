@@ -1,552 +1,762 @@
 {
-  "update_time": "2026-08-29 03:41:09",
-  "total": 78,
+  "update_time": "2026-08-29 10:31:32",
+  "total": 108,
   "news": [
     {
-      "title": "天文台：今早部分地區驟雨較多及有雷暴　最高溫約33度",
-      "link": "https://www.dotdotnews.com/a/202608/29/AP6a91a94ae4b04b6c5d38293a.html",
+      "title": "藝周香港｜IVE/汪蘇瀧9·4起連唱3天　鐘表展及國際名表薈萃9·1會展開幕",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a9162c3e4b04b6c5d3821fe.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:53"
+      "scraped_at": "2026-08-29 10:31:05"
+    },
+    {
+      "title": "書簿津貼不考慮「通派」　蔡若蓮：資源有限須精準幫扶基層",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a924010e4b04b6c5d382f66.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:05"
+    },
+    {
+      "title": "（有片）李家超落區到訪耆乐中心　憶蘇屋邨童年歲月籲長者多運動",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a923d28e4b04b6c5d382f4e.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:05"
+    },
+    {
+      "title": "港澳律師通過考試可在灣區內地九市執業　林定國：已有逾650人取得執業證",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a923805e4b04b6c5d382ec8.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:05"
+    },
+    {
+      "title": "田心報案中心明起運作　朝8晚10時半服務",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a923358e4b04b6c5d382e58.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:05"
+    },
+    {
+      "title": "開學大「折」日！惠康買滿168元全場88折　雪糕額外9折",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a922dbae4b04b6c5d382de5.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:05"
+    },
+    {
+      "title": "教育及工業界代表熱議龔之平系列文章：築牢國安屏障　護航香港創新發展",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a9227a6e4b04b6c5d382d3b.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:05"
+    },
+    {
+      "title": "發現灣區｜沖走一身「班味」！來深圳大梅沙發呆看海　沉浸式過個鬆弛周末",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a913d8de4b04b6c5d381dca.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:05"
+    },
+    {
+      "title": "（有片）「人道關懷沒有界線」　鄭麗文捐款200萬新台幣支援西藏災區",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a923b84e4b04b6c5d382f15.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:08"
+    },
+    {
+      "title": "港澳律師通過考試可在灣區內地九市執業　林定國：已有逾650人取得執業證",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a923805e4b04b6c5d382ec8.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:08"
+    },
+    {
+      "title": "西藏吉隆泥石流災害已致7人遇難554人失聯",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a921d36e4b04b6c5d382c6b.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:08"
     },
     {
       "title": "西藏泥石流｜受災區域已搶通1座基站　新增3座基站",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a91926ce4b04b6c5d38265b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:08"
     },
     {
       "title": "（有片）西藏吉隆泥石流到底如何發生的？一片睇清災害發生全過程",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9191dde4b04b6c5d382646.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:08"
     },
     {
       "title": "12人被依法罷免全國人大代表職務　包括張又俠劉振立鍾紹軍巨乾生",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a918ac8e4b04b6c5d3825c3.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:08"
     },
     {
       "title": "直升機無人機齊上陣　應急救援1386人抵吉隆災區搶險救援",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a91853fe4b04b6c5d382563.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:08"
     },
     {
       "title": "（有片）西藏泥石流｜近距離直擊樹林遭氣浪摧毀　堰塞湖一帶仍有泥沙襲來",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a917efde4b04b6c5d3824d9.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:08"
     },
     {
       "title": "習近平簽署第八十號至第八十五號主席令",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a917264e4b04b6c5d382366.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:10"
     },
     {
       "title": "（有片）航拍災後西藏吉隆口岸　與災前衛星圖對比變化明顯",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a916932e4b04b6c5d382273.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:10"
     },
     {
       "title": "張又俠被免去中央軍委副主席職務　劉振立被免去中央軍委委員職務",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9167c4e4b04b6c5d382249.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:10"
     },
     {
       "title": "林定國：灣區規則銜接已有實質成果",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9167a4e4b04b6c5d382246.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:10"
     },
     {
       "title": "尼泊爾山洪遇難人數升至547人",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a916575e4b04b6c5d38223f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:10"
     },
     {
       "title": "李常官任民政部部長　陸治原卸任",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9164dee4b04b6c5d38223c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:10"
     },
     {
       "title": "受賄7.46億餘元　蔣超良一審被判死緩",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a916255e4b04b6c5d3821e7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:10"
     },
     {
       "title": "「所見即所得」「交房即交證」！內地商品房銷售新規公布",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9161e0e4b04b6c5d3821e5.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:10"
     },
     {
       "title": "（不斷更新）西藏泥石流｜消防人員到達口岸救援核心位置　現已安置499人　轉移555人",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a910833e4b04b6c5d381869.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:12"
     },
     {
       "title": "點聞1分鐘｜西藏吉隆口岸上游堰塞湖溢流　高風險下救援任務被迫暫緩",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a915fb3e4b04b6c5d3821c8.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:12"
     },
     {
       "title": "西藏泥石流｜吉隆附近雪山發生雪崩：5萬方冰屑匯入堰塞湖　已啟動預警",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a915f8de4b04b6c5d3821c6.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:54"
+      "scraped_at": "2026-08-29 10:31:12"
     },
     {
       "title": "（有片）泥石流襲來　他仍在指揮人群撤退……",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a915ee2e4b04b6c5d3821b0.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:55"
+      "scraped_at": "2026-08-29 10:31:12"
     },
     {
       "title": "劉桂平任國家市場監管總局黨組書記",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a915459e4b04b6c5d382094.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:55"
+      "scraped_at": "2026-08-29 10:31:12"
     },
     {
       "title": "小象超市華南首店深圳福田開業　港人北上消費再添新選擇",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a915380e4b04b6c5d38206a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:55"
+      "scraped_at": "2026-08-29 10:31:12"
     },
     {
       "title": "西藏泥石流｜信和集團及黃廷方慈善基金捐1500萬人民幣馳援災區",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9150c2e4b04b6c5d381f98.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:55"
+      "scraped_at": "2026-08-29 10:31:12"
     },
     {
       "title": "截至28日15時　西藏吉隆泥石流已致5人遇難558人失聯",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a914d88e4b04b6c5d381f3b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:55"
+      "scraped_at": "2026-08-29 10:31:12"
     },
     {
       "title": "習近平就尼泊爾遭受泥石流災害向尼總統致慰問電",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a914301e4b04b6c5d381e27.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:55"
+      "scraped_at": "2026-08-29 10:31:13"
     },
     {
       "title": "外交部：中尼專家研判此次泥石流災害由尼境內高位冰川崩塌引發",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a914231e4b04b6c5d381e23.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:55"
+      "scraped_at": "2026-08-29 10:31:13"
     },
     {
       "title": "孫宇晨狀告景甜索3000萬「彩禮」　女方首開腔：我眼光不行",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9141fbe4b04b6c5d381e1f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:55"
+      "scraped_at": "2026-08-29 10:31:13"
     },
     {
       "title": "標普維持中國主權信用評級「A+」、展望「穩定」　財政部回應",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9136a3e4b04b6c5d381cf5.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:56"
+      "scraped_at": "2026-08-29 10:31:13"
     },
     {
       "title": "神舟二十三號航天員出艙5.5小時　成功安裝空間碎片防護裝置",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a91352be4b04b6c5d381c92.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:56"
+      "scraped_at": "2026-08-29 10:31:13"
     },
     {
       "title": "中共中央政治局開會部署西藏泥石流救援　會前全體起立為遇難人員默哀",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a912583e4b04b6c5d381abc.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:56"
+      "scraped_at": "2026-08-29 10:31:13"
     },
     {
       "title": "四川內江發生5.1級地震　中國地震局啟動三級應急響應",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a912078e4b04b6c5d381a30.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:56"
+      "scraped_at": "2026-08-29 10:31:13"
     },
     {
       "title": "北上注意！受颱風「沙德爾」影響　京港高鐵部分列車今停運",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a911699e4b04b6c5d381986.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:56"
+      "scraped_at": "2026-08-29 10:31:13"
     },
     {
       "title": "（有片+多圖）2004年曾來港　「中華第一艦」退出現役",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a911651e4b04b6c5d381982.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:56"
+      "scraped_at": "2026-08-29 10:31:14"
     },
     {
       "title": "（有片）西藏泥石流｜蓄水量超250萬立方米　吉隆口岸上游堰塞湖最新畫面",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9110aee4b04b6c5d38190b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:56"
+      "scraped_at": "2026-08-29 10:31:14"
     },
     {
       "title": "（有片）點妹周記｜大象滑梯回來了！實測翻新後深圳兒童公園　解鎖深港親子遊好去處",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a911087e4b04b6c5d381901.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:56"
+      "scraped_at": "2026-08-29 10:31:14"
     },
     {
       "title": "（有片）China Squeeze？發改委回應點新聞：「中國擠壓」論完全站不住腳",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a9109ede4b04b6c5d381881.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:57"
+      "scraped_at": "2026-08-29 10:31:14"
     },
     {
       "title": "尼泊爾北部山洪遇難人數升至469人",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a90fc12e4b04b6c5d381722.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:57"
+      "scraped_at": "2026-08-29 10:31:14"
     },
     {
       "title": "颱風「沙德爾」在浙江龍灣二次登陸　本港今日有幾陣驟雨",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a90eb2ce4b04b6c5d3815b2.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:57"
+      "scraped_at": "2026-08-29 10:31:14"
     },
     {
       "title": "點直播｜國新辦發布會　介紹中國服務貿易發展和2026年服貿會籌備工作進展情況｜8月28日",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a90dd3ae4b04b6c5d38142f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:57"
+      "scraped_at": "2026-08-29 10:31:14"
     },
     {
       "title": "又是浙江玉環！颱風「沙德爾」登陸　地點罕見復刻「巴威」「白海豚」",
       "link": "https://www.dotdotnews.com/a/202608/28/AP6a90d7bde4b04b6c5d381328.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:57"
+      "scraped_at": "2026-08-29 10:31:14"
+    },
+    {
+      "title": "尼泊爾山洪遇難人數升至616人",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a92428ae4b04b6c5d382fb8.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:21"
+    },
+    {
+      "title": "特朗普直升機與客機過近　調查曝白宮施工礙塔台通信",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a923ed0e4b04b6c5d382f64.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:21"
+    },
+    {
+      "title": "特朗普：已獲委內瑞拉650億桶石油多數控制權",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a922d3ee4b04b6c5d382de2.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:21"
+    },
+    {
+      "title": "伊朗：持續控制霍爾木茲海峽　船隻未經協調不得通過",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a92252fe4b04b6c5d382d14.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:21"
+    },
+    {
+      "title": "特朗普宣布將創建「美國太空學院」",
+      "link": "https://www.dotdotnews.com/a/202608/29/AP6a921dbce4b04b6c5d382c80.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-08-29 10:31:21"
     },
     {
       "title": "螞蟻國際參與香港監管機構GenA.I.沙盒++　提升銀行AI流動性風控管理能力",
       "link": "https://www.dotdotnews.com/a/202608/27/AP6a900d5ae4b04b6c5d380523.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:59"
+      "scraped_at": "2026-08-29 10:31:22"
     },
     {
       "title": "百度下周二起在聯交所轉為主要上市",
       "link": "https://www.dotdotnews.com/a/202608/27/AP6a8faa92e4b04b6c5d37f5f7.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:40:59"
+      "scraped_at": "2026-08-29 10:31:22"
     },
     {
       "title": "【KD狂賺240倍】NBA杜蘭特25萬早投AI大爆發 輝達收購Hugging Face帶挈狂賺6000萬美元 投資回報多過打NBA年薪",
       "link": "https://www.edigest.hk/news/kevin-durant-nvidia-hugging-face-ai-investment-60-million-return-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2036252/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:41:01"
+      "scraped_at": "2026-08-29 10:31:24"
     },
     {
       "title": "比爾蓋茨 發 6,000 字長文痛批稅制 直指「請人交稅，買機械人可扣稅極不公平」 提議劃定「人類專屬領域」  保障人情味與就業",
       "link": "https://www.edigest.hk/news/ed09-bill-gates-robot-tax-ai-token-tax-human-reserved-jobs-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2036218/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:41:01"
+      "scraped_at": "2026-08-29 10:31:24"
     },
     {
       "title": "Twitter 重生？新平台 Twitter.now 搶閘上線 聲稱馬斯克已放棄舊商標 搶先佔用 早鳥登記收 20 美元 籌旗與 X 打官司",
       "link": "https://www.edigest.hk/news/ed09-witter-now-operation-bluebird-trademark-lawsuit-x-elon-musk-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2036219/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:41:01"
+      "scraped_at": "2026-08-29 10:31:24"
     },
     {
       "title": "Pokémon 30周年卡炒上 20 萬日圓 官方首推「實名認證」抽籤圖打擊黃牛 粉絲哀鴻遍野：認證完依然全滅",
       "link": "https://www.edigest.hk/news/ed09-pokemon-tcg-30th-anniversary-lottery-scalping-200k-yen-%e5%8d%b3%e6%99%82%e5%bd%a9%e7%b6%93-2036207/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:41:01"
+      "scraped_at": "2026-08-29 10:31:24"
     },
     {
       "title": "【內房危機】萬科中期巨虧近150億！手頭現金無法覆蓋短期巨債",
       "link": "https://www.edigest.hk/news/vanke-02202-h1-loss-15-billion-cash-flow-short-term-debt-crisis-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2036189/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:41:01"
+      "scraped_at": "2026-08-29 10:31:24"
     },
     {
       "title": "【聯儲局放鷹】Jackson Hole前夕三官員警告通脹頑固 直指目前利率仍偏寬鬆",
       "link": "https://www.edigest.hk/news/fed-officials-hawkish-jackson-hole-inflation-interest-rates-warning-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2036169/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:41:01"
+      "scraped_at": "2026-08-29 10:31:24"
     },
     {
       "title": "【業績速報】周大福媒體娛樂(01097)半年蝕2.8億 鄭家純批出5000萬幫手  11月推《臥底旅行團6.0》",
       "link": "https://www.edigest.hk/news/chow-tai-fook-media-01097-interim-loss-cheng-kar-shun-loan-hoy-tv-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2036149/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-08-29 03:41:01"
+      "scraped_at": "2026-08-29 10:31:24"
+    },
+    {
+      "title": "打工仔AI增值指南！嚴選Google、OpenAI等6大免費AI課程涵蓋基礎至進階 最快 1 日完成即拎證書",
+      "link": "https://ezone.hk/article/20099925/%E6%89%93%E5%B7%A5%E4%BB%94AI%E5%A2%9E%E5%80%BC%E6%8C%87%E5%8D%97-%E5%9A%B4%E9%81%B8Google-OpenAI%E7%AD%896%E5%A4%A7%E5%85%8D%E8%B2%BBAI%E8%AA%B2%E7%A8%8B%E6%B6%B5%E8%93%8B%E5%9F%BA%E7%A4%8E%E8%87%B3%E9%80%B2%E9%9A%8E-%E6%9C%80%E5%BF%AB-1-%E6%97%A5%E5%AE%8C%E6%88%90%E5%8D%B3%E6%8B%8E%E8%AD%89%E6%9B%B8",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:25"
+    },
+    {
+      "title": "【專家說】小朋友溫習唔再喊悶 : AI 3招幫小朋友學得更入腦",
+      "link": "https://ezone.hk/article/20067750/%E5%B0%88%E5%AE%B6%E8%AA%AA-%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%BA%AB%E7%BF%92%E5%94%94%E5%86%8D%E5%96%8A%E6%82%B6-AI-3%E6%8B%9B%E5%B9%AB%E5%B0%8F%E6%9C%8B%E5%8F%8B%E5%AD%B8%E5%BE%97%E6%9B%B4%E5%85%A5%E8%85%A6",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:25"
+    },
+    {
+      "title": "iPhone 18 Pro 系列準備加價＋包裝盒曝光！傳 Apple 跟足 Google、Samsung 「入場費」或升至這口價",
+      "link": "https://ezone.hk/article/20107370/iPhone-18-Pro-%E7%B3%BB%E5%88%97%E6%BA%96%E5%82%99%E5%8A%A0%E5%83%B9-%E5%8C%85%E8%A3%9D%E7%9B%92%E6%9B%9D%E5%85%89-%E5%82%B3-Apple-%E8%B7%9F%E8%B6%B3-Google-Samsung-%E5%85%A5%E5%A0%B4%E8%B2%BB-%E6%88%96%E5%8D%87%E8%87%B3%E9%80%99%E5%8F%A3%E5%83%B9",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:25"
+    },
+    {
+      "title": "AI 情感陪伴與心情追蹤神器　原價 US $0.99《Aura-Luna》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/aura-luna-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb-2/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "日常行程管理神器　原價 US $0.99《DayFlow Planner》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/dayflow-planner-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "家長必備日程管理助手　原價 US $0.99《SchoolSync UK》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/schoolsync-uk-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "斷電離線求生指南　原價 US $0.99《Blackout》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/blackout-emergency-plan-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb-2/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "智能照片自動清理助手　原價 US $0.99《VanishCam》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/vanishcam-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "錄影自動備份神器　原價 US $0.99《Haven》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/haven-never-lose-a-recording-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "嬰兒早教閃卡好幫手　原價 US $0.99《Professor Ary》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/professor-ary-baby-flashcards-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "極簡可愛提醒好幫手　原價 US $0.99《CalendarNotes》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/calendarnotes-cute-reminder-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "生活事務追蹤神器　原價 US $0.99《Oops, Paper Trail!》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/oops-paper-trail-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb-2/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "收藏 TikTok、IG 影片神器　原價 US $0.99《Catch》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/catch-reels-link-organizer-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "【PC】高難度攀爬受虐 NoRush! – Tower Edition 限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/norush-tower-edition-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "樂譜視奏節奏訓練神器　原價 US $0.99《Musical Meter 3》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/musical-meter-3-sight-reading-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "ChatGPT 支援多個 Google 帳戶　打通個人與工作數據",
+      "link": "https://www.newmobilelife.com/2026/08/29/chatgpt-codex-multi-google-account-support/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "鍛鍊邏輯推理力　原價 US $1.99《Math Square》限時免費",
+      "link": "https://www.newmobilelife.com/2026/08/29/math-square-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
+    },
+    {
+      "title": "Steve Jobs 中學科學展作品成功拍賣　成交價達 34,375 美元",
+      "link": "https://www.newmobilelife.com/2026/08/29/steve-jobs-science-project-auction/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-08-29 10:31:26"
     },
     {
       "title": "WhatsApp 推出 iOS 聊天主題功能　新增動態壁紙",
       "link": "https://www.newmobilelife.com/2026/08/29/whatsapp-ios-chat-themes-animated/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:04"
+      "scraped_at": "2026-08-29 10:31:26"
     },
     {
       "title": "女性週期追蹤好幫手　原價 US $29.99《Sola》終生版限時免費",
       "link": "https://www.newmobilelife.com/2026/08/29/sola-period-cycle-tracker-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:04"
+      "scraped_at": "2026-08-29 10:31:26"
     },
     {
       "title": "美聯邦法官裁定    國防部封殺 Anthropic 屬違法   破紀錄 IPO 料 10 月登場",
       "link": "https://unwire.hk/2026/08/28/anthropic-pentagon-ban-illegal-ruling/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "DeepSeek 收入急增 10 倍  但淨虧損卻同樣急升   本年首 7 個月虧損 8.35 億元",
       "link": "https://unwire.hk/2026/08/28/deepseek-revenue-loss-funding/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "網約車牌照今起接受申請   陳美寶：推動服務科技化   Uber, 滴滴擬遞交申請",
       "link": "https://unwire.hk/2026/08/28/ride-hailing-licence-hk-2026-2/life-tech/auto/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "科技角度看「高精準平移工程」   港鐵洪水橋站創全球首例    1 萬噸月台嵌入營運中高架橋",
       "link": "https://unwire.hk/2026/08/28/mtr-hung-shui-kiu-skid-station/fun-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "教學：AI 玩轉小畫家風格 ChatGPT+Gemini 畫廢圖 相片即變童年劣質塗鴉",
       "link": "https://unwire.hk/2026/08/28/chatgpt-paint-doodle-ugly-art-prompt-tutorial/tips-2/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "香港首航試飛成功   數碼港垂直起降飛行器   將來實現跨境低空客運物流",
       "link": "https://unwire.hk/2026/08/28/cyberport-evtol-first-flight/life-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "智能門鎖開門逼睇廣告 解鎖 2 秒暴增至半分鐘 長者唔識熄被困門外",
       "link": "https://unwire.hk/2026/08/28/china-smart-lock-ads-trap/software/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "車廂實體鍵越黎越少　BMW 澳洲行政總裁：因為後生仔鍾意用語音",
       "link": "https://unwire.hk/2026/08/28/bmw-physical-buttons-voice-control/life-tech/auto/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "網約車牌照正式開放申請 資本門檻須達5,000萬港元 引入競爭改善日常叫車體驗",
       "link": "https://unwire.hk/2026/08/28/ride-hailing-licence-hk-2026/life-tech/auto/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "Bill Gates 警告 AI 衝擊 倡設「人類保留區」保飯碗 同時徵「AI 稅」減失業潮",
       "link": "https://unwire.hk/2026/08/28/bill-gates-human-reserved-jobs-ai/hottopic/spotlight/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "Pikachu 突襲 Apple 總部  Tim Cook 帶接班人亮相",
       "link": "https://unwire.hk/2026/08/28/pikachu-apple-park-tim-cook/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "Samsung 發佈輕旗艦 Galaxy S26 FE：首發預載 One UI 9 結合次世代 Galaxy AI",
       "link": "https://unwire.hk/2026/08/28/samsung-galaxy-s26-fe-one-ui-9-launch/mobile-phone/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
-    },
-    {
-      "title": "Anthropic 新標準 MHS 登場：AI 終於可以「動手動腳」操控機械臂及實驗室儀器",
-      "link": "https://unwire.hk/2026/08/28/anthropic-model-hardware-standard-ai-agent-control-devices/ai/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
-    },
-    {
-      "title": "Waymo 暗批 Tesla 純視覺唔夠安全　光達雷達先係自動駕駛關鍵",
-      "link": "https://unwire.hk/2026/08/28/waymo-vision-only-autonomous-driving/fun-tech/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
-    },
-    {
-      "title": "Ring 千億級影片搜尋曝光 講句「藍色衫的人」2 秒內找到片段",
-      "link": "https://unwire.hk/2026/08/28/ring-ai-vector-video-search-rds/genai-and-cloud/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:27"
     },
     {
       "title": "【熱海海上花火大會2026】全年舉辦15場 即睇時間表、交通及介紹｜東京靜岡出發超方便",
       "link": "https://flyday.hk/atamide-hanabi",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:28"
     },
     {
       "title": "【海南航空優惠】免美國簽證，來回墨西哥城連稅7千6起，包2件23kg行李！",
       "link": "https://flyday.hk/hainan-airlines-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:28"
     },
     {
       "title": "【日本自由行2026】2026日本美食都市大賞出爐！4大必去美食勝地｜北海道余市、青森八戶、岐阜飛驒、大分日田",
       "link": "https://flyday.hk/gastronomic-city-japan",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:28"
     },
     {
       "title": "【菲律賓航空澳洲優惠】一萬頭商務艙飛澳洲！香港/台北出發來回連稅1萬起！包40kg行李",
       "link": "https://flyday.hk/philippine-airlines-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:05"
+      "scraped_at": "2026-08-29 10:31:28"
     },
     {
       "title": "嘩！星宇連稅千五飛台北！包23kg寄艙行李！12月31日前出發！香港飛台北來回連稅只需$1,596起 – 星宇航空 (優惠至9月4日)",
       "link": "https://www.meethk.com/163382/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     },
     {
       "title": "聯合航空飛曼谷！連稅千八！包23kg寄艙行李！明年4月30日前出發！香港飛曼谷來回連稅只需$1,886起 – 聯合航空",
       "link": "https://www.meethk.com/163402/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     },
     {
       "title": "港航飛上海！連稅千一！包23kg寄艙行李！10月31日前出發！香港飛上海來回連稅只需$1,102起 – 香港航空 (優惠至10月31日)",
       "link": "https://www.meethk.com/163364/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     },
     {
       "title": "嘩！$22飛台北/高雄/台中、$60飛首爾、$78飛沖繩、$102飛廣島！老友記出發啦！13個精選航點機票低至兩折！HK Express 60+老友記專享優惠！12月15日前出發 – HK Express (優惠至8月30日)",
       "link": "https://www.meethk.com/163293/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     },
     {
       "title": "大韓連稅2千5飛首爾！紅葉季出發都有平！可凌晨機去晚機返！12月15日前出發！香港飛首爾來回連稅只需$2,526起 – 大韓航空 (優惠至8月31日)",
       "link": "https://www.meethk.com/163274/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     },
     {
       "title": "國泰直飛倫敦！連稅7千3起！明年3月10日前出發！香港直飛倫敦來回連稅只需$7,396起 – 國泰航空 (優惠至8月31日)",
       "link": "https://www.meethk.com/163187/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     },
     {
       "title": "抵呀！連稅一千蚊飛富國島！包23kg寄艙行李！仲送太陽世界香島跨海纜車車票！香港直飛富國島來回連稅只需$1,055起 – 太陽富國航空 (優惠至9月30日)",
       "link": "https://www.meethk.com/163245/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     },
     {
       "title": "港航直飛烏魯木齊！連稅千九！包23kg寄艙行李！10月6日前出發！香港飛烏魯木齊來回連稅只需$1,978起 – 香港航空",
       "link": "https://www.meethk.com/163247/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     },
     {
       "title": "【永安旅遊 x 杜拜旅遊局】玩轉杜拜！杜拜機票無門檻減$200！阿聯酋航空香港直飛杜拜來回連稅只需$4,437起+無限次免費改期！",
       "link": "https://www.meethk.com/163118/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     },
     {
       "title": "連稅千七飛首爾！包15kg寄艙行李！11月30日前出發！香港飛首爾來回連稅只需$1,778起 – EastarJet 易斯達航空 (優惠至8月25日)",
       "link": "https://www.meethk.com/163235/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-08-29 03:41:09"
+      "scraped_at": "2026-08-29 10:31:32"
     }
   ]
 }
