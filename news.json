@@ -1,636 +1,706 @@
 {
-  "update_time": "2026-09-26 03:38:21",
-  "total": 90,
+  "update_time": "2026-09-26 06:53:23",
+  "total": 100,
   "news": [
     {
       "title": "天文台：今日大致天晴　日間乾燥酷熱　市區最高氣溫約33度",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab69ad4e4b02724bdb59cbe.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:06"
+      "scraped_at": "2026-09-26 06:53:04"
     },
     {
       "title": "中區警區嚴厲打擊「黑的」濫收車資　過去3個月拘3人發182張告票",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6808ae4b02724bdb59ac0.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:06"
+      "scraped_at": "2026-09-26 06:53:04"
+    },
+    {
+      "title": "（有片）習近平一連3日訪美　行程全紀錄",
+      "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6ef45e4b02724bdb59e26.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-26 06:53:05"
+    },
+    {
+      "title": "（有片）習近平和彭麗媛同特朗普夫婦共同參觀美國國家檔案館",
+      "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6eb16e4b02724bdb59e10.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-26 06:53:05"
     },
     {
       "title": "習近平向全球發展倡議5周年高級別對話會致賀信",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6c996e4b02724bdb59db3.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:07"
+      "scraped_at": "2026-09-26 06:53:05"
     },
     {
-      "title": "時政微觀察丨落實中美關係新定位　習主席指明方向",
+      "title": "時政微觀察｜落實中美關係新定位　習主席指明方向",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6b70fe4b02724bdb59daf.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:07"
+      "scraped_at": "2026-09-26 06:53:05"
     },
     {
       "title": "（有片）中美兩國元首夫婦茶敘　特朗普：這次訪問富有成效",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6b334e4b02724bdb59dac.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:07"
+      "scraped_at": "2026-09-26 06:53:05"
     },
     {
       "title": "習近平圓滿結束對美國的國事訪問",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6a911e4b02724bdb59d28.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:07"
+      "scraped_at": "2026-09-26 06:53:05"
     },
     {
       "title": "（有片）習近平和彭麗媛同美國總統特朗普夫婦茶敘",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6a806e4b02724bdb59d24.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:07"
+      "scraped_at": "2026-09-26 06:53:05"
     },
     {
       "title": "中美同意共同構建「基於尊重、公平、對等的建設性戰略穩定關係」",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6a159e4b02724bdb59d0b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:07"
+      "scraped_at": "2026-09-26 06:53:05"
     },
     {
       "title": "（有片）中美兩國元首夫婦共同參觀美國國家檔案館",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab6998ce4b02724bdb59ca8.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:07"
+      "scraped_at": "2026-09-26 06:53:06"
     },
     {
       "title": "（有片）習近平主席夫婦將同美國總統特朗普夫婦茶敘",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab680d1e4b02724bdb59ad5.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:07"
+      "scraped_at": "2026-09-26 06:53:06"
     },
     {
       "title": "中美元首即將參觀的國家檔案館　存逾萬中美共同抗戰照片",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab67c7de4b02724bdb59a99.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:09"
+      "scraped_at": "2026-09-26 06:53:06"
     },
     {
       "title": "中美元首將在白宮私人茶敘　再參觀國家檔案館",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab67492e4b02724bdb5999f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:09"
+      "scraped_at": "2026-09-26 06:53:06"
     },
     {
       "title": "點直播｜中央廣播電視總台2026年中秋晚會｜9月25日",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab6610ee4b02724bdb59851.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:09"
+      "scraped_at": "2026-09-26 06:53:06"
     },
     {
       "title": "30金13銀11銅！中國游泳隊圓滿收官",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab656a3e4b02724bdb596ab.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:09"
+      "scraped_at": "2026-09-26 06:53:06"
     },
     {
       "title": "習近平訪美｜專家：AI治理成中美關係新合作空間重要信號",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab64b8ce4b02724bdb59563.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:09"
+      "scraped_at": "2026-09-26 06:53:06"
     },
     {
       "title": "中國海警局：正告菲方立即停止挑釁滋事",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab63f92e4b02724bdb5941a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:09"
+      "scraped_at": "2026-09-26 06:53:06"
     },
     {
       "title": "蔡若蓮明赴上海出席世界技能大賽　為香港代表團打氣",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab636b7e4b02724bdb592ea.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:09"
+      "scraped_at": "2026-09-26 06:53:07"
     },
     {
       "title": "下周一，內地4條高鐵線同時開通運營",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab62916e4b02724bdb591c4.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:09"
+      "scraped_at": "2026-09-26 06:53:07"
     },
     {
       "title": "最快2小時27分可達！京港高鐵雄安至商丘段28日開通運營",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab60b74e4b02724bdb58fab.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:10"
+      "scraped_at": "2026-09-26 06:53:07"
     },
     {
       "title": "特朗普在白宮歡迎儀式上發表講話：美海軍陸戰隊仍在使用來自中文的詞語",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab60aa8e4b02724bdb58fa6.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:10"
+      "scraped_at": "2026-09-26 06:53:07"
     },
     {
       "title": "「平平」「福雙」將赴美　一文睇中美半世紀「熊貓情」",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5ffcae4b02724bdb58ead.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:10"
+      "scraped_at": "2026-09-26 06:53:07"
     },
     {
       "title": "中美元首同提飛虎隊　在世飛虎隊老兵僅剩4人　其中一位過百歲",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5fd43e4b02724bdb58e5e.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:10"
+      "scraped_at": "2026-09-26 06:53:07"
     },
     {
       "title": "央視中秋晚會節目單公布！王祖藍壓軸合唱《燈火裏的中國》　莎拉布萊曼將與周深合唱",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5f111e4b02724bdb58e0a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:10"
+      "scraped_at": "2026-09-26 06:53:07"
     },
     {
       "title": "新皇崗口岸｜聯檢大樓市政工程竣工驗收　已具通車條件",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5e64ee4b02724bdb58d76.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:10"
+      "scraped_at": "2026-09-26 06:53:07"
     },
     {
       "title": "習近平：中美兩國的乒乓外交　叩開了塵封已久的交往大門",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5e5ece4b02724bdb58d72.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:10"
+      "scraped_at": "2026-09-26 06:53:09"
     },
     {
       "title": "（有片）回顧北京之行受熱情款待　特朗普在白宮盛情接待中國代表團",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5e311e4b02724bdb58d00.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:10"
+      "scraped_at": "2026-09-26 06:53:09"
     },
     {
       "title": "習近平：80多年前中美人民並肩作戰　這份血與火鍛造的友誼必將世代相傳",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5dfa2e4b02724bdb58c9c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:11"
+      "scraped_at": "2026-09-26 06:53:09"
     },
     {
       "title": "（有片）特朗普：願美中兩國人民有一個更和諧、和平繁榮的未來",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5de2ee4b02724bdb58c86.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:11"
+      "scraped_at": "2026-09-26 06:53:09"
     },
     {
       "title": "（有片）神二十三乘組中秋送祝福　黎家盈：「天宮」望明月　千里共嬋娟",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5daa0e4b02724bdb58c36.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:11"
+      "scraped_at": "2026-09-26 06:53:09"
     },
     {
       "title": "習近平：賽考斯資助殷玉珍種樹　成為中美兩國人民友好交往的範例",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5d099e4b02724bdb58b7b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:11"
+      "scraped_at": "2026-09-26 06:53:09"
     },
     {
       "title": "習近平主席夫婦出席歡迎宴會　高清大圖來了",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5ce8ae4b02724bdb58b4d.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:11"
+      "scraped_at": "2026-09-26 06:53:09"
     },
     {
       "title": "習近平出席白宮歡迎宴會並致辭：共同書寫中美友好的嶄新篇章",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5cd6ce4b02724bdb58b33.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:11"
+      "scraped_at": "2026-09-26 06:53:09"
     },
     {
       "title": "習近平夫婦出席白宮國宴　特朗普贈白鷹雕塑並參與設計",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5c722e4b02724bdb58b08.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:11"
+      "scraped_at": "2026-09-26 06:53:10"
     },
     {
       "title": "習近平祝大家中秋快樂闔家幸福",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5be25e4b02724bdb58aa3.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:11"
+      "scraped_at": "2026-09-26 06:53:10"
     },
     {
       "title": "（有片）習近平同特朗普小範圍交流　高清大圖來了",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5bc83e4b02724bdb58a57.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:12"
+      "scraped_at": "2026-09-26 06:53:10"
     },
     {
       "title": "習近平和彭麗媛出席特朗普總統夫婦舉行的歡迎國宴　中美元首發表致辭",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5b404e4b02724bdb58942.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:12"
+      "scraped_at": "2026-09-26 06:53:10"
     },
     {
       "title": "（有片）習近平主席夫婦抵達白宮出席歡迎宴會　特朗普總統夫婦熱情迎接",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5b2b6e4b02724bdb588f4.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:12"
+      "scraped_at": "2026-09-26 06:53:10"
     },
     {
       "title": "習近平訪美｜專家解讀：穩定的中美關係對「台獨」是重大打擊",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5b2a2e4b02724bdb588f0.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:12"
+      "scraped_at": "2026-09-26 06:53:10"
     },
     {
       "title": "中美元首華盛頓會晤　看點一文睇",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5af3ce4b02724bdb588c8.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:12"
+      "scraped_at": "2026-09-26 06:53:10"
     },
     {
-      "title": "中美元首會談　習近平：中美經貿團隊達成新聯合安排",
+      "title": "（有片）中美元首會談　習近平：中美經貿團隊達成新聯合安排",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5aa52e4b02724bdb588ad.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:12"
+      "scraped_at": "2026-09-26 06:53:10"
     },
     {
       "title": "習近平在白宮歡迎儀式上致辭有這些金句",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab58301e4b02724bdb587ad.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:12"
+      "scraped_at": "2026-09-26 06:53:11"
     },
     {
       "title": "（有片）習近平出席特朗普在白宮舉行的歡迎儀式",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab57c3ce4b02724bdb58785.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:12"
+      "scraped_at": "2026-09-26 06:53:11"
     },
     {
       "title": "習近平訪美｜白宮國宴菜單曝光！食材融入中國元素　重現1972「和平祝酒」",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab56a29e4b02724bdb58724.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:13"
+      "scraped_at": "2026-09-26 06:53:11"
     },
     {
       "title": "（有片）習近平訪美｜戰機飛越！一起看歡迎儀式上的特別環節",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5687ee4b02724bdb58720.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:13"
+      "scraped_at": "2026-09-26 06:53:11"
     },
     {
       "title": "（有片）中美元首會談結束　習近平乘車離開白宮",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab5617ae4b02724bdb586af.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:13"
+      "scraped_at": "2026-09-26 06:53:11"
     },
     {
       "title": "習近平：把中美建設性戰略穩定關係從願景轉化為行動　以釘釘子精神落實好共識",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab55915e4b02724bdb5863c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:13"
+      "scraped_at": "2026-09-26 06:53:11"
     },
     {
       "title": "習近平：中方支持美伊回歸伊斯蘭堡諒解備忘錄　盡早實現和平",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab55639e4b02724bdb58622.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:13"
+      "scraped_at": "2026-09-26 06:53:11"
     },
     {
       "title": "習近平：希望美方堅持反對「台獨」的正確立場　慎重處理台灣問題",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab554f0e4b02724bdb585f9.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:13"
+      "scraped_at": "2026-09-26 06:53:11"
     },
     {
       "title": "習近平：未來5年邀10萬美國青少年來華交流學習",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab54a43e4b02724bdb5852b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:13"
+      "scraped_at": "2026-09-26 06:53:12"
+    },
+    {
+      "title": "（有片）習近平一連3日訪美　行程全紀錄",
+      "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6ef45e4b02724bdb59e26.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-26 06:53:14"
+    },
+    {
+      "title": "（有片）習近平和彭麗媛同特朗普夫婦共同參觀美國國家檔案館",
+      "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6eb16e4b02724bdb59e10.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-26 06:53:14"
     },
     {
       "title": "習近平向全球發展倡議5周年高級別對話會致賀信",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6c996e4b02724bdb59db3.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:15"
+      "scraped_at": "2026-09-26 06:53:14"
     },
     {
-      "title": "時政微觀察丨落實中美關係新定位　習主席指明方向",
+      "title": "時政微觀察｜落實中美關係新定位　習主席指明方向",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6b70fe4b02724bdb59daf.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:15"
+      "scraped_at": "2026-09-26 06:53:14"
     },
     {
       "title": "（有片）中美兩國元首夫婦茶敘　特朗普：這次訪問富有成效",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6b334e4b02724bdb59dac.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:15"
+      "scraped_at": "2026-09-26 06:53:14"
     },
     {
       "title": "習近平圓滿結束對美國的國事訪問",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6a911e4b02724bdb59d28.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:15"
+      "scraped_at": "2026-09-26 06:53:14"
     },
     {
       "title": "（有片）習近平和彭麗媛同美國總統特朗普夫婦茶敘",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6a806e4b02724bdb59d24.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:15"
+      "scraped_at": "2026-09-26 06:53:14"
     },
     {
       "title": "中美同意共同構建「基於尊重、公平、對等的建設性戰略穩定關係」",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6a159e4b02724bdb59d0b.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:15"
+      "scraped_at": "2026-09-26 06:53:14"
     },
     {
       "title": "（有片）張朝陽：AI重要性比肩互聯網　創新和對世界理解仍靠人腦",
       "link": "https://www.dotdotnews.com/a/202609/25/AP6ab6491de4b02724bdb59525.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:16"
+      "scraped_at": "2026-09-26 06:53:17"
     },
     {
       "title": "【AI顛覆遊戲界】Meta推「零代碼」AI開發工具+股價飆4%！朱克伯格身家躍升全球第四",
       "link": "https://www.edigest.hk/news/meta-ai-game-maker-horizon-create-studio-zuckerberg-wealth-unity-stock-drop-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042241/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:16"
+      "scraped_at": "2026-09-26 06:53:17"
     },
     {
       "title": "2026 薪酬趨勢調查出爐 港人平均加薪 2.8% 實質加幅創疫後低 採購及金融業 3.8% 稱霸 會計界最慘淡 非固定花紅增至 1.56 個月 明年調薪逾半企觀望",
       "link": "https://www.edigest.hk/news/hong-kong-salary-trend-2026-pay-rise-inflation-bonus-hr-survey-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042202/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:16"
+      "scraped_at": "2026-09-26 06:53:17"
     },
     {
       "title": "【瑞士金融震盪】傳瑞銀傳密謀「撤出瑞士」不滿監管收緊 重啟外國銀行合併討論 避 1,404 億加碼資本 潛在對象傳大摩渣打",
       "link": "https://www.edigest.hk/news/ubs-considering-merger-foreign-bank-relocate-from-switzerland-capital-requirements-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042171/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:16"
+      "scraped_at": "2026-09-26 06:53:17"
     },
     {
       "title": "【出口狂飆】本港8月出口按年暴升53%遠超預期！AI產品強勁需求帶動連升19個月",
       "link": "https://www.edigest.hk/news/hong-kong-export-value-august-2026-soars-53-percent-ai-products-demand-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042165/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:16"
+      "scraped_at": "2026-09-26 06:53:17"
     },
     {
       "title": "【美息狂飆】聯儲局官員齊放鷹！美30年債息衝破5.5厘創22年高 按揭利率破7.4厘",
       "link": "https://www.edigest.hk/news/us-treasury-yields-30-year-5-5-percent-hawkish-fed-rate-hike-mortgage-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042162/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-26 03:38:16"
+      "scraped_at": "2026-09-26 06:53:17"
+    },
+    {
+      "title": "遺忘曲線智能複習　原價 US $12.99《RecallNote》限時免費",
+      "link": "https://www.newmobilelife.com/2026/09/26/recallnote-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb-3/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-09-26 06:53:20"
+    },
+    {
+      "title": "全家同步記錄狗狗作息　原價 US $0.99《Barkeeping》限時免費",
+      "link": "https://www.newmobilelife.com/2026/09/26/barkeeping-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-09-26 06:53:20"
+    },
+    {
+      "title": "watchOS 27 為 Modular 錶面加入 13 款配色　新複雜功能限 Ultra 4 及 Series 12",
+      "link": "https://www.newmobilelife.com/2026/09/26/watchos-27-modular-face-colors/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-09-26 06:53:20"
+    },
+    {
+      "title": "Apple 公佈 tvOS 27 詳細更新說明　列出多項重點新功能",
+      "link": "https://www.newmobilelife.com/2026/09/26/apple-tvos-27-release-notes/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-09-26 06:53:20"
+    },
+    {
+      "title": "智能提醒養成飲水習慣　原價 US $0.99《Drink Now》限時免費",
+      "link": "https://www.newmobilelife.com/2026/09/26/drink-now-water-reminder-app-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb-2/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-09-26 06:53:20"
+    },
+    {
+      "title": "無帳戶零雲端習慣追蹤　原價 US $0.99《Kujun》限時免費",
+      "link": "https://www.newmobilelife.com/2026/09/26/kujun-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "iPad mini 8 細節再曝光　前鏡頭改横並配 A20 Pro 晶片",
       "link": "https://www.newmobilelife.com/2026/09/26/ipad-mini-a20-pro-leak/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "Apple 程式碼確認 iPad 12 規格　配 A19 晶片與 8GB 記憶體",
       "link": "https://www.newmobilelife.com/2026/09/26/apple-ipad-12-a19-specs/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "專訪：Unreal 引擎製作最真實香港的 3D 藝術家   講述自學 Unreal Engine 製作歷程",
       "link": "https://unwire.hk/2026/09/25/unreal-engine-hong-kong/people-interview/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "GTA 6 限量禮盒賣 3 千 包 11 款周邊但竟然無 Game",
       "link": "https://unwire.hk/2026/09/25/gta6-collector-box-400-no-game/shop_guide/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "港人研發伴侶 AI 機械人 模擬體溫兼具 165 種動作 年底香港開體驗店開放試玩",
       "link": "https://unwire.hk/2026/09/25/somnia-lab-ai-robot-hk/unwire-space/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "【評測】《EA SPORTS FC27》：The Ground 全新玩法  削弱 AI 防守能力由玩家掌控",
       "link": "https://unwire.hk/2026/09/25/ea-sports-fc27/game-channel/game-review/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "手柄發熱冬天握住似暖蛋  港產智能拐杖跌倒即通報  設緩衝時間免誤鳴嚇親人",
       "link": "https://unwire.hk/2026/09/25/sticku-smart-walking-stick-gerontechnology/life-tech/health/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "新加坡男涉尾隨女學生 疑戴智能眼鏡天橋偷拍 被人識破斷正急轉身逃",
       "link": "https://unwire.hk/2026/09/25/sg-smart-glasses-student-probe/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "Sony A7S 或將現身 上一代已相隔 6年 專業拍片迎升級首選",
       "link": "https://unwire.hk/2026/09/25/sony-mystery-camera-a7s-cert/dc/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "HUAWEI WATCH GT 7 官方網店 9 折優惠碼 ：「A3GT7」   即買即用",
       "link": "https://unwire.hk/2026/09/25/huawei-watch-gt-7/shop_guide/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "Huawei Kirin 9050 Pro 跑分流出！多核超越 Apple A17 Pro 差距縮至 3 年",
       "link": "https://unwire.hk/2026/09/25/huawei-kirin-9050-pro-outperforms-a17-pro/mobile-phone/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "Google 下周發射 AI 衛星上太空　Project Suncatcher 首步試驗太陽能運算",
       "link": "https://unwire.hk/2026/09/25/google-project-suncatcher-ai-satellite-space-datacenter/life-tech/green-2/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "微軟專利曝光：打贏 Boss 即彈廣告？PC 及 Xbox 或引入暫停插播系統",
       "link": "https://unwire.hk/2026/09/25/microsoft-game-ad-patent/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-26 03:38:19"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "【熱海海上花火大會2026】全年舉辦15場 即睇時間表、交通及介紹｜東京靜岡出發超方便",
       "link": "https://flyday.hk/atamide-hanabi",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:20"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "【日本航空優惠】香港秋季旅遊博覽會限時優惠，來回東京成田連稅3千2起｜出發日期至明年3月31日",
       "link": "https://flyday.hk/japan-airlines-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:20"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "【澳門‧愈夜愈美麗】Klook X 澳門旅遊局聯乘，限時減$100優惠！玩盡夜間高空飛索、細味星級餐飲！欣賞第34屆澳門國際煙花比賽匯演！",
       "link": "https://flyday.hk/klook-macao",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:20"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "【Uber優惠】中秋出門做節/去機場 Call Uber 最方便！輸入優惠碼【KEEPDOING】新舊客都可以拎高達HK$100乘車優惠！",
       "link": "https://flyday.hk/uber-keepdoing-campaign",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:20"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "【國泰航空】好消息，國泰福岡加班次｜來回連稅低至$3,482 起！",
       "link": "https://flyday.hk/%E5%9C%8B%E6%B3%B0%E8%88%AA%E7%A9%BA-%E7%A6%8F%E5%B2%A1%E5%84%AA%E6%83%A0",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:20"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "【易斯達航空EastarJet韓國優惠】凌晨機去晚機返！來回釜山1千2起包15kg寄艙行李！10月25日起開航",
       "link": "https://flyday.hk/eastarjet-korea-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:20"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "【國泰航空】二人或以上同行，來回札幌每位來回連稅低至$4,408 起！",
       "link": "https://flyday.hk/%E5%9C%8B%E6%B3%B0%E8%88%AA%E7%A9%BA-%E4%BA%8C%E4%BA%BA%E5%90%8C%E8%A1%8C%E6%9C%AD%E5%B9%8C%E5%84%AA%E6%83%A0",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:20"
+      "scraped_at": "2026-09-26 06:53:20"
     },
     {
       "title": "突發韓國優惠！$38飛大邱！12月20日前出發！香港飛大邱單程只需$38起 – HK Express (優惠至9月27日)",
       "link": "https://www.meethk.com/164349/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:21"
+      "scraped_at": "2026-09-26 06:53:23"
     },
     {
       "title": "抵呀！港航直飛澳洲！連稅4千1起！包23kg寄艙行李！香港直飛悉尼、墨爾本來回連稅只需$4,188起 – 香港航空 (優惠至11月15日)",
       "link": "https://www.meethk.com/164227/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:21"
+      "scraped_at": "2026-09-26 06:53:23"
     },
     {
       "title": "國泰飛札幌！連稅4千4！11月30日前出發！香港飛札幌二人同行來回連稅每人只需$4,406起 – 國泰航空 (優惠至10月5日)",
       "link": "https://www.meethk.com/164009/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:21"
+      "scraped_at": "2026-09-26 06:53:23"
     },
     {
       "title": "抵呀！連稅千二飛釜山！包15kg寄艙行李！明年1月31日前出發！香港飛釜山來回連稅只需$1,293起 – EastarJet 易斯達航空 (優惠至9月29日)",
       "link": "https://www.meethk.com/164311/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:21"
+      "scraped_at": "2026-09-26 06:53:23"
     },
     {
       "title": "連稅二千一！港航飛東京！包23kg寄艙行李！明年1月28日前出發！香港飛東京成田來回連稅只需$2,184起 – 香港航空",
       "link": "https://www.meethk.com/163956/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:21"
+      "scraped_at": "2026-09-26 06:53:23"
     },
     {
       "title": "連稅2千2飛福岡！包20kg寄艙行李！1月21日前出發！香港飛福岡來回連稅只需$2,240起 – 大灣區航空 (優惠至10月6日)",
       "link": "https://www.meethk.com/164294/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:21"
+      "scraped_at": "2026-09-26 06:53:23"
     },
     {
       "title": "連稅二千蚊！港航飛大阪！包23kg寄艙行李！明年1月28日前出發！香港飛大阪來回連稅只需$2,049起 – 香港航空",
       "link": "https://www.meethk.com/163961/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:21"
+      "scraped_at": "2026-09-26 06:53:23"
     },
     {
       "title": "抵呀！跌穿五千！港航直飛溫哥華！連稅4千7起！12月17日前出發！香港直飛溫哥華來回連稅只需$4,698起 – 香港航空 (優惠至12月17日)",
       "link": "https://www.meethk.com/164208/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:21"
+      "scraped_at": "2026-09-26 06:53:23"
     },
     {
       "title": "$68飛台北/高雄/台中！12月20日前出發！香港飛台北/高雄/台中單程只需$68起 – HK Express (優惠至9月19日)",
       "link": "https://www.meethk.com/164186/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-26 03:38:21"
+      "scraped_at": "2026-09-26 06:53:23"
     }
   ]
 }
