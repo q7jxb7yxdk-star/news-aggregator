@@ -1,706 +1,1014 @@
 {
-  "update_time": "2026-09-27 11:25:06",
-  "total": 100,
+  "update_time": "2026-09-27 17:35:34",
+  "total": 144,
   "news": [
+    {
+      "title": "《培生擂台：無敵盃》12月迎港澳拳王巔峰對決　勝者衝擊世界冠軍席位",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8e2f9e4b02724bdb5c33a.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:11"
+    },
+    {
+      "title": "麥美娟：昨收黃碧嬌以健康理由請辭　是否補選按實際情況安排",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8dafae4b02724bdb5c2c1.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:11"
+    },
+    {
+      "title": "亞運｜香港男子重劍團體摘銅　劍擊港隊2銀4銅收官",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8d343e4b02724bdb5c24b.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:11"
+    },
+    {
+      "title": "（有片）流浮山貨櫃車起火　黑煙席捲半空",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8cacfe4b02724bdb5c12f.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:11"
+    },
+    {
+      "title": "中秋返程高峰來襲！港珠澳大橋往香港車龍逾500米　候檢時長逾40分鐘",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c94ee4b02724bdb5c0e4.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:11"
+    },
+    {
+      "title": "（有片）荃錦公路跑車越線撼對頭車起火　私家車司機受傷送院",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c7aee4b02724bdb5c0b9.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:11"
+    },
+    {
+      "title": "（有片）東盟盃｜港隊VS老撾！啟德化身「紅色海洋」　荷蘭客購波衫作紀念",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c54ae4b02724bdb5c09f.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:11"
+    },
+    {
+      "title": "西貢黃石碼頭男子疑醉酒遇溺　送院搶救不治",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c301e4b02724bdb5c084.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:11"
+    },
+    {
+      "title": "羅淑佩冀五年內動工重建維園網球場　施工期內擬大球場辦賽事",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8bf26e4b02724bdb5c033.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:12"
+    },
+    {
+      "title": "破邊洲2小時兩宗懷疑中暑　直升機出動救援　即睇行山防暑指南",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8b5e3e4b02724bdb5bf95.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:12"
+    },
+    {
+      "title": "亞運｜鄧銘漮/李嘉兒壁球混雙摘金！港隊包攬金銀",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8b27ee4b02724bdb5bf74.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:12"
+    },
+    {
+      "title": "亞運｜男子重劍團體賽　港隊晉級4強鎖定獎牌",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8a9b1e4b02724bdb5bea7.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:12"
+    },
+    {
+      "title": "搶票必看！劉德華紅館跨年騷門票明起登記抽籤（附安排詳情）",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab89b6be4b02724bdb5be1d.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:12"
+    },
+    {
+      "title": "（有片）運輸署：4成過路處已裝新發聲裝置　料明年底完成全港更換",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab89af1e4b02724bdb5be1a.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:12"
+    },
+    {
+      "title": "陳茂波：有信心達到全年GDP增長3.5%至4.5%預測目標",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab898efe4b02724bdb5bde1.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:12"
+    },
+    {
+      "title": "亞運｜陳善鈺壁球女單排第4　仍為港隊摘得銅牌",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab896c1e4b02724bdb5bdb9.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:12"
+    },
     {
       "title": "孫東：利用市場力量　提早推進新田科技城「一級土地開發」",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab886d7e4b02724bdb5bc27.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:50"
+      "scraped_at": "2026-09-27 17:35:13"
     },
     {
       "title": "移加廚師自創韭菜豬肉餡「月餅」　網民:你呢啲喺古代要浸豬籠",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab885efe4b02724bdb5bc24.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:50"
+      "scraped_at": "2026-09-27 17:35:13"
     },
     {
       "title": "亞運｜9·27港隊焦點賽程　男重女佩團體衝金　伍家朗楊雅婷羽球爭4強",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab881cde4b02724bdb5bbd5.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:50"
+      "scraped_at": "2026-09-27 17:35:13"
     },
     {
       "title": "盧寵茂：公院醫生流失率降至4.4%　護士「畢業即失業」說法不實",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab87367e4b02724bdb5bacb.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:50"
+      "scraped_at": "2026-09-27 17:35:13"
     },
     {
       "title": "荃灣近水灣89歲婦游早泳遇溺　送院不治",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab870bbe4b02724bdb5b9f1.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:50"
+      "scraped_at": "2026-09-27 17:35:13"
     },
     {
       "title": "（有片）將軍澳「子彈仔」深夜橫行擾民　 警傳票檢控7青少年",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8653be4b02724bdb5b964.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:50"
+      "scraped_at": "2026-09-27 17:35:13"
     },
     {
       "title": "發現灣區｜免費入場！紅磡新海濱華服嘉年華打卡攻略　巨型花燈/無人機匯演等你來",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab7655be4b02724bdb5a99e.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:50"
+      "scraped_at": "2026-09-27 17:35:13"
     },
     {
       "title": "天文台：今日日間酷熱及乾燥　市區最高溫約33度",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab7e6bce4b02724bdb5b5ed.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:50"
+      "scraped_at": "2026-09-27 17:35:13"
+    },
+    {
+      "title": "（有片）內地虐貓網紅「傑克辣條」疑遭持刀伤害　警方回應",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8da86e4b02724bdb5c2ad.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:16"
+    },
+    {
+      "title": "習近平訪美期間　談中美關係有這些金句",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8d3c4e4b02724bdb5c24e.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:16"
+    },
+    {
+      "title": "中國遊客韓國遺失手機　陌生人帶回千里寄還：看到中文就知道是同胞",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8cd03e4b02724bdb5c19f.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:16"
+    },
+    {
+      "title": "（有片）現場畫面！新型無人機亮劍黃岩島",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c82ce4b02724bdb5c0e0.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:16"
+    },
+    {
+      "title": "韓正出席第81屆聯合國大會一般性辯論並發表講話",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c69be4b02724bdb5c0b5.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:16"
+    },
+    {
+      "title": "大熊貓「平平」「福雙」去美國　行李箱大公開",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c3afe4b02724bdb5c098.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:16"
+    },
+    {
+      "title": "亞運｜國乒提前鎖定女單冠亞軍！孫穎莎王曼昱會師決賽",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c242e4b02724bdb5c066.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:16"
+    },
+    {
+      "title": "專家解讀：中美人工智能對話後續進展主要體現三方面",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8b49de4b02724bdb5bf7e.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:16"
     },
     {
       "title": "（有片）助力國產AI芯片研究　神二十三乘組完成空間站載荷進出艙任務",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab88ac8e4b02724bdb5bc89.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:52"
+      "scraped_at": "2026-09-27 17:35:17"
     },
     {
       "title": "亞運｜熱血乒乓！孫穎莎王曼昱今雙線爭冠　女單男雙迎4場「中日對決」",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab87a5ce4b02724bdb5bb2e.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:52"
+      "scraped_at": "2026-09-27 17:35:17"
     },
     {
       "title": "福建羅源縣發生滑坡泥石流　3人失聯",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab86964e4b02724bdb5b98f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:52"
+      "scraped_at": "2026-09-27 17:35:17"
     },
     {
       "title": "大熊貓「平平」「福雙」已啟程赴美",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8540ae4b02724bdb5b804.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:52"
+      "scraped_at": "2026-09-27 17:35:17"
     },
     {
       "title": "亞運｜林詩棟蒯曼首奪金：抱着必勝的心態拚",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7e2e3e4b02724bdb5b57a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:52"
+      "scraped_at": "2026-09-27 17:35:17"
     },
     {
       "title": "（有片）致敬劉歡　那英哽咽唱《彎彎的月亮》",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7de9ee4b02724bdb5b552.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:52"
+      "scraped_at": "2026-09-27 17:35:17"
     },
     {
       "title": "港澳旅客假期「經深飛」　9月以來南航港澳客近3萬人次",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7d71be4b02724bdb5b4cd.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:52"
+      "scraped_at": "2026-09-27 17:35:17"
     },
     {
       "title": "亞運｜王楚欽孫穎莎無緣三連冠：已拚盡全力　小將衝擊力不斷提高",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7c644e4b02724bdb5b2d5.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:52"
+      "scraped_at": "2026-09-27 17:35:17"
     },
     {
       "title": "（有片）張雪機車意大利站第4　張雪率近200人現場助威",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7c12ee4b02724bdb5b2bb.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:53"
+      "scraped_at": "2026-09-27 17:35:18"
     },
     {
       "title": "（有片）劉歡跨年晚會最後一次公開亮相　那英庾澄慶林志炫等緬懷",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7bf44e4b02724bdb5b2b7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:53"
+      "scraped_at": "2026-09-27 17:35:18"
     },
     {
       "title": "習近平訪美｜專家解讀：經貿成果務實　應盡快將共識落地",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7bb56e4b02724bdb5b21c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:53"
+      "scraped_at": "2026-09-27 17:35:18"
     },
     {
       "title": "亞運｜林詩棟/蒯曼奪金　王楚欽/孫穎莎摘銀　國乒包攬混雙金銀牌",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7ab16e4b02724bdb5b0c7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:53"
+      "scraped_at": "2026-09-27 17:35:18"
     },
     {
       "title": "習近平訪美｜美方將AI改叫「超級智能」　外交部：尊重美方提法",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7a672e4b02724bdb5b069.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:53"
+      "scraped_at": "2026-09-27 17:35:18"
     },
     {
       "title": "（有片）中美「乒乓外交」親歷者：期待中美加強交流增進互信　友誼代代相傳",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7a4f5e4b02724bdb5b052.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:53"
+      "scraped_at": "2026-09-27 17:35:18"
     },
     {
       "title": "習近平訪美｜王毅：開闢大國相處正確之道 書寫中美關係歷史新篇",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7a4c8e4b02724bdb5b04f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:53"
+      "scraped_at": "2026-09-27 17:35:18"
     },
     {
       "title": "專家解讀：中美互降關稅　對全球經濟格局釋放積極信號",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab78d65e4b02724bdb5ae35.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:53"
+      "scraped_at": "2026-09-27 17:35:18"
     },
     {
       "title": "亞運｜零封！王楚欽勝馮翊新晉四強　半決賽對陣阿拉米扬",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab78898e4b02724bdb5ad75.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:54"
+      "scraped_at": "2026-09-27 17:35:20"
     },
     {
       "title": "亞運｜孫穎莎晉級女單四強　半決賽將對陣早田希娜",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab787fee4b02724bdb5ad70.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:54"
+      "scraped_at": "2026-09-27 17:35:20"
     },
     {
       "title": "特朗普：中美元首會晤富有成效　年內將再會面兩次",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab78459e4b02724bdb5acb2.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:54"
+      "scraped_at": "2026-09-27 17:35:20"
     },
     {
       "title": "亞運｜王曼昱晉級女單四強　半決賽再戰張本美和",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab77da6e4b02724bdb5abee.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:54"
+      "scraped_at": "2026-09-27 17:35:20"
     },
     {
       "title": "亞運｜中國男足3∶0勝泰國隊　晉級四強",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab77d00e4b02724bdb5abea.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:54"
+      "scraped_at": "2026-09-27 17:35:20"
     },
     {
       "title": "中美達成八點成果共識",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab77aa1e4b02724bdb5abad.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:54"
+      "scraped_at": "2026-09-27 17:35:20"
     },
     {
       "title": "中秋假期首日　粵高速單日車流量約820.77萬車次",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab77680e4b02724bdb5ab34.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:54"
+      "scraped_at": "2026-09-27 17:35:20"
     },
     {
       "title": "習近平結束對美國的國事訪問回到北京",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7762de4b02724bdb5ab2f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:54"
+      "scraped_at": "2026-09-27 17:35:20"
     },
     {
       "title": "女遊客獨遊日本遭誣陷偷竊　遭警察搜身趕不上飛機　店員毫無誠意道歉",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7740ce4b02724bdb5aaf4.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:55"
+      "scraped_at": "2026-09-27 17:35:21"
     },
     {
       "title": "習近平：中美關係的前途是光明的　這是歷史大勢",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab76f03e4b02724bdb5aa66.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:55"
+      "scraped_at": "2026-09-27 17:35:21"
     },
     {
       "title": "中秋正日16.9萬內地客訪港　38.8萬港人北上",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7674be4b02724bdb5a9b7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:55"
+      "scraped_at": "2026-09-27 17:35:21"
     },
     {
       "title": "廣深港高鐵加開！港珠澳大橋日車流量1.68萬車次",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab75c27e4b02724bdb5a8d7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:55"
+      "scraped_at": "2026-09-27 17:35:21"
     },
     {
       "title": "台女命喪日本黑部五郎岳　疑失足跌落山坡",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab75867e4b02724bdb5a889.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:55"
+      "scraped_at": "2026-09-27 17:35:21"
     },
     {
       "title": "大灣區錦囊x動物誌｜養寵人集合！深圳深寵展：寵物商品、領養、爬蟲互動全體驗",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab751a9e4b02724bdb5a792.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:55"
+      "scraped_at": "2026-09-27 17:35:21"
     },
     {
       "title": "從香港回歸晚會《團聚》到奧運《我和你》　劉歡用天籟歌聲刻下時代印記",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab7503ce4b02724bdb5a77b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:55"
+      "scraped_at": "2026-09-27 17:35:21"
     },
     {
       "title": "熱點追蹤｜大河仍向東流　人間再無劉歡",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab749dbe4b02724bdb5a6e3.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:55"
+      "scraped_at": "2026-09-27 17:35:21"
     },
     {
       "title": "著名歌手劉歡去世　享年63歲",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab72b14e4b02724bdb5a275.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:56"
+      "scraped_at": "2026-09-27 17:35:22"
     },
     {
       "title": "四川宜賓高縣3小時內連發2次地震　成都重慶有震感",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab70ef6e4b02724bdb59f8a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:56"
+      "scraped_at": "2026-09-27 17:35:22"
     },
     {
       "title": "大熊貓「平平」「福雙」近日赴美",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab70a7ae4b02724bdb59f5c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:56"
+      "scraped_at": "2026-09-27 17:35:22"
     },
     {
       "title": "（有片）習近平一連3日訪美　行程全紀錄",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6ef45e4b02724bdb59e26.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:56"
+      "scraped_at": "2026-09-27 17:35:22"
     },
     {
       "title": "（有片）習近平和彭麗媛同特朗普夫婦共同參觀美國國家檔案館",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6eb16e4b02724bdb59e10.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:56"
+      "scraped_at": "2026-09-27 17:35:22"
     },
     {
       "title": "習近平向全球發展倡議5周年高級別對話會致賀信",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6c996e4b02724bdb59db3.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:56"
+      "scraped_at": "2026-09-27 17:35:22"
     },
     {
       "title": "時政微觀察｜落實中美關係新定位　習主席指明方向",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6b70fe4b02724bdb59daf.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:56"
+      "scraped_at": "2026-09-27 17:35:22"
     },
     {
       "title": "（有片）中美兩國元首夫婦茶敘　特朗普：這次訪問富有成效",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6b334e4b02724bdb59dac.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:56"
+      "scraped_at": "2026-09-27 17:35:22"
     },
     {
       "title": "習近平圓滿結束對美國的國事訪問",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6a911e4b02724bdb59d28.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:57"
+      "scraped_at": "2026-09-27 17:35:23"
     },
     {
       "title": "（有片）習近平和彭麗媛同美國總統特朗普夫婦茶敘",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6a806e4b02724bdb59d24.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:57"
+      "scraped_at": "2026-09-27 17:35:23"
     },
     {
       "title": "中美同意共同構建「基於尊重、公平、對等的建設性戰略穩定關係」",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab6a159e4b02724bdb59d0b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:57"
+      "scraped_at": "2026-09-27 17:35:23"
+    },
+    {
+      "title": "尼泊爾發生雪崩　多人失聯",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8e32ce4b02724bdb5c33c.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:24"
+    },
+    {
+      "title": "（有片）紐約暴雨變「澤國」　市民泛舟出行",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8dcd4e4b02724bdb5c2d7.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:24"
+    },
+    {
+      "title": "出大事？美軍駐英轟炸機基地突封路設卡　附近居民緊急疏散",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8dbe7e4b02724bdb5c2d5.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:24"
+    },
+    {
+      "title": "習近平訪美期間　談中美關係有這些金句",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8d3c4e4b02724bdb5c24e.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:24"
+    },
+    {
+      "title": "喜馬拉雅再拉警報！尼泊爾上月泥石流重災區再遭洪水威脅",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8d2a2e4b02724bdb5c237.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:24"
+    },
+    {
+      "title": "南非再爆槍擊案！兩起共致27人死亡",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8d0c0e4b02724bdb5c1d7.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:24"
+    },
+    {
+      "title": "韓正出席第81屆聯合國大會一般性辯論並發表講話",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c69be4b02724bdb5c0b5.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:24"
+    },
+    {
+      "title": "一夜17命！南非酒吧驚傳血案　槍手步槍無差別掃射",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c3f6e4b02724bdb5c09c.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:24"
+    },
+    {
+      "title": "亞運｜國乒提前鎖定女單冠亞軍！孫穎莎王曼昱會師決賽",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8c242e4b02724bdb5c066.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:25"
+    },
+    {
+      "title": "雅典旅遊區氣爆　整棟民宅夷平　6人喪生廢墟",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8bb79e4b02724bdb5bfbc.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:25"
+    },
+    {
+      "title": "專家解讀：中美人工智能對話後續進展主要體現三方面",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8b49de4b02724bdb5bf7e.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:25"
+    },
+    {
+      "title": "俄德外長烏克蘭危機後首次會面　會見簡短氣氛緊張",
+      "link": "https://www.dotdotnews.com/a/202609/27/AP6ab89c2ce4b02724bdb5be24.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-09-27 17:35:25"
     },
     {
       "title": "移加廚師自創韭菜豬肉餡「月餅」　網民:你呢啲喺古代要浸豬籠",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab885efe4b02724bdb5bc24.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:58"
+      "scraped_at": "2026-09-27 17:35:25"
     },
     {
       "title": "特朗普拒伊停火提議　擬美中選後恢復轟炸",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab87936e4b02724bdb5baf6.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:58"
+      "scraped_at": "2026-09-27 17:35:25"
     },
     {
       "title": "「五眼」內訌狂加關稅　歐盟躊躇作壁上觀",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab4cdfee4b02724bdb5756a.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:58"
+      "scraped_at": "2026-09-27 17:35:25"
     },
     {
       "title": "加國多省穆斯林學校接恐嚇電郵",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab874c0e4b02724bdb5bae0.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:58"
+      "scraped_at": "2026-09-27 17:35:25"
     },
     {
       "title": "曼谷暴雨全市受災　民眾恐慌囤物資",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab86f14e4b02724bdb5b9dc.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:58"
+      "scraped_at": "2026-09-27 17:35:27"
     },
     {
       "title": "加拿大一架直升機墜毀致4人死亡",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab86d99e4b02724bdb5b9c8.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:58"
+      "scraped_at": "2026-09-27 17:35:27"
     },
     {
       "title": "伊朗總統：不再信任同美國的對話",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab866c0e4b02724bdb5b97a.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:58"
+      "scraped_at": "2026-09-27 17:35:27"
     },
     {
       "title": "俄外長：西方為遏制俄羅斯而摧毀歐洲安全體系",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab862bee4b02724bdb5b908.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:58"
+      "scraped_at": "2026-09-27 17:35:27"
     },
     {
       "title": "OpenAI智能體入侵美國政府網站　外洩53張用戶圖片",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab85b87e4b02724bdb5b851.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:59"
+      "scraped_at": "2026-09-27 17:35:27"
     },
     {
       "title": "特朗普稱美國和古巴會達成協議",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab85b1de4b02724bdb5b83d.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:59"
+      "scraped_at": "2026-09-27 17:35:27"
     },
     {
       "title": "元首密集互訪　為中美關係領航定向",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab8527ae4b02724bdb5b7ef.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:59"
+      "scraped_at": "2026-09-27 17:35:27"
     },
     {
       "title": "國際社會高度評價習近平主席美國之行",
       "link": "https://www.dotdotnews.com/a/202609/27/AP6ab84ed3e4b02724bdb5b7c8.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:24:59"
+      "scraped_at": "2026-09-27 17:35:28"
     },
     {
       "title": "香港證監會就恒大審計問題與羅兵咸達成和解：羅兵咸不承認責任但支付10億港元",
       "link": "https://www.dotdotnews.com/a/202609/26/AP6ab70429e4b02724bdb59ef6.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:25:00"
+      "scraped_at": "2026-09-27 17:35:29"
     },
     {
       "title": "【AI顛覆遊戲界】Meta推「零代碼」AI開發工具+股價飆4%！朱克伯格身家躍升全球第四",
       "link": "https://www.edigest.hk/news/meta-ai-game-maker-horizon-create-studio-zuckerberg-wealth-unity-stock-drop-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042241/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:25:00"
+      "scraped_at": "2026-09-27 17:35:29"
     },
     {
       "title": "2026 薪酬趨勢調查出爐 港人平均加薪 2.8% 實質加幅創疫後低 採購及金融業 3.8% 稱霸 會計界最慘淡 非固定花紅增至 1.56 個月 明年調薪逾半企觀望",
       "link": "https://www.edigest.hk/news/hong-kong-salary-trend-2026-pay-rise-inflation-bonus-hr-survey-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042202/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:25:00"
+      "scraped_at": "2026-09-27 17:35:29"
     },
     {
       "title": "【瑞士金融震盪】傳瑞銀傳密謀「撤出瑞士」不滿監管收緊 重啟外國銀行合併討論 避 1,404 億加碼資本 潛在對象傳大摩渣打",
       "link": "https://www.edigest.hk/news/ubs-considering-merger-foreign-bank-relocate-from-switzerland-capital-requirements-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042171/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:25:00"
+      "scraped_at": "2026-09-27 17:35:29"
     },
     {
       "title": "【出口狂飆】本港8月出口按年暴升53%遠超預期！AI產品強勁需求帶動連升19個月",
       "link": "https://www.edigest.hk/news/hong-kong-export-value-august-2026-soars-53-percent-ai-products-demand-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042165/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:25:00"
+      "scraped_at": "2026-09-27 17:35:29"
     },
     {
       "title": "【美息狂飆】聯儲局官員齊放鷹！美30年債息衝破5.5厘創22年高 按揭利率破7.4厘",
       "link": "https://www.edigest.hk/news/us-treasury-yields-30-year-5-5-percent-hawkish-fed-rate-hike-mortgage-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2042162/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-09-27 11:25:00"
+      "scraped_at": "2026-09-27 17:35:29"
+    },
+    {
+      "title": "學車考自動波/棍波好？考生8大Q&A！考牌、費用、海外自駕遊有何分別？",
+      "link": "https://ezone.hk/article/20073790/%E5%AD%B8%E8%BB%8A%E8%80%83%E8%87%AA%E5%8B%95%E6%B3%A2-%E6%A3%8D%E6%B3%A2%E5%A5%BD-%E8%80%83%E7%94%9F8%E5%A4%A7Q-A-%E8%80%83%E7%89%8C-%E8%B2%BB%E7%94%A8-%E6%B5%B7%E5%A4%96%E8%87%AA%E9%A7%95%E9%81%8A%E6%9C%89%E4%BD%95%E5%88%86%E5%88%A5",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:31"
+    },
+    {
+      "title": "Android手機唔見即刻自救｜Remote Lock遠端鎖機＋Find Hub尋機教學　先鎖後抹除",
+      "link": "https://ezone.hk/article/20111609/Android%E6%89%8B%E6%A9%9F%E5%94%94%E8%A6%8B%E5%8D%B3%E5%88%BB%E8%87%AA%E6%95%91-Remote-Lock%E9%81%A0%E7%AB%AF%E9%8E%96%E6%A9%9F-Find-Hub%E5%B0%8B%E6%A9%9F%E6%95%99%E5%AD%B8-%E5%85%88%E9%8E%96%E5%BE%8C%E6%8A%B9%E9%99%A4",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:31"
+    },
+    {
+      "title": "Google Drive 誤刪檔案點救？30日黃金救援期 清空垃圾桶後仲有冇機會？",
+      "link": "https://ezone.hk/article/20110683/Google-Drive-%E8%AA%A4%E5%88%AA%E6%AA%94%E6%A1%88%E9%BB%9E%E6%95%91-30%E6%97%A5%E9%BB%83%E9%87%91%E6%95%91%E6%8F%B4%E6%9C%9F-%E6%B8%85%E7%A9%BA%E5%9E%83%E5%9C%BE%E6%A1%B6%E5%BE%8C%E4%BB%B2%E6%9C%89%E5%86%87%E6%A9%9F%E6%9C%83",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:31"
+    },
+    {
+      "title": "Gemini影片分析教學｜唔使上載YouTube　自己拍片都可一鍵整理重點、出測驗題",
+      "link": "https://ezone.hk/article/20111608/Gemini%E5%BD%B1%E7%89%87%E5%88%86%E6%9E%90%E6%95%99%E5%AD%B8-%E5%94%94%E4%BD%BF%E4%B8%8A%E8%BC%89YouTube-%E8%87%AA%E5%B7%B1%E6%8B%8D%E7%89%87%E9%83%BD%E5%8F%AF%E4%B8%80%E9%8D%B5%E6%95%B4%E7%90%86%E9%87%8D%E9%BB%9E-%E5%87%BA%E6%B8%AC%E9%A9%97%E9%A1%8C",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:31"
+    },
+    {
+      "title": "iPhone Duo 實機尺寸有幾大？7.6 吋摺屏直迫 iPad mini　網拍影片體積差距曝光",
+      "link": "https://ezone.hk/article/20111189/iPhone-Duo-%E5%AF%A6%E6%A9%9F%E5%B0%BA%E5%AF%B8%E6%9C%89%E5%B9%BE%E5%A4%A7-7-6-%E5%90%8B%E6%91%BA%E5%B1%8F%E7%9B%B4%E8%BF%AB-iPad-mini-%E7%B6%B2%E6%8B%8D%E5%BD%B1%E7%89%87%E9%AB%94%E7%A9%8D%E5%B7%AE%E8%B7%9D%E6%9B%9D%E5%85%89",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:31"
+    },
+    {
+      "title": "iPhone 18 Pro DXOMARK 172 分僅次華為！3 鏡拍攝優勢、短處全面睇　可變光圈 F1.48 至 F4.0 點用先影得靚？",
+      "link": "https://ezone.hk/article/20110805/iPhone-18-Pro-DXOMARK-172-%E5%88%86%E5%83%85%E6%AC%A1%E8%8F%AF%E7%82%BA-3-%E9%8F%A1%E6%8B%8D%E6%94%9D%E5%84%AA%E5%8B%A2-%E7%9F%AD%E8%99%95%E5%85%A8%E9%9D%A2%E7%9D%87-%E5%8F%AF%E8%AE%8A%E5%85%89%E5%9C%88-F1-48-%E8%87%B3-F4-0-%E9%BB%9E%E7%94%A8%E5%85%88%E5%BD%B1%E5%BE%97%E9%9D%9A",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:31"
     },
     {
       "title": "Samsung雪櫃更新「死機」出事？用戶報稱斷冷食材變壞　官方緊急維修",
       "link": "https://ezone.hk/article/20111590/Samsung%E9%9B%AA%E6%AB%83%E6%9B%B4%E6%96%B0-%E6%AD%BB%E6%A9%9F-%E5%87%BA%E4%BA%8B-%E7%94%A8%E6%88%B6%E5%A0%B1%E7%A8%B1%E6%96%B7%E5%86%B7%E9%A3%9F%E6%9D%90%E8%AE%8A%E5%A3%9E-%E5%AE%98%E6%96%B9%E7%B7%8A%E6%80%A5%E7%B6%AD%E4%BF%AE",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:01"
+      "scraped_at": "2026-09-27 17:35:31"
     },
     {
       "title": "Apple Pay iPhone綁Visa鎖屏也被偷8萬！實測iPhone遭隔空盜刷 附1招保命設定",
       "link": "https://ezone.hk/article/20094428/Apple-Pay-iPhone%E7%B6%81Visa%E9%8E%96%E5%B1%8F%E4%B9%9F%E8%A2%AB%E5%81%B78%E8%90%AC-%E5%AF%A6%E6%B8%ACiPhone%E9%81%AD%E9%9A%94%E7%A9%BA%E7%9B%9C%E5%88%B7-%E9%99%841%E6%8B%9B%E4%BF%9D%E5%91%BD%E8%A8%AD%E5%AE%9A",
       "source": "E-zone",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:01"
+      "scraped_at": "2026-09-27 17:35:31"
+    },
+    {
+      "title": "智能提醒你多久沒做重要的事　原價 US $0.99《Lastly》限時免費",
+      "link": "https://www.newmobilelife.com/2026/09/27/lastly-days-since-last-time-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:32"
+    },
+    {
+      "title": "動畫引導呼吸助你放鬆入睡　原價 US $0.99《Vaju》限時免費",
+      "link": "https://www.newmobilelife.com/2026/09/27/vaju-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "告別雜亂分頁的連結收藏庫　原價 US $0.99《LinkDock》限時免費",
       "link": "https://www.newmobilelife.com/2026/09/27/linkdock-app-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:02"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "自訂多組計時提升專注效率　原價 US $0.99《Multi Timer》限時免費",
       "link": "https://www.newmobilelife.com/2026/09/27/multi-timer-study-focus-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:02"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "讓 PDF 筆記開口朗讀　原價 US $0.99《RobotKloud》限時免費",
       "link": "https://www.newmobilelife.com/2026/09/27/robotkloud-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:02"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "敏感文件離線極速閱讀　原價 US $0.99《Kinetic Reader》限時免費",
       "link": "https://www.newmobilelife.com/2026/09/27/kinetic-reader-private-pdf-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:02"
+      "scraped_at": "2026-09-27 17:35:32"
+    },
+    {
+      "title": "Elon Musk 豪擲 121 萬顆 GPU    半年內追上 OpenAI",
+      "link": "https://unwire.hk/2026/09/27/musk-colossus2-gpu/ai/",
+      "source": "Unwire.hk",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:32"
+    },
+    {
+      "title": "Bill Gates 呼籲立法強制監察 AI　警告或釀成大災難達 10 億人死亡",
+      "link": "https://unwire.hk/2026/09/27/bill-bill-gates-ai-risk-eu-oversight/ai/",
+      "source": "Unwire.hk",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:32"
+    },
+    {
+      "title": "中國光量子電腦 4 分鐘完成運算 傳統超級電腦要計 26 億年",
+      "link": "https://unwire.hk/2026/09/27/jiuzhang-quantum-2-6-billion-years/hottopic/spotlight/",
+      "source": "Unwire.hk",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:32"
+    },
+    {
+      "title": "Elon Musk 紀錄片被多平台拒登廣告   YouTube 同 Meta 事後認錯重新上架",
+      "link": "https://unwire.hk/2026/09/27/musk-documentary-ads-rejected/ai/",
+      "source": "Unwire.hk",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:32"
+    },
+    {
+      "title": "中美達成「超級智能」溝通機制 特朗普習近平峰會後定 11 月深圳再談",
+      "link": "https://unwire.hk/2026/09/27/china-us-ai-superintelligence-channel/ai/",
+      "source": "Unwire.hk",
+      "category": "科技",
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "Qualcomm 與 Apple 續簽專利授權協議　2027 年起生效但未公佈期限",
       "link": "https://unwire.hk/2026/09/26/qualcomm-apple-patent-renewal/mobile-phone/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:03"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "Microsoft 悄悄棄用 Copilot+ PC 品牌　新 Surface 符合規格卻不再稱為 Copilot+ PC",
       "link": "https://unwire.hk/2026/09/26/microsoft-drops-copilot-plus-pc-brand/notebook/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:03"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "全球工業機械人繼續普及　中國佔 2025 新安裝近六成",
       "link": "https://unwire.hk/2026/09/26/global-industrial-robots-2025/life-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:03"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "iPhone 18 Pro 出現 Face ID 問題　Apple 預告下周推出軟件修正",
       "link": "https://unwire.hk/2026/09/26/iphone-18-pro-face-id-fix/software/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-09-27 11:25:03"
-    },
-    {
-      "title": "Gmail 星號通通變藍   用戶嫌收件匣更雜亂",
-      "link": "https://unwire.hk/2026/09/26/gmail-blue-stars-update/ai/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-09-27 11:25:03"
-    },
-    {
-      "title": "1-Bit Bonsai 小型 AI 模型成功登陸智能眼鏡 細小裝置都可執行強大本地 AI",
-      "link": "https://unwire.hk/2026/09/26/bonsai-ai-smart-glasses/ai/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-09-27 11:25:03"
-    },
-    {
-      "title": "影視級 B 機新標準？Sony FX5 實測：三原生 ISO 、5K Open Gate 橫直通殺",
-      "link": "https://unwire.hk/2026/09/26/sony-fx5-cinema-line-review-hands-on/dc/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-09-27 11:25:03"
-    },
-    {
-      "title": "iPhone 18 Pro Face ID 當機有解   Apple 證實下周推 iOS 27.0.1 修復",
-      "link": "https://unwire.hk/2026/09/26/iphone18pro-faceid-fix/mobile-phone/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-09-27 11:25:03"
-    },
-    {
-      "title": "macOS 27 儲存空間蒸發之謎 Apple Intelligence 一次佔用近 25GB",
-      "link": "https://unwire.hk/2026/09/26/macos27-ai-storage-30gb/software/mac-os-x/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-09-27 11:25:03"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "【熱海海上花火大會2026】全年舉辦15場 即睇時間表、交通及介紹｜東京靜岡出發超方便",
       "link": "https://flyday.hk/atamide-hanabi",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:04"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "【日本航空優惠】香港秋季旅遊博覽會限時優惠，來回東京成田連稅3千2起｜出發日期至明年3月31日",
       "link": "https://flyday.hk/japan-airlines-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:04"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "【澳門‧愈夜愈美麗】Klook X 澳門旅遊局聯乘，限時減$100優惠！玩盡夜間高空飛索、細味星級餐飲！欣賞第34屆澳門國際煙花比賽匯演！",
       "link": "https://flyday.hk/klook-macao",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:04"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "【Uber優惠】中秋出門做節/去機場 Call Uber 最方便！輸入優惠碼【KEEPDOING】新舊客都可以拎高達HK$100乘車優惠！",
       "link": "https://flyday.hk/uber-keepdoing-campaign",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:04"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "【國泰航空】好消息，國泰福岡加班次｜來回連稅低至$3,482 起！",
       "link": "https://flyday.hk/%E5%9C%8B%E6%B3%B0%E8%88%AA%E7%A9%BA-%E7%A6%8F%E5%B2%A1%E5%84%AA%E6%83%A0",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:04"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "【易斯達航空EastarJet韓國優惠】凌晨機去晚機返！來回釜山1千2起包15kg寄艙行李！10月25日起開航",
       "link": "https://flyday.hk/eastarjet-korea-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:04"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "【國泰航空】二人或以上同行，來回札幌每位來回連稅低至$4,408 起！",
       "link": "https://flyday.hk/%E5%9C%8B%E6%B3%B0%E8%88%AA%E7%A9%BA-%E4%BA%8C%E4%BA%BA%E5%90%8C%E8%A1%8C%E6%9C%AD%E5%B9%8C%E5%84%AA%E6%83%A0",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:04"
+      "scraped_at": "2026-09-27 17:35:32"
     },
     {
       "title": "突發韓國優惠！$38飛大邱！12月20日前出發！香港飛大邱單程只需$38起 – HK Express (優惠至9月27日)",
       "link": "https://www.meethk.com/164349/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:06"
+      "scraped_at": "2026-09-27 17:35:34"
     },
     {
       "title": "抵呀！港航直飛澳洲！連稅4千1起！包23kg寄艙行李！香港直飛悉尼、墨爾本來回連稅只需$4,188起 – 香港航空 (優惠至11月15日)",
       "link": "https://www.meethk.com/164227/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:06"
+      "scraped_at": "2026-09-27 17:35:34"
     },
     {
       "title": "國泰飛札幌！連稅4千4！11月30日前出發！香港飛札幌二人同行來回連稅每人只需$4,406起 – 國泰航空 (優惠至10月5日)",
       "link": "https://www.meethk.com/164009/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:06"
+      "scraped_at": "2026-09-27 17:35:34"
     },
     {
       "title": "抵呀！連稅千二飛釜山！包15kg寄艙行李！明年1月31日前出發！香港飛釜山來回連稅只需$1,293起 – EastarJet 易斯達航空 (優惠至9月29日)",
       "link": "https://www.meethk.com/164311/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:06"
+      "scraped_at": "2026-09-27 17:35:34"
     },
     {
       "title": "連稅二千一！港航飛東京！包23kg寄艙行李！明年1月28日前出發！香港飛東京成田來回連稅只需$2,184起 – 香港航空",
       "link": "https://www.meethk.com/163956/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:06"
+      "scraped_at": "2026-09-27 17:35:34"
     },
     {
       "title": "連稅2千2飛福岡！包20kg寄艙行李！1月21日前出發！香港飛福岡來回連稅只需$2,240起 – 大灣區航空 (優惠至10月6日)",
       "link": "https://www.meethk.com/164294/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:06"
+      "scraped_at": "2026-09-27 17:35:34"
     },
     {
       "title": "連稅二千蚊！港航飛大阪！包23kg寄艙行李！明年1月28日前出發！香港飛大阪來回連稅只需$2,049起 – 香港航空",
       "link": "https://www.meethk.com/163961/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:06"
+      "scraped_at": "2026-09-27 17:35:34"
     },
     {
       "title": "抵呀！跌穿五千！港航直飛溫哥華！連稅4千7起！12月17日前出發！香港直飛溫哥華來回連稅只需$4,698起 – 香港航空 (優惠至12月17日)",
       "link": "https://www.meethk.com/164208/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:06"
+      "scraped_at": "2026-09-27 17:35:34"
     },
     {
       "title": "$68飛台北/高雄/台中！12月20日前出發！香港飛台北/高雄/台中單程只需$68起 – HK Express (優惠至9月19日)",
       "link": "https://www.meethk.com/164186/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-09-27 11:25:06"
+      "scraped_at": "2026-09-27 17:35:34"
     }
   ]
 }
