@@ -33,8 +33,8 @@ on:
 jobs:
   # 任務 ID：update-news
   update-news:
-    # 指定執行環境：使用最新版本的 Ubuntu Linux
-    runs-on: ubuntu-latest
+    # 指定執行環境：固定使用 Ubuntu 24.04
+    runs-on: ubuntu-24.04
     
     # ============================================
     # 執行步驟（按順序執行）
@@ -44,15 +44,15 @@ jobs:
       # 步驟 1：檢出程式碼儲存庫
       # --------------------------------------------
       - name: Checkout repository
-        # 使用 GitHub 官方提供的 checkout action（版本 3）
-        uses: actions/checkout@v3
+        # 使用 GitHub 官方提供的 checkout action（版本 7）
+        uses: actions/checkout@v7
       
       # --------------------------------------------
       # 步驟 2：設定 Python 環境
       # --------------------------------------------
       - name: Set up Python
-        # 使用 GitHub 官方提供的 Python 設定 action（版本 4）
-        uses: actions/setup-python@v4
+        # 使用 GitHub 官方提供的 Python 設定 action（版本 7）
+        uses: actions/setup-python@v7
         with:
           # 指定 Python 版本為 3.10
           python-version: '3.10'
