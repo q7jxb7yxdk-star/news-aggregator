@@ -30,6 +30,14 @@ on:
 # ============================================
 # 工作任務定義
 # ============================================
+permissions:
+  contents: write
+
+# Serialize cloud writers. The Mac publisher also retries branch races.
+concurrency:
+  group: update-news-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   # 任務 ID：update-news
   update-news:
@@ -46,6 +54,8 @@ jobs:
       - name: Checkout repository
         # 使用 GitHub 官方提供的 checkout action（版本 7）
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       
       # --------------------------------------------
       # 步驟 2：設定 Python 環境
@@ -82,16 +92,25 @@ jobs:
       # --------------------------------------------
       - name: Commit and push if changed
         run: |
-          # 設定 Git 使用者資訊（使用 GitHub Actions 機器人身份）
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          
-          # 將 news.json 檔案加入到 Git 暫存區
-          git add news.json
-          
-          # 檢查是否有變更，如果有則提交並推送
-          # git diff --quiet：檢查工作區是否有變更
-          # git diff --staged --quiet：檢查暫存區是否有變更
-          # || 表示：如果前面的指令失敗（有變更），則執行後面的指令
-          # $(date '+%Y-%m-%d %H:%M')：在提交訊息中加入當前時間
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update news $(date '+%Y-%m-%d %H:%M')" && git push)
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -- news.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          # Refuse to publish any unexpected staged path.
+          test "$(git diff --cached --name-only)" = 'news.json'
+          git commit -m "Auto update news $(date '+%Y-%m-%d %H:%M')"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo 'Push failed after three attempts.' >&2
+              exit 1
+            fi
+            git fetch origin "refs/heads/${GITHUB_REF_NAME}"
+            # Different JSON files merge; a real content conflict must stop the job.
+            git rebase FETCH_HEAD
+          done

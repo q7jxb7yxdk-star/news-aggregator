@@ -339,3 +339,28 @@ python scraper.py
 - `news.json` 是否成功更新
 - `index.html` 能否正常顯示
 - 分類和來源篩選是否正確
+
+## Now Sports 本機排程
+
+採用獨立寫入：`scraper.py`／GitHub Actions 只更新 `news.json`，
+Mac 專用 Chrome → `collect_now_sports.py` → `now_sports.py` 驗證／原子替換 →
+`run_now_sports.py` 從獨立 checkout 只提交 `now_sports_posts.json`。
+`index.html` 以 `Promise.allSettled` 分別載入兩份資料，其中一份失敗仍顯示另一份。
+
+收集器只操作專頁可見 DOM；使用同一張貼文的元素 handle、作者 heading、時間連結及新出現的日期 tooltip。
+Chrome locale 設為 en-GB、頁面時區固定 Asia/Hong_Kong，完整日期解析後存含時區 ISO 8601。
+舊的相對時間匯入仍使用最早可能時間。標準化、讀取及網頁載入時重新檢查 24 小時期限。
+不使用 React 內部資料、Facebook 私有 API、搜尋、Cookie 匯出或一般 Chrome profile。
+
+排程：`setup_now_sports.py` 產生／安裝使用者 LaunchAgent，
+`StartCalendarInterval={Hour:13, Minute:0}`、`RunAtLoad=false`。
+launchd 使用 macOS 系統時區；安裝時檢查 UTC+8，環境 TZ 不會改變 launchd 的日曆時間。
+專用 profile、固定版本 runtime、獨立 checkout、鎖、日期標記和日誌均存於 Git 以外。
+同一香港日期完成發布後不重跑。600 秒收集逾時會先要求 Chrome 正常關閉，再終止程序群組。
+
+發布前要求獨立 checkout 乾淨、指定遠端／main、沒有未推送提交；只 stage 指定 JSON。
+push 競爭最多重試三次，每次 fetch／rebase；衝突或憑證失敗會停止並保留現場，不強制推送。
+GitHub Actions 同樣限制提交檔案，並加入 concurrency 及有上限的 push 重試。
+`NowSportsFetcher` 保留供舊的手動匯入使用，雲端主程式不再呼叫。
+
+完整操作及驗證限制見 [NOW_SPORTS_COLLECTION.md](NOW_SPORTS_COLLECTION.md)。

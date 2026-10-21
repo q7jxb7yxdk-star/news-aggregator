@@ -1,10 +1,11 @@
 # 香港新聞聚合器
 
-這個專案會自動抓取香港新聞、科技資訊和旅遊優惠，輸出成 `news.json`，再由 `index.html` 以靜態網頁方式顯示。
+這個專案會自動抓取香港新聞、科技資訊和旅遊優惠，另由本機 Chrome 收集 Now Sports 足球資訊。網頁合併 `news.json` 與 `now_sports_posts.json` 顯示。
 
 ## 功能
 
 - 抓取新聞、科技和旅遊來源
+- 本機 Chrome 每日 13:00 收集 Now Sports 過去 24 小時的足球標題及影片連結（需登入專用 profile，不使用搜尋）
 - 點新聞分拆為港聞、兩岸、國際、財經
 - 支援 HTML、RSS 和專用網站解析器
 - 可自訂來源抓取順序
@@ -80,6 +81,7 @@ http://localhost:8000
 
 | 來源 | 分類 | 網址 | 抓取範圍 |
 |---|---|---|---|
+| Now Sports | 足球 | `https://www.facebook.com/now.comSports` | 過去 24 小時；匯入 Chrome 專頁收集檔，並非 GitHub 直接登入 Facebook |
 | 點新聞-港聞 | 新聞 | `https://www.dotdotnews.com/immed/hknews` | 當天 |
 | 點新聞-兩岸 | 新聞 | `https://www.dotdotnews.com/immed/bothsides` | 今天和昨天 |
 | 點新聞-國際 | 新聞 | `https://www.dotdotnews.com/immed/inter` | 當天 |
@@ -203,3 +205,14 @@ def fetch(self) -> List[Article]:
 ## 更多技術說明
 
 請看 [[news-aggregator_TECHNICAL_DOCUMENTATION | Technical Documentation]]。
+
+## Now Sports 足球資訊
+
+分類固定為「足球」，來源固定為「Now Sports」，不按聯賽細分。
+新聞與影片都以標題及原站連結顯示；影片另有標記，發布時間為估算時顯示「約」。
+
+本機收集、預覽、LaunchAgent 安裝與故障處理見 [NOW_SPORTS_COLLECTION.md](NOW_SPORTS_COLLECTION.md)。
+Mac 每日 13:00 收集後，只從獨立 checkout commit／push `now_sports_posts.json`。
+GitHub Actions 繼續更新其他來源的 `news.json`，不會共用 Mac 的 Chrome 登入。
+網頁載入時剔除超過 24 小時的足球資料；專頁遍歷目前標示 `partial`，不保證讀齊全部貼文。
+影片以 Facebook 原站連結開啟，沒有下載或重新託管影片。

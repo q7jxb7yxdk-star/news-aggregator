@@ -299,6 +299,11 @@
             height: 16px;
         }
 
+        .news-published-at {
+            color: #888;
+            font-size: 0.8em;
+        }
+
         /* ========== 載入動畫 ========== */
         .loading {
             text-align: center;
@@ -437,7 +442,10 @@
                 <!-- 統計資訊 -->
                 <div class="stats">
                     <div class="stat-item">
-                        更新時間: <span id="updateTime" class="stat-number">載入中...</span>
+                        新聞更新: <span id="updateTime" class="stat-number">載入中...</span>
+                    </div>
+                    <div class="stat-item">
+                        足球收集: <span id="footballUpdateTime" class="stat-number">載入中...</span>
                     </div>
                     <div class="stat-item">
                         總文章數: <span id="totalCount" class="stat-number">0</span>
@@ -521,49 +529,101 @@
             '點新聞-港聞': '📰',
             '點新聞-兩岸': '📰',
             '點新聞-國際': '📰',
-            '點新聞-財經': '💰'
+            '點新聞-財經': '💰',
+            'Now Sports': '⚽'
         };
 
         // ==================== 主要功能函數 ====================
 
-        /**
-         * 載入新聞資料
-         * 從 news.json 檔案讀取新聞資料並顯示
-         */
-        async function loadNews() {
+        // Both writers publish independently. An unavailable feed must not hide the other.
+        function timestampWithZone(value) {
+            if (typeof value !== 'string' || !/T.*(?:Z|[+-]\d{2}:\d{2})$/.test(value)) return NaN;
+            return Date.parse(value);
+        }
+
+        function footballIdentity(link) {
             try {
-                // 從伺服器讀取 news.json 檔案
-                const response = await fetch('news.json');
-                
-                // 如果讀取失敗，拋出錯誤
-                if (!response.ok) {
-                    throw new Error('無法載入新聞數據');
+                const url = new URL(link);
+                if (url.protocol !== 'https:' || !['facebook.com', 'www.facebook.com'].includes(url.hostname)
+                    || url.port || url.username || url.password) return null;
+                const path = url.pathname.replace(/\/$/, '');
+                const post = path.match(/^\/now\.comSports\/posts\/(pfbid[A-Za-z0-9]+|\d+)$/i);
+                if (post) return { key: `post:${post[1]}`, link: `https://www.facebook.com/now.comSports/posts/${post[1]}` };
+                const video = path.match(/^\/(?:now\.comSports\/videos|reel)\/(\d+)$/i);
+                if (video) return { key: `video:${video[1]}`, link: `https://www.facebook.com${path}/` };
+                const id = url.searchParams.get('v');
+                if (path === '/watch' && /^\d+$/.test(id || '')) {
+                    return { key: `video:${id}`, link: `https://www.facebook.com/watch/?v=${id}` };
                 }
-                
-                // 將回應轉換為 JSON 格式
-                const data = await response.json();
-                
-                // 將新聞資料存入全域變數
-                allNews = data.news || [];
-                
-                // 更新頁面上的統計資訊
-                document.getElementById('updateTime').textContent = data.update_time || '未知';
-                document.getElementById('totalCount').textContent = data.total_count || allNews.length;
-                
-                // 初始化篩選器按鈕（根據資料產生分類和來源按鈕）
-                initializeFilters();
-                
-                // 顯示所有新聞
-                displayNews(allNews);
-                
-                // 顯示結果資訊區
-                document.getElementById('resultsInfo').style.display = 'flex';
-                
-            } catch (error) {
-                // 如果發生錯誤，顯示錯誤訊息
-                showError('載入新聞失敗，請稍後再試');
-                console.error('Error:', error);
+            } catch (_) { /* Reject malformed or unrelated links. */ }
+            return null;
+        }
+
+        function footballFeed(data, now) {
+            const collected = timestampWithZone(data && data.collected_at);
+            if (!data || data.page_url !== 'https://www.facebook.com/now.comSports'
+                || data.status !== 'ok' || !Number.isFinite(collected) || collected > now
+                || !Array.isArray(data.posts)) throw new Error('無效的足球收集資料');
+            const seen = new Set();
+            const news = [];
+            for (const item of data.posts) {
+                if (!item || item.source !== 'Now Sports' || item.category !== '足球'
+                    || typeof item.title !== 'string' || !item.title.trim()
+                    || !['post', 'video'].includes(item.content_type)) continue;
+                const published = timestampWithZone(item.published_at);
+                const observed = timestampWithZone(item.observed_at || data.collected_at);
+                const identity = footballIdentity(item.link);
+                if (!identity || seen.has(identity.key) || !Number.isFinite(published)
+                    || !Number.isFinite(observed) || observed > collected || published > observed
+                    || published > now || now - published > 24 * 60 * 60 * 1000) continue;
+                seen.add(identity.key);
+                news.push({ ...item, link: identity.link,
+                    content_type: identity.key.startsWith('video:') ? 'video' : item.content_type });
             }
+            return { ...data, news };
+        }
+
+        async function loadNews() {
+            const now = Date.now();
+            const feeds = await Promise.allSettled([
+                fetch('news.json', { cache: 'no-store' }).then(async response => {
+                    if (!response.ok) throw new Error('無法載入新聞數據');
+                    const data = await response.json();
+                    if (!data || !Array.isArray(data.news)) throw new Error('無效的新聞資料');
+                    // Ignore legacy football rows: the local collector owns that feed now.
+                    return { ...data, news: data.news.filter(item => item && item.source !== 'Now Sports'
+                        && ['title', 'link', 'source', 'category'].every(key => typeof item[key] === 'string')) };
+                }),
+                fetch('now_sports_posts.json', { cache: 'no-store' }).then(async response => {
+                    if (!response.ok) throw new Error('無法載入足球數據');
+                    return footballFeed(await response.json(), now);
+                })
+            ]);
+            const news = feeds[0].status === 'fulfilled' ? feeds[0].value : null;
+            const football = feeds[1].status === 'fulfilled' ? feeds[1].value : null;
+            document.getElementById('updateTime').textContent = news ? (news.update_time || '未知') : '暫時無法載入';
+            document.getElementById('footballUpdateTime').textContent = football
+                ? new Date(football.collected_at).toLocaleString('zh-HK', { timeZone: 'Asia/Hong_Kong', hour12: false })
+                    + (football.coverage === 'partial' ? '（部分貼文）' : '')
+                : '暫時無法載入';
+            for (const feed of feeds) {
+                if (feed.status === 'rejected') console.warn('資料來源載入失敗:', feed.reason);
+            }
+            if (!news && !football) {
+                showError('載入新聞失敗，請稍後再試');
+                return;
+            }
+            const seen = new Set();
+            allNews = [...(news ? news.news : []), ...(football ? football.news : [])].filter(item => {
+                const key = `${item.source}\n${item.link}`;
+                if (seen.has(key)) return false;
+                seen.add(key);
+                return true;
+            });
+            document.getElementById('totalCount').textContent = allNews.length;
+            initializeFilters();
+            displayNews(allNews);
+            document.getElementById('resultsInfo').style.display = 'flex';
         }
 
         /**
@@ -572,7 +632,7 @@
          */
         function initializeFilters() {
             // 定義分類的顯示順序
-            const categoryOrder = ['新聞', '科技', '旅遊'];
+            const categoryOrder = ['新聞', '科技', '旅遊', '足球'];
             
             // 從所有新聞中提取分類，並去除重複項
             const allCategories = allNews.map(item => item.category);
@@ -660,20 +720,34 @@
             
             // 產生新聞卡片的 HTML
             container.innerHTML = newsArray.map(item => {
+                const link = getSafeHttpUrl(item.link);
+                if (!link) return '';
+
                 // 取得來源圖標，如果沒有定義就用預設的 📰
                 const icon = sourceIcons[item.source] || '📰';
+                const category = escapeHtml(item.category || '');
+                const source = escapeHtml(item.source || '');
+                const isFootball = item.source === 'Now Sports';
+                const publishedAt = isFootball && Number.isFinite(Date.parse(item.published_at || ''))
+                    ? `${item.published_at_precision === 'relative' ? '約 ' : ''}${new Date(item.published_at).toLocaleString('zh-HK', { timeZone: 'Asia/Hong_Kong' })}`
+                    : '';
+                const contentTypeBadge = isFootball && item.content_type === 'video'
+                    ? '<span class="badge">影片</span>'
+                    : '';
                 
                 return `
-                    <div class="news-card" data-category="${item.category}" data-source="${item.source}">
-                        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="news-title">
-                            ${highlightSearchTerm(item.title, currentFilters.search)}
+                    <div class="news-card" data-category="${escapeHtml(item.category || '')}" data-source="${escapeHtml(item.source || '')}">
+                        <a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer" class="news-title">
+                            ${highlightSearchTerm(item.title || '', currentFilters.search)}
                         </a>
                         <div class="news-meta">
-                            <span class="badge ${item.category === '旅遊' ? 'travel' : ''}">${item.category}</span>
+                            <span class="badge ${item.category === '旅遊' ? 'travel' : ''}">${category}</span>
+                            ${contentTypeBadge}
                             <span class="source-tag">
                                 <span class="source-icon">${icon}</span>
-                                ${item.source}
+                                ${source}
                             </span>
+                            ${publishedAt ? `<time class="news-published-at" datetime="${escapeHtml(item.published_at)}">${escapeHtml(publishedAt)}</time>` : ''}
                         </div>
                     </div>
                 `;
@@ -687,14 +761,37 @@
          * @return {string} - 高亮後的文字
          */
         function highlightSearchTerm(text, searchTerm) {
+            text = String(text);
             // 如果沒有搜尋關鍵字，直接回傳原文
-            if (!searchTerm) return text;
+            if (!searchTerm) return escapeHtml(text);
             
             // 建立正則表達式，不區分大小寫
-            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            const escapedSearchTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`(${escapedSearchTerm})`, 'gi');
             
             // 將符合的文字用 mark 標籤包起來（黃色背景）
-            return text.replace(regex, '<mark style="background: #ffeb3b; padding: 2px 4px; border-radius: 3px;">$1</mark>');
+            return text.split(regex).map((part, index) => index % 2
+                ? `<mark style="background: #ffeb3b; padding: 2px 4px; border-radius: 3px;">${escapeHtml(part)}</mark>`
+                : escapeHtml(part)).join('');
+        }
+
+        function escapeHtml(value) {
+            return String(value).replace(/[&<>"']/g, character => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            })[character]);
+        }
+
+        function getSafeHttpUrl(value) {
+            try {
+                const url = new URL(value);
+                return url.protocol === 'http:' || url.protocol === 'https:' ? url.href : '';
+            } catch (error) {
+                return '';
+            }
         }
 
         /**
