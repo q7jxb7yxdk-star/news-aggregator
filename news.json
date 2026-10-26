@@ -1,6 +1,6 @@
 {
   "update_time": "2026-10-26 14:22:30",
-  "total": 106,
+  "total": 119,
   "news": [
     {
       "title": "六小時穿越灣區五城　一帶一路x大灣區青年城市定向挑戰賽落幕",
@@ -743,6 +743,149 @@
       "source": "MeetHK",
       "category": "旅遊",
       "scraped_at": "2026-10-26 14:22:30"
+    },
+    {
+      "title": "【意甲】烏甸尼斯 VS AC米蘭",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610082170813&type=otherSoccer",
+      "published_at": "2026-10-26T06:19:33+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【西甲】巴塞隆拿VS皇家馬德里",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167970&type=spain",
+      "published_at": "2026-10-26T06:03:04+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【西甲】皇家蘇斯達VS利雲特",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167969&type=spain",
+      "published_at": "2026-10-26T04:00:31+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【意甲】萊切VS祖雲達斯",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610082170801&type=otherSoccer",
+      "published_at": "2026-10-26T04:00:31+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【德甲】弗賴堡VS拜仁慕尼黑",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167967&type=otherSoccer",
+      "published_at": "2026-10-26T02:36:49+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】新特蘭VS列斯聯",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167968&type=england",
+      "published_at": "2026-10-26T02:31:31+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【西甲】切爾達VS貝迪斯",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167964&type=spain",
+      "published_at": "2026-10-26T01:32:54+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】水晶宮VS紐卡素",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167961&type=england",
+      "published_at": "2026-10-26T01:00:01+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】侯城VS賓福特",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167960&type=england",
+      "published_at": "2026-10-26T00:59:16+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【西甲】畢爾包VS基達菲",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167959&type=spain",
+      "published_at": "2026-10-26T00:58:48+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】利物浦VS白禮頓",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167962&type=england",
+      "published_at": "2026-10-25T23:58:54+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】曼聯VS般尼茅夫",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167963&type=england",
+      "published_at": "2026-10-25T23:55:28+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【意甲】國際米蘭VS費倫天拿",
+      "link": "https://sports.now.com/home/video#tvVideoId=202609262167958&type=otherSoccer",
+      "published_at": "2026-10-25T21:36:22+08:00",
+      "scraped_at": "2026-10-26 16:19:56",
+      "observed_at": "2026-10-26T16:19:56.966233+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
     }
   ]
 }

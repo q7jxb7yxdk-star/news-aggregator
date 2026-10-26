@@ -33,7 +33,7 @@ on:
 permissions:
   contents: write
 
-# Serialize cloud writers. The Mac publisher also retries branch races.
+# Serialize cloud updates to news.json.
 concurrency:
   group: update-news-${{ github.ref }}
   cancel-in-progress: false
@@ -86,7 +86,7 @@ jobs:
         run: |
           # 執行 scraper.py 腳本來抓取新聞資料
           python scraper.py
-      
+
       # --------------------------------------------
       # 步驟 5：提交並推送變更到儲存庫
       # --------------------------------------------
@@ -111,6 +111,6 @@ jobs:
               exit 1
             fi
             git fetch origin "refs/heads/${GITHUB_REF_NAME}"
-            # Different JSON files merge; a real content conflict must stop the job.
+            # A real content conflict must stop the job.
             git rebase FETCH_HEAD
           done

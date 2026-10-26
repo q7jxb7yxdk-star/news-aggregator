@@ -1,6 +1,6 @@
 # ============================================================================
 # 這個Python 腳本的主要功能：
-# 自動抓取新聞 - 從多個來源抓取新聞、科技和旅遊資訊
+# 自動抓取新聞 - 從多個來源抓取新聞、科技、旅遊資訊和足球精華
 # 智慧過濾 - 排除廣告、優惠碼等不相關內容
 # 去除重複 - 自動刪除重複的新聞
 # 存成檔案 - 最後輸出成 news.json 檔案
@@ -24,6 +24,8 @@ from urllib.parse import urljoin, urlparse          # 處理網址
 import time                                         # 處理時間延遲
 import re                                           # 用來比對文字格式
 import calendar                                     # 處理 RSS UTC 時間
+import os
+import tempfile
 
 # ============================================================================
 # 設定日誌系統（像是程式的日記本，記錄發生什麼事）
@@ -1060,10 +1062,205 @@ class HolidaySmartFetcher:
             logger.error(f"✗ HolidaySmart 抓取失敗: {e}")
             return []
 
+@dataclass
+class NowSportsArticle:
+    title: str
+    link: str
+    published_at: str
+    scraped_at: str
+    observed_at: str
+    content_type: str = 'video'
+    published_at_precision: str = 'exact'
+    source: str = 'Now Sports'
+    category: str = '足球'
+
+    def to_dict(self):
+        return asdict(self)
+
+
+class NowSportsFetcher:
+    """Official football highlights; retain eligible previous rows on failure."""
+    source = 'Now Sports'
+    category = '足球'
+    PAGE_URL = 'https://sports.now.com/home/video'
+    API_URL = 'https://sportsapi.now.com/api/getSoccerVideoList'
+    HK = timezone(timedelta(hours=8))
+    WINDOW = timedelta(hours=24)
+    PAGE_SIZE = 12
+    MAX_PAGES = 50
+    MAX_SECONDS = 600
+    AREAS = {
+        'england': 'soccerEnglandSearchTags',
+        'spain': 'soccerSpainSearchTags',
+        'ucl': 'soccerUCLSearchTags',
+        'uecl': 'soccerUECLSearchTags',
+        'worldcup2026': 'worldcup2026SearchTags',
+        'otherSoccer': 'soccerOtherSearchTags',
+    }
+
+    def __init__(self, fallback_path='news.json'):
+        self.fallback_path = Path(fallback_path)
+
+    @classmethod
+    def parse_instant(cls, value):
+        if not isinstance(value, str):
+            raise ValueError('時間必須是含時區的 ISO 8601 字串')
+        result = datetime.fromisoformat(value.replace('Z', '+00:00'))
+        if result.tzinfo is None:
+            raise ValueError('時間缺少時區')
+        return result.astimezone(cls.HK)
+
+    @classmethod
+    def content_key(cls, link):
+        if not isinstance(link, str):
+            raise ValueError('缺少影片連結')
+        match = re.fullmatch(re.escape(cls.PAGE_URL) + r'#tvVideoId=([0-9]+)&type=('
+                             + '|'.join(cls.AREAS) + r')', link)
+        if not match:
+            raise ValueError('只接受 Now Sports 官方足球影片頁連結')
+        return match.group(1)
+
+    @classmethod
+    def epoch_instant(cls, value):
+        if type(value) is not int or value < 1_000_000_000_000:
+            raise ValueError('無效的毫秒時間戳')
+        try:
+            return datetime.fromtimestamp(value / 1000, cls.HK)
+        except (OverflowError, OSError) as error:
+            raise ValueError('時間戳超出範圍') from error
+
+    @classmethod
+    def normalize_video(cls, row, area, observed):
+        if not isinstance(row, dict) or area not in cls.AREAS:
+            raise ValueError('影片資料或分類無效')
+        video_id, title = row.get('tvVideoId'), row.get('videoDescChi')
+        if not isinstance(video_id, str) or not re.fullmatch(r'[0-9]+', video_id):
+            raise ValueError('缺少有效的影片 ID')
+        if not isinstance(title, str) or not title.strip():
+            raise ValueError('缺少影片標題')
+        sports = row.get('sportTypes')
+        if not isinstance(sports, list) or not any(
+                isinstance(sport, dict) and str(sport.get('sportTypeId')) == '112'
+                for sport in sports):
+            raise ValueError('影片不是足球分類')
+        if type(row.get('deleted')) is not bool or row.get('assetStatus') not in ('Y', 'N'):
+            raise ValueError('影片狀態無效')
+        # Publication time is distinct from the availability interval.
+        published = cls.epoch_instant(row.get('publishDate'))
+        on_air = cls.epoch_instant(row.get('onAirDate'))
+        off_air = cls.epoch_instant(row.get('offAirDate'))
+        if off_air <= on_air:
+            raise ValueError('影片上架期限無效')
+        if (row['deleted'] or row['assetStatus'] != 'Y'
+                or not on_air <= observed < off_air
+                or not observed - cls.WINDOW <= published <= observed):
+            return None
+        return NowSportsArticle(
+            title=re.sub(r'\s+', ' ', title).strip()[:180],
+            link=f'{cls.PAGE_URL}#tvVideoId={video_id}&type={area}',
+            published_at=published.isoformat(), observed_at=observed.isoformat(),
+            scraped_at=observed.strftime('%Y-%m-%d %H:%M:%S'),
+        )
+
+    def fetch_page(self, tag, page, deadline):
+        for attempt in range(3):
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                raise TimeoutError('足球擷取超過 10 分鐘')
+            try:
+                response = requests.get(
+                    self.API_URL, params={'searchTagsKey': tag,
+                                          'pageSize': self.PAGE_SIZE, 'pageNo': page},
+                    headers={'User-Agent': 'NewsAggregator/1.0', 'Accept': 'application/json'},
+                    timeout=min(20, remaining))
+                response.raise_for_status()
+                if response.status_code != 200:
+                    raise ValueError('影片列表 HTTP 狀態並非 200')
+                payload = response.json()
+            except requests.exceptions.JSONDecodeError as error:
+                raise ValueError('影片列表不是有效 JSON') from error
+            except requests.exceptions.RequestException:
+                if attempt == 2:
+                    raise
+                time.sleep(max(0, min(attempt + 1, deadline - time.monotonic())))
+                continue
+            if not isinstance(payload, list) or len(payload) > self.PAGE_SIZE:
+                raise ValueError('影片列表格式改變')
+            return payload
+
+    def collect(self, fetch_page=None, now=None, max_pages=None):
+        observed = now or datetime.now(self.HK)
+        deadline = time.monotonic() + self.MAX_SECONDS
+        fetch_page = fetch_page or (lambda tag, page: self.fetch_page(tag, page, deadline))
+        articles = {}
+        for area, tag in self.AREAS.items():
+            seen_pages = set()
+            for page in range(1, (max_pages or self.MAX_PAGES) + 1):
+                if time.monotonic() >= deadline:
+                    raise TimeoutError('足球擷取超過 10 分鐘')
+                rows = fetch_page(tag, page)
+                if not isinstance(rows, list) or len(rows) > self.PAGE_SIZE:
+                    raise ValueError(f'{area} 影片列表格式無效')
+                page_ids = []
+                for row in rows:
+                    article = self.normalize_video(row, area, observed)
+                    page_ids.append(row['tvVideoId'])
+                    if article:
+                        articles.setdefault(self.content_key(article.link), article)
+                signature = tuple(page_ids)
+                if rows and signature in seen_pages:
+                    raise ValueError(f'{area} 分頁重複')
+                seen_pages.add(signature)
+                # Scan all pages without assuming publication-date ordering.
+                if len(rows) < self.PAGE_SIZE:
+                    break
+            else:
+                raise ValueError(f'{area} 超過分頁上限')
+        return sorted(articles.values(), key=lambda article: article.published_at, reverse=True)
+
+    def read_previous(self, now):
+        try:
+            payload = json.loads(self.fallback_path.read_text(encoding='utf-8'))
+            if not isinstance(payload, dict) or not isinstance(payload.get('news'), list):
+                raise ValueError('news.json 格式無效')
+        except (OSError, ValueError) as error:
+            logger.warning('Now Sports 舊資料不可用：%s', error)
+            return []
+        articles = {}
+        for post in payload['news']:
+            try:
+                if (not isinstance(post, dict) or post.get('source') != self.source
+                        or post.get('category') != self.category or post.get('content_type') != 'video'
+                        or not isinstance(post.get('title'), str) or not post['title'].strip()):
+                    continue
+                key = self.content_key(post.get('link'))
+                published = self.parse_instant(post.get('published_at'))
+                observed = self.parse_instant(post.get('observed_at'))
+                if not now - self.WINDOW <= published <= observed <= now:
+                    continue
+                articles.setdefault(key, NowSportsArticle(
+                    title=post['title'], link=post['link'], published_at=published.isoformat(),
+                    observed_at=observed.isoformat(), scraped_at=observed.strftime('%Y-%m-%d %H:%M:%S'),
+                ))
+            except (ValueError, TypeError, OverflowError):
+                continue
+        return sorted(articles.values(), key=lambda article: article.published_at, reverse=True)
+
+    def fetch(self):
+        try:
+            articles = self.collect()
+            logger.info('✓ Now Sports 抓取 %d 則足球精華（過去 24 小時）', len(articles))
+            return articles
+        except (requests.exceptions.RequestException, OSError, ValueError, TypeError, OverflowError) as error:
+            logger.warning('Now Sports 擷取失敗：%s；保留仍在 24 小時內的舊足球資料', error)
+            return self.read_previous(datetime.now(self.HK))
+
+
 # ============================================================================
 # 抓取器清單（順序即 VS Code Terminal 顯示和實際抓取順序）
 # ============================================================================
 FETCHERS = {
+    'Now Sports': NowSportsFetcher(),
     '點新聞': DotDotNewsFetcher(),
     '經濟一週': EdigestRSSFetcher(),
     'E-zone': EzoneFetcher(),
@@ -1160,11 +1357,19 @@ class DataStorage:
             'news': [a.to_dict() for a in articles]     # 所有新聞（轉成字典）
         }
 
-        # 寫入檔案
-        Path(filename).write_text(
-            json.dumps(data, ensure_ascii=False, indent=2),  # 轉成 JSON，保留中文，縮排 2 格
-            encoding='utf-8'  # 使用 UTF-8 編碼
-        )
+        # 原子替換，避免中途寫入失敗留下不完整的統一資料檔。
+        path = Path(filename)
+        descriptor, temporary = tempfile.mkstemp(prefix='.' + path.name, dir=path.parent)
+        try:
+            with os.fdopen(descriptor, 'w', encoding='utf-8') as stream:
+                json.dump(data, stream, ensure_ascii=False, indent=2)
+                stream.write('\n')
+                stream.flush()
+                os.fsync(stream.fileno())
+            os.replace(temporary, path)
+        finally:
+            if os.path.exists(temporary):
+                os.unlink(temporary)
 
         logger.info(f"✓ 已輸出 {filename}")
 

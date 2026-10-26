@@ -96,6 +96,7 @@ def fetch(self) -> List[Article]:
 
 ```python
 FETCHERS = {
+    'Now Sports': NowSportsFetcher(),
     '點新聞': DotDotNewsFetcher(),
     '經濟一週': EdigestRSSFetcher(),
     'E-zone': EzoneFetcher(),
@@ -164,6 +165,7 @@ RSS 抓取器基礎類別。
 
 | Fetcher | 來源 | 特點 |
 |---|---|---|
+| `NowSportsFetcher` | Now Sports | 官方足球精華，24 小時、跨分類影片 ID 去重、失敗保留有效舊資料 |
 | `DotDotNewsFetcher` | 點新聞 | 多分類、分頁、按日期範圍抓取 |
 | `EdigestRSSFetcher` | 經濟一週 | RSS 抓取當天即時財經；當天沒有內容時抓最新發布日期 |
 | `EzoneFetcher` | E-zone | 只保留當天科技焦點 |
@@ -340,27 +342,51 @@ python scraper.py
 - `index.html` 能否正常顯示
 - 分類和來源篩選是否正確
 
-## Now Sports 本機排程
+## Now Sports 雲端足球精華
 
-採用獨立寫入：`scraper.py`／GitHub Actions 只更新 `news.json`，
-Mac 專用 Chrome → `collect_now_sports.py` → `now_sports.py` 驗證／原子替換 →
-`run_now_sports.py` 從獨立 checkout 只提交 `now_sports_posts.json`。
-`index.html` 以 `Promise.allSettled` 分別載入兩份資料，其中一份失敗仍顯示另一份。
+`NowSportsFetcher`、`NowSportsArticle` 與其驗證邏輯均在 `scraper.py`，
+由 `FETCHERS` 與其他來源一起執行，統一輸出至 `news.json` 的 `news` 陣列。
+足球項目另含 `published_at`、`observed_at`、`content_type=video` 及
+`published_at_precision=exact`；來源為 `Now Sports`，分類為「足球」。
+不需要獨立收集程式、驗證模組或足球 JSON 檔案。
 
-收集器只操作專頁可見 DOM；使用同一張貼文的元素 handle、作者 heading、時間連結及新出現的日期 tooltip。
-Chrome locale 設為 en-GB、頁面時區固定 Asia/Hong_Kong，完整日期解析後存含時區 ISO 8601。
-舊的相對時間匯入仍使用最早可能時間。標準化、讀取及網頁載入時重新檢查 24 小時期限。
-不使用 React 內部資料、Facebook 私有 API、搜尋、Cookie 匯出或一般 Chrome profile。
+從官方影片頁使用的 `https://sportsapi.now.com/api/getSoccerVideoList` 讀取六個足球分類。
 
-排程：`setup_now_sports.py` 產生／安裝使用者 LaunchAgent，
-`StartCalendarInterval={Hour:13, Minute:0}`、`RunAtLoad=false`。
-launchd 使用 macOS 系統時區；安裝時檢查 UTC+8，環境 TZ 不會改變 launchd 的日曆時間。
-專用 profile、固定版本 runtime、獨立 checkout、鎖、日期標記和日誌均存於 Git 以外。
-同一香港日期完成發布後不重跑。600 秒收集逾時會先要求 Chrome 正常關閉，再終止程序群組。
+| 分類 | area | 官方列表 tag |
+|---|---|---|
+| 英格蘭 | england | soccerEnglandSearchTags |
+| 西班牙 | spain | soccerSpainSearchTags |
+| 歐聯 | ucl | soccerUCLSearchTags |
+| 歐霸／歐協 | uecl | soccerUECLSearchTags |
+| 世界盃 | worldcup2026 | worldcup2026SearchTags |
+| 其他足球 | otherSoccer | soccerOtherSearchTags |
 
-發布前要求獨立 checkout 乾淨、指定遠端／main、沒有未推送提交；只 stage 指定 JSON。
-push 競爭最多重試三次，每次 fetch／rebase；衝突或憑證失敗會停止並保留現場，不強制推送。
-GitHub Actions 同樣限制提交檔案，並加入 concurrency 及有上限的 push 重試。
-`NowSportsFetcher` 保留供舊的手動匯入使用，雲端主程式不再呼叫。
+每頁 12 筆，逐頁讀至不足一頁；不假設列表依發布日期排序，每類上限 50 頁。
+足球收集有 10 分鐘時間預算，請求前檢查剩餘時間；每次請求 timeout 最多 20 秒，網路錯誤最多嘗試三次。
+Requests timeout 是連線／讀取等待上限，不是整體執行的精確截止時間。
 
-完整操作及驗證限制見 [NOW_SPORTS_COLLECTION.md](NOW_SPORTS_COLLECTION.md)。
+六個分類全部成功後，才使用本次足球結果。
+任一分類請求、格式、重複頁或分頁上限檢查失敗，會記錄 warning，
+並從寫入前的 `news.json` 保留仍在 24 小時內且通過來源、分類、官方網址、影片類型與時間驗證的舊足球資料。
+不混入部分完成的新資料；成功但沒有近期影片時不沿用舊足球資料。
+舊資料的 `observed_at` 保持不變，避免把回退項目表示成新抓取結果。
+
+`publishDate` 為毫秒 Unix 時間，以香港時間檢查過去 24 小時；
+`onAirDate`／`offAirDate` 只判斷上架期限，不作發布時間替代值。
+只儲存標題、時間與官方觀看連結，不查詢播放串流。
+觀看連結格式為 `https://sports.now.com/home/video#tvVideoId=<id>&type=<area>`。
+足球收集與回退皆按影片 ID 去重，然後按發布時間由新至舊排序。
+
+`DataStorage.save()` 以同目錄暫存檔、flush／fsync 及原子替換寫入統一的 `news.json`。
+`index.html` 只載入這份檔案，普通新聞依來源／連結去重，足球項目另檢查官方網址、影片 ID、來源、分類、
+發布／觀察時間及 24 小時期限。足球更新時間顯示有效項目中最新的 `observed_at`，
+沒有有效項目時顯示「暫無近 24 小時精華」。
+
+GitHub Actions 沿用每小時第 17 分鐘排程與 concurrency，只執行 `python scraper.py`，
+提交清單只允許 `news.json`。push 競爭最多重試三次，每次 fetch／rebase；真正內容衝突會停止，沒有強制推送。
+舊本機收集／推送程式、排程安裝器、Playwright 依賴清單及匯入入口已移除。
+本機舊 LaunchAgent 已停用並卸載，plist 及整個專用資料目錄（登入資料、日誌、runtime、checkout）已刪除。
+
+本地擷取成功不代表 GitHub Actions 或 GitHub Pages 已部署成功。
+提交並推送後，須再核對 Actions 執行結果與線上的 JSON／網頁。
+本流程不測試影片實際播放、地區或登入限制；觀看仍受官方網站及影片上架期限限制。

@@ -535,7 +535,6 @@
 
         // ==================== 主要功能函數 ====================
 
-        // Both writers publish independently. An unavailable feed must not hide the other.
         function timestampWithZone(value) {
             if (typeof value !== 'string' || !/T.*(?:Z|[+-]\d{2}:\d{2})$/.test(value)) return NaN;
             return Date.parse(value);
@@ -544,86 +543,77 @@
         function footballIdentity(link) {
             try {
                 const url = new URL(link);
-                if (url.protocol !== 'https:' || !['facebook.com', 'www.facebook.com'].includes(url.hostname)
-                    || url.port || url.username || url.password) return null;
-                const path = url.pathname.replace(/\/$/, '');
-                const post = path.match(/^\/now\.comSports\/posts\/(pfbid[A-Za-z0-9]+|\d+)$/i);
-                if (post) return { key: `post:${post[1]}`, link: `https://www.facebook.com/now.comSports/posts/${post[1]}` };
-                const video = path.match(/^\/(?:now\.comSports\/videos|reel)\/(\d+)$/i);
-                if (video) return { key: `video:${video[1]}`, link: `https://www.facebook.com${path}/` };
-                const id = url.searchParams.get('v');
-                if (path === '/watch' && /^\d+$/.test(id || '')) {
-                    return { key: `video:${id}`, link: `https://www.facebook.com/watch/?v=${id}` };
-                }
+                if (url.protocol !== 'https:' || url.hostname !== 'sports.now.com'
+                    || url.port || url.username || url.password || url.pathname !== '/home/video'
+                    || url.search || url.href !== link) return null;
+                const video = url.hash.match(/^#tvVideoId=(\d+)&type=(england|spain|ucl|uecl|worldcup2026|otherSoccer)$/);
+                if (video) return {
+                    key: `video:${video[1]}`,
+                    link: `https://sports.now.com/home/video#tvVideoId=${video[1]}&type=${video[2]}`
+                };
             } catch (_) { /* Reject malformed or unrelated links. */ }
             return null;
         }
 
-        function footballFeed(data, now) {
-            const collected = timestampWithZone(data && data.collected_at);
-            if (!data || data.page_url !== 'https://www.facebook.com/now.comSports'
-                || data.status !== 'ok' || !Number.isFinite(collected) || collected > now
-                || !Array.isArray(data.posts)) throw new Error('無效的足球收集資料');
+        function footballFeed(items, now) {
             const seen = new Set();
             const news = [];
-            for (const item of data.posts) {
+            for (const item of items) {
                 if (!item || item.source !== 'Now Sports' || item.category !== '足球'
                     || typeof item.title !== 'string' || !item.title.trim()
-                    || !['post', 'video'].includes(item.content_type)) continue;
+                    || item.content_type !== 'video') continue;
                 const published = timestampWithZone(item.published_at);
-                const observed = timestampWithZone(item.observed_at || data.collected_at);
+                const observed = timestampWithZone(item.observed_at);
                 const identity = footballIdentity(item.link);
                 if (!identity || seen.has(identity.key) || !Number.isFinite(published)
-                    || !Number.isFinite(observed) || observed > collected || published > observed
+                    || !Number.isFinite(observed) || observed > now || published > observed
                     || published > now || now - published > 24 * 60 * 60 * 1000) continue;
                 seen.add(identity.key);
-                news.push({ ...item, link: identity.link,
-                    content_type: identity.key.startsWith('video:') ? 'video' : item.content_type });
+                news.push({ ...item, link: identity.link, content_type: 'video',
+                    _footballIdentity: identity.key, _observedTimestamp: observed });
             }
-            return { ...data, news };
+            return news;
         }
 
         async function loadNews() {
-            const now = Date.now();
-            const feeds = await Promise.allSettled([
-                fetch('news.json', { cache: 'no-store' }).then(async response => {
-                    if (!response.ok) throw new Error('無法載入新聞數據');
-                    const data = await response.json();
-                    if (!data || !Array.isArray(data.news)) throw new Error('無效的新聞資料');
-                    // Ignore legacy football rows: the local collector owns that feed now.
-                    return { ...data, news: data.news.filter(item => item && item.source !== 'Now Sports'
-                        && ['title', 'link', 'source', 'category'].every(key => typeof item[key] === 'string')) };
-                }),
-                fetch('now_sports_posts.json', { cache: 'no-store' }).then(async response => {
-                    if (!response.ok) throw new Error('無法載入足球數據');
-                    return footballFeed(await response.json(), now);
-                })
-            ]);
-            const news = feeds[0].status === 'fulfilled' ? feeds[0].value : null;
-            const football = feeds[1].status === 'fulfilled' ? feeds[1].value : null;
-            document.getElementById('updateTime').textContent = news ? (news.update_time || '未知') : '暫時無法載入';
-            document.getElementById('footballUpdateTime').textContent = football
-                ? new Date(football.collected_at).toLocaleString('zh-HK', { timeZone: 'Asia/Hong_Kong', hour12: false })
-                    + (football.coverage === 'partial' ? '（部分貼文）' : '')
-                : '暫時無法載入';
-            for (const feed of feeds) {
-                if (feed.status === 'rejected') console.warn('資料來源載入失敗:', feed.reason);
-            }
-            if (!news && !football) {
+            try {
+                const response = await fetch('news.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('無法載入新聞數據');
+                const data = await response.json();
+                if (!data || !Array.isArray(data.news)) throw new Error('無效的新聞資料');
+
+                const now = Date.now();
+                const regularNews = data.news.filter(item => item && item.source !== 'Now Sports'
+                    && ['title', 'link', 'source', 'category'].every(key => typeof item[key] === 'string'));
+                const footballNews = footballFeed(data.news, now);
+                document.getElementById('updateTime').textContent = data.update_time || '未知';
+                const latestFootballObservation = footballNews.reduce(
+                    (latest, item) => Math.max(latest, item._observedTimestamp), 0);
+                document.getElementById('footballUpdateTime').textContent = latestFootballObservation
+                    ? new Date(latestFootballObservation).toLocaleString('zh-HK', {
+                        timeZone: 'Asia/Hong_Kong', hour12: false
+                    })
+                    : '暫無近 24 小時精華';
+
+                const seen = new Set();
+                allNews = [...regularNews, ...footballNews].filter(item => {
+                    const key = item._footballIdentity
+                        ? item._footballIdentity
+                        : `${item.source}\n${item.link}`;
+                    if (seen.has(key)) return false;
+                    seen.add(key);
+                    return true;
+                }).map(({ _footballIdentity, _observedTimestamp, ...item }) => item);
+                document.getElementById('totalCount').textContent = allNews.length;
+                initializeFilters();
+                displayNews(allNews);
+                document.getElementById('resultsInfo').style.display = 'flex';
+            } catch (error) {
+                console.warn('新聞載入失敗:', error);
+                document.getElementById('updateTime').textContent = '暫時無法載入';
+                document.getElementById('footballUpdateTime').textContent = '暫時無法載入';
                 showError('載入新聞失敗，請稍後再試');
-                return;
             }
-            const seen = new Set();
-            allNews = [...(news ? news.news : []), ...(football ? football.news : [])].filter(item => {
-                const key = `${item.source}\n${item.link}`;
-                if (seen.has(key)) return false;
-                seen.add(key);
-                return true;
-            });
-            document.getElementById('totalCount').textContent = allNews.length;
-            initializeFilters();
-            displayNews(allNews);
-            document.getElementById('resultsInfo').style.display = 'flex';
         }
 
         /**

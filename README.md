@@ -1,11 +1,11 @@
 # 香港新聞聚合器
 
-這個專案會自動抓取香港新聞、科技資訊和旅遊優惠，另由本機 Chrome 收集 Now Sports 足球資訊。網頁合併 `news.json` 與 `now_sports_posts.json` 顯示。
+這個專案會自動抓取香港新聞、科技資訊和旅遊優惠，另由 GitHub Actions 收集 Now Sports 足球精華。所有來源由 `scraper.py` 統一寫入 `news.json`，供網頁顯示。
 
 ## 功能
 
 - 抓取新聞、科技和旅遊來源
-- 本機 Chrome 每日 13:00 收集 Now Sports 過去 24 小時的足球標題及影片連結（需登入專用 profile，不使用搜尋）
+- GitHub Actions 每小時收集 Now Sports 過去 24 小時的足球精華標題及官方觀看連結，無需本機 Chrome 或登入
 - 點新聞分拆為港聞、兩岸、國際、財經
 - 支援 HTML、RSS 和專用網站解析器
 - 可自訂來源抓取順序
@@ -81,7 +81,7 @@ http://localhost:8000
 
 | 來源 | 分類 | 網址 | 抓取範圍 |
 |---|---|---|---|
-| Now Sports | 足球 | `https://www.facebook.com/now.comSports` | 過去 24 小時；匯入 Chrome 專頁收集檔，並非 GitHub 直接登入 Facebook |
+| Now Sports | 足球 | `https://sports.now.com/home/video` | 六個足球分類的精華影片，過去 24 小時；由 GitHub Actions 更新 |
 | 點新聞-港聞 | 新聞 | `https://www.dotdotnews.com/immed/hknews` | 當天 |
 | 點新聞-兩岸 | 新聞 | `https://www.dotdotnews.com/immed/bothsides` | 今天和昨天 |
 | 點新聞-國際 | 新聞 | `https://www.dotdotnews.com/immed/inter` | 當天 |
@@ -100,6 +100,7 @@ http://localhost:8000
 
 ```python
 FETCHERS = {
+    'Now Sports': NowSportsFetcher(),
     '點新聞': DotDotNewsFetcher(),
     '經濟一週': EdigestRSSFetcher(),
     'E-zone': EzoneFetcher(),
@@ -206,13 +207,17 @@ def fetch(self) -> List[Article]:
 
 請看 [[news-aggregator_TECHNICAL_DOCUMENTATION | Technical Documentation]]。
 
-## Now Sports 足球資訊
+## Now Sports 足球精華
 
 分類固定為「足球」，來源固定為「Now Sports」，不按聯賽細分。
-新聞與影片都以標題及原站連結顯示；影片另有標記，發布時間為估算時顯示「約」。
+只顯示精華標題、發布時間及官方觀看連結；不下載、嵌入或重新託管影片。
 
-本機收集、預覽、LaunchAgent 安裝與故障處理見 [NOW_SPORTS_COLLECTION.md](NOW_SPORTS_COLLECTION.md)。
-Mac 每日 13:00 收集後，只從獨立 checkout commit／push `now_sports_posts.json`。
-GitHub Actions 繼續更新其他來源的 `news.json`，不會共用 Mac 的 Chrome 登入。
-網頁載入時剔除超過 24 小時的足球資料；專頁遍歷目前標示 `partial`，不保證讀齊全部貼文。
-影片以 Facebook 原站連結開啟，沒有下載或重新託管影片。
+GitHub Actions 沿用每小時第 17 分鐘的排程，執行 `scraper.py`，
+將全部來源統一寫入 `news.json`。排程可能延遲，Mac 關機不影響雲端執行。
+六個足球分類為英格蘭、西班牙、歐聯、歐霸／歐協、世界盃及其他足球。
+以官方 `publishDate` 判斷 24 小時期限，按影片 ID 去重，再依發布時間排序。
+任何分類請求、格式或分頁檢查失敗時，保留舊 `news.json` 中仍在 24 小時內且通過驗證的足球資料；
+其他新聞仍可更新。成功但沒有近 24 小時影片時，輸出中不含足球項目，不沿用舊足球資料。
+前端只讀取 `news.json`，載入時也會剔除超過 24 小時的足球資料。
+
+分類設定、資料流程及驗證限制見 [技術文件](TECHNICAL_DOCUMENTATION.md#now-sports-雲端足球精華)。
