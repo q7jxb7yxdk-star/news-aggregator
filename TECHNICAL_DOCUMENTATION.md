@@ -379,8 +379,8 @@ Requests timeout 是連線／讀取等待上限，不是整體執行的精確截
 
 `DataStorage.save()` 以同目錄暫存檔、flush／fsync 及原子替換寫入統一的 `news.json`。
 `index.html` 只載入這份檔案，普通新聞依來源／連結去重，足球項目另檢查官方網址、影片 ID、來源、分類、
-發布／觀察時間及 24 小時期限。足球更新時間顯示有效項目中最新的 `observed_at`，
-沒有有效項目時顯示「暫無近 24 小時精華」。
+發布／觀察時間及 24 小時期限。頁首統一以 `news.json.update_time` 顯示「新聞更新」時間，
+不另列足球收集時間；足球項目的發布時間及有效期限檢查維持不變。
 
 GitHub Actions 沿用每小時第 17 分鐘排程與 concurrency，只執行 `python scraper.py`，
 提交清單只允許 `news.json`。push 競爭最多重試三次，每次 fetch／rebase；真正內容衝突會停止，沒有強制推送。

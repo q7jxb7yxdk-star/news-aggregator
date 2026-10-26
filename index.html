@@ -445,9 +445,6 @@
                         新聞更新: <span id="updateTime" class="stat-number">載入中...</span>
                     </div>
                     <div class="stat-item">
-                        足球收集: <span id="footballUpdateTime" class="stat-number">載入中...</span>
-                    </div>
-                    <div class="stat-item">
                         總文章數: <span id="totalCount" class="stat-number">0</span>
                     </div>
                 </div>
@@ -570,7 +567,7 @@
                     || published > now || now - published > 24 * 60 * 60 * 1000) continue;
                 seen.add(identity.key);
                 news.push({ ...item, link: identity.link, content_type: 'video',
-                    _footballIdentity: identity.key, _observedTimestamp: observed });
+                    _footballIdentity: identity.key });
             }
             return news;
         }
@@ -587,13 +584,6 @@
                     && ['title', 'link', 'source', 'category'].every(key => typeof item[key] === 'string'));
                 const footballNews = footballFeed(data.news, now);
                 document.getElementById('updateTime').textContent = data.update_time || '未知';
-                const latestFootballObservation = footballNews.reduce(
-                    (latest, item) => Math.max(latest, item._observedTimestamp), 0);
-                document.getElementById('footballUpdateTime').textContent = latestFootballObservation
-                    ? new Date(latestFootballObservation).toLocaleString('zh-HK', {
-                        timeZone: 'Asia/Hong_Kong', hour12: false
-                    })
-                    : '暫無近 24 小時精華';
 
                 const seen = new Set();
                 allNews = [...regularNews, ...footballNews].filter(item => {
@@ -603,7 +593,7 @@
                     if (seen.has(key)) return false;
                     seen.add(key);
                     return true;
-                }).map(({ _footballIdentity, _observedTimestamp, ...item }) => item);
+                }).map(({ _footballIdentity, ...item }) => item);
                 document.getElementById('totalCount').textContent = allNews.length;
                 initializeFilters();
                 displayNews(allNews);
@@ -611,7 +601,6 @@
             } catch (error) {
                 console.warn('新聞載入失敗:', error);
                 document.getElementById('updateTime').textContent = '暫時無法載入';
-                document.getElementById('footballUpdateTime').textContent = '暫時無法載入';
                 showError('載入新聞失敗，請稍後再試');
             }
         }
