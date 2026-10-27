@@ -1,11 +1,11 @@
 # 香港新聞聚合器
 
-這個專案會自動抓取香港新聞、科技資訊和旅遊優惠，另由 GitHub Actions 收集 Now Sports 足球精華。所有來源由 `scraper.py` 統一寫入 `news.json`，供網頁顯示。
+這個專案會自動抓取香港新聞、科技資訊和旅遊優惠，另由 GitHub Actions 收集 Now Sports 足球新聞及精華。所有來源由 `scraper.py` 統一寫入 `news.json`，供網頁顯示。
 
 ## 功能
 
 - 抓取新聞、科技和旅遊來源
-- GitHub Actions 每小時收集 Now Sports 過去 24 小時的足球精華標題及官方觀看連結，無需本機 Chrome 或登入
+- GitHub Actions 每小時收集 Now Sports 過去 24 小時的足球新聞及精華標題、發布時間與官方連結，無需本機 Chrome 或登入
 - 點新聞分拆為港聞、兩岸、國際、財經
 - 支援 HTML、RSS 和專用網站解析器
 - 可自訂來源抓取順序
@@ -81,7 +81,7 @@ http://localhost:8000
 
 | 來源 | 分類 | 網址 | 抓取範圍 |
 |---|---|---|---|
-| Now Sports | 足球 | `https://sports.now.com/home/video` | 六個足球分類的精華影片，過去 24 小時；由 GitHub Actions 更新 |
+| Now Sports | 足球 | `https://sports.now.com/home/video` | 足球新聞及六個足球分類的精華影片，過去 24 小時；由 GitHub Actions 更新 |
 | 點新聞-港聞 | 新聞 | `https://www.dotdotnews.com/immed/hknews` | 當天 |
 | 點新聞-兩岸 | 新聞 | `https://www.dotdotnews.com/immed/bothsides` | 今天和昨天 |
 | 點新聞-國際 | 新聞 | `https://www.dotdotnews.com/immed/inter` | 當天 |
@@ -207,17 +207,18 @@ def fetch(self) -> List[Article]:
 
 請看 [[news-aggregator_TECHNICAL_DOCUMENTATION | Technical Documentation]]。
 
-## Now Sports 足球精華
+## Now Sports 足球新聞及精華
 
 分類固定為「足球」，來源固定為「Now Sports」，不按聯賽細分。
-只顯示精華標題、發布時間及官方觀看連結；不下載、嵌入或重新託管影片。
+只顯示新聞／精華標題、發布時間及官方原文／觀看連結；不下載、嵌入或重新託管影片。
 
 GitHub Actions 沿用每小時第 17 分鐘的排程，執行 `scraper.py`，
 將全部來源統一寫入 `news.json`。排程可能延遲，Mac 關機不影響雲端執行。
 六個足球分類為英格蘭、西班牙、歐聯、歐霸／歐協、世界盃及其他足球。
-以官方 `publishDate` 判斷 24 小時期限，按影片 ID 去重，再依發布時間排序。
-任何分類請求、格式或分頁檢查失敗時，保留舊 `news.json` 中仍在 24 小時內且通過驗證的足球資料；
-其他新聞仍可更新。成功但沒有近 24 小時影片時，輸出中不含足球項目，不沿用舊足球資料。
+文字新聞來自官方足球新聞列表，與六個影片分類分別收集。
+以官方 `publishDate` 判斷 24 小時期限，按內容類型及新聞／影片 ID 去重，再依發布時間排序。
+新聞或影片請求、格式或分頁檢查失敗時，只保留舊 `news.json` 中該類型仍在 24 小時內且通過驗證的資料；
+另一類型與其他來源仍可更新。某類型成功但沒有近期項目時，不沿用該類型的舊資料。
 前端只讀取 `news.json`，載入時也會剔除超過 24 小時的足球資料。
 
-分類設定、資料流程及驗證限制見 [技術文件](TECHNICAL_DOCUMENTATION.md#now-sports-雲端足球精華)。
+分類設定、資料流程及驗證限制見 [技術文件](TECHNICAL_DOCUMENTATION.md#now-sports-雲端足球新聞及精華)。

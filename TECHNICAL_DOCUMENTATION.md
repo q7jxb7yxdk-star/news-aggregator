@@ -165,7 +165,7 @@ RSS 抓取器基礎類別。
 
 | Fetcher | 來源 | 特點 |
 |---|---|---|
-| `NowSportsFetcher` | Now Sports | 官方足球精華，24 小時、跨分類影片 ID 去重、失敗保留有效舊資料 |
+| `NowSportsFetcher` | Now Sports | 官方足球新聞及精華，24 小時、按類型與 ID 去重、各類型獨立回退 |
 | `DotDotNewsFetcher` | 點新聞 | 多分類、分頁、按日期範圍抓取 |
 | `EdigestRSSFetcher` | 經濟一週 | RSS 抓取當天即時財經；當天沒有內容時抓最新發布日期 |
 | `EzoneFetcher` | E-zone | 只保留當天科技焦點 |
@@ -342,13 +342,18 @@ python scraper.py
 - `index.html` 能否正常顯示
 - 分類和來源篩選是否正確
 
-## Now Sports 雲端足球精華
+## Now Sports 雲端足球新聞及精華
 
 `NowSportsFetcher`、`NowSportsArticle` 與其驗證邏輯均在 `scraper.py`，
 由 `FETCHERS` 與其他來源一起執行，統一輸出至 `news.json` 的 `news` 陣列。
-足球項目另含 `published_at`、`observed_at`、`content_type=video` 及
+足球項目另含 `published_at`、`observed_at`、`content_type=news` 或 `content_type=video` 及
 `published_at_precision=exact`；來源為 `Now Sports`，分類為「足球」。
 不需要獨立收集程式、驗證模組或足球 JSON 檔案。
+
+文字新聞從 `https://sportsapi.now.com/api/getNewsList` 讀取，tag 為 `soccerAllSearchTags`。
+驗證 `newsId`、`headlineChi`、`publishDate`、足球分類 `sportTypeId=112` 及 `deleted`；
+排除已刪除、未來或超過 24 小時的新聞，不保存內文或圖片。
+原文連結格式為 `https://sports.now.com/home/news/details?id=<id>`。
 
 從官方影片頁使用的 `https://sportsapi.now.com/api/getSoccerVideoList` 讀取六個足球分類。
 
@@ -361,26 +366,26 @@ python scraper.py
 | 世界盃 | worldcup2026 | worldcup2026SearchTags |
 | 其他足球 | otherSoccer | soccerOtherSearchTags |
 
-每頁 12 筆，逐頁讀至不足一頁；不假設列表依發布日期排序，每類上限 50 頁。
-足球收集有 10 分鐘時間預算，請求前檢查剩餘時間；每次請求 timeout 最多 20 秒，網路錯誤最多嘗試三次。
+每頁 12 筆，逐頁讀至不足一頁；不假設列表依發布日期排序，每類上限 50 頁；文字新聞同樣每頁 12 筆、上限 50 頁。
+新聞與影片收集各有 10 分鐘時間預算，請求前檢查剩餘時間；每次請求 timeout 最多 20 秒，網路錯誤最多嘗試三次。
 Requests timeout 是連線／讀取等待上限，不是整體執行的精確截止時間。
 
-六個分類全部成功後，才使用本次足球結果。
-任一分類請求、格式、重複頁或分頁上限檢查失敗，會記錄 warning，
-並從寫入前的 `news.json` 保留仍在 24 小時內且通過來源、分類、官方網址、影片類型與時間驗證的舊足球資料。
-不混入部分完成的新資料；成功但沒有近期影片時不沿用舊足球資料。
+新聞列表成功後使用本次新聞結果，六個影片分類全部成功後使用本次影片結果，兩者獨立處理。
+某類型請求、格式、重複頁或分頁上限檢查失敗，會記錄 warning，
+並從寫入前的 `news.json` 保留該類型仍在 24 小時內且通過來源、分類、官方網址、內容類型與時間驗證的舊資料。
+同一類型不混入部分完成的新資料；成功但沒有近期項目時不沿用該類型的舊資料。
 舊資料的 `observed_at` 保持不變，避免把回退項目表示成新抓取結果。
 
 `publishDate` 為毫秒 Unix 時間，以香港時間檢查過去 24 小時；
 `onAirDate`／`offAirDate` 只判斷上架期限，不作發布時間替代值。
-只儲存標題、時間與官方觀看連結，不查詢播放串流。
+只儲存標題、時間與官方原文／觀看連結，不查詢播放串流。
 觀看連結格式為 `https://sports.now.com/home/video#tvVideoId=<id>&type=<area>`。
-足球收集與回退皆按影片 ID 去重，然後按發布時間由新至舊排序。
+足球收集與回退皆以 `news:<id>`／`video:<id>` 分開去重，然後按發布時間由新至舊排序。
 
 `DataStorage.save()` 以同目錄暫存檔、flush／fsync 及原子替換寫入統一的 `news.json`。
-`index.html` 只載入這份檔案，普通新聞依來源／連結去重，足球項目另檢查官方網址、影片 ID、來源、分類、
+`index.html` 只載入這份檔案，普通新聞依來源／連結去重，足球項目另檢查官方網址、新聞／影片 ID、連結與內容類型一致性、來源、分類、
 發布／觀察時間及 24 小時期限。頁首統一以 `news.json.update_time` 顯示「新聞更新」時間，
-不另列足球收集時間；足球項目的發布時間及有效期限檢查維持不變。
+新聞與影片卡片顯示各自類型標籤；不另列足球收集時間；足球項目的發布時間及有效期限檢查維持不變。
 
 GitHub Actions 沿用每小時第 17 分鐘排程與 concurrency，只執行 `python scraper.py`，
 提交清單只允許 `news.json`。push 競爭最多重試三次，每次 fetch／rebase；真正內容衝突會停止，沒有強制推送。

@@ -541,11 +541,15 @@
             try {
                 const url = new URL(link);
                 if (url.protocol !== 'https:' || url.hostname !== 'sports.now.com'
-                    || url.port || url.username || url.password || url.pathname !== '/home/video'
-                    || url.search || url.href !== link) return null;
+                    || url.port || url.username || url.password || url.href !== link) return null;
+                if (url.pathname === '/home/news/details' && !url.hash) {
+                    const news = url.search.match(/^\?id=(\d+)$/);
+                    if (news) return { key: `news:${news[1]}`, contentType: 'news', link };
+                }
+                if (url.pathname !== '/home/video' || url.search) return null;
                 const video = url.hash.match(/^#tvVideoId=(\d+)&type=(england|spain|ucl|uecl|worldcup2026|otherSoccer)$/);
                 if (video) return {
-                    key: `video:${video[1]}`,
+                    key: `video:${video[1]}`, contentType: 'video',
                     link: `https://sports.now.com/home/video#tvVideoId=${video[1]}&type=${video[2]}`
                 };
             } catch (_) { /* Reject malformed or unrelated links. */ }
@@ -558,15 +562,15 @@
             for (const item of items) {
                 if (!item || item.source !== 'Now Sports' || item.category !== '足球'
                     || typeof item.title !== 'string' || !item.title.trim()
-                    || item.content_type !== 'video') continue;
+                    || !['video', 'news'].includes(item.content_type)) continue;
                 const published = timestampWithZone(item.published_at);
                 const observed = timestampWithZone(item.observed_at);
                 const identity = footballIdentity(item.link);
-                if (!identity || seen.has(identity.key) || !Number.isFinite(published)
+                if (!identity || identity.contentType !== item.content_type || seen.has(identity.key) || !Number.isFinite(published)
                     || !Number.isFinite(observed) || observed > now || published > observed
                     || published > now || now - published > 24 * 60 * 60 * 1000) continue;
                 seen.add(identity.key);
-                news.push({ ...item, link: identity.link, content_type: 'video',
+                news.push({ ...item, link: identity.link, content_type: identity.contentType,
                     _footballIdentity: identity.key });
             }
             return news;
@@ -712,7 +716,8 @@
                     : '';
                 const contentTypeBadge = isFootball && item.content_type === 'video'
                     ? '<span class="badge">影片</span>'
-                    : '';
+                    : isFootball && item.content_type === 'news'
+                        ? '<span class="badge">新聞</span>' : '';
                 
                 return `
                     <div class="news-card" data-category="${escapeHtml(item.category || '')}" data-source="${escapeHtml(item.source || '')}">

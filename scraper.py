@@ -1,6 +1,6 @@
 # ============================================================================
 # 這個Python 腳本的主要功能：
-# 自動抓取新聞 - 從多個來源抓取新聞、科技、旅遊資訊和足球精華
+# 自動抓取新聞 - 從多個來源抓取新聞、科技、旅遊資訊和足球新聞及精華
 # 智慧過濾 - 排除廣告、優惠碼等不相關內容
 # 去除重複 - 自動刪除重複的新聞
 # 存成檔案 - 最後輸出成 news.json 檔案
@@ -1079,11 +1079,14 @@ class NowSportsArticle:
 
 
 class NowSportsFetcher:
-    """Official football highlights; retain eligible previous rows on failure."""
+    """Official football news and highlights, with independent failure recovery."""
     source = 'Now Sports'
     category = '足球'
     PAGE_URL = 'https://sports.now.com/home/video'
     API_URL = 'https://sportsapi.now.com/api/getSoccerVideoList'
+    NEWS_API_URL = 'https://sportsapi.now.com/api/getNewsList'
+    NEWS_URL = 'https://sports.now.com/home/news/details'
+    NEWS_TAG = 'soccerAllSearchTags'
     HK = timezone(timedelta(hours=8))
     WINDOW = timedelta(hours=24)
     PAGE_SIZE = 12
@@ -1113,12 +1116,15 @@ class NowSportsFetcher:
     @classmethod
     def content_key(cls, link):
         if not isinstance(link, str):
-            raise ValueError('缺少影片連結')
+            raise ValueError('缺少官方連結')
         match = re.fullmatch(re.escape(cls.PAGE_URL) + r'#tvVideoId=([0-9]+)&type=('
                              + '|'.join(cls.AREAS) + r')', link)
-        if not match:
-            raise ValueError('只接受 Now Sports 官方足球影片頁連結')
-        return match.group(1)
+        if match:
+            return f'video:{match.group(1)}'
+        match = re.fullmatch(re.escape(cls.NEWS_URL) + r'\?id=([0-9]+)', link)
+        if match:
+            return f'news:{match.group(1)}'
+        raise ValueError('只接受 Now Sports 官方足球新聞或影片頁連結')
 
     @classmethod
     def epoch_instant(cls, value):
@@ -1162,30 +1168,53 @@ class NowSportsFetcher:
             scraped_at=observed.strftime('%Y-%m-%d %H:%M:%S'),
         )
 
-    def fetch_page(self, tag, page, deadline):
+    @classmethod
+    def normalize_news(cls, row, observed):
+        if not isinstance(row, dict):
+            raise ValueError('新聞資料格式無效')
+        news_id, title = row.get('newsId'), row.get('headlineChi')
+        if not isinstance(news_id, str) or not re.fullmatch(r'[0-9]+', news_id):
+            raise ValueError('缺少有效的新聞 ID')
+        if not isinstance(title, str) or not title.strip():
+            raise ValueError('缺少新聞標題')
+        if str(row.get('sportTypeId')) != '112':
+            raise ValueError('新聞不是足球分類')
+        if type(row.get('deleted')) is not bool:
+            raise ValueError('新聞狀態無效')
+        published = cls.epoch_instant(row.get('publishDate'))
+        if row['deleted'] or not observed - cls.WINDOW <= published <= observed:
+            return None
+        return NowSportsArticle(
+            title=re.sub(r'\s+', ' ', title).strip()[:180],
+            link=f'{cls.NEWS_URL}?id={news_id}', content_type='news',
+            published_at=published.isoformat(), observed_at=observed.isoformat(),
+            scraped_at=observed.strftime('%Y-%m-%d %H:%M:%S'),
+        )
+
+    def fetch_page(self, tag, page, deadline, api_url=None):
         for attempt in range(3):
             remaining = deadline - time.monotonic()
             if remaining <= 0:
                 raise TimeoutError('足球擷取超過 10 分鐘')
             try:
                 response = requests.get(
-                    self.API_URL, params={'searchTagsKey': tag,
+                    api_url or self.API_URL, params={'searchTagsKey': tag,
                                           'pageSize': self.PAGE_SIZE, 'pageNo': page},
                     headers={'User-Agent': 'NewsAggregator/1.0', 'Accept': 'application/json'},
                     timeout=min(20, remaining))
                 response.raise_for_status()
                 if response.status_code != 200:
-                    raise ValueError('影片列表 HTTP 狀態並非 200')
+                    raise ValueError('官方列表 HTTP 狀態並非 200')
                 payload = response.json()
             except requests.exceptions.JSONDecodeError as error:
-                raise ValueError('影片列表不是有效 JSON') from error
+                raise ValueError('官方列表不是有效 JSON') from error
             except requests.exceptions.RequestException:
                 if attempt == 2:
                     raise
                 time.sleep(max(0, min(attempt + 1, deadline - time.monotonic())))
                 continue
             if not isinstance(payload, list) or len(payload) > self.PAGE_SIZE:
-                raise ValueError('影片列表格式改變')
+                raise ValueError('官方列表格式改變')
             return payload
 
     def collect(self, fetch_page=None, now=None, max_pages=None):
@@ -1218,7 +1247,36 @@ class NowSportsFetcher:
                 raise ValueError(f'{area} 超過分頁上限')
         return sorted(articles.values(), key=lambda article: article.published_at, reverse=True)
 
-    def read_previous(self, now):
+    def collect_news(self, fetch_page=None, now=None, max_pages=None):
+        observed = now or datetime.now(self.HK)
+        deadline = time.monotonic() + self.MAX_SECONDS
+        fetch_page = fetch_page or (lambda tag, page: self.fetch_page(
+            tag, page, deadline, api_url=self.NEWS_API_URL))
+        articles, seen_pages = {}, set()
+        for page in range(1, (max_pages or self.MAX_PAGES) + 1):
+            if time.monotonic() >= deadline:
+                raise TimeoutError('足球新聞擷取超過 10 分鐘')
+            rows = fetch_page(self.NEWS_TAG, page)
+            if not isinstance(rows, list) or len(rows) > self.PAGE_SIZE:
+                raise ValueError('足球新聞列表格式無效')
+            page_ids = []
+            for row in rows:
+                article = self.normalize_news(row, observed)
+                page_ids.append(row['newsId'])
+                if article:
+                    articles.setdefault(self.content_key(article.link), article)
+            signature = tuple(page_ids)
+            if rows and signature in seen_pages:
+                raise ValueError('足球新聞分頁重複')
+            seen_pages.add(signature)
+            # Scan every page; do not assume publication-date ordering.
+            if len(rows) < self.PAGE_SIZE:
+                break
+        else:
+            raise ValueError('足球新聞超過分頁上限')
+        return sorted(articles.values(), key=lambda article: article.published_at, reverse=True)
+
+    def read_previous(self, now, content_type='video'):
         try:
             payload = json.loads(self.fallback_path.read_text(encoding='utf-8'))
             if not isinstance(payload, dict) or not isinstance(payload.get('news'), list):
@@ -1230,16 +1288,19 @@ class NowSportsFetcher:
         for post in payload['news']:
             try:
                 if (not isinstance(post, dict) or post.get('source') != self.source
-                        or post.get('category') != self.category or post.get('content_type') != 'video'
+                        or post.get('category') != self.category or post.get('content_type') != content_type
                         or not isinstance(post.get('title'), str) or not post['title'].strip()):
                     continue
                 key = self.content_key(post.get('link'))
+                if not key.startswith(f'{content_type}:'):
+                    continue
                 published = self.parse_instant(post.get('published_at'))
                 observed = self.parse_instant(post.get('observed_at'))
                 if not now - self.WINDOW <= published <= observed <= now:
                     continue
                 articles.setdefault(key, NowSportsArticle(
-                    title=post['title'], link=post['link'], published_at=published.isoformat(),
+                    title=post['title'], link=post['link'], content_type=content_type,
+                    published_at=published.isoformat(),
                     observed_at=observed.isoformat(), scraped_at=observed.strftime('%Y-%m-%d %H:%M:%S'),
                 ))
             except (ValueError, TypeError, OverflowError):
@@ -1247,13 +1308,19 @@ class NowSportsFetcher:
         return sorted(articles.values(), key=lambda article: article.published_at, reverse=True)
 
     def fetch(self):
-        try:
-            articles = self.collect()
-            logger.info('✓ Now Sports 抓取 %d 則足球精華（過去 24 小時）', len(articles))
-            return articles
-        except (requests.exceptions.RequestException, OSError, ValueError, TypeError, OverflowError) as error:
-            logger.warning('Now Sports 擷取失敗：%s；保留仍在 24 小時內的舊足球資料', error)
-            return self.read_previous(datetime.now(self.HK))
+        articles = []
+        for content_type, collect in (('video', self.collect), ('news', self.collect_news)):
+            try:
+                current = collect()
+                logger.info('✓ Now Sports 抓取 %d 則足球%s（過去 24 小時）',
+                            len(current), '精華' if content_type == 'video' else '新聞')
+                articles.extend(current)
+            except (requests.exceptions.RequestException, OSError, ValueError,
+                    TypeError, OverflowError) as error:
+                logger.warning('Now Sports %s 擷取失敗：%s；保留該類型仍在 24 小時內的舊資料',
+                               content_type, error)
+                articles.extend(self.read_previous(datetime.now(self.HK), content_type))
+        return sorted(articles, key=lambda article: article.published_at, reverse=True)
 
 
 # ============================================================================
