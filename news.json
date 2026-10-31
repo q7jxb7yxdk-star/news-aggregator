@@ -1,14 +1,102 @@
 {
-  "update_time": "2026-11-01 01:47:15",
-  "total": 80,
+  "update_time": "2026-11-01 05:39:45",
+  "total": 96,
   "news": [
+    {
+      "title": "【英超】熱刺VS水晶宮",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172172&type=england",
+      "published_at": "2026-11-01T03:31:13+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "以眾凌寡贈水晶宮雙蛋 熱刺3連勝",
+      "link": "https://sports.now.com/home/news/details?id=39824497478",
+      "published_at": "2026-11-01T03:31:13+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【德甲】拜仁慕尼黑VS多蒙特",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172171&type=otherSoccer",
+      "published_at": "2026-11-01T03:29:22+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "簡尼宴客 拜仁兩度領先遭多蒙特逼和",
+      "link": "https://sports.now.com/home/news/details?id=39824497481",
+      "published_at": "2026-11-01T03:29:22+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【德甲】利華古遜VS史特加",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172161&type=otherSoccer",
+      "published_at": "2026-11-01T02:20:23+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "卡域克自信仍會執掌紅魔",
+      "link": "https://sports.now.com/home/news/details?id=39826470742",
+      "published_at": "2026-11-01T01:33:04+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【西甲】華歷簡奴VS切爾達",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172162&type=spain",
+      "published_at": "2026-11-01T01:23:05+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
     {
       "title": "加歷查言論惹禍 維拉擬採法律行動",
       "link": "https://sports.now.com/home/news/details?id=39826969973",
       "published_at": "2026-11-01T01:15:22+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】曼城VS白禮頓",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172167&type=england",
+      "published_at": "2026-11-01T01:01:21+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
+      "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
       "category": "足球"
@@ -17,9 +105,53 @@
       "title": "曼城英超連敗 主場0：1負白禮頓",
       "link": "https://sports.now.com/home/news/details?id=39824497473",
       "published_at": "2026-11-01T01:01:21+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】侯城VS葉士域治",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172163&type=england",
+      "published_at": "2026-11-01T00:55:09+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】高雲地利VS新特蘭",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172164&type=england",
+      "published_at": "2026-11-01T00:55:04+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】般尼茅夫VS列斯聯",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172166&type=england",
+      "published_at": "2026-11-01T00:55:04+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】賓福特VS諾定咸森林",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172165&type=england",
+      "published_at": "2026-11-01T00:54:58+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
+      "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
       "category": "足球"
@@ -28,8 +160,8 @@
       "title": "名宿加歷查為踩低維拉道歉",
       "link": "https://sports.now.com/home/news/details?id=39826470740",
       "published_at": "2026-10-31T23:33:56+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -39,8 +171,8 @@
       "title": "曼聯再敗38年最差 安保姆：已做對了很多事",
       "link": "https://sports.now.com/home/news/details?id=39826470739",
       "published_at": "2026-10-31T23:13:36+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -50,8 +182,8 @@
       "title": "【西甲】利雲特VS馬德里體育會",
       "link": "https://sports.now.com/home/video#tvVideoId=202610132172160&type=spain",
       "published_at": "2026-10-31T22:59:07+08:00",
-      "scraped_at": "2026-11-01 01:46:48",
-      "observed_at": "2026-11-01T01:46:48.414799+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
       "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -61,8 +193,8 @@
       "title": "【英超】車路士VS曼聯",
       "link": "https://sports.now.com/home/video#tvVideoId=202610132172159&type=england",
       "published_at": "2026-10-31T22:30:53+08:00",
-      "scraped_at": "2026-11-01 01:46:48",
-      "observed_at": "2026-11-01T01:46:48.414799+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
       "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -72,8 +204,8 @@
       "title": "下半場入兩球 車路士2：0挫曼聯",
       "link": "https://sports.now.com/home/news/details?id=39824497472",
       "published_at": "2026-10-31T22:30:53+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -83,8 +215,8 @@
       "title": "般奴復任正選失機 曼聯半場悶和車仔",
       "link": "https://sports.now.com/home/news/details?id=39826969974",
       "published_at": "2026-10-31T21:19:42+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -94,8 +226,8 @@
       "title": "利記擋「兵」 伊拉奧拿：阿拿奧荷防死球有法",
       "link": "https://sports.now.com/home/news/details?id=39826470737",
       "published_at": "2026-10-31T20:43:36+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -105,8 +237,8 @@
       "title": "安歷基：有波在腳時夏基美就是射手",
       "link": "https://sports.now.com/home/news/details?id=39826470728",
       "published_at": "2026-10-31T19:30:53+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -116,8 +248,8 @@
       "title": "東區2：1挫沙田重回勝軌",
       "link": "https://sports.now.com/home/news/details?id=39826969970",
       "published_at": "2026-10-31T19:03:21+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -127,8 +259,8 @@
       "title": "阿迪達訓示杜文：我們不是身處迪士尼樂園",
       "link": "https://sports.now.com/home/news/details?id=39826470730",
       "published_at": "2026-10-31T18:00:51+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -138,8 +270,8 @@
       "title": "馬利斯卡：當拿隆馬目前仍是正選……",
       "link": "https://sports.now.com/home/news/details?id=39826969965",
       "published_at": "2026-10-31T15:15:50+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -149,8 +281,8 @@
       "title": "捷禾稱米蘭打吡非定生死：只是第10輪比賽",
       "link": "https://sports.now.com/home/news/details?id=39826969967",
       "published_at": "2026-10-31T15:09:23+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -160,8 +292,8 @@
       "title": "陳葦如：今季首場米蘭打吡",
       "link": "https://sports.now.com/home/news/details?id=39826470729",
       "published_at": "2026-10-31T14:00:29+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -171,8 +303,8 @@
       "title": "【精彩重溫】車仔紅魔十大金球",
       "link": "https://sports.now.com/home/video#tvVideoId=202610292176980&type=england",
       "published_at": "2026-10-31T13:09:34+08:00",
-      "scraped_at": "2026-11-01 01:46:48",
-      "observed_at": "2026-11-01T01:46:48.414799+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
       "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -182,8 +314,8 @@
       "title": "【球迷會請入】香港曼聯擁躉：卡域克值得尊重",
       "link": "https://sports.now.com/home/news/details?id=39826969963",
       "published_at": "2026-10-31T12:47:31+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -193,8 +325,8 @@
       "title": "尼高高華期待國家打吡：終有機會同分鬥拜仁",
       "link": "https://sports.now.com/home/news/details?id=39826470725",
       "published_at": "2026-10-31T09:05:53+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -204,8 +336,8 @@
       "title": "簡尼28分險勝安巴比贏金球獎",
       "link": "https://sports.now.com/home/news/details?id=39826470722",
       "published_at": "2026-10-31T07:57:19+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -215,8 +347,8 @@
       "title": "劉舜文：德甲打吡 睇好拜仁",
       "link": "https://sports.now.com/home/news/details?id=39826470715",
       "published_at": "2026-10-31T07:53:24+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -226,8 +358,8 @@
       "title": "程添霖：車路士曼聯鬥快反彈",
       "link": "https://sports.now.com/home/news/details?id=39824520848",
       "published_at": "2026-10-31T07:53:15+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -237,8 +369,8 @@
       "title": "【英超‧預告】曼城變陣盼再收「禮」",
       "link": "https://sports.now.com/home/news/details?id=39826969960",
       "published_at": "2026-10-31T07:10:15+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -248,8 +380,8 @@
       "title": "【英超‧預告】車仔鋒銳有力伏「魔」",
       "link": "https://sports.now.com/home/news/details?id=39826969959",
       "published_at": "2026-10-31T07:10:09+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -259,8 +391,8 @@
       "title": "【西甲】維拉利爾VS愛斯賓奴",
       "link": "https://sports.now.com/home/video#tvVideoId=202610132172157&type=spain",
       "published_at": "2026-10-31T06:42:06+08:00",
-      "scraped_at": "2026-11-01 01:46:48",
-      "observed_at": "2026-11-01T01:46:48.414799+08:00",
+      "scraped_at": "2026-11-01 05:39:18",
+      "observed_at": "2026-11-01T05:39:18.258122+08:00",
       "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -270,409 +402,425 @@
       "title": "迪拿曼斯樂見卡域克留任：曼聯需要穩定",
       "link": "https://sports.now.com/home/news/details?id=39826470721",
       "published_at": "2026-10-31T06:06:57+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
+      "scraped_at": "2026-11-01 05:39:29",
+      "observed_at": "2026-11-01T05:39:29.159717+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
       "category": "足球"
     },
     {
-      "title": "【法甲】勒阿弗爾VS巴黎聖日耳門",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610132172156&type=otherSoccer",
-      "published_at": "2026-10-31T03:54:09+08:00",
-      "scraped_at": "2026-11-01 01:46:48",
-      "observed_at": "2026-11-01T01:46:48.414799+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
+      "title": "萬聖節｜皇崗口岸出境輪候時間回復正常　一度顯示等候45分鐘",
+      "link": "https://www.dotdotnews.com/a/202611/01/AP6ae62e59e4b02fd1c5f6237d.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-01 05:39:34"
     },
     {
-      "title": "夏基美3+2 PSG炒勒阿弗爾5：1",
-      "link": "https://sports.now.com/home/news/details?id=39821066830",
-      "published_at": "2026-10-31T03:54:09+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
+      "title": "（有片）凌晨北上人流湧現　皇崗口岸加闊通道應對高峰　記者實測15分鐘通關",
+      "link": "https://www.dotdotnews.com/a/202611/01/AP6ae62d99e4b02fd1c5f62377.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-01 05:39:34"
     },
     {
-      "title": "麥迪臣無礙可出鬥水晶宮",
-      "link": "https://sports.now.com/home/news/details?id=39826969958",
-      "published_at": "2026-10-31T02:52:09+08:00",
-      "scraped_at": "2026-11-01 01:46:57",
-      "observed_at": "2026-11-01T01:46:57.793041+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
+      "title": "萬聖節｜入境處：皇崗口岸出境人流相當繁忙　盡量2點前改用深圳灣口岸",
+      "link": "https://www.dotdotnews.com/a/202611/01/AP6ae62cebe4b02fd1c5f62374.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-01 05:39:34"
     },
     {
       "title": "萬聖節｜警方：皇崗口岸交通開始繁忙　車輛預計等候約15至30分鐘",
       "link": "https://www.dotdotnews.com/a/202611/01/AP6ae62345e4b02fd1c5f62305.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:03"
+      "scraped_at": "2026-11-01 05:39:34"
     },
     {
       "title": "萬聖節｜皇崗口岸凌晨北上人流增　卓孝業到場視察通關情況",
       "link": "https://www.dotdotnews.com/a/202611/01/AP6ae61dd1e4b02fd1c5f6225f.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:03"
+      "scraped_at": "2026-11-01 05:39:34"
     },
     {
       "title": "皇崗口岸出境繁忙　訪港旅客需等候約45分鐘",
       "link": "https://www.dotdotnews.com/a/202611/01/AP6ae61dc9e4b02fd1c5f6225d.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:03"
+      "scraped_at": "2026-11-01 05:39:34"
     },
     {
       "title": "記者直擊｜萬聖節蘭桂坊驚現財神/牛來/袁湘琴　內地客讚熱鬧盼再來港",
       "link": "https://www.dotdotnews.com/a/202611/01/AP6ae61abde4b02fd1c5f62248.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:03"
+      "scraped_at": "2026-11-01 05:39:34"
     },
     {
       "title": "萬聖節｜運輸署：午夜赴皇崗口岸需求或增　城巴九巴加開巴士",
       "link": "https://www.dotdotnews.com/a/202611/01/AP6ae612dee4b02fd1c5f6220c.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:03"
+      "scraped_at": "2026-11-01 05:39:34"
     },
     {
       "title": "天文台：今日大致多雲　最高氣溫約28度",
       "link": "https://www.dotdotnews.com/a/202611/01/AP6ae60ceee4b02fd1c5f621d3.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:03"
+      "scraped_at": "2026-11-01 05:39:35"
     },
     {
       "title": "WTT蒙彼利埃｜苦戰7局！孫穎莎勝早田希娜晉4強",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae60c7ae4b02fd1c5f621cf.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:04"
+      "scraped_at": "2026-11-01 05:39:37"
     },
     {
       "title": "「未來之星」·「范長江行動」暑期活動總結分享會　傳承愛國情懷",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae5ed37e4b02fd1c5f61eae.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:04"
+      "scraped_at": "2026-11-01 05:39:37"
     },
     {
       "title": "（有片）大灣區錦囊·生活｜樂從羅浮宮打造家裝優選地　港人可享跨境整裝閉環服務",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae5d5e1e4b02fd1c5f61c39.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:04"
+      "scraped_at": "2026-11-01 05:39:37"
     },
     {
       "title": "打虎！原中石化董事長傅成玉被查　退休逾10年",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae5b963e4b02fd1c5f619b5.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:04"
+      "scraped_at": "2026-11-01 05:39:37"
     },
     {
       "title": "大陸短劇APP霸榜台灣應用商店　台媒：台當局越防範年輕人越愛看",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae59558e4b02fd1c5f615c4.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:04"
+      "scraped_at": "2026-11-01 05:39:37"
     },
     {
       "title": "自然資源部：找礦行動「十五五」開局良好　金相當於新增50個大型礦床",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae579b9e4b02fd1c5f613d9.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:04"
+      "scraped_at": "2026-11-01 05:39:37"
     },
     {
       "title": "中國首次載人登月任務乘組計劃公布！由3人組成　2人着陸月球",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae56325e4b02fd1c5f6124f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:04"
+      "scraped_at": "2026-11-01 05:39:37"
     },
     {
       "title": "俄美互投反對票　安理會未能延長西撒特派團任期　中方表態",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae54d61e4b02fd1c5f6106f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:04"
+      "scraped_at": "2026-11-01 05:39:37"
     },
     {
       "title": "中瑞簽署自貿協定升級議定書　商務部：瑞士咖啡機床手錶等輸華產品將逐步取消關稅",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae53528e4b02fd1c5f60ef7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:05"
+      "scraped_at": "2026-11-01 05:39:38"
     },
     {
       "title": "（有片）「港艇北上」感受自由行便利　入境15分鐘搞定",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae52923e4b02fd1c5f60e56.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:05"
+      "scraped_at": "2026-11-01 05:39:38"
     },
     {
       "title": "巴拿馬南部地區發生6.1級地震",
       "link": "https://www.dotdotnews.com/a/202611/01/AP6ae61650e4b02fd1c5f62233.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:07"
+      "scraped_at": "2026-11-01 05:39:40"
     },
     {
       "title": "陳茂波：香港今年經濟增長過去5年最強　或上調經濟預測",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae5a3d3e4b02fd1c5f617b5.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:09"
+      "scraped_at": "2026-11-01 05:39:42"
     },
     {
       "title": "歐央行行長哽咽辭職　明年2月提前卸任惹爭議",
       "link": "https://www.dotdotnews.com/a/202610/31/AP6ae5389fe4b02fd1c5f60f58.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:09"
+      "scraped_at": "2026-11-01 05:39:42"
     },
     {
       "title": "【末日預警？】全球多國齊籲民眾囤應急物資 網傳第三次世界大戰將至惹恐慌 前 FBI 副局長警告：備 3 天物資把家變堡壘 外媒拆解非「末日預警」 各國應對天災人禍大不同",
       "link": "https://www.edigest.hk/news/global-emergency-stockpile-warnings-doomsday-ww3-rumors-debunked-fbi-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2047793/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:11"
+      "scraped_at": "2026-11-01 05:39:42"
     },
     {
       "title": "【晶片巨頭受挫】英特爾Q3超預期但Q4指引「見光死」  PC 疲弱疊加廠房事故 自由現金流見負 盤後暴跌逾23%",
       "link": "https://www.edigest.hk/news/intel-q3-earnings-q4-guidance-stock-crash-technical-analysis-55-dollars-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2047789/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:11"
+      "scraped_at": "2026-11-01 05:39:42"
     },
     {
       "title": "亞馬遜 Q3 季績一樣出事 AI燒錢致負現金流擴大至423億美元 盈利收入雙雙失準 盤後股價急挫近8%",
       "link": "https://www.edigest.hk/news/amazon-q3-earnings-negative-free-cash-flow-ai-capex-aws-cloud-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2047775/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:11"
+      "scraped_at": "2026-11-01 05:39:42"
     },
     {
       "title": "【加密貨幣風暴】幣安疑遭黑客攻擊全面暫停提存 凍結逾195億資產 趙長鵬承諾全額賠償",
       "link": "https://www.edigest.hk/news/binance-hack-suspends-withdrawals-2-5-billion-frozen-bitcoin-drops-safu-fund-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2047769/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-01 01:47:11"
+      "scraped_at": "2026-11-01 05:39:42"
+    },
+    {
+      "title": "雪櫃食材變出今晚菜式　原價 US $0.99《Meal DNA》限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/01/meal-dna-pantry-meal-planner-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-01 05:39:44"
+    },
+    {
+      "title": "輪班族離線排班日曆　原價 US $0.99《ShiftFlow》限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/01/shiftflow-rotation-calendar-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb-3/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-01 05:39:44"
+    },
+    {
+      "title": "零碎時間不再選擇困難　原價 US $0.99《Minpick》限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/01/minpick-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-01 05:39:44"
+    },
+    {
+      "title": "四象限分清輕重緩急　原價 US $0.99《Eisenhower》限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/01/eisenhower-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-01 05:39:44"
     },
     {
       "title": "Apple Maps 模糊 NASA 及軍基地影像　Google Maps 維持清晰",
       "link": "https://www.newmobilelife.com/2026/11/01/apple-maps-blurs-military-bases/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:44"
     },
     {
       "title": "Apple HomeView 介面細節曝光　基於 tvOS 支援六用戶",
       "link": "https://www.newmobilelife.com/2026/11/01/apple-homeview-software-tour-details/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:44"
     },
     {
       "title": "Meta 低調推出 AI 試衫 App Style Sketch　可憑 IG 舊相建立虛擬衣櫃生成造型建議",
       "link": "https://unwire.hk/2026/10/31/meta-style-sketch-ai-outfit-virtual-tryon/software/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "教宗良十四世籲為 AI「解除武裝」　促各國禁止致命自主武器",
       "link": "https://unwire.hk/2026/10/31/pope-leo-xiv-disarm-ai-autonomous-weapons/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "俄羅斯將 Apple、Microsoft 列入監管名冊　要求保存通訊紀錄3年",
       "link": "https://unwire.hk/2026/10/31/russia-apple-microsoft-surveillance-registry-2026/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "Sam Altman 稱電腦 RAM 閒置浪費資源　AI 運算應集中雲端處理",
       "link": "https://unwire.hk/2026/10/31/sam-altman-local-ai-dram-cloud-utilization/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "香港電訊同意退出美國市場　2027年9月前停止當地電訊服務",
       "link": "https://unwire.hk/2026/10/31/hkt-fcc-us-telecom-exit-2027/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "美軍至少6基地冷凍庫離奇自行解凍　大批食品報廢疑涉網絡攻擊",
       "link": "https://unwire.hk/2026/10/31/us-military-freezer-suspected-cyberattack/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "Google 太空 AI 衛星有限電力寫詩 4 顆 TPU 每次只開 1 顆約 20 分鐘",
       "link": "https://unwire.hk/2026/10/31/google-suncatcher-satellite-tpu-gemma/fun-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "摺疊手機之後平板來了！  Samsung 傳研發 17 吋摺疊式平板電腦　摺合後約 8 吋",
       "link": "https://unwire.hk/2026/10/31/samsung-17-inch-foldable-tablet-rumor/notebook/tablet-notebook/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "Mac Studio 頂配售價達 23 萬　Elon Musk 笑 Tesla 抵買",
       "link": "https://unwire.hk/2026/10/31/elon-musk-mac-studio-tesla-price/notebook/mac-os/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "Apple 智能 11 月 4 日起在中國開放測試　整合阿里巴巴千問　12 月隨 iOS 27.3 推出",
       "link": "https://unwire.hk/2026/10/31/apple-intelligence-china-qwen-ios-27-3-beta/mobile-phone/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "Waymo 無人的士配 Toyota 右軚 bZ4X 明年日本試車",
       "link": "https://unwire.hk/2026/10/31/waymo-toyota-bz4x-japan-robotaxi/life-tech/auto/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "Claude Max 20x 改名 Ultra 月費不變 已驗證帳戶取消 5 小時上限",
       "link": "https://unwire.hk/2026/10/31/claude-max-ultra-subscription-limits/fun-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "【日本退稅2026】11月1日起先付後退！Visit Japan Web網上退稅流程、7大機場安排及注意事項",
       "link": "https://flyday.hk/tax-free-japan",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "【國泰航空日本優惠】限時89折優惠！來回日本連稅3千起｜東京 大阪 福岡 名古屋都有平！",
       "link": "https://flyday.hk/cathay-pacific-japan-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "【阿聯酋航空泰國優惠】27年早鳥優惠，來回曼谷連稅1千6起，包25kg行李！暑假出發都有平！",
       "link": "https://flyday.hk/emirates-thailand-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "【日本航空優惠】加燃油費前最後一減！來回東京連稅3千1起，包2件23kg寄艙行李！出發日期至明年6月23日！",
       "link": "https://flyday.hk/japan-airlines-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "【香港航空日本優惠】年尾快閃大阪連稅2千起、沖繩1千8起、包23kg行李！指定日子出發",
       "link": "https://flyday.hk/hong-kong-airlines-japan-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:14"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "國泰飛東京/大阪！連稅3千2！國泰官網11.11驚喜優惠！明年2月28日前出發！香港飛東京/大阪二人同行來回連稅每人只需$3,241起 – 國泰航空 (優惠至11月1日)",
       "link": "https://www.meethk.com/165181/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "國泰雪季直飛札幌！連稅四千！國泰官網11.11驚喜優惠！明年2月28日前出發！香港飛札幌二人同行來回連稅每人只需$4,010起 – 國泰航空 (優惠至11月1日)",
       "link": "https://www.meethk.com/164958/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "國泰飛福岡！連稅三千！國泰官網11.11驚喜優惠！12月10日前出發！香港飛福岡來回連稅只需$3,096起 – 國泰航空 (優惠至11月1日)",
       "link": "https://www.meethk.com/165182/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "大韓飛首爾優惠！連稅2千3起！可凌晨機去晚機返！明年3月31日前出發！香港飛首爾來回連稅只需$2,361起 – 大韓航空 (優惠至10月31日)",
       "link": "https://www.meethk.com/165055/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "港航飛沖繩！連稅千八！包23kg寄艙行李！明年6月28日前出發！香港飛沖繩來回連稅只需$1,878起 – 香港航空",
       "link": "https://www.meethk.com/165105/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "【永安旅遊 x 阿提哈德航空】2026全球最安全全服務航空公司！每日直飛阿布扎比，來回連稅$4,548起！歐洲多個熱門城市$4,953起！",
       "link": "https://www.meethk.com/165077/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "連稅千六飛釜山！包15kg寄艙行李！明年1月31日前出發！香港飛釜山來回連稅只需$1,658起 – EastarJet 易斯達航空 (優惠至10月30日)",
       "link": "https://www.meethk.com/165114/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "抵呀！港航直飛澳洲！連稅3千9起！明年6月24日前出發！包23kg寄艙行李！香港直飛悉尼、墨爾本來回連稅只需$3,996起 – 香港航空",
       "link": "https://www.meethk.com/165068/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "星宇航空美國/歐洲限時優惠！飛布拉格來回連稅$6,694起！美國來回連稅：西雅圖$5,856起、洛杉磯/三藩市$6,016起、安大略/鳳凰城$6,866起！包2件各23kg寄艙行李！仲有機會搭「空山金」同「空山銀」彩繪機！ – 星宇航空 (優惠至11月4日)",
       "link": "https://www.meethk.com/164814/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     },
     {
       "title": "【新加坡航空長者專屬優惠】60歲或以上老友記出發啦！同行親友同享優惠！高達75折！來回連稅：新加坡HK$2,415起、澳洲HK$5,305起、倫敦HK$5,705起！KrisFlyer會員全程無限量免費享用機上Wi-Fi！",
       "link": "https://www.meethk.com/165001/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-01 01:47:15"
+      "scraped_at": "2026-11-01 05:39:45"
     }
   ]
 }
