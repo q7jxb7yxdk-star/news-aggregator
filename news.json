@@ -1,13 +1,68 @@
 {
-  "update_time": "2026-11-03 00:06:57",
-  "total": 92,
+  "update_time": "2026-11-03 07:35:29",
+  "total": 101,
   "news": [
     {
-      "title": "卡域克力撐「罪人」馬天：佢好投入",
+      "title": "【歐聯Day 4】狼來了！？",
+      "link": "https://sports.now.com/home/news/details?id=39826969995",
+      "published_at": "2026-11-03T07:04:11+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】紐卡素VS愛華頓",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610132172195&type=england",
+      "published_at": "2026-11-03T05:58:46+08:00",
+      "scraped_at": "2026-11-03 07:35:04",
+      "observed_at": "2026-11-03T07:35:04.622004+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "愛華頓1：0連環拆「紐」",
+      "link": "https://sports.now.com/home/news/details?id=39821003376",
+      "published_at": "2026-11-03T05:58:46+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "迪勤懷斯：阿迪達開季叮囑我付出更多",
+      "link": "https://sports.now.com/home/news/details?id=39826969994",
+      "published_at": "2026-11-03T03:57:31+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "德盃16強抽籤 拜仁鬥哈化",
+      "link": "https://sports.now.com/home/news/details?id=39826969980",
+      "published_at": "2026-11-03T00:34:04+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "卡域克力撐「罪人」馬天尼斯：佢好投入",
       "link": "https://sports.now.com/home/news/details?id=39826969993",
       "published_at": "2026-11-02T22:57:19+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -17,8 +72,8 @@
       "title": "哥頓：巴塞實力不比PSG皇馬遜色",
       "link": "https://sports.now.com/home/news/details?id=39829156229",
       "published_at": "2026-11-02T22:01:16+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -28,8 +83,8 @@
       "title": "哈伐斯破德國球員英超入球紀錄",
       "link": "https://sports.now.com/home/news/details?id=39829156228",
       "published_at": "2026-11-02T21:09:40+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -39,8 +94,8 @@
       "title": "維拉接受卡歷查道歉停法律行動",
       "link": "https://sports.now.com/home/news/details?id=39829156227",
       "published_at": "2026-11-02T20:27:41+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -50,8 +105,8 @@
       "title": "咪玩！加度素：仲差12分至護級",
       "link": "https://sports.now.com/home/news/details?id=39829156214",
       "published_at": "2026-11-02T17:59:50+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -61,8 +116,8 @@
       "title": "馬天尼斯「魔」路變不確定",
       "link": "https://sports.now.com/home/news/details?id=39829156222",
       "published_at": "2026-11-02T17:43:22+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -72,8 +127,8 @@
       "title": "士砵亭教練雷波捷斯離任",
       "link": "https://sports.now.com/home/news/details?id=39826969987",
       "published_at": "2026-11-02T16:42:17+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -83,8 +138,8 @@
       "title": "中東局勢安全成疑 C朗避戰亞冠精英",
       "link": "https://sports.now.com/home/news/details?id=39826969985",
       "published_at": "2026-11-02T14:14:53+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -94,8 +149,8 @@
       "title": "喜鵲迎愛華頓 高位逼搶自暴其短？",
       "link": "https://sports.now.com/home/news/details?id=39826969977",
       "published_at": "2026-11-02T12:23:27+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -105,8 +160,8 @@
       "title": "美斯末段入波 國密2：1反勝",
       "link": "https://sports.now.com/home/news/details?id=39826969983",
       "published_at": "2026-11-02T11:51:02+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -116,8 +171,8 @@
       "title": "【場上對弈】簡尼勇奪金球獎 17年堅持終成大器",
       "link": "https://sports.now.com/home/news/details?id=39829156219",
       "published_at": "2026-11-02T10:59:58+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -127,8 +182,8 @@
       "title": "阿迪達領「兵」破14年魔咒：漫長的時間",
       "link": "https://sports.now.com/home/news/details?id=39829156212",
       "published_at": "2026-11-02T08:01:50+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -138,605 +193,593 @@
       "title": "伊拉奧拿不忿：難道不插水就不獲判12碼？",
       "link": "https://sports.now.com/home/news/details?id=39829156213",
       "published_at": "2026-11-02T07:43:00+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
+      "scraped_at": "2026-11-03 07:35:12",
+      "observed_at": "2026-11-03T07:35:12.549358+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
       "category": "足球"
     },
     {
-      "title": "【西甲】畢爾包VS皇家蘇斯達",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610132172189&type=spain",
-      "published_at": "2026-11-02T06:06:17+08:00",
-      "scraped_at": "2026-11-03 00:06:36",
-      "observed_at": "2026-11-03T00:06:36.411369+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
+      "title": "訪港客上周末按年升34%　「美食月」逾400商戶推優惠",
+      "link": "https://www.dotdotnews.com/a/202611/03/AP6ae91d3ae4b02fd1c5f64f6d.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-03 07:35:17"
     },
     {
-      "title": "【意甲】祖雲達斯VS拿玻里",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610132172188&type=otherSoccer",
-      "published_at": "2026-11-02T05:44:57+08:00",
-      "scraped_at": "2026-11-03 00:06:36",
-      "observed_at": "2026-11-03T00:06:36.411369+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "保加世界波！祖雲達斯2：0贏「玻」",
-      "link": "https://sports.now.com/home/news/details?id=39824520840",
-      "published_at": "2026-11-02T05:44:57+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "卡卡：簡尼奪金球獎實至名歸",
-      "link": "https://sports.now.com/home/news/details?id=39826470744",
-      "published_at": "2026-11-02T04:51:13+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【西甲】艾爾切VS華倫西亞",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610132172187&type=spain",
-      "published_at": "2026-11-02T04:00:04+08:00",
-      "scraped_at": "2026-11-03 00:06:36",
-      "observed_at": "2026-11-03T00:06:36.411369+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【英超】利物浦VS阿仙奴",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610132172186&type=england",
-      "published_at": "2026-11-02T02:32:11+08:00",
-      "scraped_at": "2026-11-03 00:06:36",
-      "observed_at": "2026-11-03T00:06:36.411369+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "阿仙奴1：0贏利物浦重奪榜首",
-      "link": "https://sports.now.com/home/news/details?id=39824520838",
-      "published_at": "2026-11-02T02:32:11+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【西甲】基達菲VS西維爾",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610132172180&type=spain",
-      "published_at": "2026-11-02T01:59:14+08:00",
-      "scraped_at": "2026-11-03 00:06:36",
-      "observed_at": "2026-11-03T00:06:36.411369+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【西甲】桑坦德VS皇家馬德里",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610132172182&type=spain",
-      "published_at": "2026-11-02T01:19:46+08:00",
-      "scraped_at": "2026-11-03 00:06:36",
-      "observed_at": "2026-11-03T00:06:36.411369+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "皇馬聯賽贈桑坦德3蛋4連捷",
-      "link": "https://sports.now.com/home/news/details?id=39824520841",
-      "published_at": "2026-11-02T01:19:46+08:00",
-      "scraped_at": "2026-11-03 00:06:43",
-      "observed_at": "2026-11-03T00:06:43.868513+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
+      "title": "發現灣區｜深圳灣迎候鳥觀賞季　速速收藏這份觀鳥避坑指南吧",
+      "link": "https://www.dotdotnews.com/a/202611/03/AP6ae88504e4b02fd1c5f64a16.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-03 07:35:17"
     },
     {
       "title": "天文台：今日大致多雲　早晚有一兩陣微雨　最高氣溫約29度",
       "link": "https://www.dotdotnews.com/a/202611/03/AP6ae8aa30e4b02fd1c5f64caa.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:47"
+      "scraped_at": "2026-11-03 07:35:17"
     },
     {
       "title": "孫陽：打開APEC「朋友圈」　擴展深圳全球網絡連接力",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae8a512e4b02fd1c5f64c79.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:49"
+      "scraped_at": "2026-11-03 07:35:18"
     },
     {
       "title": "中證監：近期擬對護盤式回購作調整優化",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae89240e4b02fd1c5f64b2e.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:49"
+      "scraped_at": "2026-11-03 07:35:18"
     },
     {
       "title": "大灣區科學論壇熱議空天科技發展　港澳高校聚力布局前沿賽道",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae889a1e4b02fd1c5f64a81.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:49"
+      "scraped_at": "2026-11-03 07:35:18"
     },
     {
       "title": "「字節時間」引爆論戰　秦朔起訴抖音集團副總裁李亮",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae882b2e4b02fd1c5f649f0.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:49"
+      "scraped_at": "2026-11-03 07:35:18"
     },
     {
       "title": "中央港澳辦召開室務會會議　傳達學習貫徹二十屆五中全會精神",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae864e9e4b02fd1c5f64747.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:49"
+      "scraped_at": "2026-11-03 07:35:18"
     },
     {
       "title": "央行：明開展證券、基金、保險公司互換便利操作　申請額度逾千億",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae85e7ce4b02fd1c5f6468a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:49"
+      "scraped_at": "2026-11-03 07:35:18"
     },
     {
       "title": "中美青年企業家參訪北京　尋求務實商機",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae85d3ce4b02fd1c5f64687.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:49"
+      "scraped_at": "2026-11-03 07:35:18"
     },
     {
       "title": "（有片）外交部：中方特使將訪中東等地勸和促談　緩局降溫",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae83f8ce4b02fd1c5f642f7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:49"
+      "scraped_at": "2026-11-03 07:35:18"
     },
     {
       "title": "美稱「朝鮮是幣安被盜63億美元案幕後黑手」　外交部回應",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae83e35e4b02fd1c5f642df.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:19"
     },
     {
       "title": "APEC外交和貿易雙部長視頻會議明日在京舉行　王毅、王文濤將共同主持",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae83aa6e4b02fd1c5f642b1.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:19"
     },
     {
       "title": "APEC｜廣東公安廳：全省抽調警力支援深圳　確保重兵上街嚴管嚴控",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae80c67e4b02fd1c5f63d04.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:19"
     },
     {
       "title": "深圳男讚香港玩樂物有所值　鍾情下午茶文化　網民留言感謝「優質旅客」",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae80c38e4b02fd1c5f63d02.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:19"
     },
     {
       "title": "劉奇凡任雲南省代省長",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae800aae4b02fd1c5f63be6.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:19"
     },
     {
       "title": "五中全會《決定》　一圖睇明白",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae7ee33e4b02fd1c5f63a8f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:19"
     },
     {
       "title": "港澳辦：堅持「一國兩制」正確航向　推動港澳共赴民族復興偉大征程",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae7e7fce4b02fd1c5f63a34.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:19"
     },
     {
       "title": "雙雙創新高！深圳邊檢單日查驗114.5萬人次　皇崗口岸單日16.1萬人次出入境",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae7e363e4b02fd1c5f6399e.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:19"
     },
     {
       "title": "WTT蒙彼利埃｜孫穎莎逆轉蒯曼奪冠　對鏡頭比「1」慶祝",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae7de40e4b02fd1c5f63933.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:20"
     },
     {
       "title": "孫穎莎奪冠後因傷退出WTT法蘭克福冠軍賽　網友：好好休息",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae7d77fe4b02fd1c5f637d6.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:20"
     },
     {
       "title": "三部門聯手撐A股！今開兩場專題會　研優化穩市工具",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae7d4e6e4b02fd1c5f637bf.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:50"
+      "scraped_at": "2026-11-03 07:35:20"
+    },
+    {
+      "title": "美中期選舉 | 美中期選舉今投票　特朗普：若共和黨失利將化身「否決先生」",
+      "link": "https://www.dotdotnews.com/a/202611/03/AP6ae91d4be4b02fd1c5f64f70.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-03 07:35:21"
+    },
+    {
+      "title": "（有片）冰箱變烤箱！歐洲多國超市冷櫃再遭網絡攻擊",
+      "link": "https://www.dotdotnews.com/a/202611/03/AP6ae8a750e4b02fd1c5f64c90.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-03 07:35:21"
     },
     {
       "title": "中證監：近期擬對護盤式回購作調整優化",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae89240e4b02fd1c5f64b2e.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:23"
     },
     {
       "title": "幣安遇駭損失63億美元　慎防加密貨幣風險",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae87682e4b02fd1c5f648ea.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:23"
     },
     {
       "title": "金融科技周｜灣區FinTech公司藉港出海　海外訂單反超內地",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae8741ee4b02fd1c5f64882.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:23"
     },
     {
       "title": "央行：明開展證券、基金、保險公司互換便利操作　申請額度逾千億",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae85e7ce4b02fd1c5f6468a.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:23"
     },
     {
       "title": "滙豐：在港設人工智能及新興科技研究院　料明年投入運作",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae82890e4b02fd1c5f64034.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:23"
     },
     {
       "title": "余偉文：做好把關確保金融科技安全落地　「轉數快」年內接通銀聯",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae815d3e4b02fd1c5f63e30.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:23"
     },
     {
       "title": "三部門聯手撐A股！今開兩場專題會　研優化穩市工具",
       "link": "https://www.dotdotnews.com/a/202611/02/AP6ae7d4e6e4b02fd1c5f637bf.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:23"
     },
     {
       "title": "96歲巴菲特被爆50年無飲過水 一日 5 罐可樂 靠麥當勞、雪糕等養生 將愛好化作百億投資 發誓終生拒吃壽司",
       "link": "https://www.edigest.hk/news/warren-buffett-diet-no-water-50-years-coca-cola-mcdonalds-sushi-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2048355/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:26"
     },
     {
       "title": "AI專家拒為退休儲蓄  預言人類10年內遭消滅機會高達 50% 馬斯克亦籲勿儲錢？",
       "link": "https://www.edigest.hk/news/ai-expert-nate-soares-elon-musk-retirement-savings-human-extinction-risk-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2048342/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:26"
     },
     {
       "title": "【FinTech Week】金管局谷四大金融科技！轉數快年底接通全球逾億銀聯商戶 研「認識你的代理AI」",
       "link": "https://www.edigest.hk/news/hkma-fintech-week-4-measures-fps-unionpay-agentic-ai-tokenization-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2048338/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:26"
     },
     {
       "title": "【錶迷必讀】勞力士破天荒公開維修價目表！現代款5,100元起跳 古董錶「只報價不修」最高收1.7萬",
       "link": "https://www.edigest.hk/news/rolex-service-price-list-revealed-modern-classic-vintage-watches-repair-cost-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2048321/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:26"
     },
     {
       "title": "保時捷超跑變身逾 5 萬元咖啡機 致敬 1972 年經典 911 融入標誌性「鴨尾」設計 限量 911 部",
       "link": "https://www.edigest.hk/news/porsche-la-marzocco-911-carrera-rs-linea-micra-limited-espresso-machine-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2048305/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:26"
     },
     {
       "title": "澳洲樓市告急 連跌 7 個月累挫 8.1% 跌勢恐創 40 年最快 央行本周料再加息",
       "link": "https://www.edigest.hk/news/porsche-la-marzocco-911-carrera-rs-linea-micra-limited-espresso-machine-%e5%8d%b3%e7%9d%87%e5%85%a8%e6%96%87-2048310/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:26"
     },
     {
       "title": "【FinTech Week 2026】李家超：香港為全球投資者提供「確定性」 資金人才續湧港",
       "link": "https://www.edigest.hk/news/hong-kong-fintech-week-2026-john-lee-foreign-investment-northern-metropolis-technology-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2048304/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:26"
     },
     {
       "title": "【Airwallex調查】近九成港零售中小企看好雙11銷情 惟92%呻營運太複雜拖累利潤 隱性成本蠶食利潤",
       "link": "https://www.edigest.hk/news/airwallex-hong-kong-retail-sme-survey-double-11-sales-operational-complexity-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2048295/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:26"
     },
     {
       "title": "【史上最大幣圈失竊案】幣安恢復出金迎280億提款潮 自資填補95%損失 FBI矛頭指向北韓黑客",
       "link": "https://www.edigest.hk/news/binance-hack-withdrawals-28-billion-fbi-north-korea-tradertraitor-compensation-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2048283/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-03 00:06:53"
+      "scraped_at": "2026-11-03 07:35:26"
+    },
+    {
+      "title": "Apple AirPods 4 $749有交易！USB-C充電盒、H2晶片　開放式設計最長聽30小時",
+      "link": "https://ezone.hk/article/20116199/Apple-AirPods-4-749%E6%9C%89%E4%BA%A4%E6%98%93-USB-C%E5%85%85%E9%9B%BB%E7%9B%92-H2%E6%99%B6%E7%89%87-%E9%96%8B%E6%94%BE%E5%BC%8F%E8%A8%AD%E8%A8%88%E6%9C%80%E9%95%B7%E8%81%BD30%E5%B0%8F%E6%99%82",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:26"
+    },
+    {
+      "title": "ASUS Zenbook 14大減$6,000！3K OLED觸控屏、Core Ultra 7＋1TB　約1.2kg",
+      "link": "https://ezone.hk/article/20116200/ASUS-Zenbook-14%E5%A4%A7%E6%B8%9B-6-000-3K-OLED%E8%A7%B8%E6%8E%A7%E5%B1%8F-Core-Ultra-7-1TB-%E7%B4%841-2kg",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:26"
+    },
+    {
+      "title": "iPhone 備忘錄旅遊行程教學｜3步整靚 Google Maps 縮圖 行程表多人同步兼離線備用",
+      "link": "https://ezone.hk/article/20096652/iPhone-%E5%82%99%E5%BF%98%E9%8C%84%E6%97%85%E9%81%8A%E8%A1%8C%E7%A8%8B%E6%95%99%E5%AD%B8-3%E6%AD%A5%E6%95%B4%E9%9D%9A-Google-Maps-%E7%B8%AE%E5%9C%96-%E8%A1%8C%E7%A8%8B%E8%A1%A8%E5%A4%9A%E4%BA%BA%E5%90%8C%E6%AD%A5%E5%85%BC%E9%9B%A2%E7%B7%9A%E5%82%99%E7%94%A8",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:26"
+    },
+    {
+      "title": "成本過高 Grok Bot 收緊每週用量上限　用戶反映額度比預期更早用完",
+      "link": "https://www.newmobilelife.com/2026/11/03/grok-bot-usage-limits-reduced/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:27"
+    },
+    {
+      "title": "Apple 向菲律賓售出 170,000 部 MacBook Neo　教育市場成績顯著",
+      "link": "https://www.newmobilelife.com/2026/11/03/apple-macbook-neo-philippines-education/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:27"
+    },
+    {
+      "title": "iPhone Duo 供應短缺未解　Ternus 指供需平衡時間無法預測",
+      "link": "https://www.newmobilelife.com/2026/11/03/iphone-duo-supply-shortage-ternus/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:27"
+    },
+    {
+      "title": "Apple 2026 財年創紀錄　John Ternus 接任 CEO 後首份季報",
+      "link": "https://www.newmobilelife.com/2026/11/03/apple-2026-q4-financial-results/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:27"
+    },
+    {
+      "title": "手機掃描簽署 PDF 文件　原價 US $49.99《PDF Scanner Document Convert +》終生版限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/03/pdf-scanner-document-convert-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb-6/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:27"
+    },
+    {
+      "title": "智能掃描騰出 iPhone 儲存空間　原價 US $39.99《Photo Cleaner+》終生版限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/03/photo-cleaner-phone-storage-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:27"
+    },
+    {
+      "title": "Apple 開始測試 iOS 27.2.1　iOS 27.3 開發者 Beta 料明日推出",
+      "link": "https://www.newmobilelife.com/2026/11/03/ios-27-3-beta-china-rollout/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-03 07:35:27"
     },
     {
       "title": "96 歲巴菲特曾自稱 48 年無飲白開水　每天飲 5 罐可樂佔熱量四分一",
       "link": "https://unwire.hk/2026/11/02/warren-buffett-48-years-no-water-coca-cola/hottopic/food/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "iPhone 18 Pro 日本首 3 星期銷量跌 27%　中國升 29% 撐起全球增長",
       "link": "https://unwire.hk/2026/11/02/iphone-18-pro-japan-china-sales-2026/mobile-phone/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "轉數快與銀聯國際進行技術接駁    擬年底接通　支援逾 1 億商戶掃碼付款",
       "link": "https://unwire.hk/2026/11/02/fps-unionpay-international-qr-crossborder-payment/life-tech/epayment/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "香港電話騙案首 9 個月近萬宗　警方要求緊急停用涉案 VoIP 號碼",
       "link": "https://unwire.hk/2026/11/02/hong-kong-phone-scam-voip-numbers-suspend/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "教學：真正香港人免費 AI 秘書   Meta AI 現可一鍵生成   Google 文件、試算表、簡報",
       "link": "https://unwire.hk/2026/11/02/meta-google-document/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "神人用 AI 改造哈蘇 X2D II 相機　可內錄 4K RAW 影片  可連續錄影逾 15 分鐘",
       "link": "https://unwire.hk/2026/11/02/hasselblad-x2d-ii-video-firmware-hack/dc/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "瑪麗醫院新樓11部升降機可運作　3 部設「揸𨋢員」協助按掣   待全部安全才開新服務",
       "link": "https://unwire.hk/2026/11/02/queen-mary-hospital-lifts-resume-service/hottopic/spotlight/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "《人中之龍》之父名越稔洋工作室正式解散　馬東石主演《GANG OF DRAGON》前途未明",
       "link": "https://unwire.hk/2026/11/02/nagoshi-studio-dissolved-gang-of-dragon/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "NASA 署長: 中國若搶先登月   我會被撤職　料國會將追究責任",
       "link": "https://unwire.hk/2026/11/02/nasa-isaacman-china-moon-artemis-2027-2028/fun-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "Tesla 車主示範一句話   叫 Grok Bot 幫手訂 KFC    6 分鐘落單、17 分鐘到手",
       "link": "https://unwire.hk/2026/11/02/tesla-grok-bot-voice-order-cola/life-tech/auto/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "北韓牌\"馬頭山\"大摺機現身 外觀接近 Honor 手機  只准連官方\"未來\"Wi-Fi 網絡",
       "link": "https://unwire.hk/2026/11/02/north-korea-madusan-foldable-phone-video/mobile-phone/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "中國玩家利用 AI   將街機《灣岸》移植 iOS、Android　開發者稱舊 iPad 3 可運行 60fps",
       "link": "https://unwire.hk/2026/11/02/wangan-3dx-plus-ios-android-native-port/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "香港 3 份中文報章 11 月加價 《明報》《經濟日報》加至 HK$15 《信報》HK$18",
       "link": "https://unwire.hk/2026/11/02/hong-kong-newspapers-price-rise-2026/hottopic/spotlight/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "倡小學二年級學拼音（Pinyin）輸入法　李安迪：倉頡速成拆字門檻高    拼音跟普通話教學銜接",
       "link": "https://unwire.hk/2026/11/02/primary-school-pinyin-typing-curriculum/life-tech/school/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "日本MUJI 與松屋爆私隱外洩 近3000萬用戶受影響 退會會員紀錄亦中招",
       "link": "https://unwire.hk/2026/11/02/muji-matsuya-app-data-breach-japan/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "Newzoo 指 PC 遊戲增長反超主機 約半收入靠課金",
       "link": "https://unwire.hk/2026/11/02/newzoo-pc-gaming-revenue-console/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "Apple 新 CEO 談 AI 發展策略：絕不會為做 AI 而盲目推出功能",
       "link": "https://unwire.hk/2026/11/02/apple-ceo-john-ternus-ai-strategy-interview/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "AI 改真人原食譜冇羽衣甘藍改菠菜 紐約時報 NYT Cooking AI 改食譜惹反彈",
       "link": "https://unwire.hk/2026/11/02/nyt-cooking-ai-recipe-tool/software/ios-app/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "OpenAI 狂發逾 700 篇 AI 數學論文 數學家認突破但批寫得差兼有錯",
       "link": "https://unwire.hk/2026/11/02/openai-ai-maths-papers-frank-calegari/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-03 00:06:56"
+      "scraped_at": "2026-11-03 07:35:28"
     },
     {
       "title": "【國泰航空韓國優惠】戰鬥機來回首爾連稅2千4起！包23kg行李！",
       "link": "https://flyday.hk/cathay-pacific-korea-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "【真航空韓國優惠】濟州線再劈凌晨機去晚機返！連稅1千2起包行李！限11月至12月出發",
       "link": "https://flyday.hk/jinair-korea-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "【機上免費Wi-Fi2026】國泰、新航、達美等6間航空比較！會員資格、收費及使用限制",
       "link": "https://flyday.hk/inflight-wifi-airlines",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "【日本退稅2026】11月1日起先付後退！Visit Japan Web網上退稅流程、7大機場安排及注意事項",
       "link": "https://flyday.hk/tax-free-japan",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "連稅千四飛沖繩！包20kg寄艙行李！12月17日前出發！香港飛沖繩來回連稅只需$1,465起 – 大灣區航空 (優惠至11月8日)",
       "link": "https://www.meethk.com/165281/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "澳航直飛澳洲！連稅4千7起！明年9月10日前出發！包30kg寄艙行李！香港直飛悉尼、墨爾本來回連稅$4,751起 – 澳洲航空 (優惠至11月5日)",
       "link": "https://www.meethk.com/165235/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "國泰飛東京/大阪！連稅3千2！國泰官網11.11驚喜優惠！明年2月28日前出發！香港飛東京/大阪二人同行來回連稅每人只需$3,241起 – 國泰航空 (優惠至11月11日)",
       "link": "https://www.meethk.com/165181/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "國泰雪季直飛札幌！連稅四千！國泰官網11.11驚喜優惠！明年2月28日前出發！香港飛札幌二人同行來回連稅每人只需$4,010起 – 國泰航空 (優惠至11月11日)",
       "link": "https://www.meethk.com/164958/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "國泰飛福岡！連稅三千！國泰官網11.11驚喜優惠！12月10日前出發！香港飛福岡來回連稅只需$3,096起 – 國泰航空 (優惠至11月11日)",
       "link": "https://www.meethk.com/165182/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "大韓飛首爾優惠！連稅2千3起！可凌晨機去晚機返！明年3月31日前出發！香港飛首爾來回連稅只需$2,361起 – 大韓航空 (優惠至10月31日)",
       "link": "https://www.meethk.com/165055/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "港航飛沖繩！連稅千八！包23kg寄艙行李！明年6月28日前出發！香港飛沖繩來回連稅只需$1,878起 – 香港航空",
       "link": "https://www.meethk.com/165105/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "【永安旅遊 x 阿提哈德航空】2026全球最安全全服務航空公司！每日直飛阿布扎比，來回連稅$4,548起！歐洲多個熱門城市$4,953起！",
       "link": "https://www.meethk.com/165077/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "連稅千六飛釜山！包15kg寄艙行李！明年1月31日前出發！香港飛釜山來回連稅只需$1,658起 – EastarJet 易斯達航空 (優惠至10月30日)",
       "link": "https://www.meethk.com/165114/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     },
     {
       "title": "抵呀！港航直飛澳洲！連稅3千9起！明年6月24日前出發！包23kg寄艙行李！香港直飛悉尼、墨爾本來回連稅只需$3,996起 – 香港航空",
       "link": "https://www.meethk.com/165068/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-03 00:06:57"
+      "scraped_at": "2026-11-03 07:35:29"
     }
   ]
 }
