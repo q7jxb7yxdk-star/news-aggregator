@@ -1235,6 +1235,7 @@ class RankingArticle(Article):
 
 class ArtificialAnalysisFetcher:
     SOURCE = 'Artificial Analysis'
+    CODING_SCOPE = '全部有官方分數的代理／模型組合及設定（不包括 Router models）'
     BOARDS = (
         ('Artificial Analysis Intelligence Index',
          'https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index',
@@ -1340,6 +1341,10 @@ class ArtificialAnalysisFetcher:
             if not isinstance(row, dict):
                 raise ValueError('無效榜單項目')
             if score_key == 'indexScore':
+                if not isinstance(row.get('isRouter'), bool):
+                    raise ValueError('缺少官方 Router models 標記')
+                if row['isRouter']:
+                    continue
                 name = row.get('displayLabel')
                 multiplier = 100
             else:
@@ -1393,6 +1398,8 @@ class ArtificialAnalysisFetcher:
                 old = next((item for item in previous if isinstance(item, dict)
                             and item.get('source') == self.SOURCE and item.get('link') == link
                             and isinstance(item.get('rankings'), list) and item['rankings']
+                            and (score_key != 'indexScore'
+                                 or item.get('ranking_scope') == self.CODING_SCOPE)
                             and isinstance(item.get('scraped_at'), str)), None)
                 article = RankingArticle(
                     title, link, self.SOURCE, '科技',
@@ -1401,8 +1408,8 @@ class ArtificialAnalysisFetcher:
                     ranking_status='stale' if old else 'unavailable')
                 if old:
                     article.ranking_scope = old.get('ranking_scope', '上次成功取得的項目；範圍未確認')
-            if score_key == 'indexScore' and article.ranking_status == 'ok':
-                article.ranking_scope = '全部有官方分數的代理／模型組合及設定（包括 Router models）'
+            if score_key == 'indexScore':
+                article.ranking_scope = self.CODING_SCOPE
             articles.append(article)
         return articles
 

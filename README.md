@@ -95,15 +95,17 @@ http://localhost:8000
 | E-zone | 科技 | `https://ezone.hk/srae001/科技焦點/` | 當天 |
 | NewMobileLife | 科技 | `https://www.newmobilelife.com/最新文章/` | 當天 |
 | Unwire.hk | 科技 | `https://unwire.hk` | 當天最新文章 |
-| Artificial Analysis | 科技 | [Intelligence Index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index)、[Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents) | 全部有官方分數的模型及設定，隨現有抓取流程更新；Coding Agent 包括 Router models |
+| Artificial Analysis | 科技 | [Intelligence Index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index)、[Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents) | 全部有官方分數的模型及設定，隨現有抓取流程更新；Coding Agent 不包括 Router models |
 | FlyDayhk | 旅遊 | `https://flyday.hk/feed/` | RSS，機票相關內容；主來源 403 時改用 Google RSS 備用來源 |
 | MeetHK | 旅遊 | `https://www.meethk.com/category/flight/` | 機票相關內容 |
 
 ## 抓取順序
 
-Artificial Analysis 的兩個榜單各佔一行，點開即可查看排名。Intelligence Index 使用官方完整模型資料，Coding Agent Index 使用頁面完整代理／模型組合資料，包括 Router models。取消預設模型篩選，保留不同推理設定；只有該指數有官方分數的項目才列入，沒有分數的模型不會當成零分。按原始分數排序並顯示至小數一位；原始分數相同時使用相同名次，顯示值相同但原始分數不同時仍會有先後。
+Artificial Analysis 的兩個榜單各佔一行，點開即可查看排名。Intelligence Index 使用官方完整模型資料，Coding Agent Index 使用頁面完整代理／模型組合資料並排除 Router models。取消預設模型篩選，保留不同推理設定；只有該指數有官方分數的項目才列入，沒有分數的模型不會當成零分。按原始分數排序並顯示至小數一位；原始分數相同時使用相同名次，顯示值相同但原始分數不同時仍會有先後。
 
 更新失敗時保留該榜單上次成功資料及原擷取時間，並顯示提示；首次讀取失敗時顯示暫時無法取得排名。官方頁面格式變更可能需要調整解析器。
+
+Coding Agent 的舊資料必須同樣排除 Router models 才可保留；若只有先前包含 Router models 的快取，更新失敗時會顯示暫時無法取得排名。
 
 抓取順序由 `scraper.py` 內的 `FETCHERS` 控制。
 
