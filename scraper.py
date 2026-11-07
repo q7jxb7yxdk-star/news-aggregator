@@ -19,13 +19,13 @@ from typing import List, Optional                   # 用來標註變數類型�
 from dataclasses import dataclass, asdict           # 用來建立資料結構
 from pathlib import Path                            # 處理檔案路徑
 import logging                                      # 記錄程式執行過程
-from concurrent.futures import ThreadPoolExecutor, as_completed # 同時做多件事（多線程）
 from urllib.parse import urljoin, urlparse          # 處理網址
 import time                                         # 處理時間延遲
 import re                                           # 用來比對文字格式
 import calendar                                     # 處理 RSS UTC 時間
 import os
 import tempfile
+import math
 
 # ============================================================================
 # 設定日誌系統（像是程式的日記本，記錄發生什麼事）
@@ -954,114 +954,6 @@ class FlyDayRSSFetcher(BaseRSSFetcher):
         logger.info(f"✓ FlyDay.hk 機票過濾後 {len(filtered)} 篇")
         return filtered
 
-# ============================================================================
-# HolidaySmart 抓取器（只抓取 7 天內文章）
-# ============================================================================
-class HolidaySmartFetcher:
-    URL = 'https://holidaysmart.io/hk'
-    source = 'HolidaySmart'
-    category = '旅遊'
-
-    @staticmethod
-    def _today_hk_date():
-        return datetime.now(
-            timezone(timedelta(hours=TIMEZONE_OFFSET))
-        ).date()
-
-    @staticmethod
-    def _article_date_from_html(html: str):
-        date_match = re.search(
-            r'(?:datePublished|published_at|publishedAt)["\']?\s*[:=]\s*["\']([^"\']+)',
-            html
-        )
-        if not date_match:
-            date_match = re.search(r'(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2}))', html)
-
-        if not date_match:
-            return None
-
-        date_text = date_match.group(1).replace('Z', '+00:00')
-
-        try:
-            return datetime.fromisoformat(date_text).astimezone(
-                timezone(timedelta(hours=TIMEZONE_OFFSET))
-            ).date()
-        except ValueError:
-            return None
-
-    def fetch(self) -> List[Article]:
-        articles = []
-        seen = set()
-        today = self._today_hk_date()
-        earliest_date = today - timedelta(days=6)
-
-        try:
-            r = requests.get(self.URL, headers={'User-Agent': USER_AGENT}, timeout=REQUEST_TIMEOUT)
-            r.raise_for_status()
-            r.encoding = r.apparent_encoding
-            soup = BeautifulSoup(r.text, 'html.parser')
-            candidates = []
-
-            for tag in soup.select('a[href*="/hk/article/"]'):
-                if len(candidates) >= MAX_NEWS_PER_SOURCE:
-                    break
-
-                href = URLValidator.normalize(tag.get('href'), 'https://holidaysmart.io')
-                title = tag.get_text(strip=True)
-
-                if not title or len(title) < 12 or href in seen:
-                    continue
-
-                candidates.append((title, href))
-                seen.add(href)
-
-            def fetch_article(candidate):
-                title, href = candidate
-
-                try:
-                    article_response = requests.get(
-                        href,
-                        headers={'User-Agent': USER_AGENT},
-                        timeout=REQUEST_TIMEOUT
-                    )
-                    article_response.raise_for_status()
-                    article_response.encoding = article_response.apparent_encoding
-                    article_date = self._article_date_from_html(article_response.text)
-                except Exception as e:
-                    logger.warning(f"HolidaySmart 文章日期讀取失敗: {href} - {e}")
-                    return None
-
-                if not article_date or article_date < earliest_date or article_date > today:
-                    return None
-
-                return (
-                    article_date,
-                    Article(
-                        title=title,
-                        link=href,
-                        source=self.source,
-                        category=self.category
-                    )
-                )
-
-            with ThreadPoolExecutor(max_workers=5) as ex:
-                futures = [ex.submit(fetch_article, candidate) for candidate in candidates]
-
-                for f in as_completed(futures):
-                    result = f.result()
-
-                    if result:
-                        articles.append(result)
-
-            articles.sort(key=lambda item: item[0], reverse=True)
-            articles = [article for _, article in articles]
-            logger.info(f"✓ HolidaySmart 7 天內抓取 {len(articles)} 篇")
-            return articles
-
-        except Exception as e:
-            logger.error(f"✗ HolidaySmart 抓取失敗: {e}")
-            return []
-
 @dataclass
 class NowSportsArticle:
     title: str
@@ -1177,7 +1069,11 @@ class NowSportsFetcher:
             raise ValueError('缺少有效的新聞 ID')
         if not isinstance(title, str) or not title.strip():
             raise ValueError('缺少新聞標題')
-        if str(row.get('sportTypeId')) != '112':
+        sports = row.get('sportTypes')
+        if str(row.get('sportTypeId')) != '112' and not (
+                isinstance(sports, list) and any(
+                    isinstance(sport, dict) and str(sport.get('sportTypeId')) == '112'
+                    for sport in sports)):
             raise ValueError('新聞不是足球分類')
         if type(row.get('deleted')) is not bool:
             raise ValueError('新聞狀態無效')
@@ -1324,17 +1220,154 @@ class NowSportsFetcher:
 
 
 # ============================================================================
+# Artificial Analysis 官方預設排行榜
+# ============================================================================
+@dataclass
+class RankingArticle(Article):
+    rankings: list = None
+    ranking_scope: str = '官方預設顯示項目；非全部受測模型'
+    stale: bool = False
+    ranking_status: str = 'ok'
+
+
+class ArtificialAnalysisFetcher:
+    SOURCE = 'Artificial Analysis'
+    BOARDS = (
+        ('Artificial Analysis Intelligence Index',
+         'https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index',
+         'initialModels', 'intelligenceIndex'),
+        ('Artificial Analysis Coding Agent Index',
+         'https://artificialanalysis.ai/agents/coding-agents',
+         'benchmarkRows', 'indexScore'),
+    )
+
+    @staticmethod
+    def parse(html, collection, score_key):
+        # Next.js Flight contains JSON data, not executable code. Never eval scripts.
+        chunks = []
+        for script in BeautifulSoup(html, 'html.parser').find_all('script'):
+            match = re.fullmatch(r'self\.__next_f\.push\((.*)\)\s*;?', script.get_text(), re.S)
+            if not match:
+                continue
+            part = json.loads(match.group(1))
+            if isinstance(part, list) and len(part) > 1 and part[0] == 1 and isinstance(part[1], str):
+                chunks.append(part[1])
+        records = {}
+        for line in ''.join(chunks).splitlines():
+            key, separator, value = line.partition(':')
+            if separator:
+                try:
+                    records[key] = json.loads(value)
+                except ValueError:
+                    continue  # Module/text records are not JSON model data.
+
+        def resolve(value):
+            visited = set()
+            while isinstance(value, str) and value.startswith('$'):
+                if value in visited:
+                    raise ValueError('循環資料參照')
+                visited.add(value)
+                parts = value[1:].split(':')
+                value = records[parts[0]]
+                for part in parts[1:]:
+                    if isinstance(value, list):
+                        value = value[3 if part == 'props' else int(part)]
+                    else:
+                        value = value[part]
+            return value
+
+        def find(value):
+            if isinstance(value, dict):
+                if collection in value and isinstance(value[collection], list):
+                    yield value[collection]
+                for child in value.values():
+                    yield from find(child)
+            elif isinstance(value, list):
+                for child in value:
+                    yield from find(child)
+
+        datasets = [rows for record in records.values() for rows in find(record)]
+        if len(datasets) != 1:
+            raise ValueError('官方榜單資料結構已變更')
+        results, seen = [], set()
+        for entry in datasets[0]:
+            row = resolve(entry)
+            if not isinstance(row, dict):
+                raise ValueError('無效榜單項目')
+            if score_key == 'indexScore':
+                if row.get('isDefault') is not True or row.get('isRouter') is not False:
+                    continue
+                name = row.get('displayLabel')
+                multiplier = 100
+            else:
+                if row.get('chartDefaultSelected') is not True:
+                    continue
+                name = row.get('name')
+                multiplier = 1
+            score = row.get(score_key)
+            if score is None:
+                continue
+            if (not isinstance(name, str) or not name.strip()
+                    or isinstance(score, bool) or not isinstance(score, (int, float))
+                    or not math.isfinite(score) or not 0 <= score * multiplier <= 100):
+                raise ValueError('無效官方分數或名稱')
+            identity = row.get('id')
+            if not isinstance(identity, str) or identity in seen:
+                raise ValueError('無效或重複榜單識別碼')
+            seen.add(identity)
+            results.append({'name': name, 'score': score * multiplier})
+        if not results:
+            raise ValueError('官方榜單沒有有效分數')
+        results.sort(key=lambda row: (-row['score'], row['name']))
+        for index, row in enumerate(results):
+            row['rank'] = (results[index - 1]['rank'] if index and
+                           row['score'] == results[index - 1]['score'] else index + 1)
+        return results
+
+    def fetch(self):
+        try:
+            previous = json.loads(Path('news.json').read_text(encoding='utf-8')).get('news', [])
+        except (OSError, ValueError, AttributeError):
+            previous = []
+        if not isinstance(previous, list):
+            previous = []
+        articles = []
+        for title, link, collection, score_key in self.BOARDS:
+            try:
+                response = requests.get(link, headers=REQUEST_HEADERS, timeout=REQUEST_TIMEOUT)
+                response.raise_for_status()
+                rankings = self.parse(response.text, collection, score_key)
+                article = RankingArticle(title, link, self.SOURCE, '科技', rankings=rankings)
+                logger.info('✓ %s：%d 個官方預設項目', title, len(rankings))
+            except (requests.RequestException, ValueError, KeyError, TypeError, IndexError) as error:
+                logger.warning('%s 更新失敗：%s', title, error)
+                old = next((item for item in previous if isinstance(item, dict)
+                            and item.get('source') == self.SOURCE and item.get('link') == link
+                            and isinstance(item.get('rankings'), list) and item['rankings']
+                            and isinstance(item.get('scraped_at'), str)), None)
+                article = RankingArticle(
+                    title, link, self.SOURCE, '科技',
+                    scraped_at=old['scraped_at'] if old else None,
+                    rankings=old['rankings'] if old else [], stale=bool(old),
+                    ranking_status='stale' if old else 'unavailable')
+            if score_key == 'indexScore':
+                article.ranking_scope = '官方預設顯示項目（不含 Router models）；非全部受測模型'
+            articles.append(article)
+        return articles
+
+
+# ============================================================================
 # 抓取器清單（順序即 VS Code Terminal 顯示和實際抓取順序）
 # ============================================================================
 FETCHERS = {
     'Now Sports': NowSportsFetcher(),
     '點新聞': DotDotNewsFetcher(),
     '經濟一週': EdigestRSSFetcher(),
+    'Artificial Analysis': ArtificialAnalysisFetcher(),
     'E-zone': EzoneFetcher(),
     'NewMobileLife': NewMobileLifeFetcher(),
     'Unwire.hk': UnwireFetcher(),
     'FlyDayhk': FlyDayRSSFetcher(),
-    'HolidaySmart': HolidaySmartFetcher(),
     'MeetHK': ConfigFetcher(ScraperConfig(
         url='https://www.meethk.com/category/flight/',
         source='MeetHK',

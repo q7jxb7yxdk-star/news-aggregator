@@ -42,6 +42,21 @@ if __name__ == '__main__':
 
 ## 核心資料結構
 
+### Artificial Analysis 排行榜
+
+`ArtificialAnalysisFetcher` 讀取官方 Intelligence Index 與 Coding Agent Index 頁面。解析 `<script>` 中 Next.js Flight 的 JSON 字串，依傳輸順序串接，再解析資料記錄及跨記錄參照；不執行頁面 JavaScript。只使用 `initialModels`／`benchmarkRows` 指定資料集，避免混入其他評測圖表。
+
+- Intelligence：使用 `chartDefaultSelected == true` 項目的 `intelligenceIndex`。
+- Coding Agent：使用 `isDefault == true`、`isRouter == false` 項目的 `indexScore × 100`，保留 `displayLabel` 的代理名稱、模型名稱與設定。
+- 保留官方原始分數精度排序；原始分數相同時同名次，下一名跳號。介面顯示一位小數，所以顯示值相同不一定同名次。
+- 不套用新聞當天／24 小時篩選或每來源 15 篇上限。榜單明示為官方預設項目，不宣稱完整受測模型排名。
+- `RankingArticle` 繼承 `Article`，額外輸出 `rankings`（`rank`、`name`、`score`）、`ranking_scope`、`stale`、`ranking_status`（`ok`／`stale`／`unavailable`）。不變更一般新聞資料結構。
+- 每個榜單分開處理失敗，保留該榜單舊資料及原 `scraped_at`，並標記 `stale`。沒有舊資料時輸出空榜單及 `unavailable`，介面顯示提示而非虛構分數。
+
+現有 Actions 執行 `scraper.py` 時會一併更新這兩個榜單，不需要新增排程或套件。官方未提供這兩個圖表的公開 API；頁面結構改變時可能需要維護解析器。
+
+前端 `renderRanking()` 使用原生 `<details>` 建立兩個整行、可鍵盤展開的項目，表格支援水平捲動；名稱與時間經 HTML escaping，官方連結使用現有 URL 驗證。來源、分類及標題搜尋沿用原有流程。
+
 ### Article
 
 `Article` 是每篇新聞的標準格式。
@@ -99,11 +114,11 @@ FETCHERS = {
     'Now Sports': NowSportsFetcher(),
     '點新聞': DotDotNewsFetcher(),
     '經濟一週': EdigestRSSFetcher(),
+    'Artificial Analysis': ArtificialAnalysisFetcher(),
     'E-zone': EzoneFetcher(),
     'NewMobileLife': NewMobileLifeFetcher(),
     'Unwire.hk': UnwireFetcher(),
     'FlyDayhk': FlyDayRSSFetcher(),
-    'HolidaySmart': HolidaySmartFetcher(),
     'MeetHK': ConfigFetcher(ScraperConfig(...))
 }
 ```
@@ -172,7 +187,6 @@ RSS 抓取器基礎類別。
 | `NewMobileLifeFetcher` | NewMobileLife | 只保留當天最新文章 |
 | `UnwireFetcher` | Unwire.hk | 首頁文章，只保留當天或 24 小時內 |
 | `FlyDayRSSFetcher` | FlyDayhk | 先抓官方 RSS，失敗時改用 Google RSS 備用來源，再過濾機票優惠 |
-| `HolidaySmartFetcher` | HolidaySmart | 首頁找候選文章，再平行讀文章日期，只保留 7 天內，並按日期由新至舊排序 |
 
 ## 來源規則
 
@@ -187,7 +201,6 @@ RSS 抓取器基礎類別。
 | NewMobileLife | 科技 | 當天 |
 | Unwire.hk | 科技 | 當天或 24 小時內 |
 | FlyDayhk | 旅遊 | RSS 最新內容，並過濾機票相關；主來源不可用時使用 Google RSS 備用來源 |
-| HolidaySmart | 旅遊 | 7 天內，按文章日期由新至舊排序 |
 | MeetHK | 旅遊 | 通用 HTML 規則，並排除酒店、優惠碼等內容 |
 
 ## 去重邏輯
@@ -324,7 +337,6 @@ FETCHERS = {
 - 點新聞財經目前使用 `https://www.dotdotnews.com/finance`，優先保留香港時間當天文章；如果當天沒有內容，會改抓最近一天的文章。
 - 經濟一週使用即時財經分類 RSS：`https://www.edigest.hk/category/投資/news/feed/`，優先保留香港時間當天文章；如果 RSS 當天沒有內容，會改抓最近一天的文章。
 - FlyDayhk 優先使用 `https://flyday.hk/feed/`，不使用首頁，因為首頁有 Cloudflare 保護；如果官方 RSS 回 403，會改用 Google RSS 備用來源。
-- HolidaySmart 需要進入文章頁讀日期，因此比一般首頁解析慢；目前用 `ThreadPoolExecutor(max_workers=5)` 平行加速，最後會按文章日期由新至舊排序。
 - 所有時間判斷以香港時間 UTC+8 為準。
 
 ## 建議測試
@@ -351,7 +363,9 @@ python scraper.py
 不需要獨立收集程式、驗證模組或足球 JSON 檔案。
 
 文字新聞從 `https://sportsapi.now.com/api/getNewsList` 讀取，tag 為 `soccerAllSearchTags`。
-驗證 `newsId`、`headlineChi`、`publishDate`、足球分類 `sportTypeId=112` 及 `deleted`；
+驗證 `newsId`、`headlineChi`、`publishDate`、足球分類及 `deleted`；
+主分類 `sportTypeId=112` 或多重分類 `sportTypes` 中包含 `sportTypeId=112` 均接受，
+例如主分類為網球但同時列入足球的拿度／皇馬新聞；兩者均不含足球時仍視為分類驗證失敗。
 排除已刪除、未來或超過 24 小時的新聞，不保存內文或圖片。
 原文連結格式為 `https://sports.now.com/home/news/details?id=<id>`。
 

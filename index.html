@@ -243,6 +243,16 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* 陰影變深 */
         }
 
+        .ranking-card { grid-column: 1 / -1; min-width: 0; }
+        .ranking-card summary { cursor: pointer; font-weight: 600; line-height: 1.5; }
+        .ranking-card summary:focus-visible { outline: 2px solid #667eea; outline-offset: 5px; }
+        .ranking-table-wrap { overflow-x: auto; margin-top: 16px; }
+        .ranking-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+        .ranking-table th, .ranking-table td { padding: 10px 8px; border-bottom: 1px solid #eee; text-align: left; }
+        .ranking-table th:last-child, .ranking-table td:last-child { text-align: right; white-space: nowrap; }
+        .ranking-note { color: #666; font-size: 0.85em; line-height: 1.6; margin-top: 12px; }
+        .ranking-warning { color: #945300; }
+
         /* 新聞標題 */
         .news-title {
             font-size: 1.15em;
@@ -520,14 +530,14 @@
             'Unwire.hk': '💻',
             'NewMobileLife': '📱',
             'FlyDayhk': '🎫',
-            'HolidaySmart': '🌴',
             'MeetHK': '✈️',
             '經濟一週': '💰',
             '點新聞-港聞': '📰',
             '點新聞-兩岸': '📰',
             '點新聞-國際': '📰',
             '點新聞-財經': '💰',
-            'Now Sports': '⚽'
+            'Now Sports': '⚽',
+            'Artificial Analysis': '📊'
         };
 
         // ==================== 主要功能函數 ====================
@@ -680,6 +690,30 @@
          * 顯示新聞
          * @param {Array} newsArray - 要顯示的新聞陣列
          */
+        function renderRanking(item, link) {
+            const rows = Array.isArray(item.rankings) ? item.rankings.filter(row => row
+                && typeof row.name === 'string' && Number.isFinite(row.score)
+                && row.score >= 0 && row.score <= 100 && Number.isInteger(row.rank) && row.rank > 0) : [];
+            const warning = item.stale || item.ranking_status === 'stale'
+                ? '更新失敗，顯示上次成功取得的排名。'
+                : !rows.length ? '暫時無法取得官方排名，請稍後再試。' : '';
+            const table = rows.length ? `<div class="ranking-table-wrap"><table class="ranking-table">
+                <caption class="ranking-note">${escapeHtml(item.ranking_scope || '官方預設顯示項目；非全部受測模型')}（${rows.length} 項）</caption>
+                <thead><tr><th scope="col">名次</th><th scope="col">模型／代理及評測設定</th><th scope="col">分數</th></tr></thead>
+                <tbody>${rows.map(row => `<tr><td>${row.rank}</td><td>${escapeHtml(row.name)}</td><td>${row.score.toFixed(1)}</td></tr>`).join('')}</tbody>
+                </table></div>` : '';
+            return `<div class="news-card ranking-card" data-category="科技" data-source="Artificial Analysis">
+                <details><summary>${highlightSearchTerm(item.title, currentFilters.search)}${rows.length ? ` · ${rows.length} 項` : ''}</summary>
+                    ${warning ? `<p class="ranking-note ranking-warning" role="status">${warning}</p>` : ''}
+                    ${table}
+                    <p class="ranking-note">${rows.length ? `資料擷取時間（香港）：${escapeHtml(item.scraped_at || '未知')}<br>` : ''}按官方原始分數由高至低排序，顯示至小數一位。
+                    <a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">查看官方榜單</a></p>
+                </details>
+                <div class="news-meta"><span class="badge">科技</span><span class="source-tag">📊 Artificial Analysis</span>
+                ${warning ? `<span class="ranking-warning">${escapeHtml(warning)}</span>` : ''}</div>
+            </div>`;
+        }
+
         function displayNews(newsArray) {
             const container = document.getElementById('newsContainer');
             
@@ -705,6 +739,7 @@
             container.innerHTML = newsArray.map(item => {
                 const link = getSafeHttpUrl(item.link);
                 if (!link) return '';
+                if (item.source === 'Artificial Analysis') return renderRanking(item, link);
 
                 // 取得來源圖標，如果沒有定義就用預設的 📰
                 const icon = sourceIcons[item.source] || '📰';

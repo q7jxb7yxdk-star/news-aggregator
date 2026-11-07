@@ -14,6 +14,7 @@
 - 輸出 UTF-8 JSON
 - 網頁支援搜尋、分類篩選和來源篩選
 - 選擇分類後，來源會自動只顯示該分類可用來源
+- 「科技」→「Artificial Analysis」提供兩個可展開的官方排行榜，直接顯示名次、模型／代理及評測設定、分數和擷取時間
 
 ## 檔案
 
@@ -90,11 +91,15 @@ http://localhost:8000
 | E-zone | 科技 | `https://ezone.hk/srae001/科技焦點/` | 當天 |
 | NewMobileLife | 科技 | `https://www.newmobilelife.com/最新文章/` | 當天 |
 | Unwire.hk | 科技 | `https://unwire.hk` | 當天最新文章 |
+| Artificial Analysis | 科技 | [Intelligence Index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index)、[Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents) | 官方預設顯示項目，隨現有抓取流程更新；Coding Agent 不含 Router models |
 | FlyDayhk | 旅遊 | `https://flyday.hk/feed/` | RSS，機票相關內容；主來源 403 時改用 Google RSS 備用來源 |
-| HolidaySmart | 旅遊 | `https://holidaysmart.io/hk` | 7 天內，按文章日期由新至舊排序 |
 | MeetHK | 旅遊 | `https://www.meethk.com/category/flight/` | 機票相關內容 |
 
 ## 抓取順序
+
+Artificial Analysis 的兩個榜單各佔一行，點開即可查看排名。資料來自官方頁面內嵌資料，按原始分數排序並顯示至小數一位，不代表全部受測模型。同分的原始分數使用相同名次，顯示值相同但原始分數不同時仍會有先後。
+
+更新失敗時保留該榜單上次成功資料及原擷取時間，並顯示提示；首次讀取失敗時顯示暫時無法取得排名。官方頁面格式變更可能需要調整解析器。
 
 抓取順序由 `scraper.py` 內的 `FETCHERS` 控制。
 
@@ -103,11 +108,11 @@ FETCHERS = {
     'Now Sports': NowSportsFetcher(),
     '點新聞': DotDotNewsFetcher(),
     '經濟一週': EdigestRSSFetcher(),
+    'Artificial Analysis': ArtificialAnalysisFetcher(),
     'E-zone': EzoneFetcher(),
     'NewMobileLife': NewMobileLifeFetcher(),
     'Unwire.hk': UnwireFetcher(),
     'FlyDayhk': FlyDayRSSFetcher(),
-    'HolidaySmart': HolidaySmartFetcher(),
     'MeetHK': ConfigFetcher(ScraperConfig(...))
 }
 ```
@@ -175,6 +180,7 @@ FETCHERS = {
 E-zone
 NewMobileLife
 Unwire.hk
+Artificial Analysis
 ```
 
 ## 重要設定
@@ -216,6 +222,7 @@ GitHub Actions 沿用每小時第 17 分鐘的排程，執行 `scraper.py`，
 將全部來源統一寫入 `news.json`。排程可能延遲，Mac 關機不影響雲端執行。
 六個足球分類為英格蘭、西班牙、歐聯、歐霸／歐協、世界盃及其他足球。
 文字新聞來自官方足球新聞列表，與六個影片分類分別收集。
+新聞主分類或多重分類 `sportTypes` 包含足球（`sportTypeId=112`）即可通過分類驗證。
 以官方 `publishDate` 判斷 24 小時期限，按內容類型及新聞／影片 ID 去重，再依發布時間排序。
 新聞或影片請求、格式或分頁檢查失敗時，只保留舊 `news.json` 中該類型仍在 24 小時內且通過驗證的資料；
 另一類型與其他來源仍可更新。某類型成功但沒有近期項目時，不沿用該類型的舊資料。
