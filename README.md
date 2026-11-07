@@ -32,8 +32,10 @@
 需要 Python 3，並安裝以下套件：
 
 ```bash
-pip install requests feedparser beautifulsoup4
+python -m pip install requests feedparser beautifulsoup4 cryptography
 ```
+
+使用 VS Code 時，先在「Python: Select Interpreter」選擇專案的 `.venv/bin/python`，並在已啟用 `.venv` 的 Terminal 執行上述安裝指令，確保套件與執行程式使用同一個 Python 環境。
 
 ## 執行抓取
 
@@ -44,6 +46,8 @@ python scraper.py
 ```
 
 完成後會更新 `news.json`。
+
+在 VS Code 也可右擊 `scraper.py`，選擇「Run Python File in Terminal」。這會抓取所有來源；若只測試網頁顯示，可直接使用現有 `news.json`，無需先執行抓取。
 
 Terminal 會依抓取順序顯示每個來源的結果，例如：
 
@@ -91,13 +95,13 @@ http://localhost:8000
 | E-zone | 科技 | `https://ezone.hk/srae001/科技焦點/` | 當天 |
 | NewMobileLife | 科技 | `https://www.newmobilelife.com/最新文章/` | 當天 |
 | Unwire.hk | 科技 | `https://unwire.hk` | 當天最新文章 |
-| Artificial Analysis | 科技 | [Intelligence Index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index)、[Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents) | 官方預設顯示項目，隨現有抓取流程更新；Coding Agent 不含 Router models |
+| Artificial Analysis | 科技 | [Intelligence Index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index)、[Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents) | 全部有官方分數的模型及設定，隨現有抓取流程更新；Coding Agent 包括 Router models |
 | FlyDayhk | 旅遊 | `https://flyday.hk/feed/` | RSS，機票相關內容；主來源 403 時改用 Google RSS 備用來源 |
 | MeetHK | 旅遊 | `https://www.meethk.com/category/flight/` | 機票相關內容 |
 
 ## 抓取順序
 
-Artificial Analysis 的兩個榜單各佔一行，點開即可查看排名。資料來自官方頁面內嵌資料，按原始分數排序並顯示至小數一位，不代表全部受測模型。同分的原始分數使用相同名次，顯示值相同但原始分數不同時仍會有先後。
+Artificial Analysis 的兩個榜單各佔一行，點開即可查看排名。Intelligence Index 使用官方完整模型資料，Coding Agent Index 使用頁面完整代理／模型組合資料，包括 Router models。取消預設模型篩選，保留不同推理設定；只有該指數有官方分數的項目才列入，沒有分數的模型不會當成零分。按原始分數排序並顯示至小數一位；原始分數相同時使用相同名次，顯示值相同但原始分數不同時仍會有先後。
 
 更新失敗時保留該榜單上次成功資料及原擷取時間，並顯示提示；首次讀取失敗時顯示暫時無法取得排名。官方頁面格式變更可能需要調整解析器。
 

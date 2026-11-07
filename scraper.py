@@ -26,6 +26,9 @@ import calendar                                     # 處理 RSS UTC 時間
 import os
 import tempfile
 import math
+import gzip
+import hashlib
+import zlib
 
 # ============================================================================
 # 設定日誌系統（像是程式的日記本，記錄發生什麼事）
@@ -1220,12 +1223,12 @@ class NowSportsFetcher:
 
 
 # ============================================================================
-# Artificial Analysis 官方預設排行榜
+# Artificial Analysis 全部有分數模型排行榜
 # ============================================================================
 @dataclass
 class RankingArticle(Article):
     rankings: list = None
-    ranking_scope: str = '官方預設顯示項目；非全部受測模型'
+    ranking_scope: str = '全部有官方分數的模型及設定'
     stale: bool = False
     ranking_status: str = 'ok'
 
@@ -1242,7 +1245,7 @@ class ArtificialAnalysisFetcher:
     )
 
     @staticmethod
-    def parse(html, collection, score_key):
+    def flight_records(html):
         # Next.js Flight contains JSON data, not executable code. Never eval scripts.
         chunks = []
         for script in BeautifulSoup(html, 'html.parser').find_all('script'):
@@ -1261,6 +1264,51 @@ class ArtificialAnalysisFetcher:
                 except ValueError:
                     continue  # Module/text records are not JSON model data.
 
+        return records
+
+    @staticmethod
+    def find_collections(value, collection):
+        if isinstance(value, dict):
+            if collection in value:
+                yield value[collection]
+            for child in value.values():
+                yield from ArtificialAnalysisFetcher.find_collections(child, collection)
+        elif isinstance(value, list):
+            for child in value:
+                yield from ArtificialAnalysisFetcher.find_collections(child, collection)
+
+    @classmethod
+    def manifest(cls, html):
+        records = cls.flight_records(html)
+        manifests = [item for record in records.values()
+                     for item in cls.find_collections(record, 'manifest')]
+        if len(manifests) != 1 or not isinstance(manifests[0], dict):
+            raise ValueError('無法取得官方完整資料清單')
+        manifest = manifests[0]
+        if (not re.fullmatch(r'/data/[a-f0-9]+\.txt', manifest.get('path', ''))
+                or not re.fullmatch(r'[a-f0-9]{64}', manifest.get('key', ''))):
+            raise ValueError('無效官方完整資料清單')
+        return manifest
+
+    @staticmethod
+    def decode_models(content, manifest):
+        # Match the public frontend's AES-GCM -> gzip -> JSON data loader.
+        from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+        from cryptography.exceptions import InvalidTag
+        key = bytes.fromhex(manifest['key'])
+        nonce = hashlib.sha256(key).digest()[:12]
+        try:
+            payload = json.loads(gzip.decompress(AESGCM(key).decrypt(nonce, content, None)))
+        except (InvalidTag, OSError, EOFError, zlib.error) as error:
+            raise ValueError('官方完整模型資料解碼失敗') from error
+        if not isinstance(payload, dict) or not isinstance(payload.get('models'), list):
+            raise ValueError('官方完整模型資料無效')
+        return payload['models']
+
+    @classmethod
+    def parse(cls, html, collection, score_key, full_models=None):
+        records = cls.flight_records(html)
+
         def resolve(value):
             visited = set()
             while isinstance(value, str) and value.startswith('$'):
@@ -1276,17 +1324,14 @@ class ArtificialAnalysisFetcher:
                         value = value[part]
             return value
 
-        def find(value):
-            if isinstance(value, dict):
-                if collection in value and isinstance(value[collection], list):
-                    yield value[collection]
-                for child in value.values():
-                    yield from find(child)
-            elif isinstance(value, list):
-                for child in value:
-                    yield from find(child)
-
-        datasets = [rows for record in records.values() for rows in find(record)]
+        # Intelligence must use the complete payload, never silently use initialModels.
+        if score_key == 'intelligenceIndex':
+            if not isinstance(full_models, list):
+                raise ValueError('缺少完整 Intelligence 模型資料')
+            datasets = [full_models]
+        else:
+            datasets = [rows for record in records.values()
+                        for rows in cls.find_collections(record, collection)]
         if len(datasets) != 1:
             raise ValueError('官方榜單資料結構已變更')
         results, seen = [], set()
@@ -1295,13 +1340,9 @@ class ArtificialAnalysisFetcher:
             if not isinstance(row, dict):
                 raise ValueError('無效榜單項目')
             if score_key == 'indexScore':
-                if row.get('isDefault') is not True or row.get('isRouter') is not False:
-                    continue
                 name = row.get('displayLabel')
                 multiplier = 100
             else:
-                if row.get('chartDefaultSelected') is not True:
-                    continue
                 name = row.get('name')
                 multiplier = 1
             score = row.get(score_key)
@@ -1336,10 +1377,18 @@ class ArtificialAnalysisFetcher:
             try:
                 response = requests.get(link, headers=REQUEST_HEADERS, timeout=REQUEST_TIMEOUT)
                 response.raise_for_status()
-                rankings = self.parse(response.text, collection, score_key)
+                full_models = None
+                if score_key == 'intelligenceIndex':
+                    manifest = self.manifest(response.text)
+                    full_response = requests.get('https://artificialanalysis.ai' + manifest['path'],
+                                                 headers=REQUEST_HEADERS, timeout=REQUEST_TIMEOUT)
+                    full_response.raise_for_status()
+                    full_models = self.decode_models(full_response.content, manifest)
+                rankings = self.parse(response.text, collection, score_key, full_models)
                 article = RankingArticle(title, link, self.SOURCE, '科技', rankings=rankings)
-                logger.info('✓ %s：%d 個官方預設項目', title, len(rankings))
-            except (requests.RequestException, ValueError, KeyError, TypeError, IndexError) as error:
+                logger.info('✓ %s：全部 %d 個有官方分數的項目', title, len(rankings))
+            except (requests.RequestException, ValueError, KeyError, TypeError, IndexError,
+                    ImportError, OSError) as error:
                 logger.warning('%s 更新失敗：%s', title, error)
                 old = next((item for item in previous if isinstance(item, dict)
                             and item.get('source') == self.SOURCE and item.get('link') == link
@@ -1350,8 +1399,10 @@ class ArtificialAnalysisFetcher:
                     scraped_at=old['scraped_at'] if old else None,
                     rankings=old['rankings'] if old else [], stale=bool(old),
                     ranking_status='stale' if old else 'unavailable')
-            if score_key == 'indexScore':
-                article.ranking_scope = '官方預設顯示項目（不含 Router models）；非全部受測模型'
+                if old:
+                    article.ranking_scope = old.get('ranking_scope', '上次成功取得的項目；範圍未確認')
+            if score_key == 'indexScore' and article.ranking_status == 'ok':
+                article.ranking_scope = '全部有官方分數的代理／模型組合及設定（包括 Router models）'
             articles.append(article)
         return articles
 

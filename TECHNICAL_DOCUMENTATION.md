@@ -44,18 +44,20 @@ if __name__ == '__main__':
 
 ### Artificial Analysis 排行榜
 
-`ArtificialAnalysisFetcher` 讀取官方 Intelligence Index 與 Coding Agent Index 頁面。解析 `<script>` 中 Next.js Flight 的 JSON 字串，依傳輸順序串接，再解析資料記錄及跨記錄參照；不執行頁面 JavaScript。只使用 `initialModels`／`benchmarkRows` 指定資料集，避免混入其他評測圖表。
+`ArtificialAnalysisFetcher` 讀取官方 Intelligence Index 與 Coding Agent Index 頁面。解析 `<script>` 中 Next.js Flight 的 JSON 字串，依傳輸順序串接，再解析資料記錄及跨記錄參照；不執行頁面 JavaScript。
 
-- Intelligence：使用 `chartDefaultSelected == true` 項目的 `intelligenceIndex`。
-- Coding Agent：使用 `isDefault == true`、`isRouter == false` 項目的 `indexScore × 100`，保留 `displayLabel` 的代理名稱、模型名稱與設定。
+- Intelligence：讀取頁面 `manifest` 的官方 `/data/<hex>.txt` 檔案及公開解碼參數，依官方前端格式使用 AES-256-GCM 解碼（nonce 為 key 的 SHA-256 前 12 bytes），再 gzip 解壓及解析 JSON。使用完整 `models` 的 `intelligenceIndex`，不使用只有預設項目的 `initialModels` 作為成功結果。資料路徑固定在官方網域並驗證格式。
+- Coding Agent：使用完整 `benchmarkRows` 的 `indexScore × 100`，不依 `isDefault` 或 `isRouter` 過濾，保留 `displayLabel` 的代理名稱、模型名稱與設定。
 - 保留官方原始分數精度排序；原始分數相同時同名次，下一名跳號。介面顯示一位小數，所以顯示值相同不一定同名次。
-- 不套用新聞當天／24 小時篩選或每來源 15 篇上限。榜單明示為官方預設項目，不宣稱完整受測模型排名。
+- 不套用新聞當天／24 小時篩選、每來源 15 篇上限或預設模型篩選。納入所有有該指數官方分數的項目；缺少分數的模型不列入，也不當作零分。
 - `RankingArticle` 繼承 `Article`，額外輸出 `rankings`（`rank`、`name`、`score`）、`ranking_scope`、`stale`、`ranking_status`（`ok`／`stale`／`unavailable`）。不變更一般新聞資料結構。
-- 每個榜單分開處理失敗，保留該榜單舊資料及原 `scraped_at`，並標記 `stale`。沒有舊資料時輸出空榜單及 `unavailable`，介面顯示提示而非虛構分數。
+- 每個榜單分開處理失敗（含完整資料下載或解碼失敗），保留該榜單舊資料、原 `scraped_at` 及原 `ranking_scope`，並標記 `stale`。不把舊的部分排名誤標為完整排名。沒有舊資料時輸出空榜單及 `unavailable`。
 
-現有 Actions 執行 `scraper.py` 時會一併更新這兩個榜單，不需要新增排程或套件。官方未提供這兩個圖表的公開 API；頁面結構改變時可能需要維護解析器。
+現有 Actions 執行 `scraper.py` 時會一併更新這兩個榜單，依賴套件增加 `cryptography`（完整 Intelligence 資料解碼），不需要新增排程。官方未提供這兩個圖表的公開 API；頁面結構或資料格式改變時可能需要維護解析器。
 
 前端 `renderRanking()` 使用原生 `<details>` 建立兩個整行、可鍵盤展開的項目，表格支援水平捲動；名稱與時間經 HTML escaping，官方連結使用現有 URL 驗證。來源、分類及標題搜尋沿用原有流程。
+
+2026-11-07 驗證：實際執行 Artificial Analysis 抓取器，取得 Intelligence Index 109 項及 Coding Agent Index 33 項；數量會隨官方資料改變，不作固定上限。完整資料解碼、排序、不同設定與 Router models 收錄、缺分／零分／同分、解碼或下載失敗，以及舊資料範圍與時間保留的本機檢查通過。前端以模擬 DOM 驗證兩榜共 142 個資料列；尚未完成實際瀏覽器版面及互動驗證，也未執行整輪新聞抓取。
 
 ### Article
 

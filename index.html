@@ -698,7 +698,7 @@
                 ? '更新失敗，顯示上次成功取得的排名。'
                 : !rows.length ? '暫時無法取得官方排名，請稍後再試。' : '';
             const table = rows.length ? `<div class="ranking-table-wrap"><table class="ranking-table">
-                <caption class="ranking-note">${escapeHtml(item.ranking_scope || '官方預設顯示項目；非全部受測模型')}（${rows.length} 項）</caption>
+                <caption class="ranking-note">${escapeHtml(item.ranking_scope || '收錄範圍未確認')}（${rows.length} 項）</caption>
                 <thead><tr><th scope="col">名次</th><th scope="col">模型／代理及評測設定</th><th scope="col">分數</th></tr></thead>
                 <tbody>${rows.map(row => `<tr><td>${row.rank}</td><td>${escapeHtml(row.name)}</td><td>${row.score.toFixed(1)}</td></tr>`).join('')}</tbody>
                 </table></div>` : '';

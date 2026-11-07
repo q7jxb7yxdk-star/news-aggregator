@@ -77,7 +77,7 @@ jobs:
           # - requests：用於發送 HTTP 請求
           # - beautifulsoup4：用於解析 HTML 內容
           # - feedparser：用於解析 RSS/Atom 訂閱來源
-          pip install requests beautifulsoup4 feedparser
+          pip install requests beautifulsoup4 feedparser cryptography
       
       # --------------------------------------------
       # 步驟 4：執行爬蟲腳本
