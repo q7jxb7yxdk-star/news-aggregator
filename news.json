@@ -1,13 +1,68 @@
 {
-  "update_time": "2026-11-20 05:40:43",
-  "total": 142,
+  "update_time": "2026-11-20 11:22:49",
+  "total": 180,
   "news": [
+    {
+      "title": "【陳頌文隨筆】足球在旁就自然",
+      "link": "https://sports.now.com/home/news/details?id=39852077075",
+      "published_at": "2026-11-20T10:33:31+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "傳葡足總擬為C朗辦告別賽",
+      "link": "https://sports.now.com/home/news/details?id=39852187328",
+      "published_at": "2026-11-20T09:51:59+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "雙紅會 普捷天奴以攻為守襲利記？",
+      "link": "https://sports.now.com/home/news/details?id=39849365853",
+      "published_at": "2026-11-20T08:41:48+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "利記3主將復操迎紅魔",
+      "link": "https://sports.now.com/home/news/details?id=39852187323",
+      "published_at": "2026-11-20T08:30:06+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "普捷天奴首課操練遭無人機偷拍",
+      "link": "https://sports.now.com/home/news/details?id=39852187326",
+      "published_at": "2026-11-20T07:21:38+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
     {
       "title": "美斯2830萬美元薪酬冠絕美職",
       "link": "https://sports.now.com/home/news/details?id=39852187325",
       "published_at": "2026-11-20T05:05:53+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -17,8 +72,8 @@
       "title": "曼城贊助商或告英超董事會 18間英超挺身支持",
       "link": "https://sports.now.com/home/news/details?id=39852187324",
       "published_at": "2026-11-19T23:35:27+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -28,8 +83,8 @@
       "title": "祖亞曼尼續約皇馬至2032年",
       "link": "https://sports.now.com/home/news/details?id=39852077072",
       "published_at": "2026-11-19T22:47:38+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -39,8 +94,8 @@
       "title": "曼聯首季總收入升至1.461億鎊",
       "link": "https://sports.now.com/home/news/details?id=39852187321",
       "published_at": "2026-11-19T22:01:19+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -50,8 +105,8 @@
       "title": "【英超會客室】朗奴阿拿奧荷你問我答",
       "link": "https://sports.now.com/home/video#tvVideoId=202611182182099&type=england",
       "published_at": "2026-11-19T21:40:14+08:00",
-      "scraped_at": "2026-11-20 05:40:09",
-      "observed_at": "2026-11-20T05:40:09.329921+08:00",
+      "scraped_at": "2026-11-20 11:22:09",
+      "observed_at": "2026-11-20T11:22:09.637284+08:00",
       "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -61,8 +116,8 @@
       "title": "【精彩重溫】快速反擊話咁「2」",
       "link": "https://sports.now.com/home/video#tvVideoId=202611182182074&type=england",
       "published_at": "2026-11-19T21:40:10+08:00",
-      "scraped_at": "2026-11-20 05:40:09",
-      "observed_at": "2026-11-20T05:40:09.329921+08:00",
+      "scraped_at": "2026-11-20 11:22:09",
+      "observed_at": "2026-11-20T11:22:09.637284+08:00",
       "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -72,8 +127,8 @@
       "title": "梅迪歷首談禁賽風波 矛頭直指烏足總",
       "link": "https://sports.now.com/home/news/details?id=39852077071",
       "published_at": "2026-11-19T21:23:14+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -83,8 +138,8 @@
       "title": "國際賽卡斯度主動要求換走：想為車仔鬥列斯",
       "link": "https://sports.now.com/home/news/details?id=39852077070",
       "published_at": "2026-11-19T21:05:18+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -94,8 +149,8 @@
       "title": "普捷天奴成「魔」首訪：建立球隊文化",
       "link": "https://sports.now.com/home/news/details?id=39852187320",
       "published_at": "2026-11-19T20:28:24+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -105,8 +160,8 @@
       "title": "休戰5場復出！甘賓尼：現在身體非常健康",
       "link": "https://sports.now.com/home/news/details?id=39852187318",
       "published_at": "2026-11-19T20:01:05+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -116,8 +171,8 @@
       "title": "【德甲博聞】陽光「普」照",
       "link": "https://sports.now.com/home/news/details?id=39852187311",
       "published_at": "2026-11-19T18:23:46+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -127,8 +182,8 @@
       "title": "贊助商搵AV女星代言 李城終止合作",
       "link": "https://sports.now.com/home/news/details?id=39852187308",
       "published_at": "2026-11-19T17:25:24+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -138,8 +193,8 @@
       "title": "斯特拉斯堡換帥 馬度斯從史雲斯加盟",
       "link": "https://sports.now.com/home/news/details?id=39852077060",
       "published_at": "2026-11-19T16:36:16+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -149,8 +204,8 @@
       "title": "基馬尼斯倒戈紐記 重提離隊決定艱難",
       "link": "https://sports.now.com/home/news/details?id=39852187310",
       "published_at": "2026-11-19T15:02:00+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -160,8 +215,8 @@
       "title": "曼城防線頻犯錯 鄧尼：與哥迪奧拿離任有關",
       "link": "https://sports.now.com/home/news/details?id=39852187309",
       "published_at": "2026-11-19T13:56:09+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -171,8 +226,8 @@
       "title": "尤迪斯恢復有球訓練 基亞連尼：復出需時",
       "link": "https://sports.now.com/home/news/details?id=39852187307",
       "published_at": "2026-11-19T13:28:55+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -182,658 +237,796 @@
       "title": "普捷天奴逼切面對5大急症",
       "link": "https://sports.now.com/home/news/details?id=39846144883",
       "published_at": "2026-11-19T12:14:53+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
+      "scraped_at": "2026-11-20 11:22:20",
+      "observed_at": "2026-11-20T11:22:20.128297+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
       "category": "足球"
     },
     {
-      "title": "德意最新世界排名微升",
-      "link": "https://sports.now.com/home/news/details?id=39852077063",
-      "published_at": "2026-11-19T11:06:23+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
+      "title": "霸王茶姬3款泰奶拿鐵今上新！限量買一送一",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affb9b2e4b091a65a3022bf.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:25"
     },
     {
-      "title": "費托女球迷飛逾萬公里 圓16年美夢",
-      "link": "https://sports.now.com/home/news/details?id=39852077062",
-      "published_at": "2026-11-19T08:47:52+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
+      "title": "兩電下周公布明年電費調整方案　立法會開會討論",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affb6d8e4b091a65a30225a.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:25"
     },
     {
-      "title": "車路士絕殺PSG升女足歐聯榜首",
-      "link": "https://sports.now.com/home/news/details?id=39852187305",
-      "published_at": "2026-11-19T07:57:13+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
+      "title": "選委會選舉·你問我追｜從購物美食行轉為深度遊　旅遊界候選人獻計",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6afd9d8de4b091a65a2ff844.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:25"
     },
     {
-      "title": "普捷天奴履新：為曼聯帶來歡樂",
-      "link": "https://sports.now.com/home/news/details?id=39852077061",
-      "published_at": "2026-11-19T07:19:10+08:00",
-      "scraped_at": "2026-11-20 05:40:18",
-      "observed_at": "2026-11-20T05:40:18.833574+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
+      "title": "吐露港公路私家車撞壆翻側　橫亘路中車胎甩脫　近碗窰行車線一度封閉",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affad7ee4b091a65a302159.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:25"
+    },
+    {
+      "title": "JUPAS 2027｜理大邊科最難入？一文睇清熱門神科最新收生分數",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6afd984ee4b091a65a2ff7b0.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:25"
+    },
+    {
+      "title": "警隊進駐抖音三周年吸粉500萬　發布飛虎隊實訓片「一哥」有份演出",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affa2a8e4b091a65a302059.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:25"
+    },
+    {
+      "title": "天文台：日間氣溫降至約13度　新界再低一兩度",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affa1f1e4b091a65a302055.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:25"
+    },
+    {
+      "title": "專訪｜香港代表：APEC助港商面對面對接　乘勢推廣北都河套",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff9d2de4b091a65a30200b.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:25"
+    },
+    {
+      "title": "企業出海峰會24日舉行　聚焦科創文化外闖",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff9700e4b091a65a301f8b.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:26"
+    },
+    {
+      "title": "香港仔利群商場現巨鼠　網民笑稱：我係米奇唔係老鼠！",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff93ffe4b091a65a301f72.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:26"
+    },
+    {
+      "title": "選委會選舉｜社會各界籲踴躍投票　選賢任能推動良政善治",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff8a62e4b091a65a301e8f.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:26"
+    },
+    {
+      "title": "APEC｜港政商界：開放合作　與亞太工商界互利共贏",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff8888e4b091a65a301e68.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:26"
+    },
+    {
+      "title": "發現灣區｜浪漫冬日好去處！太古廣場「聖誕夜之夢」7大場景亮燈（附攻略）",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6afe9ad9e4b091a65a300b89.html",
+      "source": "點新聞-港聞",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:26"
     },
     {
       "title": "今日天氣顯著轉涼有幾陣雨　市區氣溫低至14度",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6aff154de4b091a65a301c3a.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:23"
+      "scraped_at": "2026-11-20 11:22:26"
+    },
+    {
+      "title": "習近平會見新加坡總理黃循財",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affb854e4b091a65a3022b8.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:27"
+    },
+    {
+      "title": "習近平會見澳大利亞總理阿爾巴尼斯",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affaf13e4b091a65a302180.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:27"
+    },
+    {
+      "title": "特朗普從中國返美途中發文：一次偉大且意義深遠的訪問",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affa8f1e4b091a65a3020e0.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:27"
+    },
+    {
+      "title": "習近平將同出席APEC領導人非正式會議的外國領導人舉行雙邊會晤",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affa5a8e4b091a65a3020a5.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:27"
+    },
+    {
+      "title": "APEC︱ 王毅介紹會議成果：發表《深圳展望》　亞太共同體建設啟航",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff8cc7e4b091a65a301ea4.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:27"
+    },
+    {
+      "title": "APEC｜港政商界：開放合作　與亞太工商界互利共贏",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff8888e4b091a65a301e68.html",
+      "source": "點新聞-兩岸",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:27"
     },
     {
       "title": "王毅送別美俄元首後舉行記者會　約30分鐘記者會有兩個關鍵詞",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6aff1f69e4b091a65a301ce6.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:24"
+      "scraped_at": "2026-11-20 11:22:27"
     },
     {
       "title": "中俄美元首首次會晤　王毅：載入史冊的標誌性事件",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6aff0f01e4b091a65a301bc4.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:24"
+      "scraped_at": "2026-11-20 11:22:27"
     },
     {
       "title": "APEC期間各國政要都去了深圳哪些地方？同款打卡地一文睇！",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6aff0d08e4b091a65a301b78.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:24"
+      "scraped_at": "2026-11-20 11:22:28"
     },
     {
       "title": "中俄美元首會晤　普京冀夥伴式合作護世界穩定",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6aff091be4b091a65a301b3f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:24"
+      "scraped_at": "2026-11-20 11:22:28"
     },
     {
       "title": "王毅機場送別美俄元首後見記者　宣布「深圳展望」達成",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6aff0877e4b091a65a301b3c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:24"
+      "scraped_at": "2026-11-20 11:22:28"
     },
     {
       "title": "首次中俄美三方會晤　特朗普：我們創造了歷史",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6aff037ce4b091a65a301b07.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:24"
+      "scraped_at": "2026-11-20 11:22:28"
     },
     {
       "title": "（有片）APEC｜外媒記者視角下的深圳：一座科創之城的安全感",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afefdc3e4b091a65a301a97.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:24"
+      "scraped_at": "2026-11-20 11:22:28"
     },
     {
       "title": "（有片）中俄美元首深圳會晤　發表和平宣言履行大國責任｜時事點睇（內附彩蛋）",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afef86ce4b091a65a3019eb.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:24"
+      "scraped_at": "2026-11-20 11:22:28"
     },
     {
       "title": "APEC與會領導人感謝習近平主席 感謝中國 感謝深圳",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afef723e4b091a65a301989.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:25"
+      "scraped_at": "2026-11-20 11:22:28"
     },
     {
       "title": "特朗普稱美國不支持「台獨」　專家解讀：台灣問題為核心根基　美方涉台表態須落到實處",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afef2ade4b091a65a301932.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:25"
+      "scraped_at": "2026-11-20 11:22:28"
     },
     {
       "title": "中俄美元首會晤｜專家解讀：為應對熱點問題和全球性挑戰提供新契機",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afef075e4b091a65a3018e8.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:25"
+      "scraped_at": "2026-11-20 11:22:29"
     },
     {
       "title": "（有片）特朗普啟程返美　王毅到機場送別　二人長時間交談",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afee568e4b091a65a3017ac.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:25"
+      "scraped_at": "2026-11-20 11:22:29"
     },
     {
       "title": "APEC宴會桌驚艷！齊聚上海北京深圳三地地標",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afedfb5e4b091a65a3016ca.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:25"
+      "scraped_at": "2026-11-20 11:22:29"
     },
     {
       "title": "中俄美元首會晤　專家：中國發揮大國擔當推動世界多極化",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afedf1ce4b091a65a3016b5.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:25"
+      "scraped_at": "2026-11-20 11:22:29"
     },
     {
       "title": "APEC｜從港深協同到亞太共贏　德勤歐振興：香港為跨境合作創造更多確定性",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afede44e4b091a65a30169e.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:25"
+      "scraped_at": "2026-11-20 11:22:29"
     },
     {
       "title": "APEC｜峰會人氣旺底氣足　楊莉珊冀世界灣區經濟合作聯盟早日進入實質運作",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afedb6ce4b091a65a301650.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:25"
+      "scraped_at": "2026-11-20 11:22:29"
     },
     {
       "title": "（有片）中俄美元首有史以來首次聚首　開場白說了什麼？",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeda14e4b091a65a30162f.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:26"
+      "scraped_at": "2026-11-20 11:22:29"
     },
     {
       "title": "習近平：三國會晤播下的種子必將生根發芽、開花結果",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afed9cce4b091a65a30162c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:26"
+      "scraped_at": "2026-11-20 11:22:29"
     },
     {
       "title": "彭麗媛同APEC領導人或代表配偶參觀嶺南非遺展",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afed781e4b091a65a301600.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:26"
+      "scraped_at": "2026-11-20 11:22:30"
     },
     {
       "title": "中俄美元首發表和平宣言　三國將就防止核擴散進行對話",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afed5fae4b091a65a301533.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:26"
+      "scraped_at": "2026-11-20 11:22:30"
     },
     {
       "title": "中俄美元首會晤結束　歷時約90分鐘",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeca97e4b091a65a301391.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:26"
+      "scraped_at": "2026-11-20 11:22:30"
     },
     {
       "title": "（有片）APEC｜藉峰會對接亞馬遜高層　優必選譚旻：香港助力創科成果走向APEC經濟體",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afec3bee4b091a65a3012a7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:26"
+      "scraped_at": "2026-11-20 11:22:30"
     },
     {
       "title": "APEC專屬圍巾揭秘　「香雲紗」與「宋錦」驚艷亮相",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afebec8e4b091a65a3011dd.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:26"
+      "scraped_at": "2026-11-20 11:22:30"
     },
     {
       "title": "（有片）點妹Vlog｜現實版「霍格沃茨魔法藏書閣」？實探深圳「最聰明」圖書館",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afebd95e4b091a65a3011c2.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:26"
+      "scraped_at": "2026-11-20 11:22:30"
     },
     {
       "title": "中俄美元首會晤　習近平就大國如何正確相處提4點看法",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afebc1ce4b091a65a301170.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:27"
+      "scraped_at": "2026-11-20 11:22:30"
     },
     {
       "title": "特朗普：我同習主席的友誼會越來越深厚",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeb97be4b091a65a3010cd.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:27"
+      "scraped_at": "2026-11-20 11:22:30"
     },
     {
       "title": "習近平：大國良性互動不是選擇題　而是必答題",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeb68de4b091a65a300fde.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:27"
+      "scraped_at": "2026-11-20 11:22:31"
     },
     {
       "title": "習近平：中俄美三國最高領導人有史以來首次聚首　具有開創性意義",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeb484e4b091a65a300f4e.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:27"
+      "scraped_at": "2026-11-20 11:22:31"
     },
     {
       "title": "APEC｜特朗普：美國不支持「台獨」",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeb483e4b091a65a300f4d.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:27"
+      "scraped_at": "2026-11-20 11:22:31"
     },
     {
       "title": "特朗普稱讚習主席：您是一位了不起的領袖",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeb3a4e4b091a65a300ed7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:27"
+      "scraped_at": "2026-11-20 11:22:31"
     },
     {
       "title": "習近平向世界推介4座中國城市　馬斯克全去過",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeb32ae4b091a65a300ebe.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:27"
+      "scraped_at": "2026-11-20 11:22:31"
     },
     {
       "title": "習近平主持中俄美元首會晤",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afea2ace4b091a65a300c41.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:27"
+      "scraped_at": "2026-11-20 11:22:31"
     },
     {
       "title": "（有片）中俄美元首會晤　普京抵達現場",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeaf13e4b091a65a300dc5.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:28"
+      "scraped_at": "2026-11-20 11:22:31"
     },
     {
       "title": "外交部介紹APEC領導人會議情況：成功舉行　成果豐碩",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeaeaae4b091a65a300d9c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:28"
+      "scraped_at": "2026-11-20 11:22:31"
     },
     {
       "title": "（有片）中俄美元首將會晤　即睇現場布置",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeae5be4b091a65a300d99.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:28"
+      "scraped_at": "2026-11-20 11:22:32"
     },
     {
       "title": "台女搭飛機調低椅背遭日男打頭　經空姐調解後再遭報復　網民怒斥：應直接報警",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeb449e4b091a65a300f13.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:28"
+      "scraped_at": "2026-11-20 11:22:32"
     },
     {
       "title": "商務部：中美貿易理事會農業工作組將於近期召開首次會議",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afeaa9ce4b091a65a300d40.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:28"
+      "scraped_at": "2026-11-20 11:22:32"
     },
     {
       "title": "點直播｜中俄美元首會晤｜11月19日",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afea7a0e4b091a65a300d08.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:28"
+      "scraped_at": "2026-11-20 11:22:32"
     },
     {
       "title": "中日領導人是否將舉行會晤？外交部回應",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afea742e4b091a65a300cf2.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:28"
+      "scraped_at": "2026-11-20 11:22:32"
     },
     {
       "title": "金正恩與特朗普是否有會晤安排？外交部回應",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afea45fe4b091a65a300c60.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:28"
+      "scraped_at": "2026-11-20 11:22:32"
     },
     {
       "title": "日媒稱高市早苗在機場受到中方「簡樸迎接」　外交部回應",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afea3e3e4b091a65a300c47.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:29"
+      "scraped_at": "2026-11-20 11:22:32"
     },
     {
       "title": "習近平會見美國總統特朗普　高清大圖來了！",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afea246e4b091a65a300c3c.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:29"
+      "scraped_at": "2026-11-20 11:22:32"
     },
     {
       "title": "中美元首會見持續約1小時",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe9d88e4b091a65a300bd1.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:29"
+      "scraped_at": "2026-11-20 11:22:33"
     },
     {
       "title": "（有片）馬斯克帶幼子到深圳：他每次都很期待來中國",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe9bb5e4b091a65a300b91.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:29"
+      "scraped_at": "2026-11-20 11:22:33"
     },
     {
       "title": "（多圖）香港羽球公開賽｜陳雨菲0比2不敵拉克希塔　無緣8強",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe9a9fe4b091a65a300b72.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:29"
+      "scraped_at": "2026-11-20 11:22:33"
     },
     {
       "title": "APEC｜普京：完全贊同APEC「中國年」主題",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe9d22e4b091a65a300bcd.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:29"
+      "scraped_at": "2026-11-20 11:22:33"
     },
     {
       "title": "李家超：與習主席短暫交流　簡報大灣區與亞太發展機遇專題研討情況",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe9371e4b091a65a300ac7.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:29"
+      "scraped_at": "2026-11-20 11:22:33"
     },
     {
       "title": "APEC｜馬斯克深圳發聲：中國很酷！我是中國的超級粉絲",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe8e55e4b091a65a300a28.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:29"
+      "scraped_at": "2026-11-20 11:22:33"
     },
     {
       "title": "李家超：已與大馬越南泰國等五國領導人會面　稍後晤秘魯及新加坡領導人",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe8d98e4b091a65a300a13.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:30"
+      "scraped_at": "2026-11-20 11:22:33"
     },
     {
       "title": "（有片）美俄元首會談　特朗普：普京是我的朋友",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe8bcfe4b091a65a3009b2.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:30"
+      "scraped_at": "2026-11-20 11:22:33"
     },
     {
       "title": "（有片）習近平會見美國總統特朗普",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe7814e4b091a65a300707.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:30"
+      "scraped_at": "2026-11-20 11:22:34"
     },
     {
       "title": "APEC｜特朗普：非常期待同習近平與普京會晤",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe8891e4b091a65a300902.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:30"
+      "scraped_at": "2026-11-20 11:22:34"
     },
     {
       "title": "中美元首深圳會晤　參加會見的美方代表有哪些？",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe7f63e4b091a65a300869.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:30"
+      "scraped_at": "2026-11-20 11:22:34"
     },
     {
       "title": "APEC領導人非正式會議前　習近平與李家超交談",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe77d4e4b091a65a300703.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:30"
+      "scraped_at": "2026-11-20 11:22:34"
     },
     {
       "title": "APEC｜特朗普：反對過度監管人工智能發展",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe77b6e4b091a65a3006ff.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:30"
+      "scraped_at": "2026-11-20 11:22:34"
     },
     {
       "title": "（有片）APEC晚宴合影前休憩時刻　李家超與卡尼卡斯特相談甚歡",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe73ade4b091a65a3006cb.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:30"
+      "scraped_at": "2026-11-20 11:22:34"
     },
     {
       "title": "（有片）特朗普盛讚中方歡迎儀式：場面盛大又美麗　我心懷感激",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe7147e4b091a65a300675.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:31"
+      "scraped_at": "2026-11-20 11:22:34"
     },
     {
       "title": "特朗普、普京等領導人步入會場　現場視頻來了",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe6c9ee4b091a65a30061d.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:31"
+      "scraped_at": "2026-11-20 11:22:34"
     },
     {
       "title": "（現場畫面）APEC領導人非正式會議　普京筆不離手記重點　特朗普專注聆聽",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe6c07e4b091a65a30061a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:31"
+      "scraped_at": "2026-11-20 11:22:35"
     },
     {
       "title": "中俄美元首會晤選址的麒麟山莊　有何來頭？",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe6b56e4b091a65a300604.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:31"
+      "scraped_at": "2026-11-20 11:22:35"
     },
     {
       "title": "（有片+全文）習近平：建設亞太共同體　續寫「亞太奇跡」新篇章",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe6949e4b091a65a3005db.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:31"
+      "scraped_at": "2026-11-20 11:22:35"
     },
     {
       "title": "（有片+多圖）特朗普乘車被拍到未拉窗簾　沉浸式欣賞深圳夜景",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe64c2e4b091a65a30056a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:31"
+      "scraped_at": "2026-11-20 11:22:35"
     },
     {
       "title": "習近平：攜手搭建亞太共同體的「四樑八柱」",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe5e95e4b091a65a3004b8.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:31"
+      "scraped_at": "2026-11-20 11:22:35"
     },
     {
       "title": "習近平：中方將提供2000萬美元開展APEC務實合作　深圳設亞太共同體研究中心",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe5e62e4b091a65a3004b4.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:31"
+      "scraped_at": "2026-11-20 11:22:35"
     },
     {
       "title": "（有片）習近平談建設亞太共同體：和衷共濟、開放融通、開拓創新、包容發展",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe5e40e4b091a65a3004b1.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:32"
+      "scraped_at": "2026-11-20 11:22:35"
     },
     {
       "title": "全球矚目！中俄美元首會晤今舉行",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe5b9ce4b091a65a300493.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:32"
+      "scraped_at": "2026-11-20 11:22:35"
     },
     {
       "title": "點直播｜APEC領導人非正式會議舉行　習近平發表重要講話｜11月19日",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe566de4b091a65a300401.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:32"
+      "scraped_at": "2026-11-20 11:22:36"
     },
     {
       "title": "習近平同與會嘉賓集體合影",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe5607e4b091a65a3003f9.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:32"
+      "scraped_at": "2026-11-20 11:22:36"
     },
     {
       "title": "普京和特朗普抵達APEC領導人非正式會議現場",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe52b4e4b091a65a3003a9.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:32"
+      "scraped_at": "2026-11-20 11:22:36"
     },
     {
       "title": "（有片）APEC｜白宮發布特朗普訪華視頻",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe528ee4b091a65a3003a5.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:32"
+      "scraped_at": "2026-11-20 11:22:36"
     },
     {
       "title": "（有片）習近平主持APEC領導人非正式會議並發表重要講話",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe50b6e4b091a65a300365.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:32"
+      "scraped_at": "2026-11-20 11:22:36"
     },
     {
       "title": "APEC｜數讀世界四大灣區　看APEC新機遇",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe4230e4b091a65a3001b2.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:32"
+      "scraped_at": "2026-11-20 11:22:36"
     },
     {
       "title": "（有片）APEC｜峰會見證港深強強結合　蔡冠深：發展創新科技需要金融賦能",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afd9d0ae4b091a65a2ff807.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:33"
+      "scraped_at": "2026-11-20 11:22:36"
     },
     {
       "title": "APEC｜ShenZhen Travel成新熱詞　世界看見未來之城",
       "link": "https://www.dotdotnews.com/a/202611/19/AP6afe39e0e4b091a65a300085.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:33"
+      "scraped_at": "2026-11-20 11:22:36"
+    },
+    {
+      "title": "亞太股市全線受壓　日韓跌幅均逾4%",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affbb8be4b091a65a3022c8.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:38"
+    },
+    {
+      "title": "習近平會見新加坡總理黃循財",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affb854e4b091a65a3022b8.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:38"
+    },
+    {
+      "title": "歐盟委員會遭網絡攻擊　系統停擺逾10日",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affb53ce4b091a65a302257.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:38"
+    },
+    {
+      "title": "克里米亞大橋連續3日遭烏軍襲擊　普京：俄方不會再討論海上停火",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affb526e4b091a65a302254.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:38"
+    },
+    {
+      "title": "未經授權讀加密私信　自主交易累用戶「破財」　 Meta智能體爆安全隱患　AI擅「替人作主」",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affaf89e4b091a65a302183.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:38"
+    },
+    {
+      "title": "特朗普從中國返美途中發文：一次偉大且意義深遠的訪問",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affa8f1e4b091a65a3020e0.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:38"
+    },
+    {
+      "title": "法節目稱「整個華僑群體都是中國間諜」　中使館：純屬污衊",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff9639e4b091a65a301f89.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:38"
+    },
+    {
+      "title": "馬斯克切割：我不是MAGA　特朗普回應",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff9549e4b091a65a301f86.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:38"
+    },
+    {
+      "title": "特朗普：不會在新年前「倉促」決定對伊朗行動",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6aff8dace4b091a65a301ecc.html",
+      "source": "點新聞-國際",
+      "category": "新聞",
+      "scraped_at": "2026-11-20 11:22:41"
     },
     {
       "title": "多國聯軍稱攔截並摧毀胡塞導彈襲擊",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6aff165de4b091a65a301c50.html",
       "source": "點新聞-國際",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:34"
+      "scraped_at": "2026-11-20 11:22:41"
     },
     {
-      "title": "APEC深圳峰會圓滿舉行　香港工商界：發揮內聯外通優勢　共建亞太金融創科雙引擎",
-      "link": "https://www.dotdotnews.com/a/202611/19/AP6afee7d2e4b091a65a3017f6.html",
+      "title": "亞太股市全線受壓　日韓跌幅均逾4%",
+      "link": "https://www.dotdotnews.com/a/202611/20/AP6affbb8be4b091a65a3022c8.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:36"
-    },
-    {
-      "title": "打造區域知識產權貿易中心　陳茂波：目標2030年港自主進行專利實質審查",
-      "link": "https://www.dotdotnews.com/a/202611/19/AP6afea1e0e4b091a65a300c34.html",
-      "source": "點新聞-財經",
-      "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:36"
-    },
-    {
-      "title": "許正宇：港交所擬推代幣化碳信用先導計劃",
-      "link": "https://www.dotdotnews.com/a/202611/19/AP6afe762ce4b091a65a3006fb.html",
-      "source": "點新聞-財經",
-      "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:36"
+      "scraped_at": "2026-11-20 11:22:44"
     },
     {
       "title": "Anthropic 今晚納指世紀首掛 最終定價每股 83 美元 超越推介區間上限 「灰色市場」暗盤預示開盤漲幅逾 20%",
       "link": "https://www.edigest.hk/news/anthropic-ipo-83-dollars-pricing-grey-market-surge-over-20-percent-107-billion-record-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051343/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:37"
+      "scraped_at": "2026-11-20 11:22:44"
     },
     {
       "title": "【一定要講用成點？】美政府擬強制美企 公開披露使用中國AI情況  Airbnb用阿里「通義千問」首當其衝",
       "link": "https://www.edigest.hk/news/us-government-considers-forcing-us-companies-disclose-chinese-ai-usage-alibaba-qwen-airbnb-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051334/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:37"
+      "scraped_at": "2026-11-20 11:22:44"
     },
     {
       "title": "大東山百年石屋 288 萬拍出 開價 38 萬承價 50 口 11 分鐘搶貴 6.6 倍 導演翁維銓持貨 49 年 帳面暴升 575 倍 冇水冇電、行山 1.5 小時 建築呎價逾 1.15 萬",
       "link": "https://www.edigest.hk/news/lantau-sunset-peak-century-old-stone-house-auction-2-88-million-hkd-575x-gain-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051329/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:37"
+      "scraped_at": "2026-11-20 11:22:44"
     },
     {
       "title": "【藍籌大洗倉】阿里巴巴(9988)績前急插逼近80元！勢錄十連跌累瀉25% 美新規堵海外算力成致命傷",
       "link": "https://www.edigest.hk/news/alibaba-9988-stock-nears-80-hkd-10-day-losing-streak-us-ai-chip-curbs-earnings-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051315/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:37"
+      "scraped_at": "2026-11-20 11:22:44"
     },
     {
       "title": "【末日博士潑冷水】黃仁勳重返英偉達？魯賓尼直言「佢嘅機會係零」 預言事件反助美國AI競賽拋離中國",
       "link": "https://www.edigest.hk/news/nouriel-roubini-zero-chance-jensen-huang-returns-nvidia-us-ai-lead-china-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051311/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:37"
+      "scraped_at": "2026-11-20 11:22:44"
     },
     {
       "title": "英偉達開黃仁勳卸任後首次全員大會  臨時 CEO Colette Kress ：「提前加薪派股權」斬釘截鐵落閘：無意讓黃仁勳回歸",
       "link": "https://www.edigest.hk/news/nvidia-interim-ceo-colette-kress-all-hands-raises-equity-december-rejects-jensen-huang-return-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051293/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-20 05:40:37"
+      "scraped_at": "2026-11-20 11:22:44"
     },
     {
       "title": "Artificial Analysis Intelligence Index",
       "link": "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index",
       "source": "Artificial Analysis",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:37",
+      "scraped_at": "2026-11-20 11:22:45",
       "rankings": [
         {
           "name": "Claude Fable 5.2 (Max, Default Fallback)",
@@ -1625,7 +1818,7 @@
       "link": "https://artificialanalysis.ai/agents/coding-agents",
       "source": "Artificial Analysis",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:37",
+      "scraped_at": "2026-11-20 11:22:45",
       "rankings": [
         {
           "name": "Antigravity CLI - Gemini 4 Neon (Xhigh)",
@@ -1833,242 +2026,319 @@
       "ranking_status": "ok"
     },
     {
+      "title": "AirPods比較2026｜AirPods 5 vs Pro 3 vs Max 2　香港售價、降噪、續航及充電差異一文睇清",
+      "link": "https://ezone.hk/article/20029312/AirPods%E6%AF%94%E8%BC%832026-AirPods-5-vs-Pro-3-vs-Max-2-%E9%A6%99%E6%B8%AF%E5%94%AE%E5%83%B9-%E9%99%8D%E5%99%AA-%E7%BA%8C%E8%88%AA%E5%8F%8A%E5%85%85%E9%9B%BB%E5%B7%AE%E7%95%B0%E4%B8%80%E6%96%87%E7%9D%87%E6%B8%85",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:47"
+    },
+    {
+      "title": "智能手機玩到厭？日本 KDDI 推復古 INFOBAR ZERO 助「戒手機癮」　無得上網、玩 SNS 成最大賣點！",
+      "link": "https://ezone.hk/article/20119759/%E6%99%BA%E8%83%BD%E6%89%8B%E6%A9%9F%E7%8E%A9%E5%88%B0%E5%8E%AD-%E6%97%A5%E6%9C%AC-KDDI-%E6%8E%A8%E5%BE%A9%E5%8F%A4-INFOBAR-ZERO-%E5%8A%A9-%E6%88%92%E6%89%8B%E6%A9%9F%E7%99%AE-%E7%84%A1%E5%BE%97%E4%B8%8A%E7%B6%B2-%E7%8E%A9-SNS-%E6%88%90%E6%9C%80%E5%A4%A7%E8%B3%A3%E9%BB%9E",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:47"
+    },
+    {
+      "title": "AI Prompt 指令教學 2026｜ChatGPT / Claude / Gemini 通用 TRIRO 原則獲得具體答案",
+      "link": "https://ezone.hk/article/20045554/AI-Prompt-%E6%8C%87%E4%BB%A4%E6%95%99%E5%AD%B8-2026-ChatGPT-Claude-Gemini-%E9%80%9A%E7%94%A8-TRIRO-%E5%8E%9F%E5%89%87%E7%8D%B2%E5%BE%97%E5%85%B7%E9%AB%94%E7%AD%94%E6%A1%88",
+      "source": "E-zone",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:47"
+    },
+    {
+      "title": "相片文字瞬間轉為可編輯　原價 US $0.99《FairyScanner》限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/20/fairyscanner-ocr-scan-reader-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb-2/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
+      "title": "自然語言快速記帳　原價 US $0.99《Hey Bill》限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/20/hey-bill-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
+      "title": "快速盤點家中 Wi-Fi 連線裝置　原價 US $0.99《HostLens》限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/20/hostlens-wifi-device-scanner-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
+      "title": "OpenAI 測試 ChatGPT dot　Plus 用戶加入體驗行列",
+      "link": "https://www.newmobilelife.com/2026/11/20/chatgpt-dot-add-chatgpt-plus-support/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
+      "title": "【Black Friday 優惠】Acer Predator GM7 2TB SSD 減價 15%　PS5 擴充儲存好時機",
+      "link": "https://www.newmobilelife.com/2026/11/20/acer-predator-gm7-ssd-black-friday-2026/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
+      "title": "Apple 招募工程經理開發 AI 代理　預計 2027 年整合至作業系統",
+      "link": "https://www.newmobilelife.com/2026/11/20/apple-ai-agents-hiring-report/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
+      "title": "隨身聲級測量紀錄工具　原價 US $0.99《SonicPro》限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/20/sonicpro-sound-level-meter-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
+      "title": "家務化身孩子冒險任務　原價 US $0.99《Chore Miner》限時免費",
+      "link": "https://www.newmobilelife.com/2026/11/20/chore-miner-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
+      "title": "Apple 發佈 iOS 27.3 Public Beta 2　Siri AI 支援繁體中文",
+      "link": "https://www.newmobilelife.com/2026/11/20/apple-ios-27-3-public-beta-2/",
+      "source": "NewMobileLife",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
       "title": "iPhone 18 及 iPhone Air 2 屏幕年底起量產　傳 2027 年 3 月推出",
       "link": "https://www.newmobilelife.com/2026/11/20/iphone-18-air-2-oled/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:40"
+      "scraped_at": "2026-11-20 11:22:48"
     },
     {
       "title": "【Black Friday 優惠】SanDisk Extreme Portable SSD 2TB 降價 17%　本地直送",
       "link": "https://www.newmobilelife.com/2026/11/20/sandisk-extreme-portable-ssd-2tb-amazon-blackfriday-2026/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:40"
+      "scraped_at": "2026-11-20 11:22:48"
     },
     {
       "title": "【PC】深入詛咒島尋失蹤船員 Mark of the Deep 限時免費",
       "link": "https://www.newmobilelife.com/2026/11/20/mark-of-the-deep-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:40"
+      "scraped_at": "2026-11-20 11:22:48"
     },
     {
       "title": "以 Muse 打理 FB 專頁竟被停權　AI 助手教用戶向 Meta 索償 7.5 萬美元",
       "link": "https://www.newmobilelife.com/2026/11/20/meta-muse-ai-lawsuit/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:40"
+      "scraped_at": "2026-11-20 11:22:48"
     },
     {
       "title": "Gemini Mac 版 App 加入電腦操作功能　可在背景視窗代用戶跨資料夾、App 及網頁執行任務",
       "link": "https://www.newmobilelife.com/2026/11/20/gemini-mac-computer-use/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:40"
+      "scraped_at": "2026-11-20 11:22:48"
     },
     {
       "title": "Apple 相機及 Photos 軟件主管退休　副總裁接任人未定",
       "link": "https://www.newmobilelife.com/2026/11/20/apple-camera-photos-head-retires/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:40"
+      "scraped_at": "2026-11-20 11:22:48"
     },
     {
       "title": "【Black Friday 優惠】Oral-B iO9 電動牙刷降價 47%　Philips Sonicare 5100 同步減價",
       "link": "https://www.newmobilelife.com/2026/11/20/oral-b-sonicare-bf-deals/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:40"
+      "scraped_at": "2026-11-20 11:22:48"
     },
     {
       "title": "Apple 確認 iOS 27.3 Beta 影響 HomeView　推出 27.2.1 修正 Siri 問題",
       "link": "https://www.newmobilelife.com/2026/11/20/ios-27-3-beta-homeview-siri-fix/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:40"
+      "scraped_at": "2026-11-20 11:22:48"
+    },
+    {
+      "title": "演唱會追星必備！vivo X500 Pro Max 攝影師套裝正式推出  包含 200mm + 400mm 雙增距鏡",
+      "link": "https://unwire.hk/2026/11/20/vivo-x500-pro-max-photographer-kit-hk/mobile-phone/",
+      "source": "Unwire.hk",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:49"
+    },
+    {
+      "title": "悉尼團隊稱「人工身體」令捐贈肝臟體外活 7 週 冰桶只保存數小時",
+      "link": "https://unwire.hk/2026/11/20/sydney-human-liver-perfusion-seven-weeks/life-tech/health/",
+      "source": "Unwire.hk",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:49"
+    },
+    {
+      "title": "GTA 6 首周銷售最高料 52 億美元 可勝星戰哈利波特魔戒票房王合計",
+      "link": "https://unwire.hk/2026/11/20/gta-6-first-week-sales-movie-box-office/game-channel/",
+      "source": "Unwire.hk",
+      "category": "科技",
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "BitLocker PIN 防護被破　6 位數暴力破解時間   由 19 年縮至 20 天",
       "link": "https://unwire.hk/2026/11/19/bitlocker-tpm-flash-pin-lockout-attack/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:41"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "Porsche Raceborn 75 周年展覽  回顧品牌賽車史兼挑戰模擬賽車",
       "link": "https://unwire.hk/2026/11/19/porsche-raceborn-hong-kong-motorsport-exhibition/hottopic/walk/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:41"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "Elon Musk 隨特朗普抵深圳 問修昔底德陷阱能否避免",
       "link": "https://unwire.hk/2026/11/19/elon-musk-shenzhen-thucydides-trap/hottopic/spotlight/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:41"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "GTA 6 推出香港警方借遊戲宣傳守法　「現實冇得消星、冇得 Load Save」",
       "link": "https://unwire.hk/2026/11/19/gta-6-hong-kong-police-wanted-stars-campaign/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:41"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "NVIDIA 遭勒索組織暗網點名　倒數 10 日威脅公開資料　官方稱系統未受影響",
       "link": "https://unwire.hk/2026/11/19/nvidia-gentlemen-ransomware-dark-web-leak/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:41"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "NVIDIA 尋黃仁勳繼任人 傳獵頭接觸曾效力 7 年 Arm CEO",
       "link": "https://unwire.hk/2026/11/19/nvidia-arm-rene-haas-ceo-search/fun-tech/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-20 05:40:41"
-    },
-    {
-      "title": "《GTA 6》暗藏《GTA 7》趣味彩蛋 遊戲內社交平台自嘲開發漫長",
-      "link": "https://unwire.hk/2026/11/19/gta-6-easter-egg-teases-gta-7-race-and-chase/game-channel/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-11-20 05:40:41"
-    },
-    {
-      "title": "最常用密碼 123456 第 7 次登頂 「starwars」「pokemon」上榜數秒可破",
-      "link": "https://unwire.hk/2026/11/19/nordpass-minecraft-pop-culture-passwords/tech-secure/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-11-20 05:40:41"
-    },
-    {
-      "title": "AMD 預告 CES「下一個計算時代」 「A」圖案惹 RDNA 5、Zen 6 猜測",
-      "link": "https://unwire.hk/2026/11/19/amd-ces-2027-rdna-5-zen-6/fun-tech/",
-      "source": "Unwire.hk",
-      "category": "科技",
-      "scraped_at": "2026-11-20 05:40:41"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "【達美航空優惠】減到出年2月，香港直飛洛杉磯來回連稅4千7起！",
       "link": "https://flyday.hk/delta-airlines",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "【樂桃航空大阪優惠】香港飛大阪單程$300起，來回連稅1千1起！繼續不收燃油費",
       "link": "https://flyday.hk/peach-japan-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "【斐濟航空優惠】來回斐濟楠迪連稅6千3起！跨年飛都係加多3百幾！",
       "link": "https://flyday.hk/fiji-airways",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "【芬蘭航空歐洲優惠】跨年飛歐洲多國連稅低至3千8起｜包括愛爾蘭 意大利 英國等！",
       "link": "https://flyday.hk/finnair-europe-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "【香港航空越南優惠】減燃油平遊之選！來回峴港連稅1千1起！27年3月16日前出發",
       "link": "https://flyday.hk/hong-kong-airlines-vietnam-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "【香港航空澳洲優惠】直航跌破新低價！來回墨爾本 悉尼連稅2千8起，包23kg行李！2027年6月前出發",
       "link": "https://flyday.hk/hong-kong-airlines-australia-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "【香港航空日本優惠】來回東京 大阪 福岡連稅2千起！包23kg行李！明年3月9日前出發",
       "link": "https://flyday.hk/hong-kong-airlines-japan-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
-      "title": "【X港歐機票優惠】變2個旅程！國泰＋英航歐洲來回4千3起包23kg行李！玩埋吉隆坡、檳城或曼谷",
-      "link": "https://flyday.hk/asia-hong-kong-europe-flight-deals",
-      "source": "FlyDayhk",
+      "title": "嘩！大專生限時機票優惠！可以帶埋屋企人/朋友一齊出發！日/韓/台/東南亞等20多個航點單程只需$88起！再送1,000里數！39間指定大專院校都有份！ (優惠至11月24日)",
+      "link": "https://www.meethk.com/166035/",
+      "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
+    },
+    {
+      "title": "連稅二千起飛大阪！包20kg寄艙行李！明年1月27日前出發！香港飛大阪來回連稅只需$2,030起 – 大灣區航空 (優惠至11月23日)",
+      "link": "https://www.meethk.com/165878/",
+      "source": "MeetHK",
+      "category": "旅遊",
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "正呀！連稅千三飛釜山！包15kg寄艙行李！12月份出發！香港飛釜山來回連稅只需$1,385起 – EastarJet 易斯達航空 (優惠至11月25日)",
       "link": "https://www.meethk.com/165937/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "真心抵！飛澳洲仲平過飛札幌！連稅2千8起！明年6月30日前出發！包23kg寄艙行李！香港直飛悉尼、墨爾本來回連稅只需$2,892起 – 香港航空 (優惠至11月30日)",
       "link": "https://www.meethk.com/165924/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "抵呀！連稅千一飛大阪！樂桃Peach Special Sale！明年1月31日前出發！香港飛大阪單程只需$300起(不收燃油附加費) – 樂桃航空 (優惠至11月22日)",
       "link": "https://www.meethk.com/165889/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "抵呀！港航飛峴港！連稅千一！包23kg寄艙行李！明年3月16日前出發！香港飛峴港來回連稅只需$1,140起 – 香港航空 (優惠至11月30日)",
       "link": "https://www.meethk.com/165862/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "國泰直飛札幌！連稅4千3！明年4月30日前出發！香港飛札幌二人同行來回連稅每人只需$4,305起 – 國泰航空 (優惠至11月30日)",
       "link": "https://www.meethk.com/165688/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "老友記出發啦！22個精選航點單程$65起！日本/韓國單程$165起！HK Express 65+老友記限定優惠！明年6月30日前出發 – HK Express (優惠至11月19日)",
       "link": "https://www.meethk.com/165727/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     },
     {
       "title": "澳航直飛澳洲！連稅4千7起！明年9月17日前出發！包30kg寄艙行李！香港直飛悉尼、墨爾本來回連稅$4,751起 – 澳洲航空 (優惠至11月19日)",
       "link": "https://www.meethk.com/165583/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
-    },
-    {
-      "title": "連稅千二飛台北！包20kg寄艙行李！12月17日前出發！香港飛台北來回連稅只需$1,222起 – 大灣區航空 (優惠至11月16日)",
-      "link": "https://www.meethk.com/165699/",
-      "source": "MeetHK",
-      "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
-    },
-    {
-      "title": "國泰直飛澳洲！連稅五千起！明年10月30日前出發！香港直飛悉尼、墨爾本來回連稅$5,073起 – 國泰航空 (優惠至11月19日)",
-      "link": "https://www.meethk.com/165629/",
-      "source": "MeetHK",
-      "category": "旅遊",
-      "scraped_at": "2026-11-20 05:40:43"
+      "scraped_at": "2026-11-20 11:22:49"
     }
   ]
 }
