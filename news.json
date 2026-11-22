@@ -1,13 +1,123 @@
 {
-  "update_time": "2026-11-22 23:23:22",
-  "total": 237,
+  "update_time": "2026-11-23 05:50:36",
+  "total": 94,
   "news": [
+    {
+      "title": "【西甲】桑坦德VS皇家蘇斯達",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610282176867&type=spain",
+      "published_at": "2026-11-23T04:05:27+08:00",
+      "scraped_at": "2026-11-23 05:50:12",
+      "observed_at": "2026-11-23T05:50:12.902361+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【意甲】AC米蘭VS科仙朗尼",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610282176873&type=otherSoccer",
+      "published_at": "2026-11-23T04:05:12+08:00",
+      "scraped_at": "2026-11-23 05:50:12",
+      "observed_at": "2026-11-23T05:50:12.902361+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】利物浦VS曼聯",
+      "link": "https://sports.now.com/home/video#tvVideoId=202611092179486&type=england",
+      "published_at": "2026-11-23T02:27:08+08:00",
+      "scraped_at": "2026-11-23 05:50:12",
+      "observed_at": "2026-11-23T05:50:12.902361+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "普捷天奴地標遭大炒 10人曼聯吞利記4蛋",
+      "link": "https://sports.now.com/home/news/details?id=39850663133",
+      "published_at": "2026-11-23T02:27:08+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "倒戈遭狂噓 基馬尼斯：截然不同的體驗",
+      "link": "https://sports.now.com/home/news/details?id=39856360761",
+      "published_at": "2026-11-23T01:29:00+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "般奴談與曼聯續約：現在不是時候",
+      "link": "https://sports.now.com/home/news/details?id=39855599529",
+      "published_at": "2026-11-23T00:13:04+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【英超】侯城VS白禮頓",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610282176870&type=england",
+      "published_at": "2026-11-23T00:00:59+08:00",
+      "scraped_at": "2026-11-23 05:50:12",
+      "observed_at": "2026-11-23T05:50:12.902361+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "麥般尼補時梅開二度 白禮頓0：2遭虎噬",
+      "link": "https://sports.now.com/home/news/details?id=39850663135",
+      "published_at": "2026-11-23T00:00:59+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "普捷天奴第1陣 古亞任箭頭",
+      "link": "https://sports.now.com/home/news/details?id=39855599528",
+      "published_at": "2026-11-22T23:22:17+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "【西甲】巴塞隆拿VS維拉利爾",
+      "link": "https://sports.now.com/home/video#tvVideoId=202610282176869&type=spain",
+      "published_at": "2026-11-22T23:01:01+08:00",
+      "scraped_at": "2026-11-23 05:50:12",
+      "observed_at": "2026-11-23T05:50:12.902361+08:00",
+      "content_type": "video",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
     {
       "title": "早段失兩球 巴塞3：2反勝黃潛",
       "link": "https://sports.now.com/home/news/details?id=39849365893",
       "published_at": "2026-11-22T23:01:01+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -17,20 +127,9 @@
       "title": "【意甲】祖雲達斯VS威尼斯",
       "link": "https://sports.now.com/home/video#tvVideoId=202610282176868&type=otherSoccer",
       "published_at": "2026-11-22T22:54:08+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
+      "scraped_at": "2026-11-23 05:50:12",
+      "observed_at": "2026-11-23T05:50:12.902361+08:00",
       "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "倒戈遭狂噓 基馬尼斯：截然不同的體驗",
-      "link": "https://sports.now.com/home/news/details?id=39856360761",
-      "published_at": "2026-11-22T22:43:47+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
       "category": "足球"
@@ -39,8 +138,8 @@
       "title": "PSG證杜爾右膝前十字韌帶撕裂",
       "link": "https://sports.now.com/home/news/details?id=39856360760",
       "published_at": "2026-11-22T21:36:11+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -50,8 +149,8 @@
       "title": "古圖奧斯：摩連奴半場訓話成關鍵",
       "link": "https://sports.now.com/home/news/details?id=39855599526",
       "published_at": "2026-11-22T20:31:00+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -61,8 +160,8 @@
       "title": "東方復仇3：0挫沙田",
       "link": "https://sports.now.com/home/news/details?id=39855599525",
       "published_at": "2026-11-22T19:50:59+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -72,8 +171,8 @@
       "title": "拜仁疑向穆斯亞拿施壓改合同",
       "link": "https://sports.now.com/home/news/details?id=39855599524",
       "published_at": "2026-11-22T19:45:07+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -83,8 +182,8 @@
       "title": "【英超‧點將】穫斯無球跑動成利記之寶",
       "link": "https://sports.now.com/home/news/details?id=39855599518",
       "published_at": "2026-11-22T18:31:37+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -94,8 +193,8 @@
       "title": "柏利迪斯捧盃後做訪問期間突暈倒",
       "link": "https://sports.now.com/home/news/details?id=39855599523",
       "published_at": "2026-11-22T17:58:53+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -105,8 +204,8 @@
       "title": "般奴澄清未係時候傾續約：貪錢唔會留喺曼聯",
       "link": "https://sports.now.com/home/news/details?id=39856360757",
       "published_at": "2026-11-22T17:19:24+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -116,8 +215,8 @@
       "title": "【英超大戰】紅軍防線雙雄抗魔實錄",
       "link": "https://sports.now.com/home/video#tvVideoId=202611182182095&type=england",
       "published_at": "2026-11-22T17:04:31+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
+      "scraped_at": "2026-11-23 05:50:12",
+      "observed_at": "2026-11-23T05:50:12.902361+08:00",
       "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -127,8 +226,8 @@
       "title": "球王都有火！美斯用波省對手被罰黃牌",
       "link": "https://sports.now.com/home/news/details?id=39856360755",
       "published_at": "2026-11-22T15:34:30+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -138,8 +237,8 @@
       "title": "卡卡斯摩拳擦掌鬥曼聯：全球期待",
       "link": "https://sports.now.com/home/news/details?id=39852077094",
       "published_at": "2026-11-22T13:09:13+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -149,8 +248,8 @@
       "title": "馬度亞基：上半場至少應該領先3球",
       "link": "https://sports.now.com/home/news/details?id=39855599515",
       "published_at": "2026-11-22T11:32:37+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -160,8 +259,8 @@
       "title": "衛冕亮紅燈！10人國密0：3負哥倫布機員",
       "link": "https://sports.now.com/home/news/details?id=39856360754",
       "published_at": "2026-11-22T10:00:17+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -171,20 +270,9 @@
       "title": "【英超印記】後費Sir時代魔帥處子戰",
       "link": "https://sports.now.com/home/video#tvVideoId=202611182182098&type=england",
       "published_at": "2026-11-22T09:11:05+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
+      "scraped_at": "2026-11-23 05:50:12",
+      "observed_at": "2026-11-23T05:50:12.902361+08:00",
       "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "一文論盡後費Sir年代魔帥首仗戰績",
-      "link": "https://sports.now.com/home/news/details?id=39856360752",
-      "published_at": "2026-11-22T09:11:05+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
       "category": "足球"
@@ -193,8 +281,19 @@
       "title": "安巴比＋艾斯比正選？摩佬：我要落場防守！",
       "link": "https://sports.now.com/home/news/details?id=39855599517",
       "published_at": "2026-11-22T09:11:05+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
+      "content_type": "news",
+      "published_at_precision": "exact",
+      "source": "Now Sports",
+      "category": "足球"
+    },
+    {
+      "title": "一文論盡後費Sir年代魔帥首仗戰績",
+      "link": "https://sports.now.com/home/news/details?id=39856360752",
+      "published_at": "2026-11-22T09:11:05+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -204,8 +303,8 @@
       "title": "程添霖：伊拉奧拿普捷天奴首戰雙紅會",
       "link": "https://sports.now.com/home/news/details?id=39852187312",
       "published_at": "2026-11-22T08:33:39+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -215,8 +314,8 @@
       "title": "看得見的慘叫！杜爾重創傷膝",
       "link": "https://sports.now.com/home/news/details?id=39855599516",
       "published_at": "2026-11-22T08:33:31+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -226,8 +325,8 @@
       "title": "普捷天奴擺明同你「搶」！",
       "link": "https://sports.now.com/home/news/details?id=39852187336",
       "published_at": "2026-11-22T07:41:18+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -237,8 +336,8 @@
       "title": "【西甲‧預告】巴塞爭勝「潛」在隱憂",
       "link": "https://sports.now.com/home/news/details?id=39856360753",
       "published_at": "2026-11-22T07:25:21+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -248,8 +347,8 @@
       "title": "【英超‧重頭戲】曼聯撼利記以攻為守？",
       "link": "https://sports.now.com/home/news/details?id=39855599514",
       "published_at": "2026-11-22T07:06:38+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -259,8 +358,8 @@
       "title": "【西甲】皇家馬德里VS切爾達",
       "link": "https://sports.now.com/home/video#tvVideoId=202610282176860&type=spain",
       "published_at": "2026-11-22T07:06:12+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
+      "scraped_at": "2026-11-23 05:50:12",
+      "observed_at": "2026-11-23T05:50:12.902361+08:00",
       "content_type": "video",
       "published_at_precision": "exact",
       "source": "Now Sports",
@@ -270,1247 +369,194 @@
       "title": "又係艾斯比 皇馬2：1反勝切爾達",
       "link": "https://sports.now.com/home/news/details?id=39849365897",
       "published_at": "2026-11-22T07:06:12+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
+      "scraped_at": "2026-11-23 05:50:20",
+      "observed_at": "2026-11-23T05:50:20.122417+08:00",
       "content_type": "news",
       "published_at_precision": "exact",
       "source": "Now Sports",
       "category": "足球"
     },
     {
-      "title": "車仔慘輸四個一皮 沙比：艱難時期",
-      "link": "https://sports.now.com/home/news/details?id=39856360751",
-      "published_at": "2026-11-22T04:24:15+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【西甲】西維爾VS貝迪斯",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176858&type=spain",
-      "published_at": "2026-11-22T03:32:43+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【英超】紐卡素VS阿仙奴",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176859&type=england",
-      "published_at": "2026-11-22T03:28:11+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "阿仙奴2：2逼和紐卡素",
-      "link": "https://sports.now.com/home/news/details?id=39850663143",
-      "published_at": "2026-11-22T03:28:11+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【意甲】帕爾馬VS羅馬",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176857&type=otherSoccer",
-      "published_at": "2026-11-22T03:13:17+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "馬倫大四喜 羅馬5：1客破帕爾馬",
-      "link": "https://sports.now.com/home/news/details?id=39850663147",
-      "published_at": "2026-11-22T03:13:17+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "馬利斯卡：賀蘭入波冇犯規",
-      "link": "https://sports.now.com/home/news/details?id=39855599513",
-      "published_at": "2026-11-22T02:27:59+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【法甲】尼斯VS巴黎聖日耳門",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176856&type=otherSoccer",
-      "published_at": "2026-11-22T02:17:50+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【西甲】華歷簡奴VS華倫西亞",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176846&type=spain",
-      "published_at": "2026-11-22T01:55:52+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【英超】車路士VS列斯聯",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176854&type=england",
-      "published_at": "2026-11-22T01:03:11+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "列斯聯4：1擊潰車路士",
-      "link": "https://sports.now.com/home/news/details?id=39850663144",
-      "published_at": "2026-11-22T01:03:11+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【英超】高雲地利VS水晶宮",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176850&type=england",
-      "published_at": "2026-11-22T00:55:33+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【英超】阿士東維拉VS新特蘭",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176852&type=england",
-      "published_at": "2026-11-22T00:55:33+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【英超】熱刺VS葉士域治",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176853&type=england",
-      "published_at": "2026-11-22T00:55:28+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "小將巴列特1+1 熱刺2：0掃「葉」",
-      "link": "https://sports.now.com/home/news/details?id=39850663145",
-      "published_at": "2026-11-22T00:55:28+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【英超】般尼茅夫VS諾定咸森林",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176851&type=england",
-      "published_at": "2026-11-22T00:54:49+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "般茅贈森林雙蛋升第4",
-      "link": "https://sports.now.com/home/news/details?id=39849365896",
-      "published_at": "2026-11-22T00:54:49+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【意甲】拉素VS萊切",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176847&type=otherSoccer",
-      "published_at": "2026-11-22T00:40:05+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "【德甲】慕遜加柏VS多蒙特",
-      "link": "https://sports.now.com/home/video#tvVideoId=202610282176849&type=otherSoccer",
-      "published_at": "2026-11-22T00:29:49+08:00",
-      "scraped_at": "2026-11-22 23:22:48",
-      "observed_at": "2026-11-22T23:22:48.943617+08:00",
-      "content_type": "video",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "安美卡奠勝 多蒙特1：0「加」分居榜首",
-      "link": "https://sports.now.com/home/news/details?id=39850663142",
-      "published_at": "2026-11-22T00:29:49+08:00",
-      "scraped_at": "2026-11-22 23:22:55",
-      "observed_at": "2026-11-22T23:22:55.889147+08:00",
-      "content_type": "news",
-      "published_at_precision": "exact",
-      "source": "Now Sports",
-      "category": "足球"
-    },
-    {
-      "title": "點漫畫｜選賢任能",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b030227e4b091a65a306203.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:22:59"
-    },
-    {
-      "title": "選委會選舉｜同鄉社團（自動當選）名單（第三界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ff8ce4b091a65a30616c.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:22:59"
-    },
-    {
-      "title": "選委會選舉｜新界地區三會當選名單（第四界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ff1ae4b091a65a3060e7.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:22:59"
-    },
-    {
-      "title": "選委會選舉｜勞工界（自動當選）名單（第三界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02fe94e4b091a65a3060ce.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:22:59"
-    },
-    {
-      "title": "新一屆選委會委員出爐　速睇全名單",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02fe6ae4b091a65a3060c8.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:22:59"
-    },
-    {
-      "title": "點直播｜選委會選舉點票結束　選管會主席陸啟康等見記者｜11月22日",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02fc91e4b091a65a305fb2.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:22:59"
-    },
-    {
-      "title": "選委會選舉｜港九地區三會當選名單（第四界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02fc46e4b091a65a305fab.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:22:59"
-    },
-    {
-      "title": "選委會選舉｜體育、演藝、文化及出版界（自動當選）名單（第二界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02fbbfe4b091a65a305f7b.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:22:59"
-    },
-    {
-      "title": "選委會選舉｜有關全國性團體香港成員的代表（自動當選）名單（第五界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02fbbae4b091a65a305f79.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:00"
-    },
-    {
-      "title": "選委會選舉｜教育界（自動當選）名單（第二界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f9a1e4b091a65a305f60.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:00"
-    },
-    {
-      "title": "選委會選舉｜基層社團當選名單（第三界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f894e4b091a65a305f23.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:00"
-    },
-    {
-      "title": "選委會選舉｜醫學及衞生服務界當選名單（第二界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f5ebe4b091a65a305ed2.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:00"
-    },
-    {
-      "title": "選委會選舉｜中小企業界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f5cce4b091a65a305ec5.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:00"
-    },
-    {
-      "title": "選委會選舉｜飲食界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f5c8e4b091a65a305ec4.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:00"
-    },
-    {
-      "title": "選委會選舉｜保險界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f55ee4b091a65a305eab.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:00"
-    },
-    {
-      "title": "選委會選舉｜金融服務界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f4b0e4b091a65a305e92.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:00"
-    },
-    {
-      "title": "選委會選舉｜金融界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f448e4b091a65a305e8b.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:01"
-    },
-    {
-      "title": "選委會選舉｜批發及零售界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f245e4b091a65a305e82.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:01"
-    },
-    {
-      "title": "選委會選舉｜地產及建造界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f0f9e4b091a65a305e57.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:01"
-    },
-    {
-      "title": "選委會選舉｜酒店界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f0bde4b091a65a305e4c.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:01"
-    },
-    {
-      "title": "選委會選舉｜航運交通界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f0b3e4b091a65a305e49.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:01"
-    },
-    {
-      "title": "選委會選舉｜旅遊界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f05ee4b091a65a305e3f.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:01"
-    },
-    {
-      "title": "選委會選舉｜工業界（第二）當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f04fe4b091a65a305e3b.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:01"
-    },
-    {
-      "title": "選委會選舉｜商界（第二）當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ef89e4b091a65a305e34.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:01"
-    },
-    {
-      "title": "選委會選舉｜商界（第三）當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ef34e4b091a65a305e2d.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:02"
-    },
-    {
-      "title": "選委會選舉｜漁農界當選名單（第三界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02eec5e4b091a65a305e26.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:02"
-    },
-    {
-      "title": "選委會選舉｜工程界當選名單（第二界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02edede4b091a65a305dd7.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:02"
-    },
-    {
-      "title": "選委會選舉｜工業界（第一）當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ebf9e4b091a65a305d3c.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:02"
-    },
-    {
-      "title": "選委會選舉｜建築、測量、都市規劃及園境界當選名單（第二界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ebefe4b091a65a305d39.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:02"
-    },
-    {
-      "title": "選委會選舉｜法律界當選名單（第二界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02eae3e4b091a65a305d18.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:02"
-    },
-    {
-      "title": "選委會選舉｜商界（第一）當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ea40e4b091a65a305cff.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:02"
-    },
-    {
-      "title": "選委會選舉｜科技創新界當選名單（第二界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02e99ee4b091a65a305ce6.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:02"
-    },
-    {
-      "title": "選委會選舉｜香港僱主聯合會當選名單　李澤楷黃永光黃光耀等勝出",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02e8dee4b091a65a305ccd.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "選委會選舉｜中醫界當選名單（第二界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02e7e5e4b091a65a305c7e.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "選委會選舉｜紡織及製衣界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02e75fe4b091a65a305c65.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "選委會選舉｜進出口界當選名單（第一界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02e6cde4b091a65a305c5e.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "選委會選舉｜鄉議局當選名單（第四界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02e60be4b091a65a305c33.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "（不斷更新）選委會選舉｜點票結果陸續公布　最新信息一文睇",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02e566e4b091a65a305c2b.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "選委會選舉｜會計界當選名單（第二界別）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02e3efe4b091a65a305b5e.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "選委會選舉｜中央點票站設公眾人士區域　市民監督點票秩序井然",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02dda1e4b091a65a305ac0.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "選委會選舉｜99歲前區議員戴權親赴票站投票　冀選賢能貢獻香港",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02da52e4b091a65a305aa6.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "（有片）選委會選舉｜陸啟康：對投票數字感鼓舞　證本港選舉制度愈趨成熟",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02d760e4b091a65a305a46.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "點直播｜選委會選舉投票結束　選管會主席陸啟康等點票前見記者｜11月22日",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02cedae4b091a65a3059cd.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "（有片+多圖）選委會選舉｜票箱陸續運往中央點票站　陸啟康謝小華倒出選票",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ccb1e4b091a65a3059a3.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "數讀選委會選舉｜今屆投票率超上屆　31界別723席位需競逐",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ca6de4b091a65a305976.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "香港館亮相第十四屆中博會　搭建中部企業出海新通道",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02c9e8e4b091a65a305961.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "選委會選舉｜屠海鳴：相信將選出賢能　築牢特區良政善治基礎",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02c7c5e4b091a65a3058fe.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "點直播｜選委會選舉投票結束　陸啟康謝小華倒出票箱選票｜11月22日",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02c519e4b091a65a3058ac.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:03"
-    },
-    {
-      "title": "選委會選舉投票結束　整體投票率98.79%",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02c16ce4b091a65a305807.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:04"
-    },
-    {
-      "title": "點直播｜選委會選舉投票結束　開票點票現場｜11月22日",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02c166e4b091a65a305805.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:04"
-    },
-    {
-      "title": "選委會選舉｜97歲蔡根培行動不便仍堅持投票　寄望當選選委切實扛起社會重任",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02b980e4b091a65a305719.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:04"
-    },
-    {
-      "title": "選委會選舉｜截至下午5時投票率98.37%　13界別100%投票",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02b334e4b091a65a305640.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:04"
-    },
-    {
-      "title": "（不斷更新）選委會選舉｜票箱運至會展　開始點票　最新信息一文睇",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b023da3e4b091a65a304a13.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:04"
-    },
-    {
-      "title": "選委會選舉｜中央點票站設135個公眾席　下午5時45分起派入場券",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02b16ee4b091a65a305602.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:04"
-    },
-    {
-      "title": "（有片）屯門公路男子拖幼童逆線狂奔　車輛疾馳險象環生　網民怒斥：呢個唔係唔拉呀？",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02af1be4b091a65a3055db.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:04"
-    },
-    {
-      "title": "（有片）尖沙咀奪命車禍｜涉事私家車兩男女棄車離去　38歲司機涉3罪落網",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ab54e4b091a65a30557c.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:04"
-    },
-    {
-      "title": "發展局推創新科技抗極端天氣　4智能系統強化應對水浸",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02a781e4b091a65a305499.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:05"
-    },
-    {
-      "title": "選委會選舉｜截至下午4時投票率97.39%　10界別100%投票",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02a531e4b091a65a30546f.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:05"
-    },
-    {
-      "title": "記得添衣！周二起顯著轉涼有雨　周三市區低見16度",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02a276e4b091a65a3053fd.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:05"
-    },
-    {
-      "title": "選委會選舉｜各界選民踴躍投票　有人推遲手術帶傷投票",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02a081e4b091a65a3053ad.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:05"
-    },
-    {
-      "title": "（多圖）現場直擊·車公廟體育館｜鄺美雲到票站打氣　現場氣氛熾熱",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b029e0be4b091a65a305380.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:05"
-    },
-    {
-      "title": "（有片）西九龍中心六旬婦搭扶手梯　失平衡跌倒一度昏迷",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0299c0e4b091a65a305321.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:05"
-    },
-    {
-      "title": "女子下班搭巴士驚遇鄰座鹹豬手！網民起底疑為慣犯　警方列案跟進暫未有人被捕",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b029904e4b091a65a30531f.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:05"
-    },
-    {
-      "title": "（有片）尖沙咀私家車剷行人路釀1死3傷　司機棄車逃去",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b029832e4b091a65a30531a.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:05"
-    },
-    {
-      "title": "選委會選舉｜廉署派員巡視票站及點票中心　籲選民踴躍投票",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b028ca9e4b091a65a3051fd.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:06"
-    },
-    {
-      "title": "選委會選舉｜截至下午2時投票率93.55%　5界別達100%",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b028967e4b091a65a30511a.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:06"
-    },
-    {
-      "title": "選委會選舉｜鄧炳強視察港九兩投票站　指現場運作順暢秩序良好",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b027e45e4b091a65a305036.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:06"
-    },
-    {
-      "title": "選委會選舉｜截至下午1時投票率89.81%　兩界別達100%",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b027c3ce4b091a65a30500b.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:06"
-    },
-    {
-      "title": "選委會選舉｜葉劉淑儀讚選舉有序進行　鼓勵候選人具大局觀助特區配合國家發展",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b027980e4b091a65a304fdc.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:06"
-    },
-    {
-      "title": "陳茂波：香港內聯外通　身處世界灣區經濟合作聯盟定能更好發揮",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0278b8e4b091a65a304fd8.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:06"
-    },
-    {
-      "title": "選委會選舉｜經民聯籲合資格選民踴躍投票　選出賢能推動香港由治及興",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b027691e4b091a65a304fcc.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:06"
-    },
-    {
-      "title": "選委會選舉｜謝小華現身九龍公園及港灣道投票站　現場拉票氣氛熱烈",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b027553e4b091a65a304fb4.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:06"
-    },
-    {
-      "title": "選委會選舉｜少數族裔：看重候選人愛國立場與社會主張　籲選民積極投票",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0271f2e4b091a65a304f73.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:07"
-    },
-    {
-      "title": "選委會選舉｜首3小時投票率83.03%　多界別投票率逾九成",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b026d05e4b091a65a304f0f.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:07"
-    },
-    {
-      "title": "選委會選舉｜陸啟康：投票過程暢順　有信心於合理時間完成點票",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0265bfe4b091a65a304e94.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:07"
-    },
-    {
-      "title": "選委會選舉｜陳茂波籲選民踴躍投票　為香港未來發展一起努力",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b026336e4b091a65a304e8a.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:07"
-    },
-    {
-      "title": "（有片）空間站迎特別「太空會師」　神二十三2名航天員即將返回",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0262ebe4b091a65a304e74.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:07"
-    },
-    {
-      "title": "選委會選舉｜譚耀宗：相信投票率勝往屆　冀當選代表積極履職",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0261f8e4b091a65a304e5a.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:07"
-    },
-    {
-      "title": "點直播｜選委會選舉　選管會主席陸啟康等見記者｜11月22日",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0261afe4b091a65a304e3d.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:07"
-    },
-    {
-      "title": "選委會選舉｜首2小時投票率69.61%　商界三100%",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0260dce4b091a65a304dfc.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:07"
-    },
-    {
-      "title": "選委會選舉｜政界籲選民積極投票　選出為香港為國家出力賢能之人",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b025e8be4b091a65a304dd1.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:08"
-    },
-    {
-      "title": "神二十四發射進入倒計時　神二十五為何同樣待命中？",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b025a8ce4b091a65a304d7a.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:08"
-    },
-    {
-      "title": "選委會選舉｜陳勇：良性互動熱烈有序　對接「十五五」規劃是新亮點",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b025914e4b091a65a304d60.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:08"
-    },
-    {
-      "title": "（有片）選委會選舉｜黎棟國：盼候選人能為香港發展建言獻策",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0255ace4b091a65a304d21.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:08"
-    },
-    {
-      "title": "選委會選舉｜首小時投票率44.74%　商界三98%",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0253d7e4b091a65a304ce3.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:08"
-    },
-    {
-      "title": "記者直擊｜麥美娟現身多票站　指選民重視投票現場氛圍熱烈有序",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0252fde4b091a65a304cbb.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:08"
-    },
-    {
-      "title": "選委會選舉｜李慧琼：票站現場氣氛熱烈　對投票率有信心",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b024cb4e4b091a65a304b95.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:08"
-    },
-    {
-      "title": "小西灣道爆鹹水管　車輛涉水而行",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b024a51e4b091a65a304b5c.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:08"
-    },
-    {
-      "title": "張敬軒澳門騷加開兩場+視線受阻位　11·24公售搶飛（附連結）",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b024810e4b091a65a304b41.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "（有片+多圖）現場直擊·九龍公園｜鄧炳強現身投票站　有警員維持秩序",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02420be4b091a65a304aa0.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "（多圖）現場直擊·港灣道體育館｜票站外人頭湧湧　投票箱打卡位受青睞",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b023f32e4b091a65a304a3d.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "點直播｜選委會界別分組一般選舉投票現場｜荃灣｜港灣道｜11月22日",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b023a20e4b091a65a3049d3.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "（多圖）現場直擊·荃灣體育館｜選委會選舉今投票　競選團隊「最後衝刺」",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b023961e4b091a65a3049cf.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "警東九龍打擊非法賽車及酒後駕駛　拘捕2人",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b023411e4b091a65a30493c.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "天文台：日間徘徊23度　稍後有微雨",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02335de4b091a65a304939.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "特區政府由應急救助走向長遠支援　宏福苑居民有序安家展開新生活",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b022999e4b091a65a304862.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "選委會選舉今日投票　政界：選實幹人才惠民生　抓緊「十五五」機遇",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0228aae4b091a65a30484c.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "選委會選舉今日舉行　選民盼推動業界轉型　提升民生福祉",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b022874e4b091a65a304847.html",
-      "source": "點新聞-港聞",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
-    },
-    {
-      "title": "發現灣區｜選委會選舉今舉行　投票流程/安排一文睇清",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b019370e4b091a65a3043c5.html",
+      "title": "選委會選舉｜立法會：選舉充分彰顯完善選舉制度後新選制優越性",
+      "link": "https://www.dotdotnews.com/a/202611/23/AP6b0315c2e4b091a65a3063b4.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
+      "scraped_at": "2026-11-23 05:50:23"
     },
     {
-      "title": "選委會選舉今舉行　投票安排一片睇",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b01979fe4b091a65a3043f0.html",
+      "title": "選委會選舉｜謝小華：向所有當選委員致以祝賀　感謝各選民積極投票",
+      "link": "https://www.dotdotnews.com/a/202611/23/AP6b03137de4b091a65a306399.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
+      "scraped_at": "2026-11-23 05:50:23"
     },
     {
-      "title": "天文台：今早最低氣溫約19度　下周天氣轉涼",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b01c11ee4b091a65a30469c.html",
+      "title": "天文台：今日多雲有一兩陣雨　氣溫介乎21至23度",
+      "link": "https://www.dotdotnews.com/a/202611/23/AP6b030fdbe4b091a65a306364.html",
       "source": "點新聞-港聞",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:09"
+      "scraped_at": "2026-11-23 05:50:23"
     },
     {
       "title": "韋東奕再獲獎",
       "link": "https://www.dotdotnews.com/a/202611/22/AP6b02f3a2e4b091a65a305e89.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:10"
+      "scraped_at": "2026-11-23 05:50:25"
     },
     {
       "title": "新疆烏魯木齊發生4.5級地震　暫無人員傷亡報告",
       "link": "https://www.dotdotnews.com/a/202611/22/AP6b02c495e4b091a65a305886.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:10"
+      "scraped_at": "2026-11-23 05:50:25"
     },
     {
       "title": "（有片）空間站迎特別「太空會師」　神二十三2名航天員即將返回",
       "link": "https://www.dotdotnews.com/a/202611/22/AP6b0262ebe4b091a65a304e74.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:10"
+      "scraped_at": "2026-11-23 05:50:25"
     },
     {
       "title": "打虎！中石油副總經理謝軍被查",
       "link": "https://www.dotdotnews.com/a/202611/22/AP6b025d94e4b091a65a304db9.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:10"
+      "scraped_at": "2026-11-23 05:50:25"
     },
     {
       "title": "神二十四發射進入倒計時　神二十五為何同樣待命中？",
       "link": "https://www.dotdotnews.com/a/202611/22/AP6b025a8ce4b091a65a304d7a.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:10"
+      "scraped_at": "2026-11-23 05:50:25"
     },
     {
       "title": "張敬軒澳門騷加開兩場+視線受阻位　11·24公售搶飛（附連結）",
       "link": "https://www.dotdotnews.com/a/202611/22/AP6b024810e4b091a65a304b41.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:10"
+      "scraped_at": "2026-11-23 05:50:25"
     },
     {
       "title": "FCC惡意打壓中國電信企業在美運營　商務部回應",
       "link": "https://www.dotdotnews.com/a/202611/22/AP6b0247e9e4b091a65a304b2b.html",
       "source": "點新聞-兩岸",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:10"
-    },
-    {
-      "title": "（有片）APEC會議落幕　深圳CBD燈光秀繼續點亮城市",
-      "link": "https://www.dotdotnews.com/a/202611/21/AP6b019e4de4b091a65a30448e.html",
-      "source": "點新聞-兩岸",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:10"
-    },
-    {
-      "title": "青海德令哈市發生5.6級地震　暫未發現人員傷亡",
-      "link": "https://www.dotdotnews.com/a/202611/21/AP6b017b46e4b091a65a30429e.html",
-      "source": "點新聞-兩岸",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:11"
-    },
-    {
-      "title": "印尼西南群島發生6.8級地震",
-      "link": "https://www.dotdotnews.com/a/202611/21/AP6b0172a1e4b091a65a3041fe.html",
-      "source": "點新聞-兩岸",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:11"
-    },
-    {
-      "title": "神舟二十四號任務完成最後一次全區合練　發射場做好發射前各項準備",
-      "link": "https://www.dotdotnews.com/a/202611/21/AP6b0168fce4b091a65a3040de.html",
-      "source": "點新聞-兩岸",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:11"
-    },
-    {
-      "title": "APEC｜特朗普黃循財等11位外國領導人　均公開重申「堅持一個中國原則」",
-      "link": "https://www.dotdotnews.com/a/202611/21/AP6b0149c7e4b091a65a303eb3.html",
-      "source": "點新聞-兩岸",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:11"
-    },
-    {
-      "title": "全國多地氣溫陸續回升！明起南方再迎新一輪降雨　華南局地有大雨",
-      "link": "https://www.dotdotnews.com/a/202611/21/AP6b0104c6e4b091a65a303a16.html",
-      "source": "點新聞-兩岸",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:11"
-    },
-    {
-      "title": "APEC｜外國客人華強北愛買什麼？AI智能產品最受寵",
-      "link": "https://www.dotdotnews.com/a/202611/21/AP6b00e6c2e4b091a65a3038b2.html",
-      "source": "點新聞-兩岸",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:11"
-    },
-    {
-      "title": "深港踩準APEC互聯互通節拍　港青創業者展望未來信心足",
-      "link": "https://www.dotdotnews.com/a/202611/21/AP6b00e05ee4b091a65a303863.html",
-      "source": "點新聞-兩岸",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:11"
-    },
-    {
-      "title": "尼日利亞船隻傾覆已致24人遇難　或因機械故障傾覆",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02b7f6e4b091a65a305704.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:12"
-    },
-    {
-      "title": "日本記者逐幀解析特朗普無視高市早苗：非常屈辱　日本成世界恥辱",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02ab38e4b091a65a305579.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:12"
-    },
-    {
-      "title": "邊打邊談！伊美軍事衝突持續　雙方表態願談判達成協議",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b02aa54e4b091a65a305564.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:12"
-    },
-    {
-      "title": "（有片）後勁太大！特朗普連發30多張照片回味APEC深圳之行",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b029ea8e4b091a65a305398.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:12"
-    },
-    {
-      "title": "印尼糖果廠火災釀6死4傷　仍有逾30人失聯",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b029092e4b091a65a305275.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:12"
-    },
-    {
-      "title": "GTA6封面女郎真身曝光！美模特兒加西亞確認參與　R星選角總監留言祝賀",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0280d0e4b091a65a305072.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:12"
-    },
-    {
-      "title": "韓國高考AI作弊事件發酵　教育部長引咎辭職　滿分考生自殺身亡",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b027bf2e4b091a65a305008.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:12"
-    },
-    {
-      "title": "德州70歲死囚注射伏法　行刑63分鐘反覆喊痛",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b025b18e4b091a65a304d91.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:12"
-    },
-    {
-      "title": "FCC惡意打壓中國電信企業在美運營　商務部回應",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0247e9e4b091a65a304b2b.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:13"
-    },
-    {
-      "title": "點漫畫｜落井下石",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b0244d0e4b091a65a304b24.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:13"
-    },
-    {
-      "title": "萬斯魯比奧同台　特朗普白宮記者會變「接班人公開面試」",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b023340e4b091a65a304935.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:13"
-    },
-    {
-      "title": "伊朗革命衛隊襲擊美軍基地",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b023121e4b091a65a3048e7.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:13"
-    },
-    {
-      "title": "美軍中央司令部：伊朗擊傷一架美軍F-16說法不實",
-      "link": "https://www.dotdotnews.com/a/202611/22/AP6b01c1eae4b091a65a30469f.html",
-      "source": "點新聞-國際",
-      "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:13"
+      "scraped_at": "2026-11-23 05:50:25"
     },
     {
       "title": "虛擬資產服務法例修訂草案刊憲　規管擴至交易託管等服務",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6b001d30e4b091a65a302ef9.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:14"
+      "scraped_at": "2026-11-23 05:50:28"
     },
     {
       "title": "大市點睇｜亞太股市黑色星期五　恒指跌430點盤中創近年半低位　金價下挫",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6b0017c7e4b091a65a302e9d.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:14"
+      "scraped_at": "2026-11-23 05:50:28"
     },
     {
       "title": "新地委任葉劉淑儀為獨立非執董　年酬30萬元",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6b001439e4b091a65a302dfb.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:14"
+      "scraped_at": "2026-11-23 05:50:28"
     },
     {
       "title": "美聯儲加息預期升溫　金價跌破3600美元",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6b001168e4b091a65a302d72.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:14"
+      "scraped_at": "2026-11-23 05:50:28"
     },
     {
       "title": "10月基本通脹微跌至2.0%　電力燃氣及水按年漲12.7%",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6b000c6ce4b091a65a302cf3.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:14"
+      "scraped_at": "2026-11-23 05:50:28"
     },
     {
       "title": "英偉達股價連瀉6日累跌逾4成　董事會確認另覓新CEO",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6b000628e4b091a65a302c7f.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:14"
+      "scraped_at": "2026-11-23 05:50:28"
     },
     {
       "title": "財政部香港發行20億美元主權債券　超額認購36倍彰顯國際市場信心",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6afff1c0e4b091a65a3028ed.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:14"
+      "scraped_at": "2026-11-23 05:50:28"
     },
     {
       "title": "史上最大AI上市！Anthropic開盤暴漲34%收盤僅升17%",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6affe604e4b091a65a302737.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:14"
+      "scraped_at": "2026-11-23 05:50:28"
     },
     {
       "title": "亞太股市全線受壓　日韓跌幅均逾4%",
       "link": "https://www.dotdotnews.com/a/202611/20/AP6affbb8be4b091a65a3022c8.html",
       "source": "點新聞-財經",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:16"
+      "scraped_at": "2026-11-23 05:50:32"
     },
     {
       "title": "【藍籌重磅委任】新鴻基地產(0016)委任葉劉淑儀為獨立非執董！年收30萬元袍金 曾言「沒能力當獨董」",
       "link": "https://www.edigest.hk/news/sun-hung-kai-properties-0016-appoints-regina-ip-independent-non-executive-director-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051543/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:16"
+      "scraped_at": "2026-11-23 05:50:32"
     },
     {
       "title": "【Anthropic崛起全解構】從OpenAI出走打造1.8萬億AI帝國 揭「憲法式AI」Claude如何顛覆矽谷火",
       "link": "https://www.edigest.hk/news/how-anthropic-rose-from-openai-split-to-ai-giant-claude-safety-strategy-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051433/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:16"
+      "scraped_at": "2026-11-23 05:50:32"
     },
     {
       "title": "當年攞3,000 英鎊遣散費孤注一擲起家《GTA VI》首日狂賣 2,458 萬套 單日吸金 184 億港元  揭創始人被裁員逆襲傳奇",
       "link": "https://www.edigest.hk/news/gta-vi-day-one-sales-24-58-million-copies-2-36-billion-revenue-creator-origin-story-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051431/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:16"
+      "scraped_at": "2026-11-23 05:50:32"
     },
     {
       "title": "【AI黑客襲歐盟】歐盟委員會證實遭AI工具網絡攻擊！多個內部系統曾停運10日 涉薪酬及醫療報銷系統",
       "link": "https://www.edigest.hk/news/european-commission-confirms-ai-powered-cyberattack-internal-systems-down-10-days-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051423/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:16"
+      "scraped_at": "2026-11-23 05:50:32"
     },
     {
       "title": "【都市傳說成真】荃灣神秘老字號「鼎大」罕見開閘快閃開倉 街坊驚呼幾十年首見 揭「三元牌」奶茶壺三代傳承史",
       "link": "https://www.edigest.hk/news/tsuen-wan-ting-tai-metal-manufactory-pop-up-warehouse-sale-rings-brand-heritage-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051406/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:16"
+      "scraped_at": "2026-11-23 05:50:32"
     },
     {
       "title": "史上最大 IPO Anthropic 首掛衝高回落 一度飆近 39% 收市升 17% 市值達1.8萬億躋身全球十大 美股三大指數全線插水",
       "link": "https://www.edigest.hk/news/anthropic-ipo-debut-surges-17-percent-1-8-trillion-valuation-dow-plunges-1101-points-%e5%8d%b3%e6%99%82%e8%b2%a1%e7%b6%93-2051399/",
       "source": "經濟一週",
       "category": "新聞",
-      "scraped_at": "2026-11-22 23:23:16"
+      "scraped_at": "2026-11-23 05:50:32"
     },
     {
       "title": "Artificial Analysis Intelligence Index",
       "link": "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index",
       "source": "Artificial Analysis",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:17",
+      "scraped_at": "2026-11-23 05:50:33",
       "rankings": [
         {
           "name": "Claude Fable 5.2 (Max, Default Fallback)",
@@ -2307,7 +1353,7 @@
       "link": "https://artificialanalysis.ai/agents/coding-agents",
       "source": "Artificial Analysis",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:17",
+      "scraped_at": "2026-11-23 05:50:33",
       "rankings": [
         {
           "name": "Antigravity CLI - Gemini 4 Neon (Xhigh)",
@@ -2515,326 +1561,235 @@
       "ranking_status": "ok"
     },
     {
-      "title": "一卡全家用！實測內地5G上網卡每日100GB瘋狂分享開Hotspot 真免翻牆日均十幾港元【附測速數據】",
-      "link": "https://ezone.hk/article/20093131/%E4%B8%80%E5%8D%A1%E5%85%A8%E5%AE%B6%E7%94%A8-%E5%AF%A6%E6%B8%AC%E5%85%A7%E5%9C%B05G%E4%B8%8A%E7%B6%B2%E5%8D%A1%E6%AF%8F%E6%97%A5100GB%E7%98%8B%E7%8B%82%E5%88%86%E4%BA%AB%E9%96%8BHotspot-%E7%9C%9F%E5%85%8D%E7%BF%BB%E7%89%86%E6%97%A5%E5%9D%87%E5%8D%81%E5%B9%BE%E6%B8%AF%E5%85%83-%E9%99%84%E6%B8%AC%E9%80%9F%E6%95%B8%E6%93%9A",
-      "source": "E-zone",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:18"
-    },
-    {
-      "title": "Google Sheets公式唔識寫？Gemini中文Prompt描述需求【附常用工作指令】",
-      "link": "https://ezone.hk/article/20112643/Google-Sheets%E5%85%AC%E5%BC%8F%E5%94%94%E8%AD%98%E5%AF%AB-Gemini%E4%B8%AD%E6%96%87Prompt%E6%8F%8F%E8%BF%B0%E9%9C%80%E6%B1%82-%E9%99%84%E5%B8%B8%E7%94%A8%E5%B7%A5%E4%BD%9C%E6%8C%87%E4%BB%A4",
-      "source": "E-zone",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:18"
-    },
-    {
-      "title": "微軟 Copilot 加入 GPT-6.2｜Word、Excel、PowerPoint 可選 Sol　Astra 要甚麼資格？",
-      "link": "https://ezone.hk/article/20120106/%E5%BE%AE%E8%BB%9F-Copilot-%E5%8A%A0%E5%85%A5-GPT-6-2-Word-Excel-PowerPoint-%E5%8F%AF%E9%81%B8-Sol-Astra-%E8%A6%81%E7%94%9A%E9%BA%BC%E8%B3%87%E6%A0%BC",
-      "source": "E-zone",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:18"
-    },
-    {
-      "title": "電視機清潔紙巾抹會刮花？3大清潔致命盲點亂用火酒隨時燒機用酒精最弊",
-      "link": "https://ezone.hk/article/20091274/%E9%9B%BB%E8%A6%96%E6%A9%9F%E6%B8%85%E6%BD%94%E7%B4%99%E5%B7%BE%E6%8A%B9%E6%9C%83%E5%88%AE%E8%8A%B1-3%E5%A4%A7%E6%B8%85%E6%BD%94%E8%87%B4%E5%91%BD%E7%9B%B2%E9%BB%9E%E4%BA%82%E7%94%A8%E7%81%AB%E9%85%92%E9%9A%A8%E6%99%82%E7%87%92%E6%A9%9F%E7%94%A8%E9%85%92%E7%B2%BE%E6%9C%80%E5%BC%8A",
-      "source": "E-zone",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:18"
-    },
-    {
-      "title": "Sony WH-1000XM6 Black Friday 減 24%｜HK$2728　六色同價",
-      "link": "https://ezone.hk/article/20120079/Sony-WH-1000XM6-Black-Friday-%E6%B8%9B-24-HK-2728-%E5%85%AD%E8%89%B2%E5%90%8C%E5%83%B9",
-      "source": "E-zone",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:18"
-    },
-    {
-      "title": "AI執相慳位《Iriora》限時免費　原價 0.99 美元　一次檢視最多 20,000 張相片",
-      "link": "https://ezone.hk/article/20120101/AI%E5%9F%B7%E7%9B%B8%E6%85%B3%E4%BD%8D-Iriora-%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB-%E5%8E%9F%E5%83%B9-0-99-%E7%BE%8E%E5%85%83-%E4%B8%80%E6%AC%A1%E6%AA%A2%E8%A6%96%E6%9C%80%E5%A4%9A-20-000-%E5%BC%B5%E7%9B%B8%E7%89%87",
-      "source": "E-zone",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:18"
-    },
-    {
-      "title": "Apple Pay iPhone綁Visa鎖屏也被偷8萬！實測iPhone遭隔空盜刷 附1招保命設定",
-      "link": "https://ezone.hk/article/20094428/Apple-Pay-iPhone%E7%B6%81Visa%E9%8E%96%E5%B1%8F%E4%B9%9F%E8%A2%AB%E5%81%B78%E8%90%AC-%E5%AF%A6%E6%B8%ACiPhone%E9%81%AD%E9%9A%94%E7%A9%BA%E7%9B%9C%E5%88%B7-%E9%99%841%E6%8B%9B%E4%BF%9D%E5%91%BD%E8%A8%AD%E5%AE%9A",
-      "source": "E-zone",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:18"
-    },
-    {
-      "title": "Gemini 可依文字提示生成 GIF　限定 8 國、須 Google AI 計劃",
-      "link": "https://www.newmobilelife.com/2026/11/22/gemini-gif-generation/",
+      "title": "Siri 裁員未涉新 AI 系統　舊有架構員工受影響",
+      "link": "https://www.newmobilelife.com/2026/11/23/siri-layoffs-old-ai-systems/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:19"
+      "scraped_at": "2026-11-23 05:50:35"
     },
     {
-      "title": "微軟 Copilot 加入 GPT-6.2 Sol 與 Astra　Word、Excel 開放使用",
-      "link": "https://www.newmobilelife.com/2026/11/22/copilot-gpt-6-2-sol-astra/",
+      "title": "Google AI 搜尋變現乏力　連累 Apple 服務收入增長放緩",
+      "link": "https://www.newmobilelife.com/2026/11/23/google-ai-search-monetization-apple-slowdown/",
       "source": "NewMobileLife",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:19"
-    },
-    {
-      "title": "Siri AI 和解案剩餘一個月申索期　每部 iPhone 預計獲賠至少 61 美元",
-      "link": "https://www.newmobilelife.com/2026/11/22/siri-ai-settlement-iphone-claim-61/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:19"
-    },
-    {
-      "title": "AI 辨識清理重複相片　原價 US $0.99《Iriora》限時免費",
-      "link": "https://www.newmobilelife.com/2026/11/22/iriora-ai-photo-cleaner-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:19"
-    },
-    {
-      "title": "取景即見效果的底片相機　原價 US $0.99《Intervals》限時免費",
-      "link": "https://www.newmobilelife.com/2026/11/22/intervals-film-look-camera-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:19"
-    },
-    {
-      "title": "【Black Friday 優惠】Razer Basilisk V3 Pro 減價 50%　5 款電競滑鼠同步劈價",
-      "link": "https://www.newmobilelife.com/2026/11/22/razer-basilisk-v3-pro-amazon-blackfriday-2026/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:19"
-    },
-    {
-      "title": "輕巧日曆掌握每日行程　原價 US $0.99《Slim Calendar》限時免費",
-      "link": "https://www.newmobilelife.com/2026/11/22/slim-calendar-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:19"
-    },
-    {
-      "title": "睡前護眼暖色閱讀　原價 US $9.99《Evening Reader》限時免費",
-      "link": "https://www.newmobilelife.com/2026/11/22/evening-reader-%e9%99%90%e6%99%82%e5%85%8d%e8%b2%bb/",
-      "source": "NewMobileLife",
-      "category": "科技",
-      "scraped_at": "2026-11-22 23:23:19"
+      "scraped_at": "2026-11-23 05:50:35"
     },
     {
       "title": "超任卡帶竟可跑 AI 聊天程式　220 萬參數模型仿 ChatGPT 回答問題",
       "link": "https://unwire.hk/2026/11/22/chatgpt-snes-ai-model-super-nintendo-demo/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "美企海外建 AI 數據中心或須付重稅　特朗普冀留住本地數據中心",
       "link": "https://unwire.hk/2026/11/22/trump-us-ai-data-centers-overseas-tax-threat/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "德奧擬收購 TikTok 歐洲業務　傳集資 250 億歐元",
       "link": "https://unwire.hk/2026/11/22/germany-austria-tiktok-europe-buyout-investors-2026/life-tech/social-network/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "《GTA 6》首日賣出 37.9 億美元　Rockstar 公布預售 3,250 萬套破紀錄",
       "link": "https://unwire.hk/2026/11/22/gta-6-day-one-3-79-billion-sales-2026/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "SSD 有望 2027 年初開始降價　HDD 或要等到 2028 年",
       "link": "https://unwire.hk/2026/11/22/ssd-nand-price-drop-2027-hdd-2028/shop_guide/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "《GTA 6》IShowSpeed 連播 52 小時爆機　誤覆蓋 98% 劇情存檔情緒崩潰",
       "link": "https://unwire.hk/2026/11/22/ishowspeed-gta6-52-hours-save-overwrite/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "《GTA 6》Xbox X 解鎖 30 FPS 上限   玩家稱可上到 60FPS 但有一大缺點",
       "link": "https://unwire.hk/2026/11/22/gta-6-xbox-series-x-quick-resume-fps-glitch/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "AI 電動螺絲批面世   鏡頭識別螺絲種類",
       "link": "https://unwire.hk/2026/11/22/arrowmax-arrowspace-s1-ai-screwdriver-smart-case/notebook/gadgets/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "（有實試片) Tesla FSD V15 3D 畫面似《GTA 6》　Reality View 可點選泊車位置",
       "link": "https://unwire.hk/2026/11/22/tesla-fsd-v15-reality-view-3d-parking/life-tech/auto/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "《GTA 6》評分大分裂　媒體 99 分玩家僅 5.6 分",
       "link": "https://unwire.hk/2026/11/22/gta-6-metacritic-critic-user-score-gap/game-channel/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "荷蘭私隱當局勸暫勿買 AI 眼鏡 模擬急救稱救護車在途中 其實冇人報警",
       "link": "https://unwire.hk/2026/11/22/dutch-ai-smart-glasses-ambulance-test/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "Google 2027 年強制 Android App 支援摺機　不達標禁止上架更新",
       "link": "https://unwire.hk/2026/11/22/google-android-foldable-app-play-rules-2027/software/android-app/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "AEON 系統遭未經授權查閱　停 App 逾兩日才披露　方保僑批削弱信任",
       "link": "https://unwire.hk/2026/11/22/aeon-credit-unauthorized-access-delayed-disclosure/tech-secure/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "羅淑佩稱演唱會門票實名制負擔大　入場須核身份證兼戴手帶",
       "link": "https://unwire.hk/2026/11/22/hong-kong-concert-ticket-real-name-law-2026/movie-2/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "黎曼猜想證明獲 Lean 社群正式認證　Claude 協助破解 167 年數學難題",
       "link": "https://unwire.hk/2026/11/22/riemann-hypothesis-lean-claude-proof-certified/ai/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "聯合國殺手機械人談判一周無果 2 年內擬規則或只屬自願",
       "link": "https://unwire.hk/2026/11/22/un-killer-robots-talks-2028/life-tech/robotics/",
       "source": "Unwire.hk",
       "category": "科技",
-      "scraped_at": "2026-11-22 23:23:20"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "【熱海海上花火大會2026】全年舉辦15場 即睇時間表、交通及介紹｜東京靜岡出發超方便",
       "link": "https://flyday.hk/atamide-hanabi",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "【永安旅遊優惠】11月25日搶馬航吉隆坡一口價連稅$699機票，另有減$120機票優惠碼！",
       "link": "https://flyday.hk/wing-on-travel",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "【永安旅遊】預訂香港至杜拜單程/來回機票即減$200！冬季必去慶典推介！",
       "link": "https://flyday.hk/wing-on-travel-dubai-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "【易斯達航空EastarJet韓國優惠】凌晨機去晚機返！來回釜山1千3起包15kg寄艙行李！限12月出發",
       "link": "https://flyday.hk/eastarjet-korea-promotions",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "【真航空韓國優惠】濟州線再劈凌晨機去晚機返！連稅1千2起包行李！限11月至12月出發",
       "link": "https://flyday.hk/jinair-korea-promotion",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "【達美航空優惠】減到出年2月，香港直飛洛杉磯來回連稅4千7起！",
       "link": "https://flyday.hk/delta-airlines",
       "source": "FlyDayhk",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "嘩！大專生限時機票優惠！可以帶埋屋企人/朋友一齊出發！日/韓/台/東南亞等20多個航點單程只需$88起！再送1,000里數！39間指定大專院校都有份！ (優惠至11月24日)",
       "link": "https://www.meethk.com/166035/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "連稅二千起飛大阪！包20kg寄艙行李！明年1月27日前出發！香港飛大阪來回連稅只需$2,030起 – 大灣區航空 (優惠至11月23日)",
       "link": "https://www.meethk.com/165878/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "正呀！連稅千三飛釜山！包15kg寄艙行李！12月份出發！香港飛釜山來回連稅只需$1,385起 – EastarJet 易斯達航空 (優惠至11月25日)",
       "link": "https://www.meethk.com/165937/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "真心抵！飛澳洲仲平過飛札幌！連稅2千8起！明年6月30日前出發！包23kg寄艙行李！香港直飛悉尼、墨爾本來回連稅只需$2,892起 – 香港航空 (優惠至11月30日)",
       "link": "https://www.meethk.com/165924/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "抵呀！連稅千一飛大阪！樂桃Peach Special Sale！明年1月31日前出發！香港飛大阪單程只需$300起(不收燃油附加費) – 樂桃航空 (優惠至11月22日)",
       "link": "https://www.meethk.com/165889/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "抵呀！港航飛峴港！連稅千一！包23kg寄艙行李！明年3月16日前出發！香港飛峴港來回連稅只需$1,140起 – 香港航空 (優惠至11月30日)",
       "link": "https://www.meethk.com/165862/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "國泰直飛札幌！連稅4千3！明年4月30日前出發！香港飛札幌二人同行來回連稅每人只需$4,305起 – 國泰航空 (優惠至11月30日)",
       "link": "https://www.meethk.com/165688/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "老友記出發啦！22個精選航點單程$65起！日本/韓國單程$165起！HK Express 65+老友記限定優惠！明年6月30日前出發 – HK Express (優惠至11月19日)",
       "link": "https://www.meethk.com/165727/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     },
     {
       "title": "澳航直飛澳洲！連稅4千7起！明年9月17日前出發！包30kg寄艙行李！香港直飛悉尼、墨爾本來回連稅$4,751起 – 澳洲航空 (優惠至11月19日)",
       "link": "https://www.meethk.com/165583/",
       "source": "MeetHK",
       "category": "旅遊",
-      "scraped_at": "2026-11-22 23:23:22"
+      "scraped_at": "2026-11-23 05:50:36"
     }
   ]
 }
